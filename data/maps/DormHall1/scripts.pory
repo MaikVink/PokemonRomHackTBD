@@ -1,0 +1,106 @@
+const FIONA_ID = 2
+
+mapscripts DormHall1_MapScripts {
+    MAP_SCRIPT_ON_RESUME: Dormhall1_OnTransition
+}
+
+script Dormhall1_OnTransition{
+    lock
+    msgbox("test")
+    applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
+    waitmovement(0)
+    msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: {COLOR BLUE}{PLAYER}! {COLOR DARK_GRAY}You're awake. I have been waiting for you!"))
+    
+    applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
+    waitmovement(0)
+    msgbox(format("{COLOR RED}???:{COLOR DARK_GRAY} What is that look on your face?\n Don't you remember me?\p
+    {COLOR RED}Fiona:{COLOR DARK_GRAY} It's me: Fiona. I was the second best of the class, just below you. \p
+    I guess being the second best at anything is not that impressive huh? \p
+    Anyway, today is the day we're gonna recieve our first pokemon! I'm so excited, aren't you?\p
+    I'll go ahead.\n Remember: we get our pokemon from the professor inside the headquarters.\l he is down the hallway, directly below our Dormhall.\p
+    Catch you later {COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}!"))
+
+    applymovement(FIONA_ID, Dormhall1_Movement_WalkAway)
+    waitmovement(0)
+    setflag(FLAG_FIRST_RIVAL_MEETING)
+    removeobject(FIONA_ID)
+    release
+}
+
+script DormHall1_EventScript_LadyInitiative{
+    lockall
+    msgbox(format("Does he really think we don't notice him?"))
+    releaseall
+}
+
+script DormHall1_EventScript_ManInitiative{
+    lockall
+    msgbox(format("Just ignore that guy, let him enjoy the moment"))
+    releaseall
+}
+
+script DormHall1_EventScript_StatueInitiative{
+    lockall
+    faceplayer
+    msgbox(format("I wonder what kind of pokemon these statues are supposed to be"))
+    releaseall
+}
+
+script Dormhall1_EventScript_NinjaInitiative{
+    lockall
+    faceplayer
+    msgbox(format("sssh, don't let them know I'm hiding here."))
+    face_original_direction
+    releaseall
+}
+
+script Dormhall1_EventScript_GuardTop{
+    lockall
+    faceplayer
+    msgbox(format("This area lead to a special area not meant for initiatives, you better move to other way"))
+    releaseall
+}
+
+script Dormhall1_EventScript_GuardBottem{
+    lockall
+    faceplayer
+    msgbox(format("Our duty is to prevent any nosey initiative from entering this area"))
+    releaseall
+}
+
+script Dormhall1_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be"))
+    releaseall
+}
+
+script Dormhall1_SignScript_SpecialStatueBack{
+    lockall
+    msgbox(format("Hé, there seems to be something etched on the back of this statue:\p
+    'forgotten, but not gone.\n
+        -Team A.S.'"))
+}
+
+script Dormhall1_Trigger_NoEntry{
+    lockall
+    msgbox(format("Sorry kid, no entry without prior authorization"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Dormhall1_Movement_MoveBack)
+}
+
+movement Dormhall1_Movement_NoticePlayer{
+    emote_exclamation_mark
+}
+
+movement Dormhall1_Movement_MoveToPlayer{
+    walk_up * 2
+}
+
+movement Dormhall1_Movement_WalkAway{
+    walk_down * 4
+    walk_left * 4
+    walk_down
+}
+
+movement Dormhall1_Movement_MoveBack{
+    walk_left
+}

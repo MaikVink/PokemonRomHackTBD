@@ -1,0 +1,19 @@
+mapscripts CommonDormRoom_MapScripts {
+    MAP_SCRIPT_ON_LOAD: CommonDormRoom_OnLoad
+}
+
+script CommonDormRoom_OnLoad{
+    setdynamicwarp(MAP_DORM_HALL1, 6, 1)
+}
+
+script CommonDormRoom_SignScript_Computer{
+    lockall
+    msgbox(format("It's a computer, and seeing it is not yours you should probably leave it alone.\l Not that you can do anything anyways since it is password protected"))
+    releaseall
+}
+
+script CommonDormRoom_SignScript_Drawer{
+    lockall
+    msgbox(format("It's a set of drawers, seems to be filled with different kinds of clothes and nothing else"))
+    releaseall
+}
