@@ -3,7 +3,17 @@ mapscripts CommonDormRoom_MapScripts {
 }
 
 script CommonDormRoom_OnLoad{
-    setdynamicwarp(MAP_DORM_HALL1, 6, 1)
+    switch(var(VAR_DYNAMIC_DORMWARP))
+    {
+        case 2:
+            setdynamicwarp(MAP_DORM_HALL1, 11, 1)
+        case 3:
+            setdynamicwarp(MAP_DORM_HALL1, 26, 1)
+        default:
+            setdynamicwarp(MAP_DORM_HALL1, 6, 1)
+
+    }
+    
 }
 
 script CommonDormRoom_SignScript_Computer{

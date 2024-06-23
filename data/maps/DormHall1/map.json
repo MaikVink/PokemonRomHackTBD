@@ -117,14 +117,14 @@
       "x": 6,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DORM_HALL1",
+      "dest_map": "MAP_COMMON_DORM_ROOM",
       "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DORM_HALL1",
+      "dest_map": "MAP_COMMON_DORM_ROOM",
       "dest_warp_id": "0"
     },
     {
@@ -138,14 +138,14 @@
       "x": 21,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DORM_HALL1",
+      "dest_map": "MAP_COMMON_DORM_ROOM",
       "dest_warp_id": "0"
     },
     {
       "x": 26,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DORM_HALL1",
+      "dest_map": "MAP_COMMON_DORM_ROOM",
       "dest_warp_id": "0"
     }
   ],
@@ -155,27 +155,54 @@
       "x": 30,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_NoEntry"
     },
     {
       "type": "trigger",
       "x": 30,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_NoEntry"
     },
     {
       "type": "trigger",
       "x": 30,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_NoEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_SetWarpValue1"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_SetWarpValue2"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_SetWarpValue3"
     }
   ],
   "bg_events": [
@@ -208,7 +235,7 @@
       "x": 22,
       "y": 6,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
     },
     {
@@ -264,7 +291,7 @@
       "x": 22,
       "y": 5,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "Dormhall1_SignScript_SpecialStatueBack"
     }
   ],

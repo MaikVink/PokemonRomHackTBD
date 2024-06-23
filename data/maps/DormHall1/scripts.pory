@@ -1,16 +1,28 @@
 const FIONA_ID = 2
 
 mapscripts DormHall1_MapScripts {
-    MAP_SCRIPT_ON_RESUME: Dormhall1_OnTransition
+    MAP_SCRIPT_ON_TRANSITION: Dormhall1_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_STORY_PROGRESSION, 1: Dormhall1_Frame
+    ]
 }
 
 script Dormhall1_OnTransition{
+    setvar(VAR_ALWAYS_ON, 1)
+    if(var(VAR_STORY_PROGRESSION) == 0)
+    {
+        setvar(VAR_STORY_PROGRESSION, 1)
+    }
+}
+
+script Dormhall1_Frame{
     lock
-    msgbox("test")
+    msgbox("testmessage")
+    waitmessage
     applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
     waitmovement(0)
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: {COLOR BLUE}{PLAYER}! {COLOR DARK_GRAY}You're awake. I have been waiting for you!"))
-    
+
     applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
     waitmovement(0)
     msgbox(format("{COLOR RED}???:{COLOR DARK_GRAY} What is that look on your face?\n Don't you remember me?\p
@@ -23,6 +35,7 @@ script Dormhall1_OnTransition{
     applymovement(FIONA_ID, Dormhall1_Movement_WalkAway)
     waitmovement(0)
     setflag(FLAG_FIRST_RIVAL_MEETING)
+    setvar(VAR_STORY_PROGRESSION, 2)
     removeobject(FIONA_ID)
     release
 }
@@ -79,12 +92,30 @@ script Dormhall1_SignScript_SpecialStatueBack{
     msgbox(format("Hé, there seems to be something etched on the back of this statue:\p
     'forgotten, but not gone.\n
         -Team A.S.'"))
+    releaseall
 }
 
 script Dormhall1_Trigger_NoEntry{
-    lockall
-    msgbox(format("Sorry kid, no entry without prior authorization"))
+    lockall    
     applymovement(OBJ_EVENT_ID_PLAYER, Dormhall1_Movement_MoveBack)
+    msgbox(format("Sorry kid, no entry without prior authorization"))
+    waitmovement(0)
+    releaseall
+}
+
+script Dormhall1_Trigger_SetWarpValue1{
+    setvar(VAR_DYNAMIC_DORMWARP, 1)
+    release
+}
+
+script Dormhall1_Trigger_SetWarpValue2{
+    setvar(VAR_DYNAMIC_DORMWARP, 2)
+    release
+}
+
+script Dormhall1_Trigger_SetWarpValue3{
+    setvar(VAR_DYNAMIC_DORMWARP, 3)
+    release
 }
 
 movement Dormhall1_Movement_NoticePlayer{

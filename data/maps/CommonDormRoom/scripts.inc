@@ -6,32 +6,48 @@ CommonDormRoom_MapScripts::
 
 CommonDormRoom_OnLoad::
 # 6 "data/maps/CommonDormRoom/scripts.pory"
+	switch VAR_DYNAMIC_DORMWARP
+# 8 "data/maps/CommonDormRoom/scripts.pory"
+	case 2, CommonDormRoom_OnLoad_2
+# 10 "data/maps/CommonDormRoom/scripts.pory"
+	case 3, CommonDormRoom_OnLoad_3
+# 13 "data/maps/CommonDormRoom/scripts.pory"
 	setdynamicwarp MAP_DORM_HALL1, 6, 1
+	return
+
+CommonDormRoom_OnLoad_2:
+# 9 "data/maps/CommonDormRoom/scripts.pory"
+	setdynamicwarp MAP_DORM_HALL1, 11, 1
+	return
+
+CommonDormRoom_OnLoad_3:
+# 11 "data/maps/CommonDormRoom/scripts.pory"
+	setdynamicwarp MAP_DORM_HALL1, 26, 1
 	return
 
 
 CommonDormRoom_SignScript_Computer::
-# 10 "data/maps/CommonDormRoom/scripts.pory"
+# 20 "data/maps/CommonDormRoom/scripts.pory"
 	lockall
-# 11 "data/maps/CommonDormRoom/scripts.pory"
+# 21 "data/maps/CommonDormRoom/scripts.pory"
 	msgbox CommonDormRoom_SignScript_Computer_Text_0
-# 12 "data/maps/CommonDormRoom/scripts.pory"
+# 22 "data/maps/CommonDormRoom/scripts.pory"
 	releaseall
 	return
 
 
 CommonDormRoom_SignScript_Drawer::
-# 16 "data/maps/CommonDormRoom/scripts.pory"
+# 26 "data/maps/CommonDormRoom/scripts.pory"
 	lockall
-# 17 "data/maps/CommonDormRoom/scripts.pory"
+# 27 "data/maps/CommonDormRoom/scripts.pory"
 	msgbox CommonDormRoom_SignScript_Drawer_Text_0
-# 18 "data/maps/CommonDormRoom/scripts.pory"
+# 28 "data/maps/CommonDormRoom/scripts.pory"
 	releaseall
 	return
 
 
 CommonDormRoom_SignScript_Computer_Text_0:
-# 11 "data/maps/CommonDormRoom/scripts.pory"
+# 21 "data/maps/CommonDormRoom/scripts.pory"
 	.string "It's a computer, and seeing it is not\n"
 	.string "yours you should probably leave it\l"
 	.string "alone.\l"
@@ -39,7 +55,7 @@ CommonDormRoom_SignScript_Computer_Text_0:
 	.string "since it is password protected$"
 
 CommonDormRoom_SignScript_Drawer_Text_0:
-# 17 "data/maps/CommonDormRoom/scripts.pory"
+# 27 "data/maps/CommonDormRoom/scripts.pory"
 	.string "It's a set of drawers, seems to be filled\n"
 	.string "with different kinds of clothes and\l"
 	.string "nothing else$"
