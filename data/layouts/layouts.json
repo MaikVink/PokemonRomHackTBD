@@ -4410,6 +4410,26 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_DORM_HALL1",
+      "name": "DormHall1_Layout",
+      "width": 35,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DormHall1/border.bin",
+      "blockdata_filepath": "data/layouts/DormHall1/map.bin"
+    },
+    {
+      "id": "LAYOUT_COMMON_DORM_ROOM",
+      "name": "CommonDormRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CommonDormRoom/border.bin",
+      "blockdata_filepath": "data/layouts/CommonDormRoom/map.bin"
     }
   ]
 }
