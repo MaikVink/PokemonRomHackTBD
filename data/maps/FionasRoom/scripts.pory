@@ -1,0 +1,60 @@
+mapscripts FionasRoom_MapScripts {
+
+}
+
+script FionasRoom_SignScript_Drawer{
+    lockall
+    msgbox(format("Fiona seems to have used to bottem two drawers for her clothes and used the top one for some of her personal belongings. The top drawer also contains a very old, blood stained bandage for some reason."))
+    releaseall
+}
+
+script FionasRoom_SignScript_Book{
+    lockall
+    msgbox(format("It seems like Fiona left her diary open on the table.\l Do you want to read it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == 1)
+    {
+        msgbox(format("'Dear Dairy,\n 
+        today is the day!\l 
+        The day I'm finally going to do something usefull with my life!\l 
+        My mom and brother were not happy with my choice, but I could not just sit around and do nothing anymore!\l
+        My mom seems to eventually understood it, but I fear my brother still hates me for the choice I made.\p
+        I just hope I can show him one day why I did this and why it was neseccary.\l
+        Please Brother, forgive me.'"))
+        msgbox(format("Do you want to continue reading?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == 1)
+        {
+            msgbox(format("'Dear Dairy,\n
+            I'm so annoyed right now!\l
+            I have been studying really hard and pushing myself to the limit and still I only scored second highest of my class. \p
+            I don't know how they do it, that {PLAYER}. They just seems to be a natural at this!\p
+            I want to hate them, but I just can't help but respect their skill.\l
+            Maybe I should just try to befriend them instead?\l 
+            Maybe they could help me out if I would ever be in need...'"))
+            msgbox(format("Do you want to continue reading?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == 1)
+            {
+                msgbox(format("'Dear Dairy,\n
+                It's finally time, I have made it through the pre-selection and I'm now applicable for getting my first pokemon.\p
+                I never have had a pokemon before, I wonder which one I will get and how they will be?\p
+                I just hope everything I'm doing is gonna be worth it...\p
+                Brother, if you would ever read this, know that I have done this in your best interest.\l
+                Please forgive our mom for letting me do this and please forgive me for wanting to do it.'"))
+                msgbox(format("That was everything that has been written down"))
+                releaseall
+                end
+            }
+        }
+        msgbox(format("That is enough for now."))
+    }
+    else
+    {
+        msgbox(format("Better not go through people's stuff without first asking permission."))
+    }
+    releaseall
+}
+
+script FionasRoom_SignScript_Computer{
+    lockall
+    msgbox(format("It's Fiona's computer. You can see a background of a cute cat hanging on a tree with the text: 'Hang in there!'.\p Not much else you can do on the computer since you don't know the password."))
+    releaseall
+}

@@ -1,0 +1,57 @@
+mapscripts DormHall3_MapScripts {
+
+}
+
+script DormHallBottemLeft_EventScript_Hiker{
+    lockall
+    faceplayer
+    msgbox(format("If you want to look in my room, go ahead!\l
+    As long as you allow me also to look in your room, of course!\l
+    I cannot deny that I'm also curious to see what the other initiatives have done with the limiting house rules we have been given."))
+    releaseall
+}
+
+script DormHallBottemLeft_EventScript_Woman{
+    lockall
+    faceplayer
+    msgbox(format("Have you gotten your pokemon already?\p
+    I was not prepared for the test they gave me before they handed the pokemon to me.\p
+    Such a strange method to decide what pokemon you should get..."))
+    releaseall
+}
+
+script DormhallBottemLeft_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
+    releaseall
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue1{
+    setvar(VAR_DYNAMIC_DORMWARP, 9)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue2{
+    setvar(VAR_DYNAMIC_DORMWARP, 10)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue3{
+    setvar(VAR_DYNAMIC_DORMWARP, 11)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue4{
+    setvar(VAR_DYNAMIC_DORMWARP, 12)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue5{
+    setvar(VAR_DYNAMIC_DORMWARP, 13)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue6{
+    setvar(VAR_DYNAMIC_DORMWARP, 14)
+    release
+}

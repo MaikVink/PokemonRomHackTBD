@@ -1,0 +1,30 @@
+mapscripts RollCall_MapScripts {
+
+}
+
+script RollCall_EventScript_FatGuy{
+    lockall
+    faceplayer
+    msgbox(format("We were told to go to this room after we got our pokemon.\p
+    I wonder if this means we will get to meet {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}..."))
+    releaseall
+}
+
+script RollCall_EventScript_LadyLeft{
+    lockall
+    msgbox(format("I was so suprised I got an Eevee! What pokemon did you get from your test?"))
+    releaseall
+}
+
+script RollCall_EventScript_LadyRight{
+    lockall
+    msgbox(format("My test resulted into a Charmander! I cannot wait to be able to fly on my charizards back!"))
+    releaseall
+}
+
+script RollCall_EventScript_Guard{
+    lockall
+    faceplayer
+    msgbox(format("Sorry, nobody is allowed past this point."))
+    releaseall
+}

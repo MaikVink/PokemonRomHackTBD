@@ -1075,3 +1075,17 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/DormHall1/scripts.inc"
 	.include "data/maps/CommonDormRoom/scripts.inc"
+
+	.include "data/maps/PlayerRoom/scripts.inc"
+
+	.include "data/maps/FionasRoom/scripts.inc"
+
+	.include "data/maps/Hall1/scripts.inc"
+
+	.include "data/maps/DormHall2/scripts.inc"
+
+	.include "data/maps/DormHall3/scripts.inc"
+
+	.include "data/maps/RollCall/scripts.inc"
+
+	.include "data/maps/LaboratoryHall/scripts.inc"

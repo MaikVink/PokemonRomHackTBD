@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_DORM_HALL1",
       "name": "DormHall1_Layout",
       "width": 35,
-      "height": 17,
+      "height": 13,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/DormHall1/border.bin",
@@ -4430,6 +4430,76 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CommonDormRoom/border.bin",
       "blockdata_filepath": "data/layouts/CommonDormRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYER_ROOM",
+      "name": "PlayerRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PlayerRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PlayerRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIONAS_ROOM",
+      "name": "FionasRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/FionasRoom/border.bin",
+      "blockdata_filepath": "data/layouts/FionasRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_HALL1",
+      "name": "Hall1_Layout",
+      "width": 10,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Hall1/border.bin",
+      "blockdata_filepath": "data/layouts/Hall1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DORM_HALL2",
+      "name": "DormHall2_Layout",
+      "width": 30,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DormHall2/border.bin",
+      "blockdata_filepath": "data/layouts/DormHall2/map.bin"
+    },
+    {
+      "id": "LAYOUT_DORM_HALL3",
+      "name": "DormHall3_Layout",
+      "width": 38,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DormHall3/border.bin",
+      "blockdata_filepath": "data/layouts/DormHall3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROLL_CALL",
+      "name": "RollCall_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/RollCall/border.bin",
+      "blockdata_filepath": "data/layouts/RollCall/map.bin"
+    },
+    {
+      "id": "LAYOUT_LABORATORY_HALL",
+      "name": "LaboratoryHall_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LaboratoryHall/border.bin",
+      "blockdata_filepath": "data/layouts/LaboratoryHall/map.bin"
     }
   ]
 }

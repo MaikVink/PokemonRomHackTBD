@@ -5,10 +5,34 @@ mapscripts CommonDormRoom_MapScripts {
 script CommonDormRoom_OnLoad{
     switch(var(VAR_DYNAMIC_DORMWARP))
     {
+        case 1:
+            setdynamicwarp(MAP_DORM_HALL1, 6, 1)
         case 2:
             setdynamicwarp(MAP_DORM_HALL1, 11, 1)
         case 3:
             setdynamicwarp(MAP_DORM_HALL1, 26, 1)
+        case 4:
+            setdynamicwarp(MAP_DORM_HALL2, 4, 2)
+        case 5:
+            setdynamicwarp(MAP_DORM_HALL2, 10, 2)
+        case 6:
+            setdynamicwarp(MAP_DORM_HALL2, 16, 2)
+        case 7:
+            setdynamicwarp(MAP_DORM_HALL2, 22, 2)
+        case 8:
+            setdynamicwarp(MAP_DORM_HALL2, 28, 2)
+        case 9:
+            setdynamicwarp(MAP_DORM_HALL3, 5, 2)
+        case 10:
+            setdynamicwarp(MAP_DORM_HALL3, 10, 2)
+        case 11:
+            setdynamicwarp(MAP_DORM_HALL3, 15, 2)
+        case 12:
+            setdynamicwarp(MAP_DORM_HALL3, 20, 2)
+        case 13:
+            setdynamicwarp(MAP_DORM_HALL3, 25, 2)
+        case 14:
+            setdynamicwarp(MAP_DORM_HALL3, 30, 2)
         default:
             setdynamicwarp(MAP_DORM_HALL1, 6, 1)
 
@@ -18,12 +42,12 @@ script CommonDormRoom_OnLoad{
 
 script CommonDormRoom_SignScript_Computer{
     lockall
-    msgbox(format("It's a computer, and seeing it is not yours you should probably leave it alone.\l Not that you can do anything anyways since it is password protected"))
+    msgbox(format("It's a computer, and seeing it is not yours, you should probably leave it alone.\l Not that you can do anything anyways since it is password protected"))
     releaseall
 }
 
 script CommonDormRoom_SignScript_Drawer{
     lockall
-    msgbox(format("It's a set of drawers, seems to be filled with different kinds of clothes and nothing else"))
+    msgbox(format("It's a set of drawers, it is filled with different kind of clothes"))
     releaseall
 }

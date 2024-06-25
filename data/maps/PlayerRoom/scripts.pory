@@ -1,0 +1,40 @@
+mapscripts PlayerRoom_MapScripts {
+
+}
+
+script PlayerRoom_SignScript_Table{
+    lockall
+    msgbox(format("It's your table.\n For some reason you're the only one whose table and carpet seems to be of two  different kinds."))
+    releaseall
+}
+
+script PlayerRoom_SignScript_Computer{
+    lockall
+    msgbox(format("It's your computer.\n There isn't anything you need to do on it though."))
+    releaseall
+}
+
+script PlayerRoom_SignScript_Drawer{
+    lockall
+    msgbox(format("You have neatly placed all your clothes inside the different drawers."))
+    releaseall
+}
+
+script PlayerRoom_SignScript_Box{
+    lockall
+    msgbox(format("It's a box with some of your personal stuff.\l You weren't allowed to bring a lot with you, but you're still looking for a good place to store it."))
+    releaseall
+}
+
+script PlayerRoom_SignScript_Bed{
+    lockall
+    if(flag(FLAG_RECEIVED_FIRST_POKEMON))
+    {
+        msgbox(format(""))
+    }
+    else
+    {
+        msgbox(format("It's your bed.\n You don't feel tired though, so there seems to be no reason right now to sleep"))
+    }
+    releaseall
+}
