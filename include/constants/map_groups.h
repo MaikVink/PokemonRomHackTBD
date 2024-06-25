@@ -594,6 +594,13 @@
 // gMapGroup_IndoorMODQuarters
 #define MAP_DORM_HALL1       (0 | (34 << 8))
 #define MAP_COMMON_DORM_ROOM (1 | (34 << 8))
+#define MAP_PLAYER_ROOM      (2 | (34 << 8))
+#define MAP_FIONAS_ROOM      (3 | (34 << 8))
+#define MAP_HALL1            (4 | (34 << 8))
+#define MAP_DORM_HALL2       (5 | (34 << 8))
+#define MAP_DORM_HALL3       (6 | (34 << 8))
+#define MAP_ROLL_CALL        (7 | (34 << 8))
+#define MAP_LABORATORY_HALL  (8 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
 

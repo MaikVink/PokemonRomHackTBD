@@ -12,13 +12,13 @@ script Dormhall1_OnTransition{
     if(var(VAR_STORY_PROGRESSION) == 0)
     {
         setvar(VAR_STORY_PROGRESSION, 1)
+        setflag(FLAG_SYS_B_DASH)
+        setflag(FLAG_SYS_ALWAYS_ON)
     }
 }
 
 script Dormhall1_Frame{
     lock
-    msgbox("testmessage")
-    waitmessage
     applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
     waitmovement(0)
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: {COLOR BLUE}{PLAYER}! {COLOR DARK_GRAY}You're awake. I have been waiting for you!"))
@@ -26,11 +26,11 @@ script Dormhall1_Frame{
     applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
     waitmovement(0)
     msgbox(format("{COLOR RED}???:{COLOR DARK_GRAY} What is that look on your face?\n Don't you remember me?\p
-    {COLOR RED}Fiona:{COLOR DARK_GRAY} It's me: Fiona. I was the second best of the class, just below you. \p
+    {COLOR RED}Fiona:{COLOR DARK_GRAY} It's me, Fiona! I was the second best of the class, just below you! \p
     I guess being the second best at anything is not that impressive huh? \p
-    Anyway, today is the day we're gonna recieve our first pokemon! I'm so excited, aren't you?\p
-    I'll go ahead.\n Remember: we get our pokemon from the professor inside the headquarters.\l he is down the hallway, directly below our Dormhall.\p
-    Catch you later {COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}!"))
+    Anyway, today is the day, we're gonna recieve our first pokemon! I'm so excited, aren't you?\p
+    I'll go ahead.\n Remember, we get our pokemon from the professor inside the headquarters.\l he is down the hallway, directly below our Dormhall.\p
+    Catch you later, {COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}!"))
 
     applymovement(FIONA_ID, Dormhall1_Movement_WalkAway)
     waitmovement(0)
@@ -48,14 +48,14 @@ script DormHall1_EventScript_LadyInitiative{
 
 script DormHall1_EventScript_ManInitiative{
     lockall
-    msgbox(format("Just ignore that guy, let him enjoy the moment"))
+    msgbox(format("Just ignore that guy, let him enjoy the moment."))
     releaseall
 }
 
 script DormHall1_EventScript_StatueInitiative{
     lockall
     faceplayer
-    msgbox(format("I wonder what kind of pokemon these statues are supposed to be"))
+    msgbox(format("I wonder what kind of pokemon these statues are supposed to be."))
     releaseall
 }
 
@@ -70,20 +70,20 @@ script Dormhall1_EventScript_NinjaInitiative{
 script Dormhall1_EventScript_GuardTop{
     lockall
     faceplayer
-    msgbox(format("This area lead to a special area not meant for initiatives, you better move to other way"))
+    msgbox(format("This area lead to a special area not meant for initiatives, you better move to other way."))
     releaseall
 }
 
 script Dormhall1_EventScript_GuardBottem{
     lockall
     faceplayer
-    msgbox(format("Our duty is to prevent any nosey initiative from entering this area"))
+    msgbox(format("Our duty is to prevent any nosey initiative from entering this area."))
     releaseall
 }
 
 script Dormhall1_SignScript_StatueNormal{
     lockall
-    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be"))
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
     releaseall
 }
 
@@ -98,7 +98,7 @@ script Dormhall1_SignScript_SpecialStatueBack{
 script Dormhall1_Trigger_NoEntry{
     lockall    
     applymovement(OBJ_EVENT_ID_PLAYER, Dormhall1_Movement_MoveBack)
-    msgbox(format("Sorry kid, no entry without prior authorization"))
+    msgbox(format("Sorry kid, no entry without prior authorization."))
     waitmovement(0)
     releaseall
 }

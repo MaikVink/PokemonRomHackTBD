@@ -10,14 +10,20 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_HALL1",
+      "offset": -3,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 18,
-      "y": 8,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -44,7 +50,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 17,
-      "y": 8,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -58,7 +64,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
       "x": 18,
-      "y": 5,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -72,7 +78,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "x": 30,
-      "y": 7,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -86,7 +92,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "x": 30,
-      "y": 11,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -100,7 +106,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 12,
-      "y": 14,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -131,14 +137,14 @@
       "x": 16,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_PLAYER_ROOM",
+      "dest_warp_id": "0"
     },
     {
       "x": 21,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_COMMON_DORM_ROOM",
+      "dest_map": "MAP_FIONAS_ROOM",
       "dest_warp_id": "0"
     },
     {
@@ -153,25 +159,25 @@
     {
       "type": "trigger",
       "x": 30,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_NoEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "Dormhall1_Trigger_NoEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
       "y": 8,
-      "elevation": 0,
-      "var": "VAR_ALWAYS_ON",
-      "var_value": "1",
-      "script": "Dormhall1_Trigger_NoEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 30,
-      "y": 9,
-      "elevation": 0,
-      "var": "VAR_ALWAYS_ON",
-      "var_value": "1",
-      "script": "Dormhall1_Trigger_NoEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 30,
-      "y": 10,
       "elevation": 0,
       "var": "VAR_ALWAYS_ON",
       "var_value": "1",
@@ -209,7 +215,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -217,7 +223,7 @@
     {
       "type": "sign",
       "x": 12,
-      "y": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -225,7 +231,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -233,7 +239,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -241,7 +247,7 @@
     {
       "type": "sign",
       "x": 27,
-      "y": 6,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -249,7 +255,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 13,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -257,7 +263,7 @@
     {
       "type": "sign",
       "x": 12,
-      "y": 13,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -265,7 +271,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 13,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -273,7 +279,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 13,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -281,7 +287,7 @@
     {
       "type": "sign",
       "x": 27,
-      "y": 13,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Dormhall1_SignScript_StatueNormal"
@@ -289,7 +295,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 5,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "Dormhall1_SignScript_SpecialStatueBack"

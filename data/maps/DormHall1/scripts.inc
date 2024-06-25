@@ -22,28 +22,28 @@ Dormhall1_OnTransition::
 Dormhall1_OnTransition_1:
 # 14 "data/maps/DormHall1/scripts.pory"
 	setvar VAR_STORY_PROGRESSION, 1
+# 15 "data/maps/DormHall1/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 16 "data/maps/DormHall1/scripts.pory"
+	setflag FLAG_SYS_ALWAYS_ON
 	return
 
 
 Dormhall1_Frame::
-# 19 "data/maps/DormHall1/scripts.pory"
-	lock
-# 20 "data/maps/DormHall1/scripts.pory"
-	msgbox Dormhall1_Frame_Text_0
 # 21 "data/maps/DormHall1/scripts.pory"
-	waitmessage
+	lock
 # 22 "data/maps/DormHall1/scripts.pory"
 	applymovement 2, Dormhall1_Movement_NoticePlayer
 # 23 "data/maps/DormHall1/scripts.pory"
 	waitmovement 0
 # 24 "data/maps/DormHall1/scripts.pory"
-	msgbox Dormhall1_Frame_Text_1
+	msgbox Dormhall1_Frame_Text_0
 # 26 "data/maps/DormHall1/scripts.pory"
 	applymovement 2, Dormhall1_Movement_MoveToPlayer
 # 27 "data/maps/DormHall1/scripts.pory"
 	waitmovement 0
 # 28 "data/maps/DormHall1/scripts.pory"
-	msgbox Dormhall1_Frame_Text_2
+	msgbox Dormhall1_Frame_Text_1
 # 35 "data/maps/DormHall1/scripts.pory"
 	applymovement 2, Dormhall1_Movement_WalkAway
 # 36 "data/maps/DormHall1/scripts.pory"
@@ -230,31 +230,27 @@ Dormhall1_Movement_MoveBack:
 	step_end
 
 Dormhall1_Frame_Text_0:
-# 20 "data/maps/DormHall1/scripts.pory"
-	.string "testmessage$"
-
-Dormhall1_Frame_Text_1:
 # 24 "data/maps/DormHall1/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: {COLOR BLUE}{PLAYER}! {COLOR DARK_GRAY}You're awake. I have\n"
 	.string "been waiting for you!$"
 
-Dormhall1_Frame_Text_2:
+Dormhall1_Frame_Text_1:
 # 28 "data/maps/DormHall1/scripts.pory"
 	.string "{COLOR RED}???:{COLOR DARK_GRAY} What is that look on your face?\n"
 	.string "Don't you remember me?\p"
-	.string "{COLOR RED}Fiona:{COLOR DARK_GRAY} It's me: Fiona. I was the second\n"
-	.string "best of the class, just below you.\p"
+	.string "{COLOR RED}Fiona:{COLOR DARK_GRAY} It's me, Fiona! I was the second\n"
+	.string "best of the class, just below you!\p"
 	.string "I guess being the second best at\n"
 	.string "anything is not that impressive huh?\p"
-	.string "Anyway, today is the day we're gonna\n"
+	.string "Anyway, today is the day, we're gonna\n"
 	.string "recieve our first pokemon! I'm so\l"
 	.string "excited, aren't you?\p"
 	.string "I'll go ahead.\n"
-	.string "Remember: we get our pokemon from the\l"
+	.string "Remember, we get our pokemon from the\l"
 	.string "professor inside the headquarters.\l"
 	.string "he is down the hallway, directly below\l"
 	.string "our Dormhall.\p"
-	.string "Catch you later {COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}!$"
+	.string "Catch you later, {COLOR BLUE}{PLAYER}{COLOR DARK_GRAY}!$"
 
 DormHall1_EventScript_LadyInitiative_Text_0:
 # 45 "data/maps/DormHall1/scripts.pory"
@@ -264,12 +260,12 @@ DormHall1_EventScript_LadyInitiative_Text_0:
 DormHall1_EventScript_ManInitiative_Text_0:
 # 51 "data/maps/DormHall1/scripts.pory"
 	.string "Just ignore that guy, let him enjoy the\n"
-	.string "moment$"
+	.string "moment.$"
 
 DormHall1_EventScript_StatueInitiative_Text_0:
 # 58 "data/maps/DormHall1/scripts.pory"
 	.string "I wonder what kind of pokemon these\n"
-	.string "statues are supposed to be$"
+	.string "statues are supposed to be.$"
 
 Dormhall1_EventScript_NinjaInitiative_Text_0:
 # 65 "data/maps/DormHall1/scripts.pory"
@@ -280,19 +276,19 @@ Dormhall1_EventScript_GuardTop_Text_0:
 # 73 "data/maps/DormHall1/scripts.pory"
 	.string "This area lead to a special area not\n"
 	.string "meant for initiatives, you better move\l"
-	.string "to other way$"
+	.string "to other way.$"
 
 Dormhall1_EventScript_GuardBottem_Text_0:
 # 80 "data/maps/DormHall1/scripts.pory"
 	.string "Our duty is to prevent any nosey\n"
-	.string "initiative from entering this area$"
+	.string "initiative from entering this area.$"
 
 Dormhall1_SignScript_StatueNormal_Text_0:
 # 86 "data/maps/DormHall1/scripts.pory"
 	.string "It seems to be of a statue of a\n"
 	.string "pokemon, though the erosion make it\l"
 	.string "hard to determine which pokemon it is\l"
-	.string "supposed to be$"
+	.string "supposed to be.$"
 
 Dormhall1_SignScript_SpecialStatueBack_Text_0:
 # 92 "data/maps/DormHall1/scripts.pory"
@@ -304,4 +300,4 @@ Dormhall1_SignScript_SpecialStatueBack_Text_0:
 Dormhall1_Trigger_NoEntry_Text_0:
 # 101 "data/maps/DormHall1/scripts.pory"
 	.string "Sorry kid, no entry without prior\n"
-	.string "authorization$"
+	.string "authorization.$"

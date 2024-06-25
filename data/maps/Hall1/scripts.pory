@@ -1,0 +1,52 @@
+mapscripts Hall1_MapScripts {}
+
+script Hall1_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
+    releaseall
+}
+
+script Hall1_SignScript_PotNormal{
+    lockall
+    msgbox(format("It just an ordinary pot."))
+    releaseall
+}
+
+script Hall1_EventScript_GuardLeft{
+    lockall
+    faceplayer
+    msgbox(format("This room leads to rollcall.\n Once you get you retrieve your pokemon you should return here."))
+    releaseall
+}
+
+script Hall1_EventScript_GuardRight{
+    lockall
+    faceplayer
+    msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today."))
+    releaseall
+}
+
+script Hall1_EventScript_Wanderer{
+    lockall
+    faceplayer
+    msgbox(format("Have you gotten your pokemon already?\p You can get it from the professor down the hall to the right!"))
+    releaseall
+}
+
+script Hall1_EventScript_Beauty{
+    lockall
+    faceplayer
+    msgbox(format("I'm sorry dear, but I'm not here to make friends, so just move along."))
+    releaseall
+}
+
+script Hall1_Trigger_NotYet{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Hall1_Movement_MoveBack)
+    msgbox(format("You don't have any reason yet to go this way."))
+    release
+}
+
+movement Hall1_Movement_MoveBack{
+    walk_up
+}

@@ -1,0 +1,48 @@
+mapscripts DormHall2_MapScripts {
+
+}
+
+script DormhallTopLeft_EventScript_WindowWatcher{
+    lockall
+    faceplayer
+    msgbox(format("I wonder when we will be allowed to leave this place with our pokemon"))
+    releaseall
+}
+
+script DormhallTopLeft_EventScript_NervousWalker{
+    lockall
+    faceplayer
+    msgbox(format("Aaah, I'm so nervous to collect my pokemon!\p What if I get a pokemon I don't like?\n What if I'm stuck with a pokemon I hate?\p Should I wait to see what other people get or should I just rip off this bandage?"))
+    releaseall
+}
+
+script DormhallTopLeft_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
+    releaseall
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue1{
+    setvar(VAR_DYNAMIC_DORMWARP, 4)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue2{
+    setvar(VAR_DYNAMIC_DORMWARP, 5)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue3{
+    setvar(VAR_DYNAMIC_DORMWARP, 6)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue4{
+    setvar(VAR_DYNAMIC_DORMWARP, 7)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue5{
+    setvar(VAR_DYNAMIC_DORMWARP, 8)
+    release
+}

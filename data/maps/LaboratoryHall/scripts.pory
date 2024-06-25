@@ -1,0 +1,91 @@
+const FIONA_ID = 3
+
+mapscripts LaboratoryHall_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LaboratoryHall_OnTransition
+}
+
+script LaboratoryHall_OnTransition{
+    hideobjectat(1, MAP_LABORATORY_HALL)
+    hideobjectat(2, MAP_LABORATORY_HALL)
+    hideobjectat(3, MAP_LABORATORY_HALL)
+}
+
+script LaboratoryHall_EventScript_Woman{
+    lockall
+    faceplayer
+    msgbox(format("I just received my pokemon from the professor!\p I'm quite surprised about the method they use. If you would also like to get one, he is just a little bit up ahead!"))
+    releaseall
+}
+
+script LaboratoryHall_EventScript_Guard{
+    lockall
+    faceplayer
+    msgbox(format("Sorry kid, you're not ready yet to enter this area."))
+    releaseall
+}
+
+script LaboratoryHall_SignScript_BookCase{
+    lockall
+    msgbox(format("It seems to be a bookcase filled with books about different topics from pokemon biology to the history of the world.\p
+    You don't feel like reading right now though."))
+    releaseall
+}
+
+script LaboratoryHall_SignScript_LockedDrawer{
+    lockall
+    msgbox(format("It's a locked file cabinet. But why is it standing here out in the open?"))
+    releaseall
+}
+
+script LaboratoryHall_SignScript_Egg{
+    lockall
+    msgbox(format("An old pokemon egg is stored in this glass container. Who knows what pokemon it would contain?"))
+    releaseall
+}
+
+script LaboratoryHall_Trigger_Fiona{
+    lockall
+    opendoor(14, 1)
+    waitdooranim
+    showobjectat(FIONA_ID, MAP_LABORATORY_HALL)
+    applymovement(FIONA_ID, LaboratoryHalll_NoticePlayer)
+    waitmovement(0)
+
+    msgbox(format("Oh {PLAYER}, you came!"))
+    applymovement(FIONA_ID, LabrotaryHall_moveDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveOutOfTheWay)
+    waitmovement(0)
+    closedoor(14, 1)
+    waitdooranim
+
+    msgbox(format("I just got my pokemon! They did suprise me however with another...\p
+    I shouldn't spoil the surprise for you. You get to experience it soon enough!\p
+    I'll be heading to Roll Call now, I will wait for you there.\l Maybe we can have a pokemon battle when you got your pokemon!\p
+    See ya!"))
+
+    applymovement(FIONA_ID, LabrotaryHall_moveAway)
+    waitmovement(0)
+
+    setvar(VAR_STORY_PROGRESSION, 3)
+    removeobject(FIONA_ID)
+    releaseall
+}
+
+movement LaboratoryHalll_NoticePlayer{
+    emote_exclamation_mark
+}
+
+movement LabrotaryHall_moveDown{
+    walk_down
+    face_left
+}
+
+movement LabrotaryHall_moveOutOfTheWay{
+    walk_left
+    face_right
+}
+
+movement LabrotaryHall_moveAway{
+    walk_down * 2
+    walk_left * 7
+}
