@@ -4500,6 +4500,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LaboratoryHall/border.bin",
       "blockdata_filepath": "data/layouts/LaboratoryHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_LABORATORY",
+      "name": "Laboratory_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Laboratory/border.bin",
+      "blockdata_filepath": "data/layouts/Laboratory/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_DOJO",
+      "name": "BattleDojo_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/BattleDojo/border.bin",
+      "blockdata_filepath": "data/layouts/BattleDojo/map.bin"
     }
   ]
 }

@@ -47,17 +47,75 @@ PlayerRoom_SignScript_Bed::
 	lockall
 # 31 "data/maps/PlayerRoom/scripts.pory"
 	goto_if_set FLAG_RECEIVED_FIRST_POKEMON, PlayerRoom_SignScript_Bed_2
-# 37 "data/maps/PlayerRoom/scripts.pory"
-	msgbox PlayerRoom_SignScript_Bed_Text_1
+# 66 "data/maps/PlayerRoom/scripts.pory"
+	msgbox PlayerRoom_SignScript_Bed_Text_3
 PlayerRoom_SignScript_Bed_1:
-# 39 "data/maps/PlayerRoom/scripts.pory"
+# 68 "data/maps/PlayerRoom/scripts.pory"
 	releaseall
 	return
 
 PlayerRoom_SignScript_Bed_2:
 # 33 "data/maps/PlayerRoom/scripts.pory"
-	msgbox PlayerRoom_SignScript_Bed_Text_0
+	msgbox PlayerRoom_SignScript_Bed_Text_0, MSGBOX_YESNO
+# 35 "data/maps/PlayerRoom/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PlayerRoom_SignScript_Bed_5
+# 61 "data/maps/PlayerRoom/scripts.pory"
+	msgbox PlayerRoom_SignScript_Bed_Text_2
 	goto PlayerRoom_SignScript_Bed_1
+
+PlayerRoom_SignScript_Bed_5:
+# 37 "data/maps/PlayerRoom/scripts.pory"
+	setrespawn HEAL_LOCATION_PLAYERROOM
+# 38 "data/maps/PlayerRoom/scripts.pory"
+	fadescreen 1
+# 39 "data/maps/PlayerRoom/scripts.pory"
+	special HealPlayerParty
+# 40 "data/maps/PlayerRoom/scripts.pory"
+	playfanfare MUS_HEAL
+# 41 "data/maps/PlayerRoom/scripts.pory"
+	waitfanfare
+# 42 "data/maps/PlayerRoom/scripts.pory"
+	fadescreen 0
+# 43 "data/maps/PlayerRoom/scripts.pory"
+	compare VAR_STORY_PROGRESSION, 5
+	goto_if_eq PlayerRoom_SignScript_Bed_9
+PlayerRoom_SignScript_Bed_8:
+# 48 "data/maps/PlayerRoom/scripts.pory"
+	compare VAR_STORY_PROGRESSION < 10, 0
+	goto_if_ne PlayerRoom_SignScript_Bed_13
+PlayerRoom_SignScript_Bed_11:
+# 53 "data/maps/PlayerRoom/scripts.pory"
+	compare VAR_STORY_PROGRESSION, 10
+	goto_if_eq PlayerRoom_SignScript_Bed_17
+PlayerRoom_SignScript_Bed_16:
+# 57 "data/maps/PlayerRoom/scripts.pory"
+	msgbox PlayerRoom_SignScript_Bed_Text_1
+	goto PlayerRoom_SignScript_Bed_1
+
+PlayerRoom_SignScript_Bed_9:
+# 45 "data/maps/PlayerRoom/scripts.pory"
+	clearflag FLAG_REVERSED_GUARD
+# 46 "data/maps/PlayerRoom/scripts.pory"
+	setflag FLAG_TOURNAMENT
+	goto PlayerRoom_SignScript_Bed_8
+
+PlayerRoom_SignScript_Bed_12:
+# 50 "data/maps/PlayerRoom/scripts.pory"
+	addvar VAR_STORY_PROGRESSION, 1
+# 51 "data/maps/PlayerRoom/scripts.pory"
+	clearflag FLAG_BATTLE_WON
+	goto PlayerRoom_SignScript_Bed_11
+
+PlayerRoom_SignScript_Bed_13:
+# 48 "data/maps/PlayerRoom/scripts.pory"
+	goto_if_set FLAG_BATTLE_WON, PlayerRoom_SignScript_Bed_12
+	goto PlayerRoom_SignScript_Bed_11
+
+PlayerRoom_SignScript_Bed_17:
+# 55 "data/maps/PlayerRoom/scripts.pory"
+	setflag FLAG_FIONA_ROOM
+	goto PlayerRoom_SignScript_Bed_16
 
 
 PlayerRoom_SignScript_Table_Text_0:
@@ -88,10 +146,20 @@ PlayerRoom_SignScript_Box_Text_0:
 
 PlayerRoom_SignScript_Bed_Text_0:
 # 33 "data/maps/PlayerRoom/scripts.pory"
-	.string "$"
+	.string "You could use a rest if you need it.\p"
+	.string "Do you want to sleep and rest up for\n"
+	.string "today?$"
 
 PlayerRoom_SignScript_Bed_Text_1:
-# 37 "data/maps/PlayerRoom/scripts.pory"
+# 57 "data/maps/PlayerRoom/scripts.pory"
+	.string "You feel refreshed!$"
+
+PlayerRoom_SignScript_Bed_Text_2:
+# 61 "data/maps/PlayerRoom/scripts.pory"
+	.string "Maybe later.$"
+
+PlayerRoom_SignScript_Bed_Text_3:
+# 66 "data/maps/PlayerRoom/scripts.pory"
 	.string "It's your bed.\n"
 	.string "You don't feel tired though, so there\l"
 	.string "seems to be no reason right now to\l"

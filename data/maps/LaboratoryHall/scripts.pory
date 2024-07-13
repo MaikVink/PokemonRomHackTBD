@@ -2,25 +2,76 @@ const FIONA_ID = 3
 
 mapscripts LaboratoryHall_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: LaboratoryHall_OnTransition
+        MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_LABORATORYHALL_STATE, 1: LaboratoryHall_Frame
+    ]
 }
 
 script LaboratoryHall_OnTransition{
-    hideobjectat(1, MAP_LABORATORY_HALL)
-    hideobjectat(2, MAP_LABORATORY_HALL)
+    setvar(VAR_HIDE_OBJECTS, 1)
+}
+
+script LaboratoryHall_Frame{
     hideobjectat(3, MAP_LABORATORY_HALL)
+    setvar(VAR_LABORATORYHALL_STATE, 2)
+    release
 }
 
 script LaboratoryHall_EventScript_Woman{
     lockall
     faceplayer
-    msgbox(format("I just received my pokemon from the professor!\p I'm quite surprised about the method they use. If you would also like to get one, he is just a little bit up ahead!"))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("I just received my pokemon from the professor!\p I'm quite surprised about the method they use. If you would also like to get one, he is just a little bit up ahead!"))
+        case 5:
+            msgbox(format("Getting to meet {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} directly is not something everyone can say they have done.\l I wonder if that is a good or a bad thing tough..."))
+        case 6:
+            msgbox(format("That kid is actually more skilled than you might think, I barely managed to beat him."))
+        case 7:
+            msgbox(format("Who knew that pokemon battles are this difficult and excilirating! It's a shame I lost, would love to battle some more!"))
+        case 8:
+            msgbox(format("I have been thinking...\p
+            I think I will ask Surge if he's alright if we're allowed to use the Battle Dojo some more after the Tournament. I think battling each other could be a good way to keep in shape!"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Congrats {PLAYER}! I do hope you'll give me and the other recruits a chance to rematch you some time. I think it can also be some good training for you from time to time!"))
+            }
+            else
+            {
+                msgbox(format("My idea was approved by Surge and {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}! Good luck with the finals by the way! Afterwards I'm going to ask the champion for a battle. I want to see what the skill level is at the top!"))      
+            }
+        default:
+            msgbox(format("The battle arena is a good place to train your pokemons and to rematch other Initiatives if you want to see how far they have come.\p
+            The lab on the other hand is a good place if you need something more specific."))
+    }
     releaseall
 }
 
-script LaboratoryHall_EventScript_Guard{
+script LaboratoryHall_EventScript_GuardBlock{
     lockall
     faceplayer
     msgbox(format("Sorry kid, you're not ready yet to enter this area."))
+    releaseall
+}
+
+script LaboratoryHall_EventScript_GuardOpen{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 6:
+        case 7:
+        case 8:
+            msgbox(format("This area leads to the battle Dojo, hear you'll be performing the Tournament.\p Once you're ready you can enter."))
+        default:
+            msgbox(format("This area lead to the battle Dojo.\p If you want to fight one of your colleagues, this is the place to do it!"))
+    }
     releaseall
 }
 
@@ -67,8 +118,15 @@ script LaboratoryHall_Trigger_Fiona{
     waitmovement(0)
 
     setvar(VAR_STORY_PROGRESSION, 3)
-    removeobject(FIONA_ID)
+    setflag(FLAG_FIONA_HALL_ENCOUNTER)
+    clearflag(FLAG_FIONA_REVERSE_ROLLCALL_FLAG)
+    removeobject(FIONA_ID, MAP_LABORATORY_HALL)
     releaseall
+}
+
+script LaboratoryHall_Trigger_HideFiona{
+    hideobjectat(3, MAP_LABORATORY_HALL)
+    releaseall   
 }
 
 movement LaboratoryHalll_NoticePlayer{
@@ -87,5 +145,5 @@ movement LabrotaryHall_moveOutOfTheWay{
 
 movement LabrotaryHall_moveAway{
     walk_down * 2
-    walk_left * 7
+    walk_left * 10
 }

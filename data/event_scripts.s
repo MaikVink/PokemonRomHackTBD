@@ -1089,3 +1089,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/RollCall/scripts.inc"
 
 	.include "data/maps/LaboratoryHall/scripts.inc"
+
+	.include "data/maps/Laboratory/scripts.inc"
+
+	.include "data/maps/BattleDojo/scripts.inc"

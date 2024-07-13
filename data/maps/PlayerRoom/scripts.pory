@@ -30,7 +30,36 @@ script PlayerRoom_SignScript_Bed{
     lockall
     if(flag(FLAG_RECEIVED_FIRST_POKEMON))
     {
-        msgbox(format(""))
+        msgbox(format("You could use a rest if you need it.\p 
+        Do you want to sleep and rest up for today?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT))
+        {
+            setrespawn(HEAL_LOCATION_PLAYERROOM)
+            fadescreen(1)
+            special(HealPlayerParty)
+            playfanfare(MUS_HEAL)
+            waitfanfare
+            fadescreen(0)
+            if(var(VAR_STORY_PROGRESSION) == 5)
+            {
+                clearflag(FLAG_REVERSED_GUARD)
+                setflag(FLAG_TOURNAMENT)
+            }
+            if(var(VAR_STORY_PROGRESSION < 10) && flag(FLAG_BATTLE_WON))
+            {
+                addvar(VAR_STORY_PROGRESSION, 1)
+                clearflag(FLAG_BATTLE_WON)
+            }
+            if(var(VAR_STORY_PROGRESSION) == 10)
+            {
+                setflag(FLAG_FIONA_ROOM)
+            }
+            msgbox(format("You feel refreshed!"))
+        }
+        else
+        {
+            msgbox(format("Maybe later."))
+        }
     }
     else
     {
