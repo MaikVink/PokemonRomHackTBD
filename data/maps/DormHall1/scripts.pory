@@ -1,4 +1,5 @@
 const FIONA_ID = 2
+const NINJABOY_LOCALID = 4
 
 mapscripts DormHall1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Dormhall1_OnTransition
@@ -9,11 +10,16 @@ mapscripts DormHall1_MapScripts {
 
 script Dormhall1_OnTransition{
     setvar(VAR_ALWAYS_ON, 1)
+    setvar(VAR_HIDE_OBJECTS, 1)
     if(var(VAR_STORY_PROGRESSION) == 0)
     {
         setvar(VAR_STORY_PROGRESSION, 1)
         setflag(FLAG_SYS_B_DASH)
         setflag(FLAG_SYS_ALWAYS_ON)
+        setflag(FLAG_REVERSE_ROLLCALL_FLAG)
+        setflag(FLAG_FIONA_REVERSE_ROLLCALL_FLAG)
+        setflag(FLAG_FIONA_ROOM)
+        setflag(FLAG_REVERSED_GUARD)
     }
 }
 
@@ -26,7 +32,7 @@ script Dormhall1_Frame{
     applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
     waitmovement(0)
     msgbox(format("{COLOR RED}???:{COLOR DARK_GRAY} What is that look on your face?\n Don't you remember me?\p
-    {COLOR RED}Fiona:{COLOR DARK_GRAY} It's me, Fiona! I was the second best of the class, just below you! \p
+    {COLOR RED}Fiona{COLOR DARK_GRAY}: It's me, Fiona! I was the second best of the class, just below you! \p
     I guess being the second best at anything is not that impressive huh? \p
     Anyway, today is the day, we're gonna recieve our first pokemon! I'm so excited, aren't you?\p
     I'll go ahead.\n Remember, we get our pokemon from the professor inside the headquarters.\l he is down the hallway, directly below our Dormhall.\p
@@ -42,28 +48,139 @@ script Dormhall1_Frame{
 
 script DormHall1_EventScript_LadyInitiative{
     lockall
-    msgbox(format("Does he really think we don't notice him?"))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("Does he really think we don't notice him?"))
+        case 5:
+            msgbox(format("I never had a pokemon before and now I have to fight in a tournament. I wonder how it will go..."))
+        case 6:
+            msgbox(format("Did you really have to go that hard on me? You could have at least given me a chance!"))
+        case 7:
+            msgbox(format("I saw your fight! Fiona is really a powerfull Pokemon Trainer\p She has a good chance at winning this whole Tournament!"))
+        case 8:
+            msgbox(format("You can always ask for a rematch!\n I'll make sure I won't lose this time!"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("I really thought Fiona had the upper hand in that battle for a moment!"))
+            }
+            else
+            {
+                msgbox(format("Todays final is gonna be very interesting! Fiona and {PLAYER} have both shown incredible skill!"))      
+            }
+        default:
+            msgbox(format("The world outside can be a scary place, but at least with my Pokemon I can make sure I'm safe."))
+    }
     releaseall
 }
 
 script DormHall1_EventScript_ManInitiative{
     lockall
-    msgbox(format("Just ignore that guy, let him enjoy the moment."))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("Just ignore that guy, let him enjoy the moment."))
+        case 5:
+            msgbox(format("Don't worry about it, I'm sure {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} made this a safe environment to test out the waters."))
+        case 6:
+            msgbox(format("I'm sorry. I guess I was just a bit too much focussed on impressing Surge and possibly the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}"))
+        case 7:
+            msgbox(format("Wow, that Fiona Lass is really something else, she wiped the floor with me."))
+        case 8:
+            msgbox(format("Seeing the other Initatives fight each other makes me realize I still have much to learn."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("I was so close to be the tournament champion losers, guess I have to live with the fact I'm just a regular loser.\p
+                ...\p
+                Don't you dare, Vera!"))
+            }
+            else
+            {
+                msgbox(format("It certainly is! I hope Fiona will win, at least then I can say I lost to the Tournament Champion..."))      
+            }
+        default:
+            msgbox(format("You should watch out for those A.S. members, they look very strong..."))
+    }
     releaseall
 }
 
 script DormHall1_EventScript_StatueInitiative{
     lockall
     faceplayer
-    msgbox(format("I wonder what kind of pokemon these statues are supposed to be."))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("I wonder what kind of pokemon these statues are supposed to be."))
+        case 5:
+            msgbox(format("With the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} here, who knows what kinds of things we can learn from {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY}."))
+        case 6:
+            msgbox(format("I underestimated how little I actually know about using my skills out on the field."))
+        case 7:
+        case 8:
+            msgbox(format("I have been reflecting on my failures and I think I should try becoming more of do-er and less of learner."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Impressive {PLAYER}! I do hope you would allow a low level trainer like me take you on sometime!"))
+            }
+            else
+            {
+                msgbox(format("You know, watching you have made me realize I have still a long way to go, but that does not mean I intend to give up that easily!"))      
+            }
+        default:
+            msgbox(format("Strange how no matter what kind of pokemon I encounter, I have never seen a pokemon like this statue..."))
+    }
+    
     releaseall
 }
 
 script Dormhall1_EventScript_NinjaInitiative{
     lockall
     faceplayer
-    msgbox(format("sssh, don't let them know I'm hiding here."))
-    face_original_direction
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("sssh, don't let them know I'm hiding here."))
+        case 5:
+            msgbox(format("I have to improve my ninja skills if I want to impress the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}"))
+        case 6:
+            msgbox(format("I thought I was very sneaky with my tactics, but my opponent saw straight through me.\p 
+            I have to improve my sneaking skills if I ever want to make it far in MOD!"))
+        case 7:
+        case 8:
+            msgbox(format("I'm impressed you have gotten this far without making sure you got the upper hand on your opponent."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Congratulations {PLAYER}, you have done a great job! If you ever feel like someone is watching you, just... ignore it for me will you?"))
+            }
+            else
+            {
+                msgbox(format("You and Fiona are both fascinating trainers to watch!\p
+                I might try to shadow you for a while to learn a thing or two from you!"))     
+            } 
+        default:
+            msgbox(format("Fighting head on is not always the best tactic, I have learned that sneaking about can give you a better idea what is going on than to beat the answers out of people."))
+    }
+    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_LookOriginalDireciton)
     releaseall
 }
 
@@ -134,4 +251,8 @@ movement Dormhall1_Movement_WalkAway{
 
 movement Dormhall1_Movement_MoveBack{
     walk_left
+}
+
+movement Dormhall1_Movement_LookOriginalDireciton{
+    face_down
 }

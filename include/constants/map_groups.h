@@ -601,6 +601,8 @@
 #define MAP_DORM_HALL3       (6 | (34 << 8))
 #define MAP_ROLL_CALL        (7 | (34 << 8))
 #define MAP_LABORATORY_HALL  (8 | (34 << 8))
+#define MAP_LABORATORY       (9 | (34 << 8))
+#define MAP_BATTLE_DOJO      (10 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
 

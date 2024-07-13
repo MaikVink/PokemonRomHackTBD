@@ -53,6 +53,37 @@ script FionasRoom_SignScript_Book{
     releaseall
 }
 
+script FionasRoom_EventScript_Fiona{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 6:
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé {PLAYER}, ready for your first day of the tournament?"))
+        case 7:
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Hope the tournament is going great for you! So far, I'm keeping up my end of our agreement."))
+        case 8:
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: I made it to the finals {PLAYER}! Don't dissapoint me and make sure we meet each other there!"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé Champion, don't think I'm just going to sulk around.\p
+                I'm going to train harder than ever before and the next time you won't defeat me that easily!"))
+            }
+            else
+            {
+                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER}, today we're going to do that pokemon battle you promised me. Once you're ready, go to the Battle Dojo.\l
+                I'll be ready!"))
+            }
+        default:
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh hé {PLAYER} welcome to my room! Feel free to look around the place!\p
+            If you need anything let me know!\p
+            I do intend on getting an early night though, so hope you don't mind me going to bed soon.\p
+            Maybe you should do the same, but that is entirely up to you!"))
+    }
+    releaseall
+}
+
 script FionasRoom_SignScript_Computer{
     lockall
     msgbox(format("It's Fiona's computer. You can see a background of a cute cat hanging on a tree with the text: 'Hang in there!'.\p Not much else you can do on the computer since you don't know the password."))

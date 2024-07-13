@@ -631,6 +631,8 @@
     "DormHall2",
     "DormHall3",
     "RollCall",
-    "LaboratoryHall"
+    "LaboratoryHall",
+    "Laboratory",
+    "BattleDojo"
   ]
 }

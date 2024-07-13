@@ -1,32 +1,29 @@
-static const struct TrainerMon sParty_Sawyer1[] = {
+static const struct TrainerMon sParty_Fabian1[] = {
     {
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
+    .lvl = 5,
+    .species = SPECIES_MUNCHLAX,
     }
 };
 
-static const struct TrainerMon sParty_GruntAquaHideout1[] = {
+static const struct TrainerMon sParty_Bella1[] = {
     {
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 6,
+    .species = SPECIES_PETILIL,
     }
 };
 
-static const struct TrainerMon sParty_GruntAquaHideout2[] = {
+static const struct TrainerMon sParty_Herald1[] = {
     {
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 5,
+    .species = SPECIES_GEODUDE_ALOLAN,
     }
 };
 
-static const struct TrainerMon sParty_GruntAquaHideout3[] = {
+static const struct TrainerMon sParty_Fiona1[] = {
     {
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 6,
+    .species = SPECIES_GIBLE,
+    .ability = ABILITY_ROUGH_SKIN
     }
 };
 

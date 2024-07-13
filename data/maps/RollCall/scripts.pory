@@ -1,24 +1,144 @@
-mapscripts RollCall_MapScripts {
+const GUARD_LOCALID = 1
+const FATGUY_LOCALID = 2
+const WOMAN2_LOCALID = 3
+const RECEPTIONIST_LOCALID = 4
+const FIONA_LOCALID = 5
+const POKEFANF_LOCALID = 6
+const HIKER_LOCALID = 7
+const MOM_LOCALID = 8
+const MAN5_LOCALID = 9
+const NINJABOY_LOCALID = 10
+const MAN3_LOCALID = 11
+const WOMAN5_LOCALID = 12
+const LEADER_LOCALID = 13
+const BODYGUARD_LOCALID = 14
 
+mapscripts RollCall_MapScripts {
+    
 }
 
 script RollCall_EventScript_FatGuy{
     lockall
     faceplayer
-    msgbox(format("We were told to go to this room after we got our pokemon.\p
-    I wonder if this means we will get to meet {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}..."))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("We were told to go to this room after we got our pokemon.\p
+                I wonder if this means we will get to meet {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}..."))
+        case 5:
+            msgbox(format("I cannot believe, the rumors are true! {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was here and he talked to us directly!\l I have never been more excited in my life!"))
+        case 6:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Did you come to check up on me? Don't worry I don't hate you or anything for beating me. I acknowledge that I lacked the skill to win this battle, you won fair and square!\l
+                I'll be rooting for you to win!"))
+            }
+            else
+            {
+                msgbox(format("So you're going to be my first ever opponent? I'm not going to lie, I'm very nervous for my first ever pokemon battle."))
+            }
+        case 7:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Another win under your belt, you really are something else!"))
+            }
+            else
+            {
+                msgbox(format("A new day, a new round.\n Good luck in the tournament {PLAYER}!"))
+            }
+        case 8:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Did you see the look on that Bella's face? It was like your win insulted her entire existance HAHAHAHA!"))
+            }
+            else
+            {
+                msgbox(format("I'm already rooting for you, but you'll do everyone here a favor if you would win the next battle, believe me."))
+            }
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("YOU ACTUALLY DID IT! I'm so honoured to be your first loss, my dear Champion. I wonder what the reward was that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised..."))
+            }
+            else
+            {
+                msgbox(format("Today is the Finals, isn't it?\n 
+                I'll be rooting for you extra hard today!"))
+            }
+        default:
+            msgbox(format("I wish I could join you going outside and travel around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} but I don't feel confident enough that I can keep my Munchlax safe out there..."))   
+    }
     releaseall
 }
 
 script RollCall_EventScript_LadyLeft{
     lockall
-    msgbox(format("I was so suprised I got an Eevee! What pokemon did you get from your test?"))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("I was so suprised I got an Eevee! What pokemon did you get from your test?"))
+        case 5:
+            msgbox(format("Do you know who that was? it was the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!"))
+        case 6:
+            msgbox(format("Eevee is more powerful than I thought! I do assume you didn't take it easy on me?"))
+        case 7:
+            msgbox(format("Ugh, I hate that I lost to her. I don't mind that she is better, but does she really need to gloat so much about it?"))
+        case 8:
+            msgbox(format("I wonder which two will make it to the finals?"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{PLAYER} won, but Fiona had an equally good chance!"))
+            }
+            else
+            {
+                msgbox(format("I know right! I cannot wait to see who comes out victorious!"))   
+            }
+        default:
+            msgbox(format("I still cannot decide what I want to do with my Eevee, I have so many options when it comes to letting it evolve... Should I ask her what she wants to be?"))   
+    }
+    
     releaseall
 }
 
 script RollCall_EventScript_LadyRight{
     lockall
-    msgbox(format("My test resulted into a Charmander! I cannot wait to be able to fly on my charizards back!"))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("My test resulted into a Charmander! I cannot wait to be able to fly on my charizards back!"))
+        case 5:
+            msgbox(format("I know right! But I do wonder what important business brought {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} here..."))
+        case 6:
+            msgbox(format("Not at all! My Charmander did not stand a chance after that sand-attack!"))
+        case 7:
+            msgbox(format("I heard from more people she is quite annoying. I hope someone can beat her ass in this tournament..."))
+        case 8:
+            msgbox(format("I hope it is Fiona and {PLAYER}, they have shown incredible skill so far!"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("That was the best battle I have seen in this tournament!"))
+            }
+            else
+            {
+                 msgbox(format("This Finals is gonna be so exciting! These are some very strong trainers!"))  
+            }
+        default:
+            msgbox(format("I know what you're talking about. I cannot wait for my Charmeleon to become a Charizard, but he just looks so cute"))   
+    }
     releaseall
 }
 
@@ -27,4 +147,287 @@ script RollCall_EventScript_Guard{
     faceplayer
     msgbox(format("Sorry, nobody is allowed past this point."))
     releaseall
+}
+
+script RollCall_EventScript_Fiona{
+    lockall
+    faceplayer
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Have you gotten your pokemon already? We can't have a pokemon battle without pokemon.\l 
+    Go to the professor to collect your pokemon!"))
+    releaseall
+}
+
+script RollCall_Trigger_MeetTheLeaderLeft{
+    lockall
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: {PLAYER}, come here for a moment!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_MoveForwardLeft)
+    waitmovement(0)
+    call(RollCall_MeetTheLeader)
+    releaseall
+}
+
+script RollCall_Trigger_MeetTheLeaderRight{
+    lockall
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: {PLAYER}, come here for a moment!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_MoveForwardRight)
+    waitmovement(0)
+    call(RollCall_MeetTheLeader)
+    releaseall
+}
+
+script RollCall_MeetTheLeader{
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: I see you finally got your pokemon as well!"))
+    applymovement(GUARD_LOCALID, RollCall_Movement_WalkOutOfTheWay)
+    showobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+    applymovement(BODYGUARD_LOCALID, RollCall_Movement_InFrame)
+    msgbox(format("Now we both have a pokemon, I think this could be a good time to do our first pok-"))
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: INITIATIVES, IN FORMATION!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_JumpScare)
+    applymovement(FIONA_LOCALID, RollCall_Movement_JumpScare)
+    waitmovement(0)
+    msgbox(format("Oh, I guess we have to hold off on that fight for now then."))
+    hideobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+    
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_Player)
+    applymovement(FIONA_LOCALID, RollCall_Movement_Fiona)
+    applymovement(POKEFANF_LOCALID, RollCall_Movement_PokeFanF)
+    applymovement(WOMAN2_LOCALID, RollCall_Movement_Woman2)
+    applymovement(MAN3_LOCALID, RollCall_Movement_Man3)
+    applymovement(HIKER_LOCALID, RollCall_Movement_Hiker)
+    applymovement(RECEPTIONIST_LOCALID, RollCall_Movement_Receptionist)
+    applymovement(WOMAN5_LOCALID, RollCall_Movement_Woman5)
+    applymovement(FATGUY_LOCALID, RollCall_Movement_FatGuy)
+    applymovement(MOM_LOCALID, RollCall_Movement_Mom)
+    applymovement(NINJABOY_LOCALID, RollCall_Movement_NinjaBoy)
+    waitmovement(2)
+    applymovement(MAN5_LOCALID, RollCall_Movement_Man5)
+    waitmovement(0)
+    showobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+
+    msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: Initiatives, while according to any of my calculations it does not make sense you get rewarded this way, {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} has decided to speak to you directly today.\p
+    Please show respect and keep your mouth shut while {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is talking.\p
+    Remember, only speak when spoken to!"))
+    applymovement(BODYGUARD_LOCALID, RollCall_Movement_BodyGuard_MakeSpace)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: They are ready, sir!"))
+    showobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+    applymovement(LEADER_LOCALID, RollCall_Movement_Leader_Enter)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Thank you Airanea.\p
+    LISTEN UP ROOKIES!\p 
+    usually I don't waste my time talking to you newbloods until you have proven yourself.\p
+    You're lucky I had today other business here that I wanted to make today an exception and see what younglins were brought in here with the promise of power."))
+    msgbox(format("Each of you will have received a pokemon, tailored specifically to your abilities. I trust in G-,\l
+    I mean Professors Kectors capabilities that he has judged you correctly.\p
+    Having a pokemon might make you feel superior over the general public. But remember: 
+    For how useful pokemon can be in our daily life, they are also extremly dangerous.\p
+    Each of you have proven yourself responsable and strong enough to take care of these pokemon, but now you have to show that you didn't just luck out."))
+    msgbox(format("Over the next 3 days, starting tomorrow, a tournament will be held.\p 
+    It will be a one on one battles with your given starter pokemon. The winner continues to next round, the loser has to think about why they lost. \p
+    The Tournament winner will, of course, be rightfully rewarded."))
+    msgbox(format("Don't worry about losing, this tournament is more about your performance than your result.\p
+    But don't come to anyone here with bad excuses on why you failed. Owning a pokemon carries a lot of responsabilities, both for the health of the pokemon as the health of everyone around you.\p
+    While you own a pokemon, or even multiple pokemon later down the line, than there doesn't exists something like a good or a bad day.\l
+    It's just a day."))
+    msgbox(format("If you need to be in a good mood to take on the danger that pokemon can bring with them, than you know where the nearest exit is and you don't have to come back.\p
+    With that being said, go rest and good luck with the tournament. May the best rookie win!"))
+    applymovement(LEADER_LOCALID, RollCall_Movement_Leader_Exit)
+    waitmovement(0)
+    hideobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+
+    applymovement(BODYGUARD_LOCALID, RollCall_Movement_TakePlace)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: You heard {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} Initiatives, go to your room set yourself in sleep mode! Tomorrow we need your mind and body to be fully charged."))
+    applymovement(BODYGUARD_LOCALID, RollCall_Movement_OutOfFrame)
+    waitmovement(0)
+    hideobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+    applymovement(GUARD_LOCALID, RollCall_Movement_Guard_BlockDoor)
+    applymovement(FIONA_LOCALID, RollCall_Movement_WalkLeft)
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookRight)
+    waitmovement(0)
+    applymovement(MAN3_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(MAN5_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(HIKER_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(WOMAN5_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(NINJABOY_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(MOM_LOCALID, RollCall_Movement_WalkAwayShort)
+    applymovement(POKEFANF_LOCALID, RollCall_Movement_WalkAwayLong)
+    applymovement(FATGUY_LOCALID, RollCall_Movement_FatGuy_Return)
+    applymovement(WOMAN2_LOCALID, RollCall_Movement_WalkDown)
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Wow, who would have thought that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} would come speak to us directly.\l
+    If he is here for official busniness it must be something serious...\p
+    Anyways, I think he is right and we should act responsible with our pokemon and not just do a pokemon battle to have 'fun'.\p
+    These pokemons can be far too dangerous for that.\p
+    That being said, you do own me a pokemon battle, so you better make sure that you don't get knocked out of the tournament before you have a chance to fight me.\l
+    I'll do the same for you!\p
+    Good luck and good night {PLAYER}!"))
+    waitmovement(0)
+    removeobject(MAN3_LOCALID, MAP_ROLL_CALL)
+    removeobject(MAN5_LOCALID, MAP_ROLL_CALL)
+    removeobject(MOM_LOCALID, MAP_ROLL_CALL)
+    removeobject(NINJABOY_LOCALID, MAP_ROLL_CALL)
+    removeobject(WOMAN5_LOCALID, MAP_ROLL_CALL)
+    removeobject(HIKER_LOCALID, MAP_ROLL_CALL)
+    removeobject(POKEFANF_LOCALID, MAP_ROLL_CALL)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookDown)
+    applymovement(FIONA_LOCALID, RollCall_Movement_WalkAwayLong)
+    waitmovement(0)
+    removeobject(FIONA_LOCALID, MAP_ROLL_CALL)
+
+    setflag(FLAG_REVERSE_ROLLCALL_FLAG)
+    setflag(FLAG_FIONA_REVERSE_ROLLCALL_FLAG)
+    clearflag(FLAG_FIONA_ROOM)
+    setvar(VAR_STORY_PROGRESSION, 5)
+    setflag(FLAG_BATTLE_WON)
+}
+
+movement RollCall_Movement_MoveForwardLeft{
+    walk_up * 5
+}
+
+movement RollCall_Movement_MoveForwardRight{
+    walk_up * 2
+    walk_left
+    walk_up * 3
+}
+
+movement RollCall_Movement_WalkOutOfTheWay{
+    walk_right
+    face_down
+}
+
+movement RollCall_Movement_InFrame{
+    walk_down
+    walk_left * 3
+    face_down
+}
+
+movement RollCall_Movement_JumpScare{
+    face_up
+    emote_exclamation_mark
+}
+
+movement RollCall_Movement_PokeFanF{
+    walk_up
+}
+
+movement RollCall_Movement_Fiona{
+    walk_up * 1
+    walk_right * 2
+    walk_up
+}
+
+movement RollCall_Movement_Player{
+    walk_up * 3
+}
+
+movement RollCall_Movement_Woman2{
+    walk_right
+    walk_up * 2
+}
+
+movement RollCall_Movement_Man3{
+    walk_right
+    face_up
+}
+
+movement RollCall_Movement_Man5{
+    walk_right
+    face_up
+}
+
+movement RollCall_Movement_Hiker{
+    walk_down * 4
+    walk_right
+    face_up
+}
+
+movement RollCall_Movement_Receptionist{
+    walk_right * 2
+    face_up
+}
+
+movement RollCall_Movement_Woman5{
+    walk_down
+    face_up
+}
+
+movement RollCall_Movement_FatGuy{
+    walk_right * 3
+    walk_up * 2
+    walk_right * 2
+    walk_up * 2
+}
+
+movement RollCall_Movement_Mom{
+    walk_up * 2
+    walk_left * 2
+    face_up
+}
+
+movement RollCall_Movement_NinjaBoy{
+    walk_up * 3
+}
+
+movement RollCall_Movement_BodyGuard_MakeSpace{
+    walk_left
+    face_right
+}
+
+movement RollCall_Movement_Leader_Enter{
+    walk_slow_down
+    walk_slow_left * 3
+    face_down
+}
+
+movement RollCall_Movement_Leader_Exit{
+    walk_slow_right * 3
+    walk_slow_up
+}
+
+movement RollCall_Movement_TakePlace{
+    walk_right
+    face_down
+}
+
+movement RollCall_Movement_OutOfFrame{
+    walk_right*3
+    walk_up
+}
+
+movement RollCall_Movement_Guard_BlockDoor{
+    walk_left
+    face_down
+}
+
+movement RollCall_Movement_WalkLeft{
+    walk_left
+}
+
+movement RollCall_Movement_LookRight{
+    face_right
+}
+
+movement RollCall_Movement_LookDown{
+    face_down
+}
+
+movement RollCall_Movement_WalkAwayShort{
+    walk_down * 6
+}
+
+movement RollCall_Movement_WalkAwayLong{
+    walk_down * 8
+}
+
+movement RollCall_Movement_WalkDown{
+    walk_down
+}
+
+movement RollCall_Movement_FatGuy_Return{
+    walk_down * 4
+    walk_left * 5
+    face_right
 }

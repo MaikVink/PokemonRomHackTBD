@@ -3061,4 +3061,9 @@ extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+extern const u8 gText_ChoiceA[];
+extern const u8 gText_ChoiceB[];
+extern const u8 gText_ChoiceC[];
+extern const u8 gText_Again[];
+
 #endif // GUARD_STRINGS_H

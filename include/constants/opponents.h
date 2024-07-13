@@ -4,25 +4,27 @@
 #include "constants/battle_partner.h"
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
-#define TRAINER_DECLAN                       15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
-#define TRAINER_GRUNT_WEATHER_INST_1         17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
-#define TRAINER_GRUNT_WEATHER_INST_3         19
+#define TRAINER_FABIAN_1                      1
+#define TRAINER_BELLA_1                       2
+#define TRAINER_HERALD_1                      3
+#define TRAINER_FIONA_1                       4
+
+#define TRAINER_FIONA_B1/*TRAINER_GRUNT_AQUA_HIDEOUT_4*/          5
+#define TRAINER_FABIAN_B1/*TRAINER_GRUNT_SEAFLOOR_CAVERN_1*/       6 //fat guy
+#define TRAINER_HERALD_B1 /*TRAINER_GRUNT_SEAFLOOR_CAVERN_2*/       7 //Hiker
+#define TRAINER_BELLA_B1 /*TRAINER_GRUNT_SEAFLOOR_CAVERN_3*/       8 //Beauty
+#define TRAINER_VICTOR_B1 /*TRAINER_GABRIELLE_1*/                   9 //statue man / man 5
+#define TRAINER_VERA_B1 /*TRAINER_GRUNT_PETALBURG_WOODS*/        10 //woman 5
+#define TRAINER_MARCEL                       11 // man 3
+#define TRAINER_ALBERTO                      12 // ninja boy
+#define TRAINER_ED                           13 // Hexmaniac
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14 // Triathlete
+#define TRAINER_DECLAN                       15 // POKEFANF
+#define TRAINER_GRUNT_RUSTURF_TUNNEL         16 // MOM
+#define TRAINER_GRUNT_WEATHER_INST_1         17 // Psychic M
+#define TRAINER_GRUNT_WEATHER_INST_2         18 // Receptionist
+#define TRAINER_GRUNT_WEATHER_INST_3         19 // Woman 3
+
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22

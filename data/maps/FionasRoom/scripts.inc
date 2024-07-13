@@ -60,12 +60,59 @@ FionasRoom_SignScript_Book_8:
 	end
 
 
-FionasRoom_SignScript_Computer::
+FionasRoom_EventScript_Fiona::
 # 57 "data/maps/FionasRoom/scripts.pory"
 	lockall
 # 58 "data/maps/FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Computer_Text_0
+	faceplayer
 # 59 "data/maps/FionasRoom/scripts.pory"
+	switch VAR_STORY_PROGRESSION
+# 61 "data/maps/FionasRoom/scripts.pory"
+	case 6, FionasRoom_EventScript_Fiona_2
+# 63 "data/maps/FionasRoom/scripts.pory"
+	case 7, FionasRoom_EventScript_Fiona_3
+# 65 "data/maps/FionasRoom/scripts.pory"
+	case 8, FionasRoom_EventScript_Fiona_4
+# 67 "data/maps/FionasRoom/scripts.pory"
+	case 9, FionasRoom_EventScript_Fiona_5
+# 79 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_5
+	return
+
+FionasRoom_EventScript_Fiona_2:
+# 62 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_0
+	return
+
+FionasRoom_EventScript_Fiona_3:
+# 64 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_1
+	return
+
+FionasRoom_EventScript_Fiona_4:
+# 66 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_2
+	return
+
+FionasRoom_EventScript_Fiona_5:
+# 68 "data/maps/FionasRoom/scripts.pory"
+	goto_if_set FLAG_BATTLE_WON, FionasRoom_EventScript_Fiona_7
+# 75 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_4
+	return
+
+FionasRoom_EventScript_Fiona_7:
+# 70 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_3
+	return
+
+
+FionasRoom_SignScript_Computer::
+# 87 "data/maps/FionasRoom/scripts.pory"
+	lockall
+# 88 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Computer_Text_0
+# 89 "data/maps/FionasRoom/scripts.pory"
 	releaseall
 	return
 
@@ -155,8 +202,53 @@ FionasRoom_SignScript_Book_Text_7:
 	.string "Better not go through people's stuff\n"
 	.string "without first asking permission.$"
 
+FionasRoom_EventScript_Fiona_Text_0:
+# 62 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé {PLAYER}, ready for your\n"
+	.string "first day of the tournament?$"
+
+FionasRoom_EventScript_Fiona_Text_1:
+# 64 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hope the tournament is going\n"
+	.string "great for you! So far, I'm keeping up my\l"
+	.string "end of our agreement.$"
+
+FionasRoom_EventScript_Fiona_Text_2:
+# 66 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: I made it to the finals\n"
+	.string "{PLAYER}! Don't dissapoint me and\l"
+	.string "make sure we meet each other there!$"
+
+FionasRoom_EventScript_Fiona_Text_3:
+# 70 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé Champion, don't think I'm just\n"
+	.string "going to sulk around.\p"
+	.string "I'm going to train harder than ever\n"
+	.string "before and the next time you won't\l"
+	.string "defeat me that easily!$"
+
+FionasRoom_EventScript_Fiona_Text_4:
+# 75 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER},\n"
+	.string "today we're going to do that pokemon\l"
+	.string "battle you promised me. Once you're\l"
+	.string "ready, go to the Battle Dojo.\l"
+	.string "I'll be ready!$"
+
+FionasRoom_EventScript_Fiona_Text_5:
+# 79 "data/maps/FionasRoom/scripts.pory"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh hé {PLAYER} welcome to my\n"
+	.string "room! Feel free to look around the\l"
+	.string "place!\p"
+	.string "If you need anything let me know!\p"
+	.string "I do intend on getting an early night\n"
+	.string "though, so hope you don't mind me going\l"
+	.string "to bed soon.\p"
+	.string "Maybe you should do the same, but that\n"
+	.string "is entirely up to you!$"
+
 FionasRoom_SignScript_Computer_Text_0:
-# 58 "data/maps/FionasRoom/scripts.pory"
+# 88 "data/maps/FionasRoom/scripts.pory"
 	.string "It's Fiona's computer. You can see a\n"
 	.string "background of a cute cat hanging on a\l"
 	.string "tree with the text: 'Hang in there!'.\p"
