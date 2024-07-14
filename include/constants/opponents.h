@@ -9,21 +9,21 @@
 #define TRAINER_HERALD_1                      3
 #define TRAINER_FIONA_1                       4
 
-#define TRAINER_FIONA_B1/*TRAINER_GRUNT_AQUA_HIDEOUT_4*/          5
-#define TRAINER_FABIAN_B1/*TRAINER_GRUNT_SEAFLOOR_CAVERN_1*/       6 //fat guy
-#define TRAINER_HERALD_B1 /*TRAINER_GRUNT_SEAFLOOR_CAVERN_2*/       7 //Hiker
-#define TRAINER_BELLA_B1 /*TRAINER_GRUNT_SEAFLOOR_CAVERN_3*/       8 //Beauty
-#define TRAINER_VICTOR_B1 /*TRAINER_GABRIELLE_1*/                   9 //statue man / man 5
-#define TRAINER_VERA_B1 /*TRAINER_GRUNT_PETALBURG_WOODS*/        10 //woman 5
-#define TRAINER_MARCEL                       11 // man 3
-#define TRAINER_ALBERTO                      12 // ninja boy
-#define TRAINER_ED                           13 // Hexmaniac
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14 // Triathlete
-#define TRAINER_DECLAN                       15 // POKEFANF
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16 // MOM
-#define TRAINER_GRUNT_WEATHER_INST_1         17 // Psychic M
-#define TRAINER_GRUNT_WEATHER_INST_2         18 // Receptionist
-#define TRAINER_GRUNT_WEATHER_INST_3         19 // Woman 3
+#define TRAINER_FIONA_B0                      5
+#define TRAINER_FABIAN_B0                     6 //fat guy
+#define TRAINER_HERALD_B0                     7 //Hiker
+#define TRAINER_BELLA_B0                      8 //Beauty
+#define TRAINER_VICTOR_B0                     9 //statue man / man 5
+#define TRAINER_VERA_B0                       10 //woman 5
+#define TRAINER_TRISTAN_B0                    11 // man 3
+#define TRAINER_NIKO_B0                       12 // ninja boy
+#define TRAINER_HERA_B0                       13 // Hexmaniac
+#define TRAINER_RAOUL_B0                      14 // Triathlete
+#define TRAINER_PAULA_B0                      15 // POKEFANF
+#define TRAINER_MARIA_B0                      16 // MOM
+#define TRAINER_PHOENIX_B0                    17 // Psychic M
+#define TRAINER_ROSANNE_B0                    18 // Receptionist
+#define TRAINER_TESSA_B0                      19 // Woman 3
 
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21

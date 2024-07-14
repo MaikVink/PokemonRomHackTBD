@@ -68,51 +68,54 @@ FionasRoom_EventScript_Fiona::
 # 59 "data/maps/FionasRoom/scripts.pory"
 	switch VAR_STORY_PROGRESSION
 # 61 "data/maps/FionasRoom/scripts.pory"
-	case 6, FionasRoom_EventScript_Fiona_2
+	case 6, FionasRoom_EventScript_Fiona_3
 # 63 "data/maps/FionasRoom/scripts.pory"
-	case 7, FionasRoom_EventScript_Fiona_3
+	case 7, FionasRoom_EventScript_Fiona_4
 # 65 "data/maps/FionasRoom/scripts.pory"
-	case 8, FionasRoom_EventScript_Fiona_4
+	case 8, FionasRoom_EventScript_Fiona_5
 # 67 "data/maps/FionasRoom/scripts.pory"
-	case 9, FionasRoom_EventScript_Fiona_5
+	case 9, FionasRoom_EventScript_Fiona_6
 # 79 "data/maps/FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_5
-	return
-
-FionasRoom_EventScript_Fiona_2:
-# 62 "data/maps/FionasRoom/scripts.pory"
-	msgbox FionasRoom_EventScript_Fiona_Text_0
+FionasRoom_EventScript_Fiona_1:
+# 84 "data/maps/FionasRoom/scripts.pory"
+	releaseall
 	return
 
 FionasRoom_EventScript_Fiona_3:
-# 64 "data/maps/FionasRoom/scripts.pory"
-	msgbox FionasRoom_EventScript_Fiona_Text_1
-	return
+# 62 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_0
+	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_4:
-# 66 "data/maps/FionasRoom/scripts.pory"
-	msgbox FionasRoom_EventScript_Fiona_Text_2
-	return
+# 64 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_1
+	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_5:
+# 66 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_EventScript_Fiona_Text_2
+	goto FionasRoom_EventScript_Fiona_1
+
+FionasRoom_EventScript_Fiona_6:
 # 68 "data/maps/FionasRoom/scripts.pory"
-	goto_if_set FLAG_BATTLE_WON, FionasRoom_EventScript_Fiona_7
+	goto_if_set FLAG_BATTLE_WON, FionasRoom_EventScript_Fiona_8
 # 75 "data/maps/FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_4
-	return
+	goto FionasRoom_EventScript_Fiona_1
 
-FionasRoom_EventScript_Fiona_7:
+FionasRoom_EventScript_Fiona_8:
 # 70 "data/maps/FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_3
-	return
+	goto FionasRoom_EventScript_Fiona_1
 
 
 FionasRoom_SignScript_Computer::
-# 87 "data/maps/FionasRoom/scripts.pory"
-	lockall
 # 88 "data/maps/FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Computer_Text_0
+	lockall
 # 89 "data/maps/FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Computer_Text_0
+# 90 "data/maps/FionasRoom/scripts.pory"
 	releaseall
 	return
 
@@ -248,7 +251,7 @@ FionasRoom_EventScript_Fiona_Text_5:
 	.string "is entirely up to you!$"
 
 FionasRoom_SignScript_Computer_Text_0:
-# 88 "data/maps/FionasRoom/scripts.pory"
+# 89 "data/maps/FionasRoom/scripts.pory"
 	.string "It's Fiona's computer. You can see a\n"
 	.string "background of a cute cat hanging on a\l"
 	.string "tree with the text: 'Hang in there!'.\p"

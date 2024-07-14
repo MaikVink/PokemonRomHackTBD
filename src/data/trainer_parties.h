@@ -23,162 +23,119 @@ static const struct TrainerMon sParty_Fiona1[] = {
     {
     .lvl = 6,
     .species = SPECIES_GIBLE,
-    .ability = ABILITY_ROUGH_SKIN
+    .ability = ABILITY_ROUGH_SKIN,
+    .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_SWORDS_DANCE}
     }
 };
 
-static const struct TrainerMon sParty_GruntAquaHideout4[] = {
+static const struct TrainerMon sParty_FionaNoBadges[] = {
     {
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 8,
+    .species = SPECIES_GIBLE,
+    .ability = ABILITY_ROUGH_SKIN,
     }
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern1[] = {
+static const struct TrainerMon sParty_FabianNoBadges[] = {
     {
-    .lvl = 36,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_MUNCHLAX,
+    .heldItem = ITEM_SITRUS_BERRY
     }
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern2[] = {
+static const struct TrainerMon sParty_HeraldNoBadges[] = {
     {
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 7,
+    .species = SPECIES_GEODUDE_ALOLAN,
     }
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMon sParty_BellaNoBadges[] = {
     {
-    .lvl = 36,
-    .species = SPECIES_ZUBAT,
+    .lvl = 7,
+    .species = SPECIES_PETILIL,
+    .heldItem = ITEM_MIRACLE_SEED
     }
 };
 
-static const struct TrainerMon sParty_Gabrielle1[] = {
+static const struct TrainerMon sParty_VictorNoBadges[] = {
     {
-    .lvl = 26,
-    .species = SPECIES_SKITTY,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_ZIGZAGOON,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_LOTAD,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_SEEDOT,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_TAILLOW,
+    .lvl = 7,
+    .species = SPECIES_ARON,
+    .ability = ABILITY_ROCK_HEAD
     }
 };
 
-static const struct TrainerMon sParty_GruntPetalburgWoods[] = {
+static const struct TrainerMon sParty_VeraNoBadges[] = {
     {
-    .lvl = 9,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_ZORUA_HISUIAN,
     }
 };
 
-static const struct TrainerMon sParty_Marcel[] = {
+static const struct TrainerMon sParty_TristanNoBadges[] = {
     {
-    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .lvl = 7,
+    .species = SPECIES_LARVITAR,
     }
 };
 
-static const struct TrainerMon sParty_Alberto[] = {
+static const struct TrainerMon sParty_NikoNoBadges[] = {
     {
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
-    },
-    {
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .lvl = 7,
+    .species = SPECIES_FROAKIE,
     }
 };
 
-static const struct TrainerMon sParty_Ed[] = {
+static const struct TrainerMon sParty_HeraNoBadges[] = {
     {
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
-    },
-    {
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .lvl = 7,
+    .species = SPECIES_ROTOM,
     }
 };
 
-static const struct TrainerMon sParty_GruntSeafloorCavern4[] = {
+static const struct TrainerMon sParty_RaoulNoBadges[] = {
     {
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 7,
+    .species = SPECIES_TREECKO,
     }
 };
 
-static const struct TrainerMon sParty_Declan[] = {
+static const struct TrainerMon sParty_PaulaNoBadges[] = {
     {
-    .lvl = 34,
-    .species = SPECIES_GYARADOS,
+    .lvl = 7,
+    .species = SPECIES_AUDINO,
+    .heldItem = ITEM_SITRUS_BERRY
     }
 };
 
-static const struct TrainerMon sParty_GruntRusturfTunnel[] = {
+static const struct TrainerMon sParty_MariaNoBadges[] = {
     {
-    .lvl = 11,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_KANGASKHAN,
     }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst1[] = {
+static const struct TrainerMon sParty_PhoenixNoBadges[] = {
     {
-    .lvl = 27,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_ABRA,
+    .moves = {MOVE_TELEPORT, MOVE_HIDDEN_POWER}
     }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst2[] = {
+static const struct TrainerMon sParty_RosanneNoBadges[] = {
     {
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
+    .lvl = 7,
+    .species = SPECIES_EEVEE,
     }
 };
 
-static const struct TrainerMon sParty_GruntWeatherInst3[] = {
+static const struct TrainerMon sParty_TessaNoBadges[] = {
     {
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
+    .lvl = 7,
+    .species = SPECIES_CHARMANDER,
     }
 };
 

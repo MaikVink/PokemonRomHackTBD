@@ -1872,7 +1872,7 @@ Laboratory_EventScript_Professor_Text_2:
 Laboratory_EventScript_Professor_Text_3:
 # 845 "data/maps/Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n"
-	.string "recruit, continue your process with\l"
+	.string "recruit, continue your progress with\l"
 	.string "your pokedex, you can become a great\l"
 	.string "asset for Team MOD.$"
 
