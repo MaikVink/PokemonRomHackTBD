@@ -1,25 +1,50 @@
 const SURGE_LOCALID = 1
-const FIONA_LOCALID = 2
-const MAN5_LOCALID = 3
-const WOMAN5_LOCALID = 4
-const NINJABOY_LOCALID = 5
-const MAN3_LOCALID = 6
-const PSYCHICM_LOCALID = 7
-const BEAUTY_LOCALID = 8
+const FIONA_LOCALID = 16
+const MAN5_LOCALID = 15
+const WOMAN5_LOCALID = 14
+const NINJABOY_LOCALID = 13
+const MAN3_LOCALID = 12
+const PSYCHICM_LOCALID = 11
+const BEAUTY_LOCALID = 10
 const HIKER_LOCALID = 9
-const POKEFANF_LOCALID = 10
-const HEXMANIAC_LOCALID = 11
-const TRIATHLETEM_LOCALID = 12
-const MOM_LOCALID = 13
-const FATMAN_LOCALID = 14
-const RECEPTIONIST_LOCALID = 15
-const WOMAN2_LOCALID = 16
+const POKEFANF_LOCALID = 8
+const HEXMANIAC_LOCALID = 7
+const TRIATHLETEM_LOCALID = 6
+const MOM_LOCALID = 5
+const FATMAN_LOCALID = 4
+const RECEPTIONIST_LOCALID = 3
+const WOMAN2_LOCALID = 2
 
 
 mapscripts BattleDojo_MapScripts {
+    //MAP_SCRIPT_ON_TRANSITION: BattleDojo_FadeScreen
     MAP_SCRIPT_ON_FRAME_TABLE[
-        VAR_HIDE_OBJECTS, 1: BattleDojo_HideNPCs
+        VAR_HIDE_OBJECTS, 1: BattleDojo_HideNPCs_OnTransition
     ]
+}
+
+script BattleDojo_FadeScreen{   
+}
+
+script BattleDojo_HideNPCs_OnTransition{
+    fadescreen(1)
+    hideobjectat(FIONA_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(MAN5_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(WOMAN5_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(NINJABOY_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(MAN3_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(PSYCHICM_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(BEAUTY_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(HIKER_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(POKEFANF_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(HEXMANIAC_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(TRIATHLETEM_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(MOM_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(FATMAN_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(RECEPTIONIST_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(WOMAN2_LOCALID, MAP_BATTLE_DOJO)
+    setvar(VAR_HIDE_OBJECTS, 2)
+    fadescreen(0)
 }
 
 script BattleDojo_HideNPCs{
@@ -39,6 +64,11 @@ script BattleDojo_HideNPCs{
     hideobjectat(RECEPTIONIST_LOCALID, MAP_BATTLE_DOJO)
     hideobjectat(WOMAN2_LOCALID, MAP_BATTLE_DOJO)
     setvar(VAR_HIDE_OBJECTS, 2)
+}
+
+script BattleDojo_HNS1
+{
+    setvar(VAR_HIDE_OBJECTS, 3)
 }
 
 script BattleDojo_Event_Surge{

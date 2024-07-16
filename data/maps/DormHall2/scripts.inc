@@ -226,9 +226,10 @@ DormhallTopLeft_EventScript_WindowWatcher_Text_5:
 
 DormhallTopLeft_EventScript_WindowWatcher_Text_6:
 # 33 "data/maps/DormHall2/scripts.pory"
-	.string "The world out there is so beautiful, but\n"
-	.string "it is good to have a safe place to call\l"
-	.string "home if you need it, isn't it?$"
+	.string "{COLOR BLUE}Hera{COLOR DARK_GRAY}: The world out there is so\n"
+	.string "beautiful, but it is good to have a safe\l"
+	.string "place to call home if you need it, isn't\l"
+	.string "it?$"
 
 DormhallTopLeft_EventScript_NervousWalker_Text_0:
 # 48 "data/maps/DormHall2/scripts.pory"
@@ -279,8 +280,8 @@ DormhallTopLeft_EventScript_NervousWalker_Text_5:
 
 DormhallTopLeft_EventScript_NervousWalker_Text_6:
 # 66 "data/maps/DormHall2/scripts.pory"
-	.string "You know, running around like this\n"
-	.string "always helps me to clear my mind.\l"
+	.string "{COLOR BLUE}Raoul{COLOR DARK_GRAY}: You know, running around like\n"
+	.string "this always helps me to clear my mind.\l"
 	.string "You should try it sometimes!$"
 
 DormhallTopLeft_SignScript_StatueNormal_Text_0:

@@ -34,7 +34,7 @@ script RollCall_EventScript_FatGuy{
         case 6:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("Did you come to check up on me? Don't worry I don't hate you or anything for beating me. I acknowledge that I lacked the skill to win this battle, you won fair and square!\l
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you come to check up on me? Don't worry I don't hate you or anything for beating me. I acknowledge that I lacked the skill to win this battle, you won fair and square!\l
                 I'll be rooting for you to win!"))
             }
             else
@@ -44,33 +44,33 @@ script RollCall_EventScript_FatGuy{
         case 7:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("Another win under your belt, you really are something else!"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Another win under your belt, you really are something else!"))
             }
             else
             {
-                msgbox(format("A new day, a new round.\n Good luck in the tournament {PLAYER}!"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: A new day, a new round.\n Good luck in the tournament {PLAYER}!"))
             }
         case 8:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("Did you see the look on that Bella's face? It was like your win insulted her entire existance HAHAHAHA!"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you see the look on that Bella's face? It was like your win insulted her entire existance HAHAHAHA!"))
             }
             else
             {
-                msgbox(format("I'm already rooting for you, but you'll do everyone here a favor if you would win the next battle, believe me."))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I'm already rooting for you, but you'll do everyone here a favor if you would win the next battle, believe me."))
             }
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("YOU ACTUALLY DID IT! I'm so honoured to be your first loss, my dear Champion. I wonder what the reward was that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised..."))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: YOU ACTUALLY DID IT! I'm so honoured to be your first loss, my dear Champion. I wonder what the reward was that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised..."))
             }
             else
             {
-                msgbox(format("Today is the Finals, isn't it?\n 
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Today is the Finals, isn't it?\n 
                 I'll be rooting for you extra hard today!"))
             }
         default:
-            msgbox(format("I wish I could join you going outside and travel around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} but I don't feel confident enough that I can keep my Munchlax safe out there..."))   
+            msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I wish I could join you going outside and travel around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} but I don't feel confident enough that I can keep my Munchlax safe out there..."))   
     }
     releaseall
 }
@@ -103,7 +103,7 @@ script RollCall_EventScript_LadyLeft{
                 msgbox(format("I know right! I cannot wait to see who comes out victorious!"))   
             }
         default:
-            msgbox(format("I still cannot decide what I want to do with my Eevee, I have so many options when it comes to letting it evolve... Should I ask her what she wants to be?"))   
+            msgbox(format("{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: I still cannot decide what I want to do with my Eevee, I have so many options when it comes to letting it evolve... Should I ask her what she wants to be?"))   
     }
     
     releaseall
@@ -137,7 +137,7 @@ script RollCall_EventScript_LadyRight{
                  msgbox(format("This Finals is gonna be so exciting! These are some very strong trainers!"))  
             }
         default:
-            msgbox(format("I know what you're talking about. I cannot wait for my Charmeleon to become a Charizard, but he just looks so cute"))   
+            msgbox(format("{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I know what you're talking about. I cannot wait for my Charmeleon to become a Charizard, but he just looks so cute"))   
     }
     releaseall
 }

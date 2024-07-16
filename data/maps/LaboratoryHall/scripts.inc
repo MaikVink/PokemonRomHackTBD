@@ -324,8 +324,8 @@ LaboratoryHall_EventScript_Woman_Text_6:
 
 LaboratoryHall_EventScript_Woman_Text_7:
 # 50 "data/maps/LaboratoryHall/scripts.pory"
-	.string "The battle arena is a good place to\n"
-	.string "train your pokemons and to rematch\l"
+	.string "{COLOR BLUE}Maria{COLOR DARK_GRAY}: The battle arena is a good place\n"
+	.string "to train your pokemons and to rematch\l"
 	.string "other Initiatives if you want to see\l"
 	.string "how far they have come.\p"
 	.string "The lab on the other hand is a good\n"
