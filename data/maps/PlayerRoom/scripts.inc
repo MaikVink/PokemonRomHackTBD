@@ -47,10 +47,10 @@ PlayerRoom_SignScript_Bed::
 	lockall
 # 31 "data/maps/PlayerRoom/scripts.pory"
 	goto_if_set FLAG_RECEIVED_FIRST_POKEMON, PlayerRoom_SignScript_Bed_2
-# 66 "data/maps/PlayerRoom/scripts.pory"
+# 67 "data/maps/PlayerRoom/scripts.pory"
 	msgbox PlayerRoom_SignScript_Bed_Text_3
 PlayerRoom_SignScript_Bed_1:
-# 68 "data/maps/PlayerRoom/scripts.pory"
+# 69 "data/maps/PlayerRoom/scripts.pory"
 	releaseall
 	return
 
@@ -60,7 +60,7 @@ PlayerRoom_SignScript_Bed_2:
 # 35 "data/maps/PlayerRoom/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne PlayerRoom_SignScript_Bed_5
-# 61 "data/maps/PlayerRoom/scripts.pory"
+# 62 "data/maps/PlayerRoom/scripts.pory"
 	msgbox PlayerRoom_SignScript_Bed_Text_2
 	goto PlayerRoom_SignScript_Bed_1
 
@@ -89,7 +89,7 @@ PlayerRoom_SignScript_Bed_11:
 	compare VAR_STORY_PROGRESSION, 10
 	goto_if_eq PlayerRoom_SignScript_Bed_17
 PlayerRoom_SignScript_Bed_16:
-# 57 "data/maps/PlayerRoom/scripts.pory"
+# 58 "data/maps/PlayerRoom/scripts.pory"
 	msgbox PlayerRoom_SignScript_Bed_Text_1
 	goto PlayerRoom_SignScript_Bed_1
 
@@ -115,6 +115,8 @@ PlayerRoom_SignScript_Bed_13:
 PlayerRoom_SignScript_Bed_17:
 # 55 "data/maps/PlayerRoom/scripts.pory"
 	setflag FLAG_FIONA_ROOM
+# 56 "data/maps/PlayerRoom/scripts.pory"
+	clearflag FLAG_HIDE_LEADER
 	goto PlayerRoom_SignScript_Bed_16
 
 
@@ -151,15 +153,15 @@ PlayerRoom_SignScript_Bed_Text_0:
 	.string "today?$"
 
 PlayerRoom_SignScript_Bed_Text_1:
-# 57 "data/maps/PlayerRoom/scripts.pory"
+# 58 "data/maps/PlayerRoom/scripts.pory"
 	.string "You feel refreshed!$"
 
 PlayerRoom_SignScript_Bed_Text_2:
-# 61 "data/maps/PlayerRoom/scripts.pory"
+# 62 "data/maps/PlayerRoom/scripts.pory"
 	.string "Maybe later.$"
 
 PlayerRoom_SignScript_Bed_Text_3:
-# 66 "data/maps/PlayerRoom/scripts.pory"
+# 67 "data/maps/PlayerRoom/scripts.pory"
 	.string "It's your bed.\n"
 	.string "You don't feel tired though, so there\l"
 	.string "seems to be no reason right now to\l"

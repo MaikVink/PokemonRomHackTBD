@@ -30,7 +30,7 @@ script DormhallTopLeft_EventScript_WindowWatcher{
                 msgbox(format("Seeing you and Fiona battle is so inspiring! I will make sure I earn the right to go out of here just the way you guys already have!"))      
             }
         default:
-            msgbox(format("The world out there is so beautiful, but it is good to have a safe place to call home if you need it, isn't it?"))
+            msgbox(format("{COLOR BLUE}Hera{COLOR DARK_GRAY}: The world out there is so beautiful, but it is good to have a safe place to call home if you need it, isn't it?"))
     }
     releaseall
 }
@@ -63,7 +63,7 @@ script DormhallTopLeft_EventScript_NervousWalker{
                 msgbox(format("Who should I want to win? Do I want Fiona to win so I can say I lost to the Tournament Champion? Or should I want {PLAYER} to win so I can at least feel better she also lost?"))      
             }
         default:
-            msgbox(format("You know, running around like this always helps me to clear my mind.\l You should try it sometimes!"))
+            msgbox(format("{COLOR BLUE}Raoul{COLOR DARK_GRAY}: You know, running around like this always helps me to clear my mind.\l You should try it sometimes!"))
     }
     releaseall
 }

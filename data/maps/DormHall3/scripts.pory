@@ -23,7 +23,7 @@ script DormHallBottemLeft_EventScript_Hiker{
         case 7:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("After the first battle I felt like I was unbeatable. I was absolutely sure I was gonna come out as the Tournament Champion, but you sure showed me I have still a long way to go.\p
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: After my first battle I felt like I was unbeatable. I was absolutely sure I was gonna come out as the Tournament Champion, but you sure showed me I have still a long way to go.\p
                 I'll be rooting for you to win this Tournament!"))
             }
             else
@@ -34,19 +34,20 @@ script DormHallBottemLeft_EventScript_Hiker{
         case 8:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("hahaha, I knew you could do it!\p
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: HAHAHA!\n
+                I knew you could do it!\p
                 I hope she will now learn that she is not so great as she thinks she is!"))
             }
             else
             {
-                msgbox(format("I heard that beauty girl was gonna be your next opponent.\p
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: I heard that beauty girl was gonna be your next opponent.\p
                 Well, you humbled me with our fight, if someone needs a little bit of humbling it's gotta be her!\p
                 Go beat her up {PLAYER}!"))
             }
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("I knew you could do it! Only the best could defeat me HAHAHAHA.\l
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: I knew you could do it! Only the best could defeat me HAHAHAHA.\l
                 HAHAHA\l
                 HA\l
                 ha\l
@@ -57,12 +58,12 @@ script DormHallBottemLeft_EventScript_Hiker{
             }
             else
             {
-                msgbox(format("Of course I hope you win {PLAYER}!\p
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Of course I hope you win {PLAYER}!\p
                 Though I have also seen Fiona fight...\p
                 This is probably going to be one interesting battle!"))      
             }
         default:
-            msgbox(format("Well I like sleeping in the wild, nothing beats a comfortable bed with a strong room above your head."))
+            msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Well I like sleeping in the wild, nothing beats a comfortable bed with a strong room above your head."))
     }
     releaseall
 }

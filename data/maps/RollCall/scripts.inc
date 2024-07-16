@@ -810,11 +810,11 @@ RollCall_EventScript_FatGuy_Text_1:
 
 RollCall_EventScript_FatGuy_Text_2:
 # 37 "data/maps/RollCall/scripts.pory"
-	.string "Did you come to check up on me? Don't\n"
-	.string "worry I don't hate you or anything for\l"
-	.string "beating me. I acknowledge that I lacked\l"
-	.string "the skill to win this battle, you won\l"
-	.string "fair and square!\l"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you come to check up on me?\n"
+	.string "Don't worry I don't hate you or anything\l"
+	.string "for beating me. I acknowledge that I\l"
+	.string "lacked the skill to win this battle, you\l"
+	.string "won fair and square!\l"
 	.string "I'll be rooting for you to win!$"
 
 RollCall_EventScript_FatGuy_Text_3:
@@ -826,45 +826,46 @@ RollCall_EventScript_FatGuy_Text_3:
 
 RollCall_EventScript_FatGuy_Text_4:
 # 47 "data/maps/RollCall/scripts.pory"
-	.string "Another win under your belt, you really\n"
-	.string "are something else!$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Another win under your belt,\n"
+	.string "you really are something else!$"
 
 RollCall_EventScript_FatGuy_Text_5:
 # 51 "data/maps/RollCall/scripts.pory"
-	.string "A new day, a new round.\n"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: A new day, a new round.\n"
 	.string "Good luck in the tournament {PLAYER}!$"
 
 RollCall_EventScript_FatGuy_Text_6:
 # 56 "data/maps/RollCall/scripts.pory"
-	.string "Did you see the look on that Bella's\n"
-	.string "face? It was like your win insulted her\l"
-	.string "entire existance HAHAHAHA!$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you see the look on that\n"
+	.string "Bella's face? It was like your win\l"
+	.string "insulted her entire existance\l"
+	.string "HAHAHAHA!$"
 
 RollCall_EventScript_FatGuy_Text_7:
 # 60 "data/maps/RollCall/scripts.pory"
-	.string "I'm already rooting for you, but you'll\n"
-	.string "do everyone here a favor if you would\l"
-	.string "win the next battle, believe me.$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I'm already rooting for you, but\n"
+	.string "you'll do everyone here a favor if you\l"
+	.string "would win the next battle, believe me.$"
 
 RollCall_EventScript_FatGuy_Text_8:
 # 65 "data/maps/RollCall/scripts.pory"
-	.string "YOU ACTUALLY DID IT! I'm so honoured to\n"
-	.string "be your first loss, my dear Champion. I\l"
-	.string "wonder what the reward was that {COLOR LIGHT_GRAY}The\l"
-	.string "Leader{COLOR DARK_GRAY} promised...$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: YOU ACTUALLY DID IT! I'm so\n"
+	.string "honoured to be your first loss, my dear\l"
+	.string "Champion. I wonder what the reward was\l"
+	.string "that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised...$"
 
 RollCall_EventScript_FatGuy_Text_9:
 # 69 "data/maps/RollCall/scripts.pory"
-	.string "Today is the Finals, isn't it?\n"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Today is the Finals, isn't it?\n"
 	.string "I'll be rooting for you extra hard\l"
 	.string "today!$"
 
 RollCall_EventScript_FatGuy_Text_10:
 # 73 "data/maps/RollCall/scripts.pory"
-	.string "I wish I could join you going outside\n"
-	.string "and travel around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} but I don't\l"
-	.string "feel confident enough that I can keep\l"
-	.string "my Munchlax safe out there...$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I wish I could join you going\n"
+	.string "outside and travel around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}\l"
+	.string "but I don't feel confident enough that\l"
+	.string "I can keep my Munchlax safe out there...$"
 
 RollCall_EventScript_LadyLeft_Text_0:
 # 87 "data/maps/RollCall/scripts.pory"
@@ -905,10 +906,11 @@ RollCall_EventScript_LadyLeft_Text_6:
 
 RollCall_EventScript_LadyLeft_Text_7:
 # 106 "data/maps/RollCall/scripts.pory"
-	.string "I still cannot decide what I want to do\n"
-	.string "with my Eevee, I have so many options\l"
-	.string "when it comes to letting it evolve...\l"
-	.string "Should I ask her what she wants to be?$"
+	.string "{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: I still cannot decide what I\n"
+	.string "want to do with my Eevee, I have so many\l"
+	.string "options when it comes to letting it\l"
+	.string "evolve... Should I ask her what she\l"
+	.string "wants to be?$"
 
 RollCall_EventScript_LadyRight_Text_0:
 # 121 "data/maps/RollCall/scripts.pory"
@@ -949,10 +951,10 @@ RollCall_EventScript_LadyRight_Text_6:
 
 RollCall_EventScript_LadyRight_Text_7:
 # 140 "data/maps/RollCall/scripts.pory"
-	.string "I know what you're talking about. I\n"
-	.string "cannot wait for my Charmeleon to\l"
-	.string "become a Charizard, but he just looks\l"
-	.string "so cute$"
+	.string "{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I know what you're talking\n"
+	.string "about. I cannot wait for my Charmeleon\l"
+	.string "to become a Charizard, but he just\l"
+	.string "looks so cute$"
 
 RollCall_EventScript_Guard_Text_0:
 # 148 "data/maps/RollCall/scripts.pory"

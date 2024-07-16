@@ -65,7 +65,7 @@ script Hall1_EventScript_Wanderer{
                 msgbox(format("I heard from the other people here you're also quite strong, I'm excited to see who of you two is going to win!"))      
             }
         default:
-            msgbox(format("You would be surprised to see how many people out there are actually part of team MOD.\p
+            msgbox(format("{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: You would be surprised to see how many people out there are actually part of team MOD.\p
             I wonder how many people are secretly team A.S. members?"))
     }
     releaseall
@@ -90,7 +90,7 @@ script Hall1_EventScript_Beauty{
         case 8:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("Hmp, I don't talk to cheaters!"))
+                msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Hmp, I don't talk to cheaters!"))
             }
             else
             {
@@ -99,17 +99,17 @@ script Hall1_EventScript_Beauty{
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("...\p
+                msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: ...\p
                 ...\p
                 ...\p
                 well fought i guess..."))
             }
             else
             {
-                msgbox(format("Frankly, I think neither of you two deserve to be in the finals. I'm clearly the best trainer. But there is little I can do to chance the system now."))      
+                msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Frankly, I think neither of you two deserve to be in the finals. I'm clearly the best trainer. But there is little I can do to chance the system now."))      
             }
         default:
-            msgbox(format("Be careful not to fall off your high horse dear. It's only a matter of time before somewhere far more handsome and skillful will take your place."))
+            msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Be careful not to fall off your high horse dear. It's only a matter of time before somewhere far more handsome and skillful will take your place."))
     }
     releaseall
 }

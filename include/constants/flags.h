@@ -45,7 +45,7 @@
 #define FLAG_FIRST_RIVAL_MEETING        0x20 // Unused Flag
 #define FLAG_RECEIVED_FIRST_POKEMON     0x21 // Unused Flag
 #define FLAG_REUSABLE_SKIP_FLAG    0x22 // Usued to skip text that is story specific?
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_HIDE_LEADER    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

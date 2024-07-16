@@ -297,9 +297,9 @@ Hall1_EventScript_Wanderer_Text_6:
 
 Hall1_EventScript_Wanderer_Text_7:
 # 68 "data/maps/Hall1/scripts.pory"
-	.string "You would be surprised to see how many\n"
-	.string "people out there are actually part of\l"
-	.string "team MOD.\p"
+	.string "{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: You would be surprised to see\n"
+	.string "how many people out there are actually\l"
+	.string "part of team MOD.\p"
 	.string "I wonder how many people are secretly\n"
 	.string "team A.S. members?$"
 
@@ -322,7 +322,7 @@ Hall1_EventScript_Beauty_Text_2:
 
 Hall1_EventScript_Beauty_Text_3:
 # 93 "data/maps/Hall1/scripts.pory"
-	.string "Hmp, I don't talk to cheaters!$"
+	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Hmp, I don't talk to cheaters!$"
 
 Hall1_EventScript_Beauty_Text_4:
 # 97 "data/maps/Hall1/scripts.pory"
@@ -333,24 +333,26 @@ Hall1_EventScript_Beauty_Text_4:
 
 Hall1_EventScript_Beauty_Text_5:
 # 102 "data/maps/Hall1/scripts.pory"
-	.string "...\p"
+	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: ...\p"
 	.string "...\p"
 	.string "...\p"
 	.string "well fought i guess...$"
 
 Hall1_EventScript_Beauty_Text_6:
 # 109 "data/maps/Hall1/scripts.pory"
-	.string "Frankly, I think neither of you two\n"
-	.string "deserve to be in the finals. I'm clearly\l"
-	.string "the best trainer. But there is little I\l"
-	.string "can do to chance the system now.$"
+	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Frankly, I think neither of you\n"
+	.string "two deserve to be in the finals. I'm\l"
+	.string "clearly the best trainer. But there is\l"
+	.string "little I can do to chance the system\l"
+	.string "now.$"
 
 Hall1_EventScript_Beauty_Text_7:
 # 112 "data/maps/Hall1/scripts.pory"
-	.string "Be careful not to fall off your high\n"
-	.string "horse dear. It's only a matter of time\l"
-	.string "before somewhere far more handsome\l"
-	.string "and skillful will take your place.$"
+	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Be careful not to fall off your\n"
+	.string "high horse dear. It's only a matter of\l"
+	.string "time before somewhere far more\l"
+	.string "handsome and skillful will take your\l"
+	.string "place.$"
 
 Hall1_Trigger_NotYet_Text_0:
 # 120 "data/maps/Hall1/scripts.pory"
