@@ -23,9 +23,9 @@
 #define TRAINER_MARIA_B0                      16 // MOM
 #define TRAINER_PHOENIX_B0                    17 // Psychic M
 #define TRAINER_ROSANNE_B0                    18 // Receptionist
-#define TRAINER_TESSA_B0                      19 // Woman 3
+#define TRAINER_TESSA_B0                      19 // Woman 2
+#define TRAINER_FIONA_B0_SHINY                20
 
-#define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
 #define TRAINER_GRUNT_MT_PYRE_1              23

@@ -26,6 +26,7 @@ script Dormhall1_OnTransition{
         setflag(FLAG_FIONA_ROOM)
         setflag(FLAG_REVERSED_GUARD)
         setflag(FLAG_HIDE_LEADER)
+        setflag(FLAG_HIDE_DENEITH)
     }
     if(flag(FLAG_TOURNAMENT_LOST))
     {
@@ -36,14 +37,15 @@ script Dormhall1_OnTransition{
 }
 
 script Dormhall1_Frame_TournamentOver{
+    lockall
     if(flag(FLAG_TOURNAMENT_LOST))
     {
-
     }
     else
     {
-
+        call(DormHall1_WonTournament)
     }
+    releaseall
 }
 
 script Dormhall1_Frame{
@@ -273,11 +275,13 @@ script DormHall1_WonTournament{
     applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
     applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
     applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    applymovement(LEADER_LOCALID, Dormhall1_Movemnt_Move_To_PlayerWon)
+    closemessage
+    applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerWon)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_GRAY}Leader{COLOR DARK_GRAY}: I would like to talk to you personally, if you wouldn't mind.\p
     But let's do that somewhere with less prying eyes and gawking mounths.\l
     If you would please follow me."))
+    warp(MAP_ENTRANCE_HALL, 2, 2)
 }
 
 
@@ -287,7 +291,7 @@ movement Dormhall1_Movement_NoticePlayer{
 
 movement Dormhall1_Movement_ShockLeft{
     emote_exclamation_mark
-    face_left
+    face_right
 }
 
 movement Dormhall1_Movement_MoveToPlayer{
@@ -308,7 +312,7 @@ movement Dormhall1_Movement_LookOriginalDireciton{
     face_down
 }
 
-movement Dormhall1_Movemnt_Move_To_PlayerWon{
-    walk_right*7
-    walk_up*4
+movement Dormhall1_Movement_Move_To_PlayerWon{
+    walk_slow_right*8
+    walk_slow_up*2
 }

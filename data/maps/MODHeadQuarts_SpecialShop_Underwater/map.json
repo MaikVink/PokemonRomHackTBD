@@ -1,0 +1,34 @@
+{
+  "id": "MAP_MODHEAD_QUARTS_SPECIAL_SHOP_UNDERWATER",
+  "name": "MODHeadQuarts_SpecialShop_Underwater",
+  "layout": "LAYOUT_MODHEAD_QUARTS_SPECIAL_SHOP_UNDERWATER",
+  "music": "MUS_UNDERWATER",
+  "region_map_section": "MAPSEC_MOD_HEADQUARTERS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERWATER",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MODHEADQUARTERS_SPECIAL_STORE",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

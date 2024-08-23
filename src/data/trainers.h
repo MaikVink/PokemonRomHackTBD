@@ -240,16 +240,16 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_TessaNoBadges),
     },
 
-    [TRAINER_GRUNT_MUSEUM_1] =
+    [TRAINER_FIONA_B0_SHINY] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_SALON_MAIDEN_ANABEL,
+        .trainerName = _("Fiona"),
+        .items = {ITEM_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_GruntMuseum1),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .party = TRAINER_PARTY(sParty_FionaNoBadgesShiny),
     },
 
     [TRAINER_GRUNT_MUSEUM_2] =

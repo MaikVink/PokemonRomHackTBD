@@ -1,7 +1,7 @@
 EventScript_UseSurf::
-	checkpartymove MOVE_SURF
+	setvar VAR_RESULT, 0
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_EndUseSurf
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	bufferstring STR_VAR_1, Text_Surfboard
 	setfieldeffectargument 0, VAR_RESULT
 	lockall
 	msgbox gText_WantToUseSurf, MSGBOX_YESNO
@@ -12,3 +12,6 @@ EventScript_ReleaseUseSurf::
 	releaseall
 EventScript_EndUseSurf::
 	end
+
+Text_Surfboard:
+	.string "Surfboard$"

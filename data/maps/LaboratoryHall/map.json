@@ -86,7 +86,7 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_BATTLE_DOJO",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -170,6 +170,15 @@
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "2",
       "script": "LaboratoryHall_Trigger_HideFiona"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_ALWAYS_ON",
+      "var_value": "1",
+      "script": "LaboratoryHall_Trigger_ToBattleDojo"
     }
   ],
   "bg_events": [

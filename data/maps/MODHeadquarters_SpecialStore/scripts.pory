@@ -1,0 +1,31 @@
+mapscripts MODHeadquarters_SpecialStore_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SpecialStore_OnTransition
+}
+
+script SpecialStore_OnTransition{
+
+}
+
+script SpecialStore_Trigger_TMs{
+    lockall
+    msgbox(format("Here, take this"))
+    playfanfare(MUS_OBTAIN_BADGE)
+    setflag(FLAG_BADGE01_GET)
+    setflag(FLAG_BADGE02_GET)
+    setflag(FLAG_BADGE03_GET)
+    setflag(FLAG_BADGE04_GET)
+    setflag(FLAG_BADGE05_GET)
+    setflag(FLAG_BADGE06_GET)
+    setflag(FLAG_BADGE07_GET)
+    setflag(FLAG_BADGE08_GET)
+    giveitem(ITEM_HM01)
+    giveitem(ITEM_HM02)
+    giveitem(ITEM_HM03)
+    giveitem(ITEM_HM04)
+    giveitem(ITEM_HM05)
+    giveitem(ITEM_HM06)
+    giveitem(ITEM_HM07)
+    giveitem(ITEM_HM08)
+    waitfanfare
+    releaseall
+}

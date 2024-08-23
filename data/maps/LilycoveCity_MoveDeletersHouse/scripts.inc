@@ -37,12 +37,12 @@ LilycoveCity_MoveDeletersHouse_EventScript_ChooseMonAndMoveToForget::
 	end
 
 LilycoveCity_MoveDeletersHouse_EventScript_TryForgetMove::
-	special IsLastMonThatKnowsSurf
-	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_MoveDeletersHouse_EventScript_LastMonWithSurf
 	special MoveDeleterForgetMove
 	playfanfare MUS_MOVE_DELETED
 	waitfanfare
 	msgbox LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove, MSGBOX_DEFAULT
+	msgbox LilycoveCity_MoveDeletersHouse_Text_Payment, MSGBOX_DEFAULT
+	removemoney 100
 	releaseall
 	end
 
@@ -105,4 +105,8 @@ LilycoveCity_MoveDeletersHouse_Text_CantForgetSurf:
 	.string "Hm!\p"
 	.string "Your {STR_VAR_1} doesn't seem willing\n"
 	.string "to forget SURF.$"
+
+LilycoveCity_MoveDeletersHouse_Text_Payment:
+	.string "That will be 100, \n"
+	.string "thank you very much!"
 

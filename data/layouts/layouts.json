@@ -4520,6 +4520,86 @@
       "secondary_tileset": "gTileset_BattleFactory",
       "border_filepath": "data/layouts/BattleDojo/border.bin",
       "blockdata_filepath": "data/layouts/BattleDojo/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENTRANCE_HALL",
+      "name": "EntranceHall_Layout",
+      "width": 44,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/EntranceHall/border.bin",
+      "blockdata_filepath": "data/layouts/EntranceHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_DOJO_REPLICA",
+      "name": "BattleDojoReplica_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/BattleDojoReplica/border.bin",
+      "blockdata_filepath": "data/layouts/BattleDojoReplica/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOVE_MASTERS",
+      "name": "MoveMasters_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MoveMasters/border.bin",
+      "blockdata_filepath": "data/layouts/MoveMasters/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_GENERAL_STORE",
+      "name": "MODHeadquarters_General_Store_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MODHeadquarters_General_Store/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_General_Store/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_SPECIAL_STORE",
+      "name": "MODHeadquarters_SpecialStore_Layout",
+      "width": 38,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MODHeadquarters_SpecialStore/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_SpecialStore/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEAD_QUARTS_SPECIAL_SHOP_UNDERWATER",
+      "name": "MODHeadQuarts_SpecialShop_Underwater_Layout",
+      "width": 31,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/MODHeadQuarts_SpecialShop_Underwater/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadQuarts_SpecialShop_Underwater/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_SPECIAL_SHOP_FLASH_CAVE",
+      "name": "MODHeadquarters_SpecialShop_FlashCave_Layout",
+      "width": 7,
+      "height": 7,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MODHeadquarters_SpecialShop_FlashCave/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_SpecialShop_FlashCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS",
+      "name": "MODHeadquarters_EvoMasters_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters/map.bin"
     }
   ]
 }
