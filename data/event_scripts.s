@@ -1093,3 +1093,19 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Laboratory/scripts.inc"
 
 	.include "data/maps/BattleDojo/scripts.inc"
+
+	.include "data/maps/EntranceHall/scripts.inc"
+
+	.include "data/maps/BattleDojoReplica/scripts.inc"
+
+	.include "data/maps/MoveMasters/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_General_Store/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_SpecialStore/scripts.inc"
+
+	.include "data/maps/MODHeadQuarts_SpecialShop_Underwater/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_SpecialShop_FlashCave/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_EvoMasters/scripts.inc"

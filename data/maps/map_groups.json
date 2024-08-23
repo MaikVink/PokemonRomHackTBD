@@ -633,6 +633,14 @@
     "RollCall",
     "LaboratoryHall",
     "Laboratory",
-    "BattleDojo"
+    "BattleDojo",
+    "EntranceHall",
+    "BattleDojoReplica",
+    "MoveMasters",
+    "MODHeadquarters_General_Store",
+    "MODHeadquarters_SpecialStore",
+    "MODHeadQuarts_SpecialShop_Underwater",
+    "MODHeadquarters_SpecialShop_FlashCave",
+    "MODHeadquarters_EvoMasters"
   ]
 }

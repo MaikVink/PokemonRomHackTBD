@@ -139,10 +139,17 @@ static const struct TrainerMon sParty_TessaNoBadges[] = {
     }
 };
 
-static const struct TrainerMon sParty_GruntMuseum1[] = {
+static const struct TrainerMon sParty_FionaNoBadgesShiny[] = {
     {
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
+        .lvl = 5,
+        .species = SPECIES_EEVEE,
+        .ability = ABILITY_ADAPTABILITY,
+        .isShiny = 1
+    },
+    {
+    .lvl = 8,
+    .species = SPECIES_GIBLE,
+    .ability = ABILITY_ROUGH_SKIN,
     }
 };
 

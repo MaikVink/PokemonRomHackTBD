@@ -46,14 +46,14 @@
 #define FLAG_RECEIVED_FIRST_POKEMON     0x21 // Unused Flag
 #define FLAG_REUSABLE_SKIP_FLAG    0x22 // Usued to skip text that is story specific?
 #define FLAG_HIDE_LEADER    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_ENTRANCE_HALL_HIDE_CHARACTERS    0x24 // Unused Flag
+#define FLAG_HIDE_DENEITH               0x25 // Unused Flag
+#define FLAG_MoveMasters_FIRSTTIME      0x26 // Unused Flag
+#define FLAG_EvoMasters_FIRSTTIME       0x27 // Unused Flag
+#define FLAG_GENERAL_STORE_FRISTTIME    0x28 // Unused Flag
+#define FLAG_SPECIAL_STORE_FIRSTTIME    0x29 // Unused Flag
+#define FLAG_UNLOCK_BATTLEDOJO    0x2A // Unused Flag
+#define FLAG_IN_BATTLE_MODE    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

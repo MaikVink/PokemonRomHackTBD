@@ -607,7 +607,7 @@ extern const u8 gText_MoveVar1Where[];
 extern const u8 gText_ColorLightShadowDarkGray[];
 extern const u8 gText_ColorBlue[];
 extern const u8 gText_Friend[];
-extern const u8 gText_Tristan[];
+extern const u8 gText_TristanOld[];
 extern const u8 gText_Philip[];
 extern const u8 gText_Dennis[];
 extern const u8 gText_Roberto[];
@@ -3065,5 +3065,24 @@ extern const u8 gText_ChoiceA[];
 extern const u8 gText_ChoiceB[];
 extern const u8 gText_ChoiceC[];
 extern const u8 gText_Again[];
+
+// DojoGrid
+extern const u8 gText_Fiona[];
+extern const u8 gText_Fabian[];
+extern const u8 gText_Bella[];
+extern const u8 gText_Herald[];
+extern const u8 gText_Victor[];
+extern const u8 gText_Vera[];
+extern const u8 gText_Tristan[];
+extern const u8 gText_Niko[];
+extern const u8 gText_Hera[];
+extern const u8 gText_Raoul[];
+extern const u8 gText_Paula[];
+extern const u8 gText_Maria[];
+extern const u8 gText_Phoenix[];
+extern const u8 gText_Rosanne[];
+extern const u8 gText_Tessa[];
+
+extern const u8 gText_FabianLost[];
 
 #endif // GUARD_STRINGS_H

@@ -403,7 +403,7 @@ script Laboratory_Test{
     special(SetUnlockedPokedexFlags)
     setflag(FLAG_SYS_NATIONAL_DEX)
     special(EnableNationalPokedex)
-    msgbox(format("This is a pokedex. It was used long ago by many researches to track data of different pokemon.\p
+    msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: This is a pokedex. It was used long ago by many researches to track data of different pokemon.\p
     Sadly most of this digital data has been lost through time.\p
     While it will not be your main objective probably, I would appraciate it if you could keep a record of all pokemon you encounter.\p
     It will help us learn from the professors before me what they have learned about pokemon."))

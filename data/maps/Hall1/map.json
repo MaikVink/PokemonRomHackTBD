@@ -99,7 +99,20 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_ENTRANCE_HALL",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 4,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_ENTRANCE_HALL",
+      "dest_warp_id": "2"
+    }
   ],
   "coord_events": [
     {
@@ -227,15 +240,6 @@
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "8",
       "script": "Hall1_Trigger_NotYet"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 17,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
     },
     {
       "type": "trigger",

@@ -17,7 +17,7 @@
 
 static const u8 *const sDefaultTraderNames[NUM_TRADER_ITEMS] =
 {
-    gText_Tristan,
+    gText_TristanOld,
     gText_Philip,
     gText_Dennis,
     gText_Roberto,

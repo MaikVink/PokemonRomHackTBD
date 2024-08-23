@@ -1692,9 +1692,9 @@ Laboratory_Test_Text_26:
 
 Laboratory_Test_Text_27:
 # 406 "data/maps/Laboratory/scripts.pory"
-	.string "This is a pokedex. It was used long ago\n"
-	.string "by many researches to track data of\l"
-	.string "different pokemon.\p"
+	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: This is a pokedex. It was\n"
+	.string "used long ago by many researches to\l"
+	.string "track data of different pokemon.\p"
 	.string "Sadly most of this digital data has\n"
 	.string "been lost through time.\p"
 	.string "While it will not be your main objective\n"

@@ -17,6 +17,11 @@ script LaboratoryHall_Frame{
     release
 }
 
+script LaboratoryHall_Trigger_ToBattleDojo{
+    applymovement(OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveUp)
+    warp(MAP_BATTLE_DOJO, 6, 11)
+}
+
 script LaboratoryHall_EventScript_Woman{
     lockall
     faceplayer
@@ -146,4 +151,8 @@ movement LabrotaryHall_moveOutOfTheWay{
 movement LabrotaryHall_moveAway{
     walk_down * 2
     walk_left * 10
+}
+
+movement LabrotaryHall_moveUp {
+    walk_up
 }
