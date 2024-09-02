@@ -103,6 +103,20 @@
       "elevation": 0,
       "dest_map": "MAP_MODHEADQUARTERS_EVO_MASTERS",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CLIFF_TO_NOWHERE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CLIFF_TO_NOWHERE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -184,6 +198,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Entrancehall_Sign_SpecialShop"
+    },
+    {
+      "type": "sign",
+      "x": 42,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Entrancehall_Sign_Office"
     }
   ]
 }

@@ -3,9 +3,23 @@ const DENEITH1_LOCALID = 2
 const DENEITH2_LOCALID = 3
 
 mapscripts EntranceHall_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Entrancehall_OnTransition
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_STORY_PROGRESSION, 10: EntranceHall_FirstEntrace
+        VAR_MOD_SHOPS_STATE, 1111: EntranceHall_CheckDoor
     ]
+}
+
+script Entrancehall_OnTransition
+{
+    if(var(VAR_MOD_SHOPS_STATE) == 1000 || var(VAR_MOD_SHOPS_STATE) == 100 || var(VAR_MOD_SHOPS_STATE) == 10 || var(VAR_MOD_SHOPS_STATE) == 1)
+    {
+        clearflag(FLAG_HIDE_DENEITH)
+    }
+    elif(!flag(FLAG_HIDE_DENEITH))
+    {
+        setflag(FLAG_HIDE_DENEITH)
+    }
 }
 
 script EntranceHall_FirstEntrace{
@@ -180,6 +194,15 @@ script EntranceHall_FirstEntrace{
     releaseall
 }
 
+script EntranceHall_CheckDoor{
+    lockall
+    msgbox(format("Enough time should have passed.\p 
+    you should check if {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is in his office already."))
+    setvar(VAR_MOD_SHOPS_STATE, 2000)
+    setvar(VAR_STORY_PROGRESSION, 12)
+    releaseall
+}
+
 script EntranceHall_Trigger_Deneith{
     lockall
     faceplayer
@@ -187,6 +210,7 @@ script EntranceHall_Trigger_Deneith{
     Don't mind me, I just found this keycard and thought it was better if I brought it back before someone who isn't supposed to pick it up finds it.\p
     Don't worry, I'll handle it from here!"))
     applymovement(DENEITH2_LOCALID, EntranceHall_Movement_LookUp)
+    waitmovement(0)
     releaseall
 }
 
@@ -199,6 +223,22 @@ script EntranceHall_Trigger_NotYet{
 
 script EntranceHall_Trigger_Release{
     lockall
+    setvar(VAR_STORY_PROGRESSION, 13)
+    msgbox(format("*RING* *RING*"))
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_PlayerGetCall)
+    msgbox(format("It seems like your phone is ringing.\l
+    You decide to pick it up.\p
+    ???: Hello? Hello hello?\p
+    {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Ah good {PLAYER}, it's the leader.\p
+    This is quite unusual for me to do, but this... 'issue', has proven to be more of a problem then I expected.\p
+    I'm sorry to say, but the thing that I wanted to show has to wait until later. Please, feel free to go outside and explore {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}\l
+    You can exit the building by taking the exit south of the shops and my office.\l
+    You're free to return anytime, and if I happen to be there I'll make up on my promise.\l
+    In the meantime, show you're worthy of carring pokemon around.\l
+    May your fire burn bright.\p
+    *click*\p
+    ...
+    Was that just your imagination, or did you just hear some movement behind that door?"))
     releaseall
 }
 
@@ -257,6 +297,17 @@ script Entrancehall_Sign_Office{
             else
             {
                 msgbox(format("better to not interrupt whatever they are doing."))
+            }
+        case 2000:
+            msgbox(format("The door is locked and the reflective glass makes it impossible to see inside\l
+            do you want to put your ear to the door?"))
+            if(var(VAR_RESULT))
+            {
+                msgbox(format("You think you can hear some breathing, though you cannot make out if it comes from inside or if you just hear your own shallow breaths."))
+            }
+            else
+            {
+                msgbox(format("Why would you do that?"))
             }
         default:
             msgbox(format("It's you!\p
@@ -318,5 +369,5 @@ movement EntranceHall_Movement_LeaderWalkAway {
 }
 
 movement EntranceHall_Movement_PlayerGetCall{
-    
+    emote_exclamation_mark
 }

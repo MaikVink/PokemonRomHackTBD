@@ -41,7 +41,7 @@ LilycoveCity_MoveDeletersHouse_EventScript_TryForgetMove::
 	playfanfare MUS_MOVE_DELETED
 	waitfanfare
 	msgbox LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove, MSGBOX_DEFAULT
-	msgbox LilycoveCity_MoveDeletersHouse_Text_Payment, MSGBOX_DEFAULT
+	msgbox LilycoveCity_MoveDeletersHouse_Text_EggCantForgetMoves, MSGBOX_DEFAULT
 	removemoney 100
 	releaseall
 	end
@@ -107,6 +107,6 @@ LilycoveCity_MoveDeletersHouse_Text_CantForgetSurf:
 	.string "to forget SURF.$"
 
 LilycoveCity_MoveDeletersHouse_Text_Payment:
-	.string "That will be 100, \n"
-	.string "thank you very much!"
+	.string "That will be 100,\n"
+	.string "thank you very much!$"
 

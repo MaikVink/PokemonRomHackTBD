@@ -1109,3 +1109,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MODHeadquarters_SpecialShop_FlashCave/scripts.inc"
 
 	.include "data/maps/MODHeadquarters_EvoMasters/scripts.inc"
+
+	.include "data/maps/CliffToNowhere/scripts.inc"

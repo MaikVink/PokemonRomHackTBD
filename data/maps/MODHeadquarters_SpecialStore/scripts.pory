@@ -3,29 +3,111 @@ mapscripts MODHeadquarters_SpecialStore_MapScripts {
 }
 
 script SpecialStore_OnTransition{
-
+    if(var(VAR_MOD_SHOPS_STATE < 1000))
+    {
+        addvar(VAR_MOD_SHOPS_STATE, 1000)
+    }
+    if(var(VAR_MOD_SHOPS_STATE) == 0)
+    {
+        clearflag(FLAG_HIDE_DENEITH)
+    }
 }
 
-script SpecialStore_Trigger_TMs{
+script SpecialStore_ObjectScript_MartEmployer{
     lockall
-    msgbox(format("Here, take this"))
-    playfanfare(MUS_OBTAIN_BADGE)
-    setflag(FLAG_BADGE01_GET)
-    setflag(FLAG_BADGE02_GET)
-    setflag(FLAG_BADGE03_GET)
-    setflag(FLAG_BADGE04_GET)
-    setflag(FLAG_BADGE05_GET)
-    setflag(FLAG_BADGE06_GET)
-    setflag(FLAG_BADGE07_GET)
-    setflag(FLAG_BADGE08_GET)
-    giveitem(ITEM_HM01)
-    giveitem(ITEM_HM02)
-    giveitem(ITEM_HM03)
-    giveitem(ITEM_HM04)
-    giveitem(ITEM_HM05)
-    giveitem(ITEM_HM06)
-    giveitem(ITEM_HM07)
-    giveitem(ITEM_HM08)
-    waitfanfare
+    faceplayer
+    if(var(VAR_MOD_SHOPS_STATE) < 2000)
+    {
+        msgbox(format("Is a smal tree blocking your path? \n 
+        Do you need to push a bolder out of your way? \l 
+        Do you want to improve your way of travel?\p
+        Then you have come to right place! Here at National Usefull Tools or \l
+        N.U.T. we make sure you will have the tools you need most desperate out in the field.
+        100% customer satisfaction guaranteed or you'll get your money back!
+        Feel free to check our catalogue anytime!"))
+    }
+    msgbox(format("Where can N.U.T. help you with today?"))
+    pokemart(MODHeadquarters_SpecialShopShop)
+    msgbox(format("Please come again!"))
     releaseall
+}
+
+mart MODHeadquarters_SpecialShopShop{
+    ITEM_BLUE_FLUTE
+    ITEM_YELLOW_FLUTE
+    ITEM_RED_FLUTE
+    ITEM_BLACK_FLUTE
+    ITEM_WHITE_FLUTE
+    ITEM_HELIX_FOSSIL
+    ITEM_DOME_FOSSIL
+    ITEM_OLD_AMBER
+    ITEM_ROOT_FOSSIL
+    ITEM_CLAW_FOSSIL
+    ITEM_ARMOR_FOSSIL
+    ITEM_SKULL_FOSSIL
+    ITEM_COVER_FOSSIL
+    ITEM_PLUME_FOSSIL
+    ITEM_JAW_FOSSIL
+    ITEM_SAIL_FOSSIL
+    ITEM_FOSSILIZED_BIRD
+    ITEM_FOSSILIZED_FISH
+    ITEM_FOSSILIZED_DRAKE
+    ITEM_FOSSILIZED_DINO
+    ITEM_NORMALIUM_Z
+    ITEM_FIRIUM_Z
+    ITEM_WATERIUM_Z
+    ITEM_ELECTRIUM_Z
+    ITEM_GRASSIUM_Z
+    ITEM_ICIUM_Z
+    ITEM_FIGHTINIUM_Z
+    ITEM_POISONIUM_Z
+    ITEM_GROUNDIUM_Z
+    ITEM_FLYINIUM_Z
+    ITEM_PSYCHIUM_Z
+    ITEM_BUGINIUM_Z
+    ITEM_ROCKIUM_Z
+    ITEM_GHOSTIUM_Z
+    ITEM_DRAGONIUM_Z
+    ITEM_DARKINIUM_Z
+    ITEM_STEELIUM_Z
+    ITEM_FAIRIUM_Z
+    ITEM_PIKANIUM_Z
+    ITEM_EEVIUM_Z
+    ITEM_SNORLIUM_Z
+    ITEM_DECIDIUM_Z
+    ITEM_INCINIUM_Z
+    ITEM_PRIMARIUM_Z
+    ITEM_LYCANIUM_Z
+    ITEM_MIMIKIUM_Z
+    ITEM_KOMMONIUM_Z
+    ITEM_TAPUNIUM_Z
+    ITEM_SOLGANIUM_Z
+    ITEM_LUNALIUM_Z
+    ITEM_MARSHADIUM_Z
+    ITEM_ALORAICHIUM_Z
+    ITEM_PIKASHUNIUM_Z
+    ITEM_ULTRANECROZIUM_Z
+    ITEM_OVAL_CHARM
+    ITEM_SHINY_CHARM
+    ITEM_CATCHING_CHARM
+    ITEM_EXP_CHARM
+    ITEM_MEGA_RING
+    ITEM_Z_POWER_RING
+    ITEM_MACH_BIKE
+    ITEM_ACRO_BIKE
+    ITEM_OLD_ROD
+    ITEM_GOOD_ROD
+    ITEM_SUPER_ROD
+    ITEM_DOWSING_MACHINE
+    ITEM_POKEMON_BOX_LINK
+    ITEM_POKE_RADAR
+    //ITEM_AXE
+    //ITEM_LAMP
+    //ITEM_ROCK_SMASHER
+    //ITEM_BOLDER_PUSHER
+    //ITEM_SURFBOARD
+    //ITEM_BIRD_CALLER
+    //ITEM_DIVING_EQUIPMENT
+    //ITEM_REVERSE_WATERFALL
+    //ITEM_CAMPING_EQUIPMENT
 }
