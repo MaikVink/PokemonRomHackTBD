@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_IndoorMODQuarters"
+    "gMapGroup_IndoorMODQuarters",
+    "gMapGroup_CliffToNowhere"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -642,5 +643,8 @@
     "MODHeadQuarts_SpecialShop_Underwater",
     "MODHeadquarters_SpecialShop_FlashCave",
     "MODHeadquarters_EvoMasters"
+  ],
+  "gMapGroup_CliffToNowhere": [
+    "CliffToNowhere"
   ]
 }

@@ -612,6 +612,9 @@
 #define MAP_MODHEADQUARTERS_SPECIAL_SHOP_FLASH_CAVE (17 | (34 << 8))
 #define MAP_MODHEADQUARTERS_EVO_MASTERS             (18 | (34 << 8))
 
-#define MAP_GROUPS_COUNT 35
+// gMapGroup_CliffToNowhere
+#define MAP_CLIFF_TO_NOWHERE (0 | (35 << 8))
+
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

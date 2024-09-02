@@ -1,1 +1,338 @@
-mapscripts MODHeadquarters_EvoMasters_MapScripts {}
+mapscripts MODHeadquarters_EvoMasters_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: EvoMasters_OnTransition
+}
+
+script EvoMasters_OnTransition{
+    if(var(VAR_MOD_SHOPS_STATE) == 1011 ||
+    var(VAR_MOD_SHOPS_STATE) == 1010 || var(VAR_MOD_SHOPS_STATE) == 1001 || var(VAR_MOD_SHOPS_STATE) == 11 ||
+    var(VAR_MOD_SHOPS_STATE) == 1000 || var(VAR_MOD_SHOPS_STATE) == 10 || var(VAR_MOD_SHOPS_STATE) == 1 || var(VAR_MOD_SHOPS_STATE) == 0)
+    {
+        addvar(VAR_MOD_SHOPS_STATE, 100)
+    }
+    if(var(VAR_MOD_SHOPS_STATE) == 0)
+    {
+        clearflag(FLAG_HIDE_DENEITH)
+    }
+}
+
+script EvoMAsters_ObjectScript_Masseuse{
+    lockall
+    faceplayer
+    if(var(VAR_MOD_SHOPS_STATE) < 2000)
+    {
+        msgbox(format("Hello, I'm the Soothing Sister!\p
+        I can help your pokemon relax and feel very affectioness towards you!\p
+        ...\p
+        In a good way...\p
+        Many pokemon require some love to evolve. If you use my service I can help you speed up the process and allow them to evolve almost instantly!
+        Still, I would require sovme compensation if you don't mind. A 1000 good for you?"))
+    }
+    if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_FREE_MASSAGE))
+    {
+        setflag(FLAG_FREE_MASSAGE)
+        msgbox(format("Oh? Is that an Eevee I see in your party?\p
+        alright, for this once I allow you to use my services for free if you want."))
+        call(EvoMasters_CheckFreeMassageEevee)
+    }
+    msgbox(format("Welcome!\p
+    Want to give a pokemon a massage for 1000?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        checkmoney(1000)
+        if(var(VAR_RESULT))
+        {
+            msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
+        }
+        else
+        {
+            msgbox(format("I'm sorry, but it seems like you don't have enough money for my services..."))
+        }
+    }
+    else
+    {
+        msgbox(format("Alright, do come back if you require my services!"))
+    }
+    releaseall
+}
+
+script EvoMasters_CheckFreeMassageEevee{
+    msgbox(format("Should I give your Eevee a massage?"), MSGBOX_YESNO)
+    if(!var(VAR_RESULT))
+    {
+        call(EvoMasters_CheckDeclineMassage)
+    }
+    else
+    {
+        msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
+    }
+}
+
+script EvoMasters_CheckDeclineMassage{
+    msgbox(format("No? I'm only giving you this offer once, so I would suggest you think about it again\p
+    I mean... It's free! \n
+    Why wouldn't you want it?\p
+    So are you absolutely sure you don't want the free massage for your Eevee?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        msgbox(format("OK, that is your decision!\p
+        If you change your mind about giving your Eevee a massage do come back to me.\p
+        Though... I'll require you to pay the fee next time."))
+    }
+    else
+    {
+        msgbox(format("That is what I thought!\n
+        So..."))
+        call(EvoMasters_CheckFreeMassageEevee)
+    }
+}
+
+script EvoMasters_ObjectScript_Simulator
+{
+    lockall
+    faceplayer
+    if(var(VAR_MOD_SHOPS_STATE) < 2000)
+    {
+        msgbox(format("Good day, I'm the Simulation Sister!\p
+        Some pokemon require specific circumanstance to evolve into their new form.\l
+        Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments.
+        Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l
+        Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
+        if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
+        {
+            msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p
+            Would you like to try out this simulation for free?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                msgbox(format("I'm sorry sir, it seems that our simulation is still under construction."))
+            }
+            else
+            {
+                msgbox(format("Please talk to me again before you move on if you want to use my services for free, otherwise I'll require some compensation."))
+            }
+        }
+    }
+    msgbox(format("Would you require us to simulate a specific environment for you?\l
+    We have a processing fee of 2500 to do so."), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        checkmoney(2500)
+        if(var(VAR_RESULT))
+        {
+            msgbox(format("I'm sorry sir, it seems that our simulation is still under construction."))
+        }
+        else
+        {
+            msgbox(format("I'm sorry, but if we want to make sure that the Simulation keeps working as intended, we do require you to pay the full fee."))
+        }
+    }
+    else
+    {
+        msgbox(format("If you need something simulated, you know where to find me!"))        
+    }
+    releaseall
+}
+
+script EvoMasters_ObjectScript_EvoChecker{
+    lockall
+    faceplayer
+    if(var(VAR_MOD_SHOPS_STATE) < 2000)
+    {
+        msgbox(format("Hi, I'm the Strategic Sister!\p
+        I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p
+        Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
+    }
+    msgbox(format("Do you want to know how you need to evolve one of your pokemon?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        msgbox(format("Sorry, it seems like I still need to study some more before I'm ready to offer up my services."))
+    }
+    else
+    {
+        msgbox(format("If you ever want to know, you know where to find me!"))
+    }
+    releaseall
+}
+
+script EvoMasters_ObjectScript_MartEmployer{
+    lockall
+    faceplayer
+    if(var(VAR_MOD_SHOPS_STATE) < 2000)
+    {
+        msgbox(format("Welcome, I'm the Sell-Out Sister!\p
+        Maybe a bit of an unfortunate name, but you can come to me if you need any evolution items."))
+    }
+    if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
+    {
+        msgbox(format("Oh? Is that an Eevee I see in your party? Because it is your first time visiting us, please allow me to give you some stuff. For this once, it will be on the house!"))
+        giveitem(ITEM_WATER_STONE)
+        giveitem(ITEM_FIRE_STONE)
+        giveitem(ITEM_THUNDER_STONE)
+        giveitem(ITEM_TM51)
+        setflag(FLAG_GIFT_EVOMASTERS)
+        msgbox("Hope that it will help you in your journey!")
+    }
+    msgbox(format("Is there anything I could help you with?"))
+    pokemart(MODHeadquarters_EvoShop)
+    msgbox("Please come again!")
+    releaseall
+}
+
+mart MODHeadquarters_EvoShop {
+    ITEM_FIRE_STONE
+    ITEM_WATER_STONE
+    ITEM_THUNDER_STONE
+    ITEM_LEAF_STONE
+    ITEM_ICE_STONE
+    ITEM_SUN_STONE
+    ITEM_MOON_STONE
+    ITEM_SHINY_STONE
+    ITEM_DUSK_STONE
+    ITEM_DAWN_STONE
+    ITEM_SWEET_APPLE
+    ITEM_TART_APPLE
+    ITEM_CRACKED_POT
+    ITEM_CHIPPED_POT
+    ITEM_GALARICA_CUFF
+    ITEM_GALARICA_WREATH
+    ITEM_DRAGON_SCALE
+    ITEM_UPGRADE
+    ITEM_PROTECTOR
+    ITEM_ELECTIRIZER
+    ITEM_MAGMARIZER
+    ITEM_DUBIOUS_DISC
+    ITEM_REAPER_CLOTH
+    ITEM_PRISM_SCALE
+    ITEM_WHIPPED_DREAM
+    ITEM_SACHET
+    ITEM_OVAL_STONE
+    ITEM_STRAWBERRY_SWEET
+    ITEM_LOVE_SWEET
+    ITEM_BERRY_SWEET
+    ITEM_CLOVER_SWEET
+    ITEM_FLOWER_SWEET
+    ITEM_STAR_SWEET
+    ITEM_RIBBON_SWEET
+    ITEM_EVERSTONE
+    ITEM_RED_NECTAR
+    ITEM_YELLOW_NECTAR
+    ITEM_PINK_NECTAR
+    ITEM_PURPLE_NECTAR
+    ITEM_FLAME_PLATE
+    ITEM_SPLASH_PLATE
+    ITEM_ZAP_PLATE
+    ITEM_MEADOW_PLATE
+    ITEM_ICICLE_PLATE
+    ITEM_FIST_PLATE
+    ITEM_TOXIC_PLATE
+    ITEM_EARTH_PLATE
+    ITEM_SKY_PLATE
+    ITEM_MIND_PLATE
+    ITEM_INSECT_PLATE
+    ITEM_STONE_PLATE
+    ITEM_SPOOKY_PLATE
+    ITEM_DRACO_PLATE
+    ITEM_DREAD_PLATE
+    ITEM_IRON_PLATE
+    ITEM_PIXIE_PLATE
+    ITEM_DOUSE_DRIVE
+    ITEM_SHOCK_DRIVE
+    ITEM_BURN_DRIVE
+    ITEM_CHILL_DRIVE
+    ITEM_FIRE_MEMORY
+    ITEM_WATER_MEMORY
+    ITEM_ELECTRIC_MEMORY
+    ITEM_GRASS_MEMORY
+    ITEM_ICE_MEMORY
+    ITEM_FIGHTING_MEMORY
+    ITEM_POISON_MEMORY
+    ITEM_GROUND_MEMORY
+    ITEM_FLYING_MEMORY
+    ITEM_PSYCHIC_MEMORY
+    ITEM_BUG_MEMORY
+    ITEM_ROCK_MEMORY
+    ITEM_GHOST_MEMORY
+    ITEM_DRAGON_MEMORY
+    ITEM_DARK_MEMORY
+    ITEM_STEEL_MEMORY
+    ITEM_FAIRY_MEMORY
+    ITEM_RUSTED_SWORD
+    ITEM_RUSTED_SHIELD
+    ITEM_RED_ORB
+    ITEM_BLUE_ORB
+    ITEM_VENUSAURITE
+    ITEM_CHARIZARDITE_X
+    ITEM_CHARIZARDITE_Y
+    ITEM_BLASTOISINITE
+    ITEM_BEEDRILLITE
+    ITEM_PIDGEOTITE
+    ITEM_ALAKAZITE
+    ITEM_SLOWBRONITE
+    ITEM_GENGARITE
+    ITEM_KANGASKHANITE
+    ITEM_PINSIRITE
+    ITEM_GYARADOSITE
+    ITEM_AERODACTYLITE
+    ITEM_MEWTWONITE_X
+    ITEM_MEWTWONITE_Y
+    ITEM_AMPHAROSITE
+    ITEM_STEELIXITE
+    ITEM_SCIZORITE
+    ITEM_HERACRONITE
+    ITEM_HOUNDOOMINITE
+    ITEM_TYRANITARITE
+    ITEM_SCEPTILITE
+    ITEM_BLAZIKENITE
+    ITEM_SWAMPERTITE
+    ITEM_SABLENITE
+    ITEM_MAWILITE
+    ITEM_AGGRONITE
+    ITEM_MEDICHAMITE
+    ITEM_MANECTITE
+    ITEM_SHARPEDONITE
+    ITEM_CAMERUPTITE
+    ITEM_ALTARIANITE
+    ITEM_BANETTITE
+    ITEM_ABSOLITE
+    ITEM_GLALITITE
+    ITEM_SALAMENCITE
+    ITEM_METAGROSSITE
+    ITEM_LATIASITE
+    ITEM_LATIOSITE
+    ITEM_GARCHOMPITE
+    ITEM_LUCARIONITE
+    ITEM_GALLADITE
+    ITEM_AUDINITE
+    ITEM_DIANCITE
+    ITEM_LEEK
+    ITEM_DEEP_SEA_SCALE
+    ITEM_DEEP_SEA_TOOTH
+    ITEM_ROTOM_CATALOG
+    ITEM_GRACIDEA
+    ITEM_REVEAL_GLASS
+    ITEM_DNA_SPLICERS
+    ITEM_ZYGARDE_CUBE
+    ITEM_PRISON_BOTTLE
+    ITEM_N_SOLARIZER
+    ITEM_N_LUNARIZER
+    ITEM_REINS_OF_UNITY
+    ITEM_AUSPICIOUS_ARMOR
+    ITEM_GIMMIGHOUL_COIN
+    ITEM_LEADERS_CREST
+    ITEM_MALICIOUS_ARMOR
+    ITEM_SCROLL_OF_DARKNESS
+    ITEM_SCROLL_OF_WATERS
+    ITEM_ADAMANT_CRYSTAL
+    ITEM_GRISEOUS_CORE
+    ITEM_LUSTROUS_GLOBE
+    ITEM_BLACK_AUGURITE
+    ITEM_LINKING_CORD
+    ITEM_PEAT_BLOCK
+    ITEM_BERSERK_GENE
+    ITEM_SYRUPY_APPLE
+    ITEM_UNREMARKABLE_TEACUP
+    ITEM_MASTERPIECE_TEACUP
+    ITEM_CORNERSTONE_MASK
+    ITEM_WELLSPRING_MASK
+    ITEM_HEARTHFLAME_MASK
+    ITEM_METAL_ALLOY
+}
