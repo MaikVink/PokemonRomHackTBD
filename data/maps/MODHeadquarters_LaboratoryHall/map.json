@@ -1,7 +1,7 @@
 {
-  "id": "MAP_LABORATORY_HALL",
-  "name": "LaboratoryHall",
-  "layout": "LAYOUT_LABORATORY_HALL",
+  "id": "MAP_MODHEADQUARTERS_LABORATORY_HALL",
+  "name": "MODHeadquarters_LaboratoryHall",
+  "layout": "LAYOUT_MODHEADQUARTERS_LABORATORY_HALL",
   "music": "MUS_AQUA_MAGMA_HIDEOUT",
   "region_map_section": "MAPSEC_MOD_HEADQUARTERS",
   "requires_flash": false,
@@ -12,13 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_HALL1",
-      "offset": -23,
-      "direction": "left"
-    }
-  ],
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
@@ -35,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 6,
+      "x": 7,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -43,8 +37,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LaboratoryHall_EventScript_GuardBlock",
-      "flag": "FLAG_TOURNAMENT"
+      "script": "LaboratoryHall_EventScript_GuardOpen",
+      "flag": "FLAG_REVERSED_GUARD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ANABEL",
@@ -61,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 7,
+      "x": 6,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -69,8 +63,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LaboratoryHall_EventScript_GuardOpen",
-      "flag": "FLAG_REVERSED_GUARD"
+      "script": "LaboratoryHall_EventScript_GuardBlock",
+      "flag": "FLAG_TOURNAMENT"
     }
   ],
   "warp_events": [
@@ -78,14 +72,14 @@
       "x": 14,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_LABORATORY",
+      "dest_map": "MAP_MODHEADQUARTERS_LABORATORY_HALL",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_BATTLE_DOJO",
+      "dest_map": "MAP_MODHEADQUARTERS_BATTLE_DOJO",
       "dest_warp_id": "0"
     }
   ],
@@ -98,6 +92,15 @@
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "2",
       "script": "LaboratoryHall_Trigger_Fiona"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "2",
+      "script": "LaboratoryHall_Trigger_HideFiona"
     },
     {
       "type": "trigger",
@@ -120,7 +123,7 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "2",
@@ -130,15 +133,6 @@
       "type": "trigger",
       "x": 6,
       "y": 5,
-      "elevation": 0,
-      "var": "VAR_STORY_PROGRESSION",
-      "var_value": "2",
-      "script": "LaboratoryHall_Trigger_HideFiona"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 6,
       "elevation": 0,
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "2",
@@ -184,11 +178,11 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 12,
-      "y": 6,
+      "x": 16,
+      "y": 1,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LaboratoryHall_SignScript_Egg"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LaboratoryHall_SignScript_LockedDrawer"
     },
     {
       "type": "sign",
@@ -208,11 +202,11 @@
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 1,
+      "x": 12,
+      "y": 6,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "LaboratoryHall_SignScript_LockedDrawer"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LaboratoryHall_SignScript_Egg"
     }
   ]
 }

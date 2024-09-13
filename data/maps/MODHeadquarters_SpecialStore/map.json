@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_MODHEAD_QUARTS_SPECIAL_SHOP_UNDERWATER",
+      "map": "MAP_MODHEADQUARTERS_SPECIAL_SHOP_UNDERWATER",
       "offset": 0,
       "direction": "dive"
     }

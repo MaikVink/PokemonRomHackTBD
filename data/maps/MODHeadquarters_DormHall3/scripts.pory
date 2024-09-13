@@ -1,0 +1,152 @@
+mapscripts DormHall3_MapScripts {
+
+}
+
+script DormHallBottemLeft_EventScript_Hiker{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("If you want to look in my room, go ahead!\l
+            As long as you allow me also to look in your room, of course!\l
+            I cannot deny that I'm also curious to see what the other initiatives have done with the limiting house rules we have been given."))
+        case 5:
+            msgbox(format("uhm... I mean you still can go in my room if you want, but I do intend to go to bed soon.\l Maybe you should also go to your room sometime soon."))
+        case 6:
+            msgbox(format("Hé, good luck with the tournament!\p 
+            I have made it through my first round, I'm sure you'll be able to make it through yours as well!"))
+        case 7:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: After my first battle I felt like I was unbeatable. I was absolutely sure I was gonna come out as the Tournament Champion, but you sure showed me I have still a long way to go.\p
+                I'll be rooting for you to win this Tournament!"))
+            }
+            else
+            {
+                msgbox(format("I heard you're gonna be my next opponent.\p
+                Well I don't intend to lose, so make sure you're prepared to lose!"))
+            }
+        case 8:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: HAHAHA!\n
+                I knew you could do it!\p
+                I hope she will now learn that she is not so great as she thinks she is!"))
+            }
+            else
+            {
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: I heard that beauty girl was gonna be your next opponent.\p
+                Well, you humbled me with our fight, if someone needs a little bit of humbling it's gotta be her!\p
+                Go beat her up {PLAYER}!"))
+            }
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: I knew you could do it! Only the best could defeat me HAHAHAHA.\l
+                HAHAHA\l
+                HA\l
+                ha\l
+                ha...\l
+                ...\l
+                I was joking of course.\p
+                I know I have still a lot to learn before I can win from someone like you."))
+            }
+            else
+            {
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Of course I hope you win {PLAYER}!\p
+                Though I have also seen Fiona fight...\p
+                This is probably going to be one interesting battle!"))      
+            }
+        default:
+            msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Well I like sleeping in the wild, nothing beats a comfortable bed with a strong room above your head."))
+    }
+    releaseall
+}
+
+script DormHallBottemLeft_EventScript_Woman{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("Have you gotten your pokemon already?\p
+            I was not prepared for the test they gave me before they handed the pokemon to me.\p
+            Such a strange method to decide what pokemon you should get..."))
+        case 5:
+            msgbox(format("First that weird test to get your pokemon and now a tournament as your first pokemon battle. \p
+            They have a strange customs around in team MOD."))
+        case 6:
+            msgbox(format("How annoying, I lost my first ever pokemon battle. Though I believe I'm more frustrating because I lost to that Bi-...\l
+            ...\l
+            annoying lady than that I lost the tournament."))
+        case 7:
+            msgbox(format("Bella sadly made it to the semi-finals, I wish someone could beat her so she might act less high and mighty!"))
+        case 8:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Thank you {PLAYER}, even though she might still talk high and mighty, I can see your win against her has dealt a massive blow to her ego!"))
+            }
+            else
+            {
+                msgbox(format("I know I have no right to ask this of you {PLAYER}, but if you wouldn't mind\l
+                Could you please win this next battle? I heard you're gonna fight Bella and I just hate looking at her smug face..."))
+            }
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Well done {PLAYER}! or should I say Champion now?"))
+            }
+            else
+            {
+                msgbox(format("The finals are today, aren't they? Good luck {PLAYER}, may the best rookie win!"))      
+            }
+        default:
+            msgbox(format("You learn a lot when you're out in the field. If you ever want to find out what I have learned during my travels, go talk to Surge and see if we can use the battle arena!"))
+    }
+    releaseall
+}
+
+script DormhallBottemLeft_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
+    releaseall
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue1{
+    setvar(VAR_DYNAMIC_DORMWARP, 9)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue2{
+    setvar(VAR_DYNAMIC_DORMWARP, 10)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue3{
+    setvar(VAR_DYNAMIC_DORMWARP, 11)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue4{
+    setvar(VAR_DYNAMIC_DORMWARP, 12)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue5{
+    setvar(VAR_DYNAMIC_DORMWARP, 13)
+    release
+}
+
+script DormhallBottemLeft_Trigger_SetWarpValue6{
+    setvar(VAR_DYNAMIC_DORMWARP, 14)
+    release
+}
