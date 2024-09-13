@@ -251,7 +251,7 @@
       "x": 2,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DORM_HALL1",
+      "dest_map": "MAP_MODHEADQUARTERS_PLAYER_ROOM",
       "dest_warp_id": "2"
     }
   ],

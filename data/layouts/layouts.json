@@ -4610,6 +4610,156 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CliffToNowhere/border.bin",
       "blockdata_filepath": "data/layouts/CliffToNowhere/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_DORM_HALL1",
+      "name": "MODHeadquarters_DormHall1_Layout",
+      "width": 35,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_DormHall1/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_DormHall1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_COMMON_DORM_ROOM",
+      "name": "MODHeadquarters_CommonDormRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/MODHeadquarters_CommonDormRoom/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_CommonDormRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_PLAYER_ROOM",
+      "name": "MODHeadquarters_PlayerRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/MODHeadquarters_PlayerRoom/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_PlayerRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_FIONAS_ROOM",
+      "name": "MODHeadquarters_FionasRoom_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/MODHeadquarters_FionasRoom/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_FionasRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_HALL1",
+      "name": "MODHeadquarters_Hall1_Layout",
+      "width": 10,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_Hall1/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_Hall1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_DORM_HALL2",
+      "name": "MODHeadquarters_DormHall2_Layout",
+      "width": 30,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_DormHall2/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_DormHall2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_DORM_HALL3",
+      "name": "MODHeadquarters_DormHall3_Layout",
+      "width": 38,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_DormHall3/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_DormHall3/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_ROLL_CALL",
+      "name": "MODHeadquarters_RollCall_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_RollCall/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_RollCall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_LABORATORY_HALL",
+      "name": "MODHeadquarters_LaboratoryHall_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_LaboratoryHall/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_LaboratoryHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_LABORATORY",
+      "name": "MODHeadquarters_Laboratory_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/MODHeadquarters_Laboratory/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_Laboratory/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_BATTLE_DOJO",
+      "name": "MODHeadquarters_BattleDojo_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/MODHeadquarters_BattleDojo/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_BattleDojo/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_BATTLE_DOJO_REPLICA",
+      "name": "MODHeadquarters_BattleDojoReplica_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/MODHeadquarters_BattleDojoReplica/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_BattleDojoReplica/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_SPECIAL_SHOP_UNDERWATER",
+      "name": "MODHeadquarters_SpecialShop_Underwater_Layout",
+      "width": 31,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/MODHeadquarters_SpecialShop_Underwater/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_SpecialShop_Underwater/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_ENTRANCE_HALL",
+      "name": "MODHeadquarters_EntranceHall_Layout",
+      "width": 44,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MODHeadquarters_EntranceHall/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EntranceHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_MOVE_MASTERS",
+      "name": "MODHeadquarters_MoveMasters_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MODHeadquarters_MoveMasters/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_MoveMasters/map.bin"
     }
   ]
 }

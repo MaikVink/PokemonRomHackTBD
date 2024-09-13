@@ -642,7 +642,22 @@
     "MODHeadquarters_SpecialStore",
     "MODHeadQuarts_SpecialShop_Underwater",
     "MODHeadquarters_SpecialShop_FlashCave",
-    "MODHeadquarters_EvoMasters"
+    "MODHeadquarters_EvoMasters",
+    "MODHeadquarters_DormHall1",
+    "MODHeadquarters_CommonDormRoom",
+    "MODHeadquarters_PlayerRoom",
+    "MODHeadquarters_FionasRoom",
+    "MODHeadquarters_Hall1",
+    "MODHeadquarters_DormHall2",
+    "MODHeadquarters_DormHall3",
+    "MODHeadquarters_RollCall",
+    "MODHeadquarters_LaboratoryHall",
+    "MODHeadquarters_Laboratory",
+    "MODHeadquarters_BattleDojo",
+    "MODHeadquarters_BattleDojoReplica",
+    "MODHeadquarters_SpecialShop_Underwater",
+    "MODHeadquarters_EntranceHall",
+    "MODHeadquarters_MoveMasters"
   ],
   "gMapGroup_CliffToNowhere": [
     "CliffToNowhere"

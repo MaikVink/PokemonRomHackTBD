@@ -1,0 +1,100 @@
+mapscripts DormHall2_MapScripts {
+
+}
+
+script DormhallTopLeft_EventScript_WindowWatcher{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("I wonder when we will be allowed to leave this place with our pokemon"))
+        case 5:
+            msgbox(format("With the tournament I doubt we will be able to leave this place anything soon huh?"))
+        case 6:
+        case 7:
+            msgbox(format("With the way I'm handeling these pokemon, I should probably not be too eager to go out into the world with my pokemon..."))
+        case 8:
+            msgbox(format("I have made up my mind: I'm going to work hard so I can trust myself to handle these pokemon when I'm out and about."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Congrats {PLAYER}! I won't be allowed to leave just yet with my pokemon, but I promise you I'll follow you soon enough!"))
+            }
+            else
+            {
+                msgbox(format("Seeing you and Fiona battle is so inspiring! I will make sure I earn the right to go out of here just the way you guys already have!"))      
+            }
+        default:
+            msgbox(format("{COLOR BLUE}Hera{COLOR DARK_GRAY}: The world out there is so beautiful, but it is good to have a safe place to call home if you need it, isn't it?"))
+    }
+    releaseall
+}
+
+script DormhallTopLeft_EventScript_NervousWalker{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            msgbox(format("Aaah, I'm so nervous to collect my pokemon!\p What if I get a pokemon I don't like?\n What if I'm stuck with a pokemon I hate?\p Should I wait to see what other people get or should I just rip off this bandage?"))
+        case 5:
+            msgbox(format("What should I do? I'm not so sure that I can handle the responsability of owning pokemon but I also have gotten to far to back down!"))
+        case 6:
+            msgbox(format("I lost indescribly hard! \n I had no chance against Fiona. How can I now ever proof that I can handle pokemon to myself and {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}?"))
+        case 7:
+        case 8:
+            msgbox(format("What could I have done better? Should I have asked for a test battle before? Should I have been more aggresive? Should I have played it for the long game?"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Should I go an congratulate {PLAYER} with their win? Or should I not bother them and let them rest out for a bit?"))
+            }
+            else
+            {
+                msgbox(format("Who should I want to win? Do I want Fiona to win so I can say I lost to the Tournament Champion? Or should I want {PLAYER} to win so I can at least feel better she also lost?"))      
+            }
+        default:
+            msgbox(format("{COLOR BLUE}Raoul{COLOR DARK_GRAY}: You know, running around like this always helps me to clear my mind.\l You should try it sometimes!"))
+    }
+    releaseall
+}
+
+script DormhallTopLeft_SignScript_StatueNormal{
+    lockall
+    msgbox(format("It seems to be of a statue of a pokemon, though the erosion make it hard to determine which pokemon it is supposed to be."))
+    releaseall
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue1{
+    setvar(VAR_DYNAMIC_DORMWARP, 4)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue2{
+    setvar(VAR_DYNAMIC_DORMWARP, 5)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue3{
+    setvar(VAR_DYNAMIC_DORMWARP, 6)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue4{
+    setvar(VAR_DYNAMIC_DORMWARP, 7)
+    release
+}
+
+script DormhallTopLeft_Trigger_SetWarpValue5{
+    setvar(VAR_DYNAMIC_DORMWARP, 8)
+    release
+}

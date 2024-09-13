@@ -1,0 +1,378 @@
+const PSYCHICM_LOCALID = 3
+const POKEFANF_LOCALID = 2
+const HEXMANIAC_LOCALID = 4
+const NINJABOY_LOCALID = 7
+const SURGE_LOCALID = 1
+const MOM_LOCALID = 8
+const RECEPTIONIST_LOCALID = 5
+const WOMAN2_LOCALID = 6
+const TRIATHLETE_LOCALID = 9
+
+mapscripts BattleDojoReplica_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_BATTLE_DOJO_STATE, 1: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 2: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 3: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 4: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 6: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 7: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 8: BattleDojoReplica_HideNPCs_OnTransition
+        VAR_BATTLE_DOJO_STATE, 9: BattleDojoReplica_HideNPCs_OnTransition
+    ]
+}
+
+script BattleDojoReplica_HideNPCs_OnTransition{
+    call(BattleDojoReplica_HideNPCs)
+    applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_FaceRight)
+    switch(var(VAR_BATTLE_DOJO_STATE))
+    {
+        case 1:
+            setvar(VAR_TEMP_1, 1)
+        case 2:
+            setvar(VAR_TEMP_1, 2)
+        case 3:
+            setvar(VAR_TEMP_1, 3)
+        case 4:
+            setvar(VAR_TEMP_1, 4)
+        case 6:
+            setvar(VAR_TEMP_1, 6)
+        case 7:
+            setvar(VAR_TEMP_1, 7)
+        case 8:
+            setvar(VAR_TEMP_1, 8)
+        case 9:
+            setvar(VAR_TEMP_1, 9)
+        default:
+            msgbox("var was invalid")
+    }
+    setvar(VAR_BATTLE_DOJO_STATE, 0)
+    call(BattleDojoReplica_BattleDojoReplicaBattles)
+}
+
+script BattleDojoReplica_HideNPCs{
+    hideobjectat(MOM_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(WOMAN2_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(NINJABOY_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(TRIATHLETE_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(PSYCHICM_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(POKEFANF_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(HEXMANIAC_LOCALID, MAP_BATTLE_DOJO)
+    hideobjectat(RECEPTIONIST_LOCALID, MAP_BATTLE_DOJO)
+    setvar(VAR_HIDE_OBJECTS, 2)
+}
+
+script BattleDojoReplica_HNS1
+{
+    setvar(VAR_HIDE_OBJECTS, 3)
+}
+
+script BattleDojoReplica_Event_Surge{
+    msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Here for another fight?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        call(BattleDojoReplica_GridChoice)
+    }
+    else
+    {
+        msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, talk to me if you ever want to fight one of your colleagues."))
+    }
+}
+
+script BattleDojoReplica_PLayerMoveToBattleSpot{
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    switch(var(VAR_RESULT))
+    {
+        case 1:
+            applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotDown)
+        case 2:
+            applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotUp)
+        case 3:
+            applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotRight)
+        case 4:
+            applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotLeft)
+    }
+    waitmovement(0)
+    return
+}
+
+script BattleDojoReplica_GridChoice{
+    msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Who do you want to fight?"))
+    multichoicegrid(0, 0, MULTI_DOJO_GRID, 3, 0)
+    closemessage
+    setvar(VAR_BATTLE_DOJO_STATE, 0)
+    switch(var(VAR_RESULT))
+    {
+        case 0:
+            buffertrainername(STR_VAR_1, 5)
+            setvar(VAR_BATTLE_DOJO_STATE, 15)
+        case 1:
+            buffertrainername(STR_VAR_1, 6)
+            setvar(VAR_BATTLE_DOJO_STATE, 12)
+        case 2:
+            buffertrainername(STR_VAR_1, 7)
+            setvar(VAR_BATTLE_DOJO_STATE, 13)
+        case 3:
+            buffertrainername(STR_VAR_1, 8)
+            setvar(VAR_BATTLE_DOJO_STATE, 14)
+        case 4:
+            buffertrainername(STR_VAR_1, 9)
+            setvar(VAR_BATTLE_DOJO_STATE, 16)
+        case 5:
+            buffertrainername(STR_VAR_1, 10)
+            setvar(VAR_BATTLE_DOJO_STATE, 17)
+        case 6:
+            buffertrainername(STR_VAR_1, 11)
+            setvar(VAR_BATTLE_DOJO_STATE, 18)
+        case 7:
+            buffertrainername(STR_VAR_1, 12)
+            setvar(VAR_TEMP_1, NINJABOY_LOCALID)
+        case 8:
+            buffertrainername(STR_VAR_1, 13)
+            setvar(VAR_TEMP_1, HEXMANIAC_LOCALID)
+        case 9:
+            buffertrainername(STR_VAR_1, 14)
+            setvar(VAR_TEMP_1, TRIATHLETE_LOCALID)
+        case 10:
+            buffertrainername(STR_VAR_1, 15)
+            setvar(VAR_TEMP_1, POKEFANF_LOCALID)
+        case 11:
+            buffertrainername(STR_VAR_1, 16)
+            setvar(VAR_TEMP_1, MOM_LOCALID)
+        case 12:
+            buffertrainername(STR_VAR_1, 17)
+            setvar(VAR_TEMP_1, PSYCHICM_LOCALID)
+        case 13:
+            buffertrainername(STR_VAR_1, 18)
+            setvar(VAR_TEMP_1, RECEPTIONIST_LOCALID)
+        case 14:
+            buffertrainername(STR_VAR_1, 19)
+            setvar(VAR_TEMP_1, WOMAN2_LOCALID)
+        default:
+            msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Changed your mind?\n
+            Talk to me if you want to battle one of your colleagues!"))
+            releaseall
+            end
+    }
+    msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Do you want to fight {STR_VAR_1}?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, frist things first."))
+        fadescreen(FADE_TO_BLACK)
+        playfanfare(MUS_HEAL)
+        special(HealPlayerParty)
+        waitfanfare
+        fadescreen(FADE_FROM_BLACK)
+        msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, you know what to do."))
+        call(BattleDojoReplica_PLayerMoveToBattleSpot)
+        switch(var(VAR_BATTLE_DOJO_STATE))
+        {
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+                msgbox("{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}")
+                warp(MAP_MODHEADQUARTERS_BATTLE_DOJO, 3, 6)
+                end
+        }
+        call(BattleDojoReplica_BattleDojoReplicaBattles)      
+    }
+    else
+    {
+        call(BattleDojoReplica_GridChoice)
+    }
+}
+
+script BattleDojoReplica_BattleDojoReplicaBattles{
+    msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: {STR_VAR_1}, YOU'VE BEEN CALLED FOR BATTLE!"))
+    setvar(VAR_BATTLE_DOJO_STATE, 0)
+    showobjectat(VAR_TEMP_1, MAP_BATTLE_DOJO)
+    applymovement(VAR_TEMP_1, BattleDojoReplica_Movement_OpponentWalksToSpot)
+    waitmovement(0)
+    switch(var(VAR_TEMP_1)){
+            case 1:
+                msgbox(format("{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: I can forsee that this will be an interesting battle!"))
+            case 2:
+                msgbox(format("{COLOR BLUE}Paula{COLOR DARK_GRAY}: I hope you have taken good care of your pokemon throughout your journey.\l
+                Now let's see how strong you've become!"))
+            case 3:
+                msgbox(format("{COLOR BLUE}Hera{COLOR DARK_GRAY}: Have you already gone out with your pokemon?"))
+            case 4:
+                msgbox(format("{COLOR BLUE}Niko{COLOR DARK_GRAY}: ...\p
+                SNEAK ATTACK!"))
+            case 6:
+                msgbox(format("{COLOR BLUE}Maria{COLOR DARK_GRAY}: Glad you have found the training field\p
+                Now let's see if the experience I anything as I imagined!"))
+            case 7:
+                msgbox(format("{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: Every battle is a new experience, so bring your worst!"))
+            case 8:
+                msgbox(format("{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I have to warn you, my starter is very strong!"))
+            case 9:
+                msgbox(format("{COLOR BLUE}Raoul{COLOR DARK_GRAY}: Alright Raoul, stay focussed and don't panic.\p
+                Let's do this!"))
+    }
+    applymovement(VAR_TEMP_1, BattleDojoReplica_Movement_WalkLeft)
+    applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkRight)
+    waitmovement(0)
+    switch(var(VAR_TEMP_1))
+    {
+        case 1:
+            trainerbattle_no_intro(TRAINER_PHOENIX_B0, Phoenix_Lost)
+        case 2:
+            trainerbattle_no_intro(TRAINER_PAULA_B0, Paula_Lost)
+        case 3:
+            trainerbattle_no_intro(TRAINER_HERA_B0, Hera_Lost)
+        case 4:
+            trainerbattle_no_intro(TRAINER_NIKO_B0, Niko_Lost)
+        case 6:
+            trainerbattle_no_intro(TRAINER_MARIA_B0, Maria_Lost)
+            case 7:
+                trainerbattle_no_intro(TRAINER_ROSANNE_B0, Rosanne_Lost)
+            case 8:
+                trainerbattle_no_intro(TRAINER_TESSA_B0, Tessa_Lost)
+            case 9:
+                trainerbattle_no_intro(TRAINER_RAOUL_B0, Raoul_Lost)
+        }
+        applymovement(VAR_TEMP_1, BattleDojoReplica_Movement_WalkRightBackwards)
+        applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkLeftBackwards)
+        waitmovement(0)
+        switch(var(VAR_TEMP_1))
+        {
+            case 1:
+                msgbox(format("{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: I forsee a lot more training for me if I ever want to defeat you. Well fought {PLAYER}"))
+            case 2:
+                msgbox(format("{COLOR BLUE}Paula{COLOR DARK_GRAY}: I see you have taken excellent care of your pokemon. Keep it up {PLAYER}"))
+            case 3:
+                msgbox(format("{COLOR BLUE}Hera{COLOR DARK_GRAY}: You're skills are far beyond what I had expected. Good battle {PLAYER}"))
+            case 4:
+                msgbox(format("{COLOR BLUE}Niko{COLOR DARK_GRAY}: My tactics were not hidden enough. I'll keep training and next time you won't see me coming!"))
+            case 6:
+                msgbox(format("{COLOR BLUE}Maria{COLOR DARK_GRAY}: Thank you {PLAYER}, this was the exact experience I hoped to get when asking for this training ground."))
+            case 7:
+                msgbox(format("{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: Every battle is a new experience, so it does not matter if you lose or win, as long as you learn something from it. Until our next battle {PLAYER}!"))
+            case 8:
+                msgbox(format("{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I guess I should not be surprised everyone had gotten a strong Starter. Keep up the good work {PLAYER}!"))
+            case 9:
+                msgbox(format("{COLOR BLUE}Raoul{COLOR DARK_GRAY}: I got losts of things to think about after this battle, I better go and start doing that.\l
+                Thanks for the battle {PLAYER}!"))
+        }
+        applymovement(VAR_TEMP_1, BattleDojoReplica_Movement_OpponentLeave)
+        waitmovement(0)
+        hideobjectat(VAR_TEMP_1, MAP_BATTLE_DOJO)
+        applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalkBackSurge)
+        waitmovement(0)
+        applymovement(SURGE_LOCALID, BattleDojoReplica_Movement_FaceLeft)
+        msgbox(format("Well done {PLAYER}!\p
+        Come talk to me if you ever want to fight another one of your colleagues."))
+        releaseall
+}
+
+movement BattleDojoReplica_movement_PlayerWalksToSpotUp{
+    walk_left * 3
+    walk_down
+    face_right
+}
+
+movement BattleDojoReplica_movement_PlayerWalksToSpotLeft{
+    walk_left * 2
+    walk_down * 2
+    face_right
+}
+
+movement BattleDojoReplica_movement_PlayerWalksToSpotDown {
+    walk_left * 3
+    walk_down * 3
+    face_right
+}
+
+movement BattleDojoReplica_movement_PlayerWalksToSpotRight{
+    walk_down
+    walk_left * 4
+    walk_down
+    face_right
+}
+
+movement BattleDojoReplica_movement_PlayerWalkBackSurge{
+    walk_up * 2
+    walk_right * 2
+}
+
+movement BattleDojoReplica_Movement_OpponentWalksToSpot{
+    walk_up * 2
+    walk_right * 3
+    walk_up * 4
+    face_left
+}
+
+movement BattleDojoReplica_Movement_OpponentLeave{
+    walk_down * 4
+    walk_left * 3
+    walk_down * 2
+    walk_in_place_down
+}
+
+movement BattleDojoReplica_Movement_FaceDown{
+    face_down
+}
+
+movement BattleDojoReplica_Movement_FaceLeft{
+    face_left
+}
+
+movement BattleDojoReplica_Movement_FaceRight{
+    face_right
+}
+
+movement BattleDojoReplica_Movement_WalkLeft{
+    walk_left
+}
+
+movement BattleDojoReplica_Movement_WalkRight{
+    walk_right
+}
+
+movement BattleDojoReplica_Movement_WalkLeftBackwards{
+    lock_facing_direction
+    walk_left
+    unlock_facing_direction
+}
+
+movement BattleDojoReplica_Movement_WalkRightBackwards{
+    lock_facing_direction
+    walk_right
+    unlock_facing_direction
+}
+
+text Niko_Lost{
+    format("You saw straight through me!")
+}
+
+text Hera_Lost{
+    format("I seem to still not yet be ready.")
+}
+
+text Raoul_Lost{
+    format("Wait! Just give me a second to catch my breath!")
+}
+
+text Paula_Lost{
+    format("You really are something else, aren't you")
+}
+
+text Maria_Lost{
+    format("This is exactly the experience I hoped for!")
+}
+
+text Phoenix_Lost{
+    format("If I only could forsee that I lost!")
+}
+
+text Rosanne_Lost{
+    format("I guess we're done here!")
+}
+
+text Tessa_Lost{
+    format("Your starter is also quite strong I see!")
+}

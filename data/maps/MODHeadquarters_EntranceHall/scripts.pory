@@ -1,0 +1,373 @@
+const LEADER_LOCALID = 3
+const DENEITH1_LOCALID = 1
+const DENEITH2_LOCALID = 2
+
+mapscripts EntranceHall_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Entrancehall_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_STORY_PROGRESSION, 10: EntranceHall_FirstEntrace
+        VAR_MOD_SHOPS_STATE, 1111: EntranceHall_CheckDoor
+    ]
+}
+
+script Entrancehall_OnTransition
+{
+    if(var(VAR_MOD_SHOPS_STATE) == 1000 || var(VAR_MOD_SHOPS_STATE) == 100 || var(VAR_MOD_SHOPS_STATE) == 10 || var(VAR_MOD_SHOPS_STATE) == 1)
+    {
+        clearflag(FLAG_HIDE_DENEITH)
+    }
+    elif(!flag(FLAG_HIDE_DENEITH))
+    {
+        setflag(FLAG_HIDE_DENEITH)
+    }
+}
+
+script EntranceHall_FirstEntrace{
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookRight)
+    waitmovement(0)
+    if(flag(FLAG_TOURNAMENT_LOST))
+    {
+        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: You might wonder why I brought you here instead of Fiona, right?\p
+        Well, to tell you the truth, me and {COLOR LIGHT_GREEN}PROF KECTOR{COLOR DARK_GRAY} expected that you would come out of top in this tournament.\p
+        Sadly you didn't, but that does not mean you have disappointed us.\p
+        Team MOD is preparing something big in the near future, and you could be a great asset to my new plan"))
+        msgbox(format("You could wonder why we don't ask Fiona, the champion of the Tournament, to join us, but I have a reason for that."))
+    }
+    else
+    {
+        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: First things first, your just reward"))
+        playfanfare(MUS_OBTAIN_ITEM)
+        specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+        if(var(VAR_RESULT) == SPECIES_EEVEE)
+        {
+            givemon(SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1)
+        }
+        else
+        {
+            givemon(SPECIES_EEVEE, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1)
+        }
+        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon"))
+        waitfanfare
+        msgbox(format("Do you want to give the pokemon a name?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT))
+        {
+            call(Common_EventScript_GetGiftMonPartySlot)
+	        call(Common_EventScript_NameReceivedPartyMon)
+        }
+        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: {COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY} told me about you, you know.\p
+        He told me I should expect great thing of you.\l
+        That is also one of the reasons I'm here actually.\l
+        So far, you do not dissapoint me.\p
+        I have great plans coming and I could use a rekruut like you. But first you have to proof yourself to me."))
+    }
+    msgbox(format("Please walk with me, than I'll give you a proper tour while I'll explain what I'm talking about."))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookLeft)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_MoveDownFromLeader)
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightNormal1)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal1)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Intelligence, Strenght, Compassion.\p
+    These are incredible skills to have but in the end we as team MOD only care about one thing:\p
+    Loyalty."))
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Up here we have the Move Masters.\p
+    If you ever want your pokemon to learn or forget a move, they'll be the experts you want to talk about.\l
+    This is also the place where you can rename your pokemons if you ever need to.\p
+    That being said, like most services handled inside Team MOD, they do require a small fee for their services\l
+    So keep that in mind when you need them."))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightNormal2)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Anyways, as I was saying: Loyalty is the core aspect we are looking for in our new recruits\p
+    Most people just hope they can fumble or cheat their way in, so they are allowed to own the power of pokemons.\l
+    But we have systems in place to make sure we have mostly people we know we can trust with these pokemon.\p
+    That being said, I still have my doubts about Fiona's loyalty...\p
+    Yours, on the other, I cannot yet place."))
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: This place is team MOD general store.\p
+    Pokéballs, repels, potions and anything else you might need out in the wild can be bought here.\p
+    Though your rank inside team MOD does matter what kind of items you can buy."))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightCutOff)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightCutOff)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: You see, right now you're a level 1 Initiative\l
+    Just like all you colleagues that also participated in the tournament.\l
+    By showing your skill and loyalty to us, you'll grow in level inside our organisation.\p
+    Once you-"))
+    waitmovement(0)
+    applymovement(DENEITH1_LOCALID, EntranceHall_Movement_DeneithBumpLeader)
+    waitmovement(0)
+    msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: OOF!\p
+    I'm sorry sir-\p
+    O... O my god!\p
+    I'm so sorry Daemion, I did not even know you were here.\l
+    I'll get out of your way straight away!\p
+    Again, I'm so sorry and I'll make this will never happen again!"))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookLeft)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookLeft)
+    applymovement(DENEITH1_LOCALID, EntranceHall_Movement_DeneithWalkAway)
+    waitmovement(0)
+    removeobject(DENEITH1_LOCALID, MAP_ENTRANCE_HALL)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: hm... that might be problematic..."))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: What? O nothing you need to worry about.\p 
+    Let's just quickly finish our business here, me being '{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}' and all that means I don't have much time for myself usually.
+    Anyways, where were we?"))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightCutOff)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightCutOff)
+    msgbox(format("Ah Yes, your rank!\p
+    You can increase your rank if you show your skill and loyalty to us.\l
+    Once you reach level 10 as Initiative you get the chance to perform a promotion test.\p
+    If you succeed in that test, you'll become an official Rekruut. Maybe still low level, but at least more than a Rookie."))
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Here we have the Evolution Masters.\p
+    You might maybe know that certain pokemon require specific conditions to evolve.\p
+    If you need something specific to evolve a pokemon or you want to know how to evolve a pokemon, this is the place to go!"))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightNormal2)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Let's talk some more about your rank.\p
+    You probably wonder what you need to do to increase your rank, aren't you?\l
+    It's simple!
+    Go explore {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} with your pokemon."))
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Lastly, we have the special shop.\p
+    As you might know, long ago we would use pokemon to help us throughout our travels, but since pokemon have not only abondanded us but also have proven to be dangerous, we needed some alternatives to overcome these common obstacles.\p
+    Now, most of these obstacles have already been cleared out for most common people, but there are still a handful of places you might need some additional tools."))
+    msgbox(format("This is the shop for those tools. They might be a bit expensive and you might not need all of them in your travels, but it is worth to take a look at once in a while. Some of the tools we sell here can be quite usefull.\p
+    Well that is it for the tour, but I'm not yet done with you.\l 
+    I'll like you to invite you into one of my offices here.\l
+    So, if you don't mind."))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightNormal2)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Many MOD members wander around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}, but to give you some guidance in your quest to become a higher ranking Initiative I have made some special preparations.\p
+    I have set out 8 generals, who are specifically placed to test your skills. They are allowed to challenge you in any way, shape or form. For every general you defeat, you'll increase in rank by 1\p
+    How you get that last rank, is up to you.\n 
+    Don't worry, we'll be watching you, so I think you'll be able to get a rank by just exploring about.\p
+    If after going through all of this you still return and want to grow in this organisation, you'll have started to prove that we can count on your loyalty."))
+    msgbox(format("if not, than depending on your choices we'll either let you life your live with your pokemon or we'll take away your pokemon and put you in prison for treason.\p
+    But I assume we don't need to get that far."))
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Also, don't think you're special or anything.\p
+    Well, technically you kinda are, because you're the only one I tell this directly to, but I mean this challenge is given to all Initiatives in your group.\p
+    Everyone has an equal chance of becoming a Rekruut and everyone has an equal chance of beating you to the punch."))
+    msgbox(format("Just because I don't trust everyone, does not mean I don't give everyone a fair chance to win my trust.\p
+    However there is one last thing I wanted to talk with you about, which is the reason I brought you here."))
+    msgbox(format("Team A.S..\p
+    You might have heard that name before somewhere around here.\p
+    They are an organisation that has been trying to undermine Team MOD for years now.\p
+    We thought we had defeated them 10 years ago, but recently they have seen to become more active again.\p
+    We don't know what their plan is, but we know it can't be anything good.\p
+    As a sign of good faith, I want to show you something that will show you what Team A.S. really is about!"))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Let me just-\p
+    ...\p
+    wait, where did i put it?\p
+    i would swear i...\p
+    ...\p
+    that little -"))
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: ...\p
+    I'm sorry {PLAYER}, I seem to have lost the keycard to my office. I have an idea where to find it, so you just go and look around for a bit, while I'll go reclaim my keycard.\p
+    Just come back here in a couple of minutes and we'll continue this conversation."))
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookLeft)
+    applymovement(LEADER_LOCALID, EntranceHall_Movement_LeaderWalkAway)
+    waitmovement(0)
+    removeobject(LEADER_LOCALID, MAP_ENTRANCE_HALL)
+    setvar(VAR_STORY_PROGRESSION, 11)
+    releaseall
+}
+
+script EntranceHall_CheckDoor{
+    lockall
+    msgbox(format("Enough time should have passed.\p 
+    you should check if {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is in his office already."))
+    setvar(VAR_MOD_SHOPS_STATE, 2000)
+    setvar(VAR_STORY_PROGRESSION, 12)
+    releaseall
+}
+
+script EntranceHall_Trigger_Deneith{
+    lockall
+    faceplayer
+    msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: Oh hé Rookie!\p
+    Don't mind me, I just found this keycard and thought it was better if I brought it back before someone who isn't supposed to pick it up finds it.\p
+    Don't worry, I'll handle it from here!"))
+    applymovement(DENEITH2_LOCALID, EntranceHall_Movement_LookUp)
+    waitmovement(0)
+    releaseall
+}
+
+script EntranceHall_Trigger_NotYet{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Hall1_Movement_MoveBack)
+    msgbox(format("You don't have any reason yet to go this way."))
+    release
+}
+
+script EntranceHall_Trigger_Release{
+    lockall
+    setvar(VAR_STORY_PROGRESSION, 13)
+    msgbox(format("*RING* *RING*"))
+    applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_PlayerGetCall)
+    msgbox(format("It seems like your phone is ringing.\l
+    You decide to pick it up.\p
+    ???: Hello? Hello hello?\p
+    {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Ah good {PLAYER}, it's the leader.\p
+    This is quite unusual for me to do, but this... 'issue', has proven to be more of a problem then I expected.\p
+    I'm sorry to say, but the thing that I wanted to show has to wait until later. Please, feel free to go outside and explore {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}\l
+    You can exit the building by taking the exit south of the shops and my office.\l
+    You're free to return anytime, and if I happen to be there I'll make up on my promise.\l
+    In the meantime, show you're worthy of carring pokemon around.\l
+    May your fire burn bright.\p
+    *click*\p
+    ...
+    Was that just your imagination, or did you just hear some movement behind that door?"))
+    releaseall
+}
+
+script EntranceHall_Sign_MoveMasters{
+    lock
+    msgbox(format("Move Masters\p
+    Wether you're trying to learn or forget, Move Masters have your back!"))
+    release
+}
+
+script EntranceHall_Sign_GeneralStore{
+    lock
+    msgbox(format("MOD general Store\p
+    For all your daily needs at a cheap price!"))
+    release
+}
+
+script EntranceHall_Sign_EvolutionMaster{
+    lock
+    msgbox(format("Evolution masters\p
+    we can help you bring pokemon back to their best strongest form.
+    Together, we can make Pokemon great again!"))
+    release
+}
+
+script Entrancehall_Sign_SpecialShop{
+    lock
+    msgbox(format(
+    "Nationals Usefull Tools.\p
+    If you want to have that little extra on your journey.\l
+    Satisfaction guaranteed or your money back!"))
+    release
+}
+
+script Entrancehall_Sign_Office{
+    lockall
+    switch(var(VAR_MOD_SHOPS_STATE))
+    {
+        case 11:
+        case 101:
+        case 1001:
+        case 110:
+        case 1010:
+        case 1100:
+        case 111:
+        case 1011:
+        case 1101:
+        case 1110:
+            msgbox(format("The door is locked and the reflective glass makes it impossible to see inside\l
+            Though you do seem to hear someone rummiging around inside.\l
+            Knock on the door?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                msgbox(format("You knock on the door, but whoever is inside seems to not stop with whatever they are doing."))
+            }
+            else
+            {
+                msgbox(format("better to not interrupt whatever they are doing."))
+            }
+        case 2000:
+            msgbox(format("The door is locked and the reflective glass makes it impossible to see inside\l
+            do you want to put your ear to the door?"))
+            if(var(VAR_RESULT))
+            {
+                msgbox(format("You think you can hear some breathing, though you cannot make out if it comes from inside or if you just hear your own shallow breaths."))
+            }
+            else
+            {
+                msgbox(format("Why would you do that?"))
+            }
+        default:
+            msgbox(format("It's you!\p
+            ....\p
+            You can only see yourself in the reflective glass and the door is locked"))
+    }
+    releaseall
+}
+
+movement EntranceHall_Movement_LookRight {
+    face_right
+}
+
+movement EntranceHall_Movement_LookLeft {
+    face_left
+}
+
+movement EntranceHall_Movement_LookUp {
+    face_up
+}
+
+movement EntranceHall_Movement_LookDown {
+    face_down
+}
+
+movement EntranceHall_Movement_MoveDownFromLeader {
+    walk_down
+    walk_right
+}
+
+movement EntranceHall_Movement_WalkRightNormal1 {
+    walk_slow_right * 7
+}
+
+movement EntranceHall_Movement_WalkRightNormal2 {
+    walk_slow_right * 8
+}
+
+movement EntranceHall_Movement_WalkRightCutOff {
+    walk_slow_right * 4
+}
+
+movement EntranceHall_Movement_DeneithBumpLeader{
+    walk_fast_left * 8
+    lock_facing_direction
+    jump_right
+    unlock_facing_direction
+}
+
+movement EntranceHall_Movement_DeneithWalkAway{
+    walk_fast_down * 2
+    walk_fast_left * 2
+    walk_fast_up * 2
+    walk_fast_left * 8
+}
+
+movement EntranceHall_Movement_LeaderWalkAway {
+    walk_left * 8
+}
+
+movement EntranceHall_Movement_PlayerGetCall{
+    emote_exclamation_mark
+}

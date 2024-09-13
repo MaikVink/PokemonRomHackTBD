@@ -1111,3 +1111,33 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MODHeadquarters_EvoMasters/scripts.inc"
 
 	.include "data/maps/CliffToNowhere/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_DormHall1/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_CommonDormRoom/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_PlayerRoom/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_FionasRoom/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_Hall1/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_DormHall2/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_DormHall3/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_RollCall/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_LaboratoryHall/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_Laboratory/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_BattleDojo/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_BattleDojoReplica/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_SpecialShop_Underwater/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_EntranceHall/scripts.inc"
+
+	.include "data/maps/MODHeadquarters_MoveMasters/scripts.inc"

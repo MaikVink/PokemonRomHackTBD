@@ -1,0 +1,865 @@
+const PROF_KECTOR_ID = 1
+
+mapscripts Laboratory_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_STORY_PROGRESSION, 3: Laboratory_WarpInto_FirstPokemon   
+    ]
+}
+
+script Laboratory_WarpInto_FirstPokemon{
+    lockall
+    msgbox(format(
+        "{COLOR LIGHT_GREEN}???{COLOR DARK_GRAY}: ah {PLAYER}, I have been expecting you!\p
+        please, step forward."
+        ))
+    applymovement(OBJ_EVENT_ID_PLAYER, Laboratory_Movement_MoveToProfessor)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GREEN}???{COLOR DARK_GRAY}: While you probably already know who I am, I would like to re-introduce myself to all initiatives that made it this far:\p
+    {COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: My name is Professor Kector, I'm the lead scientist of team MOD and I'm the person in charge of giving you your pokemon. \p
+    I'm also researching how we can intrigate pokemon back into our society after... {COLOR RED}'The Incident'{COLOR DARK_GRAY}.\p
+    Anyways, let's focus on why you're here: your pokemon.\p
+    I know you're very excited to come and choose your pokemon. That whole process of getting to choose out of three or more pokemon, etc. etc.\p
+    That is however not how it works here.\p
+    We have a broad selection of pokemon we can give you and we have a short questoinnaire to make sure we give you a pokemon that fits with your personality and experience.\p
+    There are no right or wrong answers, but there are also no takebacks. Once I gave you your pokemon, you're stuck with it. you can't redo the test to get a different pokemon as result."))
+    msgbox(format("Unless of course you have some magical ability to turn back time that is...\p
+    Anyways, without further ado, let's step into it."))
+    call(Laboratory_Test)
+    setvar(VAR_STORY_PROGRESSION, 4)
+    releaseall
+}
+
+script Laboratory_Test{
+    msgbox(format("Q1: Do you know a lot about Pokemon?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        msgbox(format("Q2: Has it been a long time since you done anything with pokemon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT))
+        {
+            msgbox(format("Q3: Are you willing to try something different for a change?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                setvar(VAR_TEMP_1, 4)
+            }
+            else
+            {
+                setvar(VAR_TEMP_1, 6)
+            }
+        }
+        else
+        {
+            msgbox(format("Q3: Are you willing to try something different for a change?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                setvar(VAR_TEMP_1, 8)
+            }
+            else
+            {
+                setvar(VAR_TEMP_1, 9)
+            }
+        }
+    }
+    else
+    {
+        msgbox(format("Q2: Has it been a long time since you done anything with pokemon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT))
+        {
+            msgbox(format("Q3: Are you willing to try something different for a change?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                setvar(VAR_TEMP_1, 7)
+            }
+            else
+            {
+                setvar(VAR_TEMP_1, 1)
+            }
+        }
+        else
+        {
+            msgbox(format("Q3: Are you willing to try something different for a change?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT))
+            {
+                setvar(VAR_TEMP_1, 5)
+            }
+            else
+            {
+                setvar(VAR_TEMP_1, 2)
+            }
+        }
+    }
+    buffernumberstring(STR_VAR_1, VAR_TEMP_1)
+    msgbox(format("Hm, very interesting..."))
+    
+    setvar(VAR_TEMP_A, 1)
+    //2 = Fire, 3 = Water, 4 = Grass, 5 = special
+    setvar(VAR_TEMP_2, 0)
+    setvar(VAR_TEMP_3, 0)
+    setvar(VAR_TEMP_4, 0)
+    setvar(VAR_TEMP_5, 0)
+    //Q1
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q4: You see a burning building with people in it, do you, either:\p
+        A) Try put out the fire.\p
+        B) Try to rescue the people.\p
+        C) See if you can find someone to help you out."))
+        waitmessage
+        multichoice(25, 4, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_3, 3)
+            addvar(VAR_TEMP_4, 1)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 3)
+            addvar(VAR_TEMP_4, 1)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, -1)
+            addvar(VAR_TEMP_3, 1)
+            addvar(VAR_TEMP_4, 3)
+        }
+    }
+
+    msgbox("hm...")
+
+    //Q2
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q5: You find a lost wallet on the ground, do you:\p
+        A) Try return it to the owner.\p
+        B) Try return it to the owner, after you have taking the cash out of the wallet.\p
+        C) Keep it for yourself."))
+        waitmessage
+        multichoice(25, 4, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_3, 1)
+            addvar(VAR_TEMP_4, 3)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_3, 3)
+            addvar(VAR_TEMP_4, 1)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 3)
+            addvar(VAR_TEMP_4, -1)
+        }
+    }
+
+    msgbox("really now?")
+
+    //Q3
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q6: It's your friends birthday, do you give him:\p
+        A) Something orignal.\p
+        B) Something you know he would like.\p
+        C) Something he asked for."))
+        waitmessage
+        multichoice(25, 4, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 5)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 3)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 1)
+        }
+    }
+
+    msgbox("Of course you do...")
+
+    //Q4
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q7: What kind of person should be in charge according to you:\p
+        A) The smartest person.\p
+        B) The strongest person, either through physical strength or political power.\p
+        C) The kindest person."))
+        waitmessage
+        multichoice(25, 4, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_3, 3)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 3)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_4, 3)
+        }
+    }
+
+    msgbox("Very interesting choice...")
+
+    //Q5
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q8: You encounter a human ghost in an abandonde place. Do you:\p
+        A) Try to kill it.\p
+        B) Attempt to let the ghost past to a peacefull afterlife.\p
+        C) Follow it from a distance to see what it's doing here."))
+        waitmessage
+        multichoice(25, 5, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 3)
+            addvar(VAR_TEMP_3, -1)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 1)
+            addvar(VAR_TEMP_4, 3)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_3, 3)
+            addvar(VAR_TEMP_4, 1)
+        }
+    }
+
+    msgbox("...")
+
+    //Q6
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q9: You encounter a difficult problem, do you:\p
+        A) Try to figure it out on your own.\p
+        B) Ask other people for help.\p
+        C) Find a way to let other people solve your problem."))
+        waitmessage
+        multichoice(25, 5, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 3)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 1)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 5)
+        }
+    }
+
+    msgbox(format("If you think that is your best course of action..."))
+
+    //Q7
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format("Q10: You find out one of your fellow colleagues wants to betray team MOD, do you:\p
+        A) Confront him.\p
+        B) Tell the autoriets about the issue.\p
+        C) Try to get him red-handed."))
+        waitmessage
+        multichoice(25, 5, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 3)
+            addvar(VAR_TEMP_3, 1)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, -1)
+            addvar(VAR_TEMP_4, 3)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_2, 1)
+            addvar(VAR_TEMP_3, 3)
+        }
+    }
+
+    msgbox(format("Wonder what you would do if you're really in that situation..."))
+
+    //Q8
+    setvar(VAR_TEMP_A, 1)
+    while(var(VAR_TEMP_A) == 1)
+    {
+        message(format(" Last question: You are fighting an Alakazam one on one, choose your champion:\p
+        A) Umbreon.\p
+        B) Gengar.\p
+        C) Machamp."))
+        waitmessage
+        multichoice(25, 5, MULTI_TEST_CHOICE, 1)
+        closemessage
+        if(var(VAR_RESULT) == 0)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 3)
+        }
+        elif(var(VAR_RESULT) == 1)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 1)
+        }
+        elif(var(VAR_RESULT) == 2)
+        {
+            setvar(VAR_TEMP_A, 0)
+            addvar(VAR_TEMP_5, 5)
+        }
+    }
+
+    msgbox("Fascinating!")
+    msgbox(format("Let me just gather your results..."))
+    if(var(VAR_TEMP_2) > 30)
+    {
+        setvar(VAR_TEMP_2, 0)
+    }
+    if(var(VAR_TEMP_3) > 30)
+    {
+        setvar(VAR_TEMP_3, 0)
+    }
+    if(var(VAR_TEMP_4) > 30)
+    {
+        setvar(VAR_TEMP_4, 0)
+    }
+    setvar(VAR_TEMP_E, 2)
+    msgbox(format("alright, out of my calculations, this pokemon would be the best fit for you"))
+    switch(var(VAR_TEMP_1))
+    {
+        case 1:
+            call(Laboratory_PokemonCalculatorGen1)
+        case 2:
+            call(Laboratory_PokemonCalculatorGen2)
+        case 4:
+            call(Laboratory_PokemonCalculatorGen4)
+        case 5:
+            call(Laboratory_PokemonCalculatorGen5)
+        case 6:
+            call(Laboratory_PokemonCalculatorGen6)
+        case 7:
+            call(Laboratory_PokemonCalculatorGen7)
+        case 8:
+            call(Laboratory_PokemonCalculatorGen8)
+        case 9:
+            call(Laboratory_PokemonCalculatorGen9)
+    }
+    givemon(VAR_STARTER_POKEMON, 5, , 4, , VAR_TEMP_E)
+    setflag(FLAG_SYS_POKEMON_GET)
+    msgbox(format("I assume you want to give it a nickname?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        call(Common_EventScript_GetGiftMonPartySlot)
+	    call(Common_EventScript_NameReceivedPartyMon)
+    }
+    else
+    {
+        msgbox(format("Oh you don't?\nWell, fine by me"))
+    }
+    msgbox(format("Well that's it, enjoy your pokemon. Not that you have much of a choice, unless you can rewind time, you'll be stuck with it."))
+    
+    msgbox(format("Oh take this as well while you at it."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("{PLAYER} Received a National pokedex"))
+    waitfanfare
+    setflag(FLAG_SYS_POKEDEX_GET)
+    special(SetUnlockedPokedexFlags)
+    setflag(FLAG_SYS_NATIONAL_DEX)
+    special(EnableNationalPokedex)
+    msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: This is a pokedex. It was used long ago by many researches to track data of different pokemon.\p
+    Sadly most of this digital data has been lost through time.\p
+    While it will not be your main objective probably, I would appraciate it if you could keep a record of all pokemon you encounter.\p
+    It will help us learn from the professors before me what they have learned about pokemon."))
+
+    msgbox(format("Now that has been taken care of, go to RollCall. I heard {COLOR LIGHT_GRAY}someone special{COLOR DARK_GRAY} wants to talk to your there."))
+    
+    clearflag(FLAG_REVERSE_ROLLCALL_FLAG)
+    setflag(FLAG_RECEIVED_FIRST_POKEMON)
+
+    releaseall
+}
+
+script Laboratory_PokemonCalculatorGen1
+{
+    if(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_CHARMANDER) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_SQUIRTLE)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_BULBASAUR)
+    }
+    else
+    {
+        random(3)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_CHARMANDER) 
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_SQUIRTLE)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_BULBASAUR)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen2
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_TREECKO)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_CYNDAQUIL) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_TOTODILE)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_CHIKORITA)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_CYNDAQUIL)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_TOTODILE)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_CHIKORITA)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_TREECKO)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen4
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_RIOLU)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_CHIMCHAR) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_PIPLUP)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_TURTWIG)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_CHIMCHAR)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_PIPLUP)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_TURTWIG)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_RIOLU)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen5
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_AXEW)
+        setvar(VAR_TEMP_E, 1)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_TEPIG) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_OSHAWOTT)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_SNIVY)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_TEPIG)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_OSHAWOTT)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_SNIVY)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_AXEW)
+                setvar(VAR_TEMP_E, 1)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen6
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_MUDKIP)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_FENNEKIN) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_FROAKIE)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_CHESPIN)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_FENNEKIN)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_FROAKIE)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_CHESPIN)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_MUDKIP)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen7
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_PIKACHU)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_LITTEN) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_POPPLIO)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_ROWLET)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_LITTEN)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_POPPLIO)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_ROWLET)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_PIKACHU)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen8
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_EEVEE)
+        setvar(VAR_TEMP_E, 1)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_SCORBUNNY) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_SOBBLE)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_GROOKEY)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_SCORBUNNY)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_SOBBLE)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_GROOKEY)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_EEVEE)
+                setvar(VAR_TEMP_E, 1)
+        }
+    }
+}
+
+script Laboratory_PokemonCalculatorGen9
+{
+    if(var(VAR_TEMP_5) > 10)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_TORCHIC)
+    }
+    elif(var(VAR_TEMP_2) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_FUECOCO) 
+    }
+    elif(var(VAR_TEMP_3) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_QUAXLY)
+    }
+    elif(var(VAR_TEMP_4) > 6)
+    {
+        setvar(VAR_STARTER_POKEMON, SPECIES_SPRIGATITO)
+    }
+    else
+    {
+        random(4)
+        switch(var(VAR_RESULT))
+        {
+            case 0:
+                setvar(VAR_STARTER_POKEMON, SPECIES_FUECOCO)
+            case 1:
+                setvar(VAR_STARTER_POKEMON, SPECIES_QUAXLY)
+            case 2:
+                setvar(VAR_STARTER_POKEMON, SPECIES_SPRIGATITO)
+            case 3:
+                setvar(VAR_STARTER_POKEMON, SPECIES_TORCHIC)
+        }
+    }
+}
+
+
+
+script Laboratory_SignScript_BoxRandomStuff
+{
+    lockall
+    msgbox(format("It's a box filled with different kind of stuff, most of it you can't make sense of it."))
+    releaseall
+}
+
+script Laboratory_SignScript_BoxTrainingBooks{
+    lockall
+    msgbox(format("It's a box filled with books, seems to be some book about how to train rookies."))
+    releaseall
+}
+
+script Laboratory_SignScript_BoxGuidebooks{
+    lockall
+    msgbox(format("It's a box filled with books, seems like some kind of behavioural guidebook."))
+    releaseall
+}
+
+script Laboratory_SignScript_Plant{
+    lockall
+    msgbox(format("the plant inside the pot is fake, it would have probably died long ago otherwise."))
+    releaseall
+}
+
+script Laboratory_SignScript_Machine{
+    lockall
+    msgbox(format("It's one of the strange machines inside the laboratory. You have no idea what it does and you're too scared to touch anything, in case you break anything."))
+    releaseall
+}
+
+script Laboratory_SignScript_BooksCaseBasic{
+    lockall
+    msgbox(format("It's a gigantic bookcase filled with hundreds of books. They seem to cover most basic knowledge about every kind of pokemon."))
+    releaseall
+}
+
+script Laboratory_SignScript_SideBookCase{
+    lockall
+    msgbox(format("The bookcase is blocked by random stuff laying on the messy ground, making you unable to see clearly what the books are about."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookAnatomy{
+    lockall
+    msgbox(format("It's a pile of books, they seem to be cover some pokemon and human anatomy."))
+    releaseall
+}
+
+script Laboratory_SignScript_LeaderSchip{
+    lockall
+    msgbox(format("It's a pile of books, they seem to be about leadership and the greatest leaders of the past generations."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookBiology{
+    lockall
+    msgbox(format("It's a pile of books, they seem to cover the biology of pokemon, from the pokemon foodcycle to reproduction between different pokemon kinds."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookComplex{
+    lockall
+    msgbox(format("It's a pile of books, they seem to go over theories of timetravel and multi-unverse theories.\p...\pYou don't seem to understand anything from what you quickly scan through."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookStrange{
+    lockall
+    msgbox(format("It's a pile of books, they seem to go about...\p acting?"))
+    releaseall
+}
+
+script Laboratory_SignScript_BookGods{
+    lockall
+    msgbox(format("It's a pile of books, they seem to talk about the different gods of our world."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookNeatlyStacked{
+    lockall
+    msgbox(format("It's a neatly stack of file, it seems to be the files of different members of MOD. You can't look through them though while the professor is watching you."))
+    releaseall
+}
+
+script Laboratory_SignScript_BookJournal{
+    lockall
+    msgbox(format("It seems to be some journal to keep record in, you can see some papers sticking out as if they are from recent experiments. You can't make much sense out of the small part you can see.\p
+    Want to look through the file?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        applymovement(PROF_KECTOR_ID, Laboratory_Movement_LookUp)
+        if(flag(FLAG_TRIED_TO_LOOK))
+        {
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: I told you already, you're not allowed to look at it, just leave it alone."))
+        }
+        else
+        {
+            setflag(FLAG_TRIED_TO_LOOK)
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: hé, that is personal! Ask before you just look through my stuff!"))
+        }
+    }
+    else
+    {
+        msgbox(format("Better not touch the professors stuff while the professor is still in the room."))
+    }
+    releaseall
+}
+
+script Laboratory_SignScript_Coffee{
+    lockall
+    msgbox(format("You don't know how long this cup of coffee has been standing here, but it is long cold.\p
+    ...\p
+    scratch that, it has probably been standing here for quite some time seeing that the cup is stuck to the table..."))
+    releaseall
+}
+
+script Laboratory_SignScript_MainComputer{
+    lockall
+    msgbox(format("It's one of the professors computers.\p It is locked and the lock screen is bland, so not much you can do on it."))
+    releaseall
+}
+
+script Laboratory_SignScript_SideComputer{
+    lockall
+    msgbox(format("Why does the professor need two computers anyways?"))
+    releaseall
+}
+
+script Laboratory_EventScript_Professor{
+    lockall
+    faceplayer
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 4:
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: There is nothing left here for you to do, please go to Roll Call.\p
+            Roll Call is north from the main hallway, it's hard to mis. Now hurry up, before you make {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} mad"))
+        case 5:
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Huh?\p Do you want something?\p I think you better just go sleep so your well rested for whats to come next."))
+        case 6:
+        case 7:
+        case 8:
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Huh?\p Do you want something?\p Should you not focus on the Tournament in the room next of here?."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n recruit, continue your progress with your pokedex, you can become a great asset for Team MOD."))
+            }
+            else
+            {
+                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Good job on making it on the finals! I'll be watching your battle, I know this will be interesting to watch!"))
+            }
+        default:
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Let me take a look at your pokedex.\p
+            hm...\p
+            keep up the good work, this data will help us greatly in the future."))
+    }
+    releaseall
+}
+
+movement Laboratory_Movement_LookUp {
+    face_player
+}
+
+movement Laboratory_Movement_MoveToProfessor{
+    walk_up * 4
+}
