@@ -1073,38 +1073,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 
-	.include "data/maps/DormHall1/scripts.inc"
-	.include "data/maps/CommonDormRoom/scripts.inc"
-
-	.include "data/maps/PlayerRoom/scripts.inc"
-
-	.include "data/maps/FionasRoom/scripts.inc"
-
-	.include "data/maps/Hall1/scripts.inc"
-
-	.include "data/maps/DormHall2/scripts.inc"
-
-	.include "data/maps/DormHall3/scripts.inc"
-
-	.include "data/maps/RollCall/scripts.inc"
-
-	.include "data/maps/LaboratoryHall/scripts.inc"
-
-	.include "data/maps/Laboratory/scripts.inc"
-
-	.include "data/maps/BattleDojo/scripts.inc"
-
-	.include "data/maps/EntranceHall/scripts.inc"
-
-	.include "data/maps/BattleDojoReplica/scripts.inc"
-
-	.include "data/maps/MoveMasters/scripts.inc"
-
 	.include "data/maps/MODHeadquarters_General_Store/scripts.inc"
 
 	.include "data/maps/MODHeadquarters_SpecialStore/scripts.inc"
-
-	.include "data/maps/MODHeadQuarts_SpecialShop_Underwater/scripts.inc"
 
 	.include "data/maps/MODHeadquarters_SpecialShop_FlashCave/scripts.inc"
 

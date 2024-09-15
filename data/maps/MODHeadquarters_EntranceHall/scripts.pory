@@ -112,7 +112,7 @@ script EntranceHall_FirstEntrace{
     applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookLeft)
     applymovement(DENEITH1_LOCALID, EntranceHall_Movement_DeneithWalkAway)
     waitmovement(0)
-    removeobject(DENEITH1_LOCALID, MAP_ENTRANCE_HALL)
+    //removeobject(DENEITH1_LOCALID, MAP_ENTRANCE_HALL)
     msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: hm... that might be problematic..."))
     applymovement(LEADER_LOCALID, EntranceHall_Movement_LookDown)
     applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookUp)
@@ -189,7 +189,7 @@ script EntranceHall_FirstEntrace{
     applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookLeft)
     applymovement(LEADER_LOCALID, EntranceHall_Movement_LeaderWalkAway)
     waitmovement(0)
-    removeobject(LEADER_LOCALID, MAP_ENTRANCE_HALL)
+    //removeobject(LEADER_LOCALID, MAP_ENTRANCE_HALL)
     setvar(VAR_STORY_PROGRESSION, 11)
     releaseall
 }
