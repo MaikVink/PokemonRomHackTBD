@@ -33,14 +33,14 @@
       "x": 10,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_HALL",
+      "dest_map": "MAP_MODHEADQUARTERS_ENTRANCE_HALL",
       "dest_warp_id": "4"
     },
     {
       "x": 11,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ENTRANCE_HALL",
+      "dest_map": "MAP_MODHEADQUARTERS_ENTRANCE_HALL",
       "dest_warp_id": "4"
     }
   ],

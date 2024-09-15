@@ -502,7 +502,7 @@ DormHall1_WonTournament::
 # 281 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	msgbox DormHall1_WonTournament_Text_1
 # 284 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	warp MAP_ENTRANCE_HALL, 2, 2
+	warp MAP_MODHEADQUARTERS_ENTRANCE_HALL, 2, 2
 	return
 
 

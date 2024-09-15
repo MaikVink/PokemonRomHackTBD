@@ -56,41 +56,6 @@
   ],
   "warp_events": [
     {
-      "x": 34,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_SPECIAL_STORE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 26,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_EVO_MASTERS",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 18,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_GENERAL_STORE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_MOVE_MASTERS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_HALL1",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 22,
       "y": 7,
       "elevation": 0,
@@ -102,6 +67,41 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_CLIFF_TO_NOWHERE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MODHEADQUARTERS_HALL1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MODHEADQUARTERS_MOVE_MASTERS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MODHEADQUARTERS_GENERAL_STORE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MODHEADQUARTERS_SPECIAL_STORE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MODHEADQUARTERS_EVO_MASTERS",
       "dest_warp_id": "0"
     }
   ],

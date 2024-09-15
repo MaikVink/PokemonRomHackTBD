@@ -50,14 +50,14 @@ script BattleDojoReplica_HideNPCs_OnTransition{
 }
 
 script BattleDojoReplica_HideNPCs{
-    hideobjectat(MOM_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(WOMAN2_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(NINJABOY_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(TRIATHLETE_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(PSYCHICM_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(POKEFANF_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(HEXMANIAC_LOCALID, MAP_BATTLE_DOJO)
-    hideobjectat(RECEPTIONIST_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(MOM_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(WOMAN2_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(NINJABOY_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(TRIATHLETE_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(PSYCHICM_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(POKEFANF_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(HEXMANIAC_LOCALID, MAP_BATTLE_DOJO)
+    //hideobjectat(RECEPTIONIST_LOCALID, MAP_BATTLE_DOJO)
     setvar(VAR_HIDE_OBJECTS, 2)
 }
 
@@ -260,7 +260,7 @@ script BattleDojoReplica_BattleDojoReplicaBattles{
         }
         applymovement(VAR_TEMP_1, BattleDojoReplica_Movement_OpponentLeave)
         waitmovement(0)
-        hideobjectat(VAR_TEMP_1, MAP_BATTLE_DOJO)
+        //hideobjectat(VAR_TEMP_1, MAP_BATTLE_DOJO)
         applymovement(OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalkBackSurge)
         waitmovement(0)
         applymovement(SURGE_LOCALID, BattleDojoReplica_Movement_FaceLeft)
