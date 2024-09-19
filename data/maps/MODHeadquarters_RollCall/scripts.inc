@@ -1,4 +1,4 @@
-RollCall_MapScripts::
+MODHeadquarters_RollCall_MapScripts::
 	.byte 0
 
 
@@ -297,7 +297,7 @@ RollCall_MeetTheLeader::
 # 180 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 1, RollCall_Movement_WalkOutOfTheWay
 # 181 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	showobjectat 3, MAP_ROLL_CALL
+	showobjectat 3, MAP_MODHEADQUARTERS_ROLL_CALL
 # 182 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 3, RollCall_Movement_InFrame
 # 183 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -314,6 +314,8 @@ RollCall_MeetTheLeader::
 	waitmovement 0
 # 189 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_3
+# 190 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	hideobjectat 14, MAP_MODHEADQUARTERS_ROLL_CALL
 # 192 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, RollCall_Movement_Player
 # 193 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -343,7 +345,7 @@ RollCall_MeetTheLeader::
 # 205 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
 # 206 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	showobjectat 3, MAP_ROLL_CALL
+	showobjectat 3, MAP_MODHEADQUARTERS_ROLL_CALL
 # 208 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_4
 # 211 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -353,7 +355,7 @@ RollCall_MeetTheLeader::
 # 213 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_5
 # 214 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	showobjectat 14, MAP_ROLL_CALL
+	showobjectat 14, MAP_MODHEADQUARTERS_ROLL_CALL
 # 215 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 14, RollCall_Movement_Leader_Enter
 # 216 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -372,6 +374,8 @@ RollCall_MeetTheLeader::
 	applymovement 14, RollCall_Movement_Leader_Exit
 # 236 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
+# 237 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	hideobjectat 14, MAP_MODHEADQUARTERS_ROLL_CALL
 # 239 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 3, RollCall_Movement_TakePlace
 # 240 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -382,6 +386,8 @@ RollCall_MeetTheLeader::
 	applymovement 3, RollCall_Movement_OutOfFrame
 # 243 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
+# 244 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	hideobjectat 3, MAP_MODHEADQUARTERS_ROLL_CALL
 # 245 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 1, RollCall_Movement_Guard_BlockDoor
 # 246 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -412,12 +418,28 @@ RollCall_MeetTheLeader::
 	msgbox RollCall_MeetTheLeader_Text_12
 # 265 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
+# 266 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 10, MAP_MODHEADQUARTERS_ROLL_CALL
+# 267 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 7, MAP_MODHEADQUARTERS_ROLL_CALL
+# 268 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 11, MAP_MODHEADQUARTERS_ROLL_CALL
+# 269 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 12, MAP_MODHEADQUARTERS_ROLL_CALL
+# 270 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 8, MAP_MODHEADQUARTERS_ROLL_CALL
+# 271 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 2, MAP_MODHEADQUARTERS_ROLL_CALL
+# 272 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 9, MAP_MODHEADQUARTERS_ROLL_CALL
 # 274 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookDown
 # 275 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 6, RollCall_Movement_WalkAwayLong
 # 276 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
+# 277 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	removeobject 6, MAP_MODHEADQUARTERS_ROLL_CALL
 # 279 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	setflag FLAG_REVERSE_ROLLCALL_FLAG
 # 280 "data/maps/MODHeadquarters_RollCall/scripts.pory"

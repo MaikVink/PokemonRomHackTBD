@@ -1,4 +1,4 @@
-PlayerRoom_MapScripts::
+MODHeadquarters_PlayerRoom_MapScripts::
 	.byte 0
 
 

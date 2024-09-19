@@ -29,6 +29,16 @@ script GeneratlStore_ObjectScript_MartEmployer
         The higher your rank will become, the more items I'm allowed to sell you, so please do consider to come back from time to time!\p
         With that being said..."))
     }
+    if(!flag(FLAG_GIFT_GENERALSTORE))
+    {
+        msgbox(format("Let me give you some things on the house this once, to get you started on your journey.\p
+        I would say don't waste it, but if you do you're more quickly to come back to me so...\l
+        do waste it I guess?"))
+        giveitem(ITEM_POKE_BALL, 15)
+        giveitem(ITEM_POTION, 5)
+        setflag(FLAG_GIFT_GENERALSTORE)
+        msgbox("Hope you will come back for more!")
+    }
     msgbox(format("How can I be of service to you today?"))
     switch(var(VAR_BADGE_AMOUNT))
     {

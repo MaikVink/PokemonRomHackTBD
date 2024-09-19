@@ -125,6 +125,7 @@
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_TEST_CHOICE                  115
 #define MULTI_DOJO_GRID                    116
+#define MULTI_MOVE_TUTOR                   117
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

@@ -1,6 +1,6 @@
 const PROF_KECTOR_ID = 1
 
-mapscripts Laboratory_MapScripts {
+mapscripts MODHeadquarters_Laboratory_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_STORY_PROGRESSION, 3: Laboratory_WarpInto_FirstPokemon   
     ]

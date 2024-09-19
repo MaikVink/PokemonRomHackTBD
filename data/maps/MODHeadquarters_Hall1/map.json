@@ -163,6 +163,96 @@
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "9",
       "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "4",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "4",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "5",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "5",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "6",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "6",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "7",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "7",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "8",
+      "script": "Hall1_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "8",
+      "script": "Hall1_Trigger_NotYet"
     }
   ],
   "bg_events": [

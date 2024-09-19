@@ -1,4 +1,4 @@
-mapscripts Hall1_MapScripts {
+mapscripts MODHeadquarters_Hall1_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE[
         VAR_LABORATORYHALL_STATE, 0: Hall1_OnFrame
         VAR_LABORATORYHALL_STATE, 2: Hall1_OnFrame

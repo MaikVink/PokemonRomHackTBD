@@ -1,4 +1,4 @@
-FionasRoom_MapScripts::
+MODHeadquarters_FionasRoom_MapScripts::
 	.byte 0
 
 

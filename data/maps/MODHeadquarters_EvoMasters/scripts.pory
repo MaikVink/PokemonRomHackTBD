@@ -20,37 +20,33 @@ script EvoMAsters_ObjectScript_Masseuse{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Hello, I'm the Soothing Sister!\p
-        I can help your pokemon relax and feel very affectioness towards you!\p
-        ...\p
-        In a good way...\p
-        Many pokemon require some love to evolve. If you use my service I can help you speed up the process and allow them to evolve almost instantly!
-        Still, I would require sovme compensation if you don't mind. A 1000 good for you?"))
+        msgbox(format("Hello, I'm the Soothing Sister!\p I can help your pokemon relax and feel very affectioness towards you!\p ...\p In a good way...\p Many pokemon require some love to evolve. If you use my service I can help you speed up the process and allow them to evolve almost instantly! Still, I would require sovme compensation if you don't mind. A 1000 good for you?"))
     }
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_FREE_MASSAGE))
     {
         setflag(FLAG_FREE_MASSAGE)
-        msgbox(format("Oh? Is that an Eevee I see in your party?\p
-        alright, for this once I allow you to use my services for free if you want."))
+        msgbox(format("Oh? Is that an Eevee I see in your party?\p alright, for this once I allow you to use my services for free if you want."))
         call(EvoMasters_CheckFreeMassageEevee)
     }
-    msgbox(format("Welcome!\p
-    Want to give a pokemon a massage for 1000?"), MSGBOX_YESNO)
+    msgbox(format("Welcome!\p Want to give a pokemon a massage for 1000?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
         checkmoney(1000)
         if(var(VAR_RESULT))
         {
             msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
+            releaseall
         }
         else
         {
             msgbox(format("I'm sorry, but it seems like you don't have enough money for my services..."))
+            releaseall
         }
     }
     else
     {
         msgbox(format("Alright, do come back if you require my services!"))
+        releaseall
     }
     releaseall
 }
@@ -68,20 +64,14 @@ script EvoMasters_CheckFreeMassageEevee{
 }
 
 script EvoMasters_CheckDeclineMassage{
-    msgbox(format("No? I'm only giving you this offer once, so I would suggest you think about it again\p
-    I mean... It's free! \n
-    Why wouldn't you want it?\p
-    So are you absolutely sure you don't want the free massage for your Eevee?"), MSGBOX_YESNO)
+    msgbox(format("No? I'm only giving you this offer once, so I would suggest you think about it again\p I mean... It's free! \n Why wouldn't you want it?\p So are you absolutely sure you don't want the free massage for your Eevee?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
-        msgbox(format("OK, that is your decision!\p
-        If you change your mind about giving your Eevee a massage do come back to me.\p
-        Though... I'll require you to pay the fee next time."))
+        msgbox(format("OK, that is your decision!\p If you change your mind about giving your Eevee a massage do come back to me.\p Though... I'll require you to pay the fee next time."))
     }
     else
     {
-        msgbox(format("That is what I thought!\n
-        So..."))
+        msgbox(format("That is what I thought!\n So..."))
         call(EvoMasters_CheckFreeMassageEevee)
     }
 }
@@ -92,15 +82,10 @@ script EvoMasters_ObjectScript_Simulator
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Good day, I'm the Simulation Sister!\p
-        Some pokemon require specific circumanstance to evolve into their new form.\l
-        Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments.
-        Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l
-        Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
+        msgbox(format("Good day, I'm the Simulation Sister!\p Some pokemon require specific circumanstance to evolve into their new form.\l Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments. Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
         if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
         {
-            msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p
-            Would you like to try out this simulation for free?"), MSGBOX_YESNO)
+            msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p Would you like to try out this simulation for free?"), MSGBOX_YESNO)
             if(var(VAR_RESULT))
             {
                 msgbox(format("I'm sorry sir, it seems that our simulation is still under construction."))
@@ -111,8 +96,7 @@ script EvoMasters_ObjectScript_Simulator
             }
         }
     }
-    msgbox(format("Would you require us to simulate a specific environment for you?\l
-    We have a processing fee of 2500 to do so."), MSGBOX_YESNO)
+    msgbox(format("Would you require us to simulate a specific environment for you?\l We have a processing fee of 2500 to do so."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
         checkmoney(2500)
@@ -137,9 +121,7 @@ script EvoMasters_ObjectScript_EvoChecker{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Hi, I'm the Strategic Sister!\p
-        I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p
-        Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
+        msgbox(format("Hi, I'm the Strategic Sister!\p I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
     }
     msgbox(format("Do you want to know how you need to evolve one of your pokemon?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -158,8 +140,7 @@ script EvoMasters_ObjectScript_MartEmployer{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Welcome, I'm the Sell-Out Sister!\p
-        Maybe a bit of an unfortunate name, but you can come to me if you need any evolution items."))
+        msgbox(format("Welcome, I'm the Sell-Out Sister!\p Maybe a bit of an unfortunate name, but you can come to me if you need any evolution items."))
     }
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
     {

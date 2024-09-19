@@ -141,6 +141,15 @@
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "11",
       "script": "EntranceHall_Trigger_NotYet"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "12",
+      "script": "EntranceHall_Trigger_Release"
     }
   ],
   "bg_events": [

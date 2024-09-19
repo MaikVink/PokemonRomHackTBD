@@ -810,6 +810,17 @@ static const struct MenuAction MultichoiceList_DojoGrid[]=
     {gText_Tessa},
 };
 
+static const struct MenuAction MultichoiceList_MoveTutor[]=
+{
+    {gText_FrenzyPlant},
+    {gText_BlastBurn},
+    {gText_HydroCannon},
+    {gText_VoltTackle},
+    {gText_DragonAscent},
+    {gText_RelicSong},
+    {gText_SecretSword}
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -935,7 +946,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_TEST_CHOICE]                = MULTICHOICE(MultichoiceList_Quiz),
     [MULTI_DOJO_GRID]                  = MULTICHOICE(MultichoiceList_DojoGrid),
-
+    [MULTI_MOVE_TUTOR]                 = MULTICHOICE(MultichoiceList_MoveTutor),
 };
 
 const u8 *const gStdStrings[] =

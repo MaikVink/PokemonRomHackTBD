@@ -1,25 +1,25 @@
-BattleDojo_MapScripts::
+MODHeadquarters_BattleDojo_MapScripts::
 # 12 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleDojo_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MODHeadquarters_BattleDojo_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-BattleDojo_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+MODHeadquarters_BattleDojo_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 13 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	map_script_2 VAR_HIDE_OBJECTS, 1, BattleDojo_HideNPCs_OnTransition
 # 14 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 12, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 9, BattleDojo_Return
 # 15 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 13, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 10, BattleDojo_Return
 # 16 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 14, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 11, BattleDojo_Return
 # 17 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 15, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 12, BattleDojo_Return
 # 18 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 16, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 13, BattleDojo_Return
 # 19 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 17, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 14, BattleDojo_Return
 # 20 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	map_script_2 VAR_BATTLE_DOJO_STATE, 18, BattleDojo_Return
+	map_script_2 VAR_BATTLE_DOJO_STATE, 15, BattleDojo_Return
 	.2byte 0
 
 
@@ -31,245 +31,259 @@ BattleDojo_Return::
 # 27 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	switch VAR_BATTLE_DOJO_STATE
 # 29 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 12, BattleDojo_Return_3
-# 31 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 13, BattleDojo_Return_4
-# 33 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 14, BattleDojo_Return_5
+	case 9, BattleDojo_Return_3
+# 32 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 10, BattleDojo_Return_4
 # 35 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 15, BattleDojo_Return_6
-# 37 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 16, BattleDojo_Return_7
-# 39 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 17, BattleDojo_Return_8
+	case 11, BattleDojo_Return_5
+# 38 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 12, BattleDojo_Return_6
 # 41 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 18, BattleDojo_Return_9
+	case 13, BattleDojo_Return_7
 # 44 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 14, BattleDojo_Return_8
+# 47 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 15, BattleDojo_Return_9
+# 51 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Return_Text_0
 BattleDojo_Return_1:
-# 46 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 53 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 0
-# 47 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 54 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_BattleDojoBattles
 	return
 
 BattleDojo_Return_3:
 # 30 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 2
+	setvar VAR_TEMP_1, 8
+# 31 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 0
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_4:
-# 32 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 3
+# 33 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_1, 2
+# 34 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 1
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_5:
-# 34 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 36 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 4
+# 37 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 2
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_6:
-# 36 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 5
+# 39 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_1, 3
+# 40 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 3
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_7:
-# 38 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 6
+# 42 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_1, 5
+# 43 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 4
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_8:
-# 40 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 7
+# 45 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_1, 6
+# 46 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 5
 	goto BattleDojo_Return_1
 
 BattleDojo_Return_9:
-# 42 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_TEMP_1, 8
+# 48 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_1, 7
+# 49 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 6
 	goto BattleDojo_Return_1
 
 
 BattleDojo_HideNPCs_OnTransition::
-# 51 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	fadescreen 1
-# 52 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 8, MAP_BATTLE_DOJO
-# 53 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 3, MAP_BATTLE_DOJO
-# 54 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 4, MAP_BATTLE_DOJO
-# 55 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 5, MAP_BATTLE_DOJO
-# 56 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 2, MAP_BATTLE_DOJO
-# 57 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 7, MAP_BATTLE_DOJO
 # 58 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 6, MAP_BATTLE_DOJO
+	fadescreen 1
 # 59 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_HIDE_OBJECTS, 2
+	hideobjectat 8, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 60 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 3, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 61 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 4, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 62 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 5, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 63 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 2, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 64 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 7, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 65 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 6, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 66 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_HIDE_OBJECTS, 2
+# 67 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	fadescreen 0
 	return
 
 
 BattleDojo_HideNPCs::
-# 64 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 8, MAP_BATTLE_DOJO
-# 65 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 3, MAP_BATTLE_DOJO
-# 66 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 4, MAP_BATTLE_DOJO
-# 67 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 5, MAP_BATTLE_DOJO
-# 68 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 2, MAP_BATTLE_DOJO
-# 69 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 7, MAP_BATTLE_DOJO
-# 70 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 6, MAP_BATTLE_DOJO
 # 71 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 8, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 72 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 3, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 73 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 4, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 74 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 5, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 75 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 2, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 76 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 7, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 77 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 6, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 78 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 2
 	return
 
 
 BattleDojo_HNS1::
-# 76 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 83 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 3
 	return
 
 
 BattleDojo_Event_Surge::
-# 80 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 87 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	lock
-# 81 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 88 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	faceplayer
-# 82 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 89 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	switch VAR_STORY_PROGRESSION
-# 84 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 91 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_Event_Surge_3
-# 145 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 143 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 7, BattleDojo_Event_Surge_4
-# 205 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 193 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 8, BattleDojo_Event_Surge_5
-# 264 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 243 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 9, BattleDojo_Event_Surge_6
-# 333 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 295 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_UNLOCK_BATTLEDOJO, BattleDojo_Event_Surge_21
-# 339 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 301 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_36
-# 343 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 302 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_37
-# 346 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 303 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_UNLOCK_BATTLEDOJO
 BattleDojo_Event_Surge_20:
-# 348 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 305 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_38, MSGBOX_YESNO
-# 349 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 306 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_Event_Surge_40
-# 355 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 312 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_39
 BattleDojo_Event_Surge_1:
-# 358 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 315 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	return
 
 BattleDojo_Event_Surge_3:
-# 85 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 92 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, BattleDojo_Event_Surge_9
-# 91 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 98 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_REUSABLE_SKIP_FLAG, BattleDojo_Event_Surge_25
-# 97 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 104 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_2
-# 101 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 105 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_1, MSGBOX_YESNO
 BattleDojo_Event_Surge_24:
-# 103 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 107 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_Event_Surge_43
-# 142 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 140 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_REUSABLE_SKIP_FLAG
-# 143 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 141 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_8
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_4:
-# 146 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 144 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, BattleDojo_Event_Surge_12
-# 153 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 150 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_REUSABLE_SKIP_FLAG, BattleDojo_Event_Surge_29
-# 159 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 156 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_11, MSGBOX_YESNO
 BattleDojo_Event_Surge_28:
-# 163 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 158 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_Event_Surge_46
-# 201 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 190 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_REUSABLE_SKIP_FLAG
-# 202 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 191 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_17
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_5:
-# 206 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 194 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, BattleDojo_Event_Surge_15
-# 213 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 200 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_REUSABLE_SKIP_FLAG, BattleDojo_Event_Surge_33
-# 219 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 206 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_19, MSGBOX_YESNO
 BattleDojo_Event_Surge_32:
-# 223 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 208 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_Event_Surge_49
-# 260 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 240 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_REUSABLE_SKIP_FLAG
-# 261 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 241 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_17
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_6:
-# 265 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 244 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, BattleDojo_Event_Surge_18
-# 272 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 250 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_REUSABLE_SKIP_FLAG, BattleDojo_Event_Surge_37
-# 278 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 256 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_27, MSGBOX_YESNO
 BattleDojo_Event_Surge_36:
-# 283 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 258 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_Event_Surge_52
-# 329 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 291 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_REUSABLE_SKIP_FLAG
-# 330 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 292 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_35
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_9:
-# 87 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 94 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_0
-# 88 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 95 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	end
 
 BattleDojo_Event_Surge_12:
-# 148 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 146 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_9
-# 150 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 147 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	end
 
 BattleDojo_Event_Surge_15:
-# 208 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 196 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_18
-# 210 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 197 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	end
 
 BattleDojo_Event_Surge_18:
-# 267 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 246 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_25
-# 269 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 247 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	end
 
@@ -277,918 +291,948 @@ BattleDojo_Event_Surge_21:
 	goto BattleDojo_Event_Surge_20
 
 BattleDojo_Event_Surge_25:
-# 93 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 100 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_1, MSGBOX_YESNO
 	goto BattleDojo_Event_Surge_24
 
 BattleDojo_Event_Surge_29:
-# 155 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 152 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_10, MSGBOX_YESNO
 	goto BattleDojo_Event_Surge_28
 
 BattleDojo_Event_Surge_33:
-# 215 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 202 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_10, MSGBOX_YESNO
 	goto BattleDojo_Event_Surge_32
 
 BattleDojo_Event_Surge_37:
-# 274 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 252 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_26, MSGBOX_YESNO
 	goto BattleDojo_Event_Surge_36
 
 BattleDojo_Event_Surge_40:
-# 351 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 308 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_GridChoice
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_43:
-# 105 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setflag FLAG_TOURNAMENT_LOST
-# 106 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_3
-# 107 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 1, BattleDojo_Movement_FaceDown
-# 108 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	call BattleDojo_PLayerMoveToBattleSpot
 # 109 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_4
+	setflag FLAG_TOURNAMENT_LOST
 # 110 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 2, MAP_BATTLE_DOJO
+	msgbox BattleDojo_Event_Surge_Text_3
 # 111 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 2, BattleDojo_Movement_OpponentWalksToSpot
+	applymovement 1, BattleDojo_Movement_FaceDown
 # 112 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
+	call BattleDojo_PLayerMoveToBattleSpot
 # 113 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_5
+	msgbox BattleDojo_Event_Surge_Text_4
 # 114 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 2, BattleDojo_Movement_WalkLeft
+	showobjectat 2, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 115 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
+	applymovement 2, BattleDojo_Movement_OpponentWalksToSpot
 # 116 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
 # 117 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	trainerbattle_no_intro TRAINER_FABIAN_1, Fabian_LostTournament
+	msgbox BattleDojo_Event_Surge_Text_5
 # 118 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 2, MAP_BATTLE_DOJO
+	applymovement 2, BattleDojo_Movement_WalkLeft
 # 119 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	clearflag FLAG_TOURNAMENT_LOST
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
 # 120 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setflag FLAG_BATTLE_WON
+	waitmovement 0
 # 121 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	clearflag FLAG_REUSABLE_SKIP_FLAG
+	trainerbattle_no_intro TRAINER_FABIAN_1, Fabian_LostTournament
 # 122 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 2, BattleDojo_Movement_WalkRightBackwards
+	showobjectat 2, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 123 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
+	clearflag FLAG_TOURNAMENT_LOST
 # 124 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
+	setflag FLAG_BATTLE_WON
 # 125 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_6
+	clearflag FLAG_REUSABLE_SKIP_FLAG
+# 126 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 2, BattleDojo_Movement_WalkRightBackwards
+# 127 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
 # 128 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 2, BattleDojo_Movement_OpponentLeave
+	waitmovement 0
 # 129 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
+	msgbox BattleDojo_Event_Surge_Text_6
 # 130 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 2, MAP_BATTLE_DOJO
+	applymovement 2, BattleDojo_Movement_OpponentLeave
 # 131 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
-# 132 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
+# 132 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 2, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 133 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 1, BattleDojo_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
 # 134 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 135 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 1, BattleDojo_Movement_FaceLeft
+# 136 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_7
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_46:
-# 165 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 160 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_12
-# 166 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 161 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceDown
-# 167 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 162 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_PLayerMoveToBattleSpot
-# 168 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 163 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_13
-# 169 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 4, MAP_BATTLE_DOJO
-# 170 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 164 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat 4, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 165 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 4, BattleDojo_Movement_OpponentWalksToSpot
-# 171 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 166 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 172 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 167 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_14
-# 174 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 168 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 4, BattleDojo_Movement_WalkLeft
-# 175 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 169 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
-# 176 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 170 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 177 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 171 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_HERALD_1, Herald_LostTournament
-# 178 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 4, MAP_BATTLE_DOJO
-# 179 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 172 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat 4, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 173 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	clearflag FLAG_TOURNAMENT_LOST
-# 180 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 174 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_BATTLE_WON
-# 181 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 175 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	clearflag FLAG_REUSABLE_SKIP_FLAG
-# 182 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 176 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 4, BattleDojo_Movement_WalkRightBackwards
-# 183 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 177 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
+# 178 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 179 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	msgbox BattleDojo_Event_Surge_Text_15
+# 180 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 4, BattleDojo_Movement_OpponentLeave
+# 181 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 182 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 4, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 183 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
 # 184 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
 # 185 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_15
-# 188 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 4, BattleDojo_Movement_OpponentLeave
-# 189 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
-# 190 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 4, MAP_BATTLE_DOJO
-# 191 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
-# 192 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
-# 193 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceLeft
-# 194 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 186 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_16
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_49:
-# 225 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 210 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_20
-# 226 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 211 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceDown
-# 227 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 212 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_PLayerMoveToBattleSpot
-# 228 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 213 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_21
-# 229 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 3, MAP_BATTLE_DOJO
-# 230 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 214 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat 3, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 215 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 3, BattleDojo_Movement_OpponentWalksToSpot
+# 216 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 217 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	msgbox BattleDojo_Event_Surge_Text_22
+# 218 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 3, BattleDojo_Movement_WalkLeft
+# 219 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
+# 220 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 221 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	trainerbattle_no_intro TRAINER_BELLA_1, Bella_LostTournament
+# 222 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat 3, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 223 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	clearflag FLAG_TOURNAMENT_LOST
+# 224 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setflag FLAG_BATTLE_WON
+# 225 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	clearflag FLAG_REUSABLE_SKIP_FLAG
+# 226 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 3, BattleDojo_Movement_WalkRightBackwards
+# 227 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
+# 228 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	waitmovement 0
+# 229 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	msgbox BattleDojo_Event_Surge_Text_23
+# 230 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	applymovement 3, BattleDojo_Movement_OpponentLeave
 # 231 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
 # 232 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_22
-# 234 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 3, BattleDojo_Movement_WalkLeft
-# 235 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
-# 236 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
-# 237 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	trainerbattle_no_intro TRAINER_BELLA_1, Bella_LostTournament
-# 238 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 3, MAP_BATTLE_DOJO
-# 239 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	clearflag FLAG_TOURNAMENT_LOST
-# 240 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setflag FLAG_BATTLE_WON
-# 241 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	clearflag FLAG_REUSABLE_SKIP_FLAG
-# 242 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 3, BattleDojo_Movement_WalkRightBackwards
-# 243 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
-# 244 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
-# 245 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	msgbox BattleDojo_Event_Surge_Text_23
-# 248 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	applymovement 3, BattleDojo_Movement_OpponentLeave
-# 249 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	waitmovement 0
-# 250 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 3, MAP_BATTLE_DOJO
-# 251 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 3, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 233 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
-# 252 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 234 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 253 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 235 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceLeft
-# 254 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 236 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_24
 	goto BattleDojo_Event_Surge_1
 
 BattleDojo_Event_Surge_52:
-# 285 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 260 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_28
-# 286 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 261 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceDown
-# 287 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 262 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_PLayerMoveToBattleSpot
-# 288 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 263 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_29
-# 289 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat 8, MAP_BATTLE_DOJO
-# 290 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 264 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat 8, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 265 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 8, BattleDojo_Movement_OpponentWalksToSpot
-# 291 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 266 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 292 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 267 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_30
-# 296 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 268 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_31
-# 299 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 269 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_32
-# 300 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 270 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 8, BattleDojo_Movement_WalkLeft
-# 301 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 271 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
-# 302 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 272 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 303 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 273 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_FIONA_1, Fiona_LostTournament
-# 304 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 274 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	clearflag FLAG_TOURNAMENT_LOST
-# 305 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 275 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setflag FLAG_BATTLE_WON
-# 306 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 276 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	clearflag FLAG_REUSABLE_SKIP_FLAG
-# 307 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 277 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 8, BattleDojo_Movement_WalkRightBackwards
-# 308 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 278 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
-# 309 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 279 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 310 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 280 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_33
-# 316 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 281 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 8, BattleDojo_Movement_OpponentLeave
-# 317 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 282 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 318 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat 8, MAP_BATTLE_DOJO
-# 319 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 283 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat 8, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 284 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
-# 320 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 285 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 321 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 286 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceLeft
-# 322 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 287 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_Event_Surge_Text_34
 	goto BattleDojo_Event_Surge_1
 
 
 BattleDojo_PLayerMoveToBattleSpot::
-# 362 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 319 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 363 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 320 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	switch VAR_RESULT
-# 365 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 322 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 1, BattleDojo_PLayerMoveToBattleSpot_3
-# 367 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 324 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 2, BattleDojo_PLayerMoveToBattleSpot_4
-# 369 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 326 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 3, BattleDojo_PLayerMoveToBattleSpot_5
-# 371 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 328 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 4, BattleDojo_PLayerMoveToBattleSpot_6
 BattleDojo_PLayerMoveToBattleSpot_1:
-# 374 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 331 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
 	return
 
 BattleDojo_PLayerMoveToBattleSpot_3:
-# 366 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 323 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalksToSpotDown
 	goto BattleDojo_PLayerMoveToBattleSpot_1
 
 BattleDojo_PLayerMoveToBattleSpot_4:
-# 368 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 325 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalksToSpotUp
 	goto BattleDojo_PLayerMoveToBattleSpot_1
 
 BattleDojo_PLayerMoveToBattleSpot_5:
-# 370 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 327 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalksToSpotRight
 	goto BattleDojo_PLayerMoveToBattleSpot_1
 
 BattleDojo_PLayerMoveToBattleSpot_6:
-# 372 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 329 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalksToSpotLeft
 	goto BattleDojo_PLayerMoveToBattleSpot_1
 
 
 BattleDojo_GridChoice::
-# 379 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 336 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_0
-# 380 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 337 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	multichoicegrid 0, 0, MULTI_DOJO_GRID, 3, 0
-# 382 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 339 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	closemessage
-# 383 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 340 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 0
-# 384 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 341 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	switch VAR_RESULT
-# 386 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 343 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 0, BattleDojo_GridChoice_3
-# 389 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 347 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 1, BattleDojo_GridChoice_4
-# 392 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 351 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 2, BattleDojo_GridChoice_5
-# 395 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 355 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 3, BattleDojo_GridChoice_6
-# 398 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 359 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 4, BattleDojo_GridChoice_7
-# 401 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 363 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 5, BattleDojo_GridChoice_8
-# 404 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 367 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_GridChoice_9
-# 407 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 371 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 7, BattleDojo_GridChoice_10
-# 410 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 375 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 8, BattleDojo_GridChoice_11
-# 413 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 379 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 9, BattleDojo_GridChoice_12
-# 416 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 383 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 10, BattleDojo_GridChoice_13
-# 419 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 387 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 11, BattleDojo_GridChoice_14
-# 422 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 391 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 12, BattleDojo_GridChoice_15
-# 425 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 395 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 13, BattleDojo_GridChoice_16
-# 428 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 399 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 14, BattleDojo_GridChoice_17
-# 432 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 404 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_1
-# 434 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 405 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	end
 
 BattleDojo_GridChoice_1:
-# 437 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 408 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_2, MSGBOX_YESNO
-# 438 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 409 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojo_GridChoice_20
-# 466 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 437 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_GridChoice
 BattleDojo_GridChoice_19:
-# 468 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 439 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	return
 
 BattleDojo_GridChoice_3:
-# 387 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 344 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 5
-# 388 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 345 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 0
+# 346 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 8
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_4:
-# 390 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 348 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 6
-# 391 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 349 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 1
+# 350 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 2
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_5:
-# 393 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 352 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 7
-# 394 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 353 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 2
+# 354 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 4
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_6:
-# 396 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 356 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 8
-# 397 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 357 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 3
+# 358 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 3
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_7:
-# 399 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 360 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 9
-# 400 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 361 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 4
+# 362 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 5
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_8:
-# 402 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 364 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 10
-# 403 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 365 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 5
+# 366 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 6
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_9:
-# 405 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 368 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 11
-# 406 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 369 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 6
+# 370 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_TEMP_1, 7
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_10:
-# 408 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 372 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 12
-# 409 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 4
-	goto BattleDojo_GridChoice_1
-
-BattleDojo_GridChoice_11:
-# 411 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	buffertrainername STR_VAR_1, 13
-# 412 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 3
-	goto BattleDojo_GridChoice_1
-
-BattleDojo_GridChoice_12:
-# 414 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	buffertrainername STR_VAR_1, 14
-# 415 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 9
-	goto BattleDojo_GridChoice_1
-
-BattleDojo_GridChoice_13:
-# 417 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	buffertrainername STR_VAR_1, 15
-# 418 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 2
-	goto BattleDojo_GridChoice_1
-
-BattleDojo_GridChoice_14:
-# 420 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	buffertrainername STR_VAR_1, 16
-# 421 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 6
-	goto BattleDojo_GridChoice_1
-
-BattleDojo_GridChoice_15:
-# 423 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	buffertrainername STR_VAR_1, 17
-# 424 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 373 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 7
+# 374 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 1
 	goto BattleDojo_GridChoice_1
 
+BattleDojo_GridChoice_11:
+# 376 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	buffertrainername STR_VAR_1, 13
+# 377 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 8
+# 378 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 2
+	goto BattleDojo_GridChoice_1
+
+BattleDojo_GridChoice_12:
+# 380 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	buffertrainername STR_VAR_1, 14
+# 381 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 9
+# 382 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 3
+	goto BattleDojo_GridChoice_1
+
+BattleDojo_GridChoice_13:
+# 384 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	buffertrainername STR_VAR_1, 15
+# 385 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 10
+# 386 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 4
+	goto BattleDojo_GridChoice_1
+
+BattleDojo_GridChoice_14:
+# 388 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	buffertrainername STR_VAR_1, 16
+# 389 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 11
+# 390 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 5
+	goto BattleDojo_GridChoice_1
+
+BattleDojo_GridChoice_15:
+# 392 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	buffertrainername STR_VAR_1, 17
+# 393 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 12
+# 394 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 6
+	goto BattleDojo_GridChoice_1
+
 BattleDojo_GridChoice_16:
-# 426 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 396 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 18
-# 427 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 397 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 13
+# 398 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 7
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_17:
-# 429 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 400 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	buffertrainername STR_VAR_1, 19
-# 430 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 401 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	setvar VAR_TEMP_2, 14
+# 402 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 8
 	goto BattleDojo_GridChoice_1
 
 BattleDojo_GridChoice_20:
-# 440 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 411 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_3
-# 441 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 412 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 442 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 413 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	playfanfare MUS_HEAL
-# 443 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 414 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	special HealPlayerParty
-# 444 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 415 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitfanfare
-# 445 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 416 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 446 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 417 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_4
-# 447 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 418 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_PLayerMoveToBattleSpot
-# 448 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 419 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	switch VAR_BATTLE_DOJO_STATE
-# 450 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 421 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 1, BattleDojo_GridChoice_25
-# 451 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 422 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 2, BattleDojo_GridChoice_25
-# 452 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 423 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 3, BattleDojo_GridChoice_25
-# 453 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 424 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 4, BattleDojo_GridChoice_25
-# 454 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 425 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 5, BattleDojo_GridChoice_25
+# 426 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_GridChoice_25
-# 455 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 427 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 7, BattleDojo_GridChoice_25
-# 456 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 428 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 8, BattleDojo_GridChoice_25
-# 457 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 9, BattleDojo_GridChoice_25
-# 462 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 433 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	call BattleDojo_BattleDojoBattles
 	goto BattleDojo_GridChoice_19
 
 BattleDojo_GridChoice_25:
-# 458 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 429 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_5
-# 459 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 430 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	warp MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA, 3, 6
 	end
 
 
 BattleDojo_BattleDojoBattles::
-# 472 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 443 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_0
-# 473 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 444 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	clearflag FLAG_IN_BATTLE_MODE
-# 474 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	showobjectat VAR_TEMP_1, MAP_BATTLE_DOJO
-# 475 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 445 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	showobjectat VAR_TEMP_1, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 446 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_OpponentWalksToSpot
-# 476 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 447 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 477 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	switch VAR_TEMP_1
-# 479 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 2, BattleDojo_BattleDojoBattles_3
-# 481 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 3, BattleDojo_BattleDojoBattles_4
-# 483 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 4, BattleDojo_BattleDojoBattles_5
-# 486 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 5, BattleDojo_BattleDojoBattles_6
-# 495 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 448 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	switch VAR_TEMP_2
+# 450 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 1, BattleDojo_BattleDojoBattles_3
+# 452 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 2, BattleDojo_BattleDojoBattles_4
+# 454 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 3, BattleDojo_BattleDojoBattles_5
+# 456 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 0, BattleDojo_BattleDojoBattles_6
+# 465 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_BattleDojoBattles_7
-# 497 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 7, BattleDojo_BattleDojoBattles_8
-# 499 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 8, BattleDojo_BattleDojoBattles_9
+# 467 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 4, BattleDojo_BattleDojoBattles_8
+# 469 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 5, BattleDojo_BattleDojoBattles_9
 BattleDojo_BattleDojoBattles_1:
-# 502 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 472 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_WalkLeft
-# 503 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 473 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight
-# 504 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 474 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 505 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	switch VAR_TEMP_1
-# 507 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 2, BattleDojo_BattleDojoBattles_12
-# 509 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 3, BattleDojo_BattleDojoBattles_13
-# 511 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 4, BattleDojo_BattleDojoBattles_14
-# 513 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 5, BattleDojo_BattleDojoBattles_15
-# 522 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 475 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	switch VAR_TEMP_2
+# 477 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 1, BattleDojo_BattleDojoBattles_12
+# 479 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 2, BattleDojo_BattleDojoBattles_13
+# 481 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 3, BattleDojo_BattleDojoBattles_14
+# 483 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 0, BattleDojo_BattleDojoBattles_15
+# 492 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_BattleDojoBattles_16
-# 524 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 7, BattleDojo_BattleDojoBattles_17
-# 526 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 8, BattleDojo_BattleDojoBattles_18
+# 494 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 4, BattleDojo_BattleDojoBattles_17
+# 496 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 5, BattleDojo_BattleDojoBattles_18
 BattleDojo_BattleDojoBattles_10:
-# 529 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 499 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_WalkRightBackwards
-# 530 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 500 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards
-# 531 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 501 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 532 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	switch VAR_TEMP_1
-# 534 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 2, BattleDojo_BattleDojoBattles_24
-# 536 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 3, BattleDojo_BattleDojoBattles_25
-# 539 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 4, BattleDojo_BattleDojoBattles_26
-# 541 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 5, BattleDojo_BattleDojoBattles_27
-# 550 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 502 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	switch VAR_TEMP_2
+# 504 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 1, BattleDojo_BattleDojoBattles_24
+# 506 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 2, BattleDojo_BattleDojoBattles_25
+# 508 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 3, BattleDojo_BattleDojoBattles_26
+# 510 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 0, BattleDojo_BattleDojoBattles_27
+# 519 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 6, BattleDojo_BattleDojoBattles_28
-# 553 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 7, BattleDojo_BattleDojoBattles_29
-# 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 8, BattleDojo_BattleDojoBattles_30
+# 521 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 4, BattleDojo_BattleDojoBattles_29
+# 523 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	case 5, BattleDojo_BattleDojoBattles_30
 BattleDojo_BattleDojoBattles_22:
-# 560 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 526 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_OpponentLeave
-# 561 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 527 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 562 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	hideobjectat VAR_TEMP_1, MAP_BATTLE_DOJO
-# 563 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 528 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	hideobjectat VAR_TEMP_1, MAP_MODHEADQUARTERS_BATTLE_DOJO
+# 529 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge
-# 564 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 530 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	waitmovement 0
-# 565 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 531 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement 1, BattleDojo_Movement_FaceLeft
-# 566 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 532 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_17
-# 568 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 533 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	releaseall
 	return
 
 BattleDojo_BattleDojoBattles_3:
-# 480 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 451 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_1
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_4:
-# 482 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 453 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_2
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_5:
-# 484 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 455 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_3
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_6:
-# 487 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 457 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_TOURNAMENT_LOST, BattleDojo_BattleDojoBattles_19
-# 493 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 463 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_5
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_7:
-# 496 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 466 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_6
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_8:
-# 498 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 468 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_7
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_9:
-# 500 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 470 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_8
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_12:
-# 508 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 478 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_FABIAN_B0, Fabian_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_13:
-# 510 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 480 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_HERALD_B0, Herald_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_14:
-# 512 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 482 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_BELLA_B0, Bella_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_15:
-# 514 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 484 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_TOURNAMENT_LOST, BattleDojo_BattleDojoBattles_31
-# 520 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 490 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_FIONA_B0, Fiona_LostNormal
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_16:
-# 523 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 493 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_TRISTAN_B0, Tristan_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_17:
-# 525 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 495 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_VICTOR_B0, Victor_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_18:
-# 527 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 497 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_VERA_B0, Vera_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_19:
-# 489 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 459 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_4
 	goto BattleDojo_BattleDojoBattles_1
 
 BattleDojo_BattleDojoBattles_24:
-# 535 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 505 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_9
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_25:
-# 537 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 507 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_10
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_26:
-# 540 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 509 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_11
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_27:
-# 542 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 511 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	goto_if_set FLAG_TOURNAMENT_LOST, BattleDojo_BattleDojoBattles_34
-# 548 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 517 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_13
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_28:
-# 551 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 520 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_14
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_29:
-# 554 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 522 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_15
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_30:
-# 557 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 524 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_16
 	goto BattleDojo_BattleDojoBattles_22
 
 BattleDojo_BattleDojoBattles_31:
-# 516 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 486 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	trainerbattle_no_intro TRAINER_FIONA_B0_SHINY, Fiona_LostShiny
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_34:
-# 544 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 513 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_BattleDojoBattles_Text_12
 	goto BattleDojo_BattleDojoBattles_22
 
 
-# 571 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 536 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_movement_PlayerWalksToSpotUp:
-# 572 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 537 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 572 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 537 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 572 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 537 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 573 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 538 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 574 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 539 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_right
 	step_end
 
-# 577 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 542 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_movement_PlayerWalksToSpotLeft:
-# 578 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 543 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 578 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 543 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 579 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 544 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 579 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 544 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 580 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 545 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_right
 	step_end
 
-# 583 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 548 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_movement_PlayerWalksToSpotDown:
-# 584 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 549 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 584 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 549 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 584 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 549 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 585 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 550 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 585 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 550 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 585 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 550 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 586 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 551 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_right
 	step_end
 
-# 589 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 554 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_movement_PlayerWalksToSpotRight:
-# 590 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 555 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 591 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 591 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 591 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 591 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 592 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 557 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 593 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 558 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_right
 	step_end
 
-# 596 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 561 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_movement_PlayerWalkBackSurge:
-# 597 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 562 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 597 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 562 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 598 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 563 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
-# 598 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 563 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
 	step_end
 
-# 601 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 566 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_OpponentWalksToSpot:
-# 602 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 567 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 602 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 567 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 603 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 568 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
-# 603 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 568 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
-# 603 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 568 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
-# 604 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 569 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 604 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 569 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 604 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 569 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 604 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 569 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_up
-# 605 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 570 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_left
 	step_end
 
-# 608 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 573 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_OpponentLeave:
-# 609 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 574 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 609 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 574 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 609 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 574 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 609 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 574 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 610 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 575 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 610 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 575 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 610 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 575 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 611 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 576 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 611 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 576 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_down
-# 612 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 577 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 615 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 580 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_FaceDown:
-# 616 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 581 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_down
 	step_end
 
-# 619 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 584 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_FaceLeft:
-# 620 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 585 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	face_left
 	step_end
 
-# 623 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 588 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_WalkLeft:
-# 624 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 589 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
 	step_end
 
-# 627 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 592 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_WalkRight:
-# 628 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 593 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
 	step_end
 
-# 631 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 596 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_WalkLeftBackwards:
-# 632 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 597 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	lock_facing_direction
-# 633 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 598 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_left
-# 634 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 599 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 637 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 602 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 BattleDojo_Movement_WalkRightBackwards:
-# 638 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 603 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	lock_facing_direction
-# 639 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 604 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	walk_right
-# 640 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 605 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	unlock_facing_direction
 	step_end
 
 BattleDojo_Return_Text_0:
-# 44 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 51 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "var was invalid$"
 
 BattleDojo_Event_Surge_Text_0:
-# 87 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 94 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: You have fought well today\n"
 	.string "{PLAYER}, go rest now.\l"
 	.string "Tomorrow your next battle will be ready!$"
 
 BattleDojo_Event_Surge_Text_1:
-# 93 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 100 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Are you ready to do you first\n"
 	.string "ever pokemon battle?$"
 
 BattleDojo_Event_Surge_Text_2:
-# 97 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 104 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}???{COLOR DARK_GRAY}: Welcome Rekruut! This is the\n"
 	.string "Battle Dojo, a safe place to perform\l"
 	.string "pokemon battles!\p"
@@ -1204,21 +1248,21 @@ BattleDojo_Event_Surge_Text_2:
 	.string "capable to subdue the situation.$"
 
 BattleDojo_Event_Surge_Text_3:
-# 106 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 110 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, you can stand ready and\n"
 	.string "I'll call your first opponent than.$"
 
 BattleDojo_Event_Surge_Text_4:
-# 109 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 113 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}:FABIAN, YOU CAN ENTER!$"
 
 BattleDojo_Event_Surge_Text_5:
-# 113 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 117 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle,\n"
 	.string "let's go easy on this one, OK?$"
 
 BattleDojo_Event_Surge_Text_6:
-# 125 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 129 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Wow, that totally did not go as\n"
 	.string "I expected.\p"
 	.string "But fair is fair, you were clearly the\n"
@@ -1228,7 +1272,7 @@ BattleDojo_Event_Surge_Text_6:
 	.string "to become a better trainer!$"
 
 BattleDojo_Event_Surge_Text_7:
-# 134 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 136 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Well fought {PLAYER}, I can\n"
 	.string "see you can get far in this tournament.\p"
 	.string "In my eyes you have already proven\n"
@@ -1245,48 +1289,49 @@ BattleDojo_Event_Surge_Text_7:
 	.string "battle will be ready!$"
 
 BattleDojo_Event_Surge_Text_8:
-# 143 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 141 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: that's fine, come talk to me when\n"
 	.string "you're ready$"
 
 BattleDojo_Event_Surge_Text_9:
-# 148 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 146 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: You already managed to make it\n"
-	.string "to the semi finals!!\l"
+	.string "to the semi finals!\l"
 	.string "now go rest and be preparred for yet\l"
 	.string "another battle tomorrow!$"
 
 BattleDojo_Event_Surge_Text_10:
-# 155 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 152 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Are you ready for your next\n"
 	.string "battle?$"
 
 BattleDojo_Event_Surge_Text_11:
-# 159 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 156 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: One battle down, three to go.\p"
 	.string "Every Initiative has a different\n"
 	.string "pokemon so it's impossible for anyone\l"
-	.string "to know how these battles will go. Still,\l"
-	.string "are you ready for your next battle?$"
+	.string "to know how these battles will go.\p"
+	.string "Still, are you ready for your next\n"
+	.string "battle?$"
 
 BattleDojo_Event_Surge_Text_12:
-# 165 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 160 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Fantastic! go stand where you\n"
 	.string "stood yesterday and I'll call your next\l"
 	.string "opponent forward$"
 
 BattleDojo_Event_Surge_Text_13:
-# 168 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 163 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: HERALD, YOU MAY ENTER!$"
 
 BattleDojo_Event_Surge_Text_14:
-# 172 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 167 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: Don't think I'm gonna take it\n"
 	.string "easy on you because we're colleague's.\p"
 	.string "I'm here to win!$"
 
 BattleDojo_Event_Surge_Text_15:
-# 185 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 179 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: Guess my ego got a bit too my\n"
 	.string "head after my first win.\p"
 	.string "Thank you for keeping me humble\n"
@@ -1295,7 +1340,7 @@ BattleDojo_Event_Surge_Text_15:
 	.string "tournament, I'll be rooting for you!$"
 
 BattleDojo_Event_Surge_Text_16:
-# 194 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 186 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: And that makes two: you have\n"
 	.string "already made it to the semi-finals.\l"
 	.string "Congrats {PLAYER}!\p"
@@ -1306,19 +1351,19 @@ BattleDojo_Event_Surge_Text_16:
 	.string "that comes next!$"
 
 BattleDojo_Event_Surge_Text_17:
-# 202 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 191 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: No shame in being overprepared.\n"
 	.string "come talk to me when you're ready$"
 
 BattleDojo_Event_Surge_Text_18:
-# 208 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 196 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job on making it to the\n"
 	.string "finals {PLAYER}!\l"
 	.string "now go rest and be preparred for the\l"
 	.string "thoughest battle tomorrow!$"
 
 BattleDojo_Event_Surge_Text_19:
-# 219 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 206 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, You're halfway, keep it up!\p"
 	.string "Do expect these battle to become\n"
 	.string "harder through the tournament though.\l"
@@ -1327,22 +1372,22 @@ BattleDojo_Event_Surge_Text_19:
 	.string "Are you ready for your next battle?$"
 
 BattleDojo_Event_Surge_Text_20:
-# 225 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 210 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Understood! You know what to do.$"
 
 BattleDojo_Event_Surge_Text_21:
-# 228 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 213 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: BELLA, ITS YOUR TIME TO SHINE!$"
 
 BattleDojo_Event_Surge_Text_22:
-# 232 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 217 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}BELLA{COLOR DARK_GRAY}: Thanks for playing dear, but\n"
 	.string "this will be the end of the road for you.\l"
 	.string "It's time for the REAL pokemon trainers\l"
 	.string "to come out and play!$"
 
 BattleDojo_Event_Surge_Text_23:
-# 245 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 229 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}BELLA{COLOR DARK_GRAY}: hmp.\p"
 	.string "Don't think you're better than me just\n"
 	.string "because you won!\p"
@@ -1350,7 +1395,7 @@ BattleDojo_Event_Surge_Text_23:
 	.string "won't be so lucky, mark my words!$"
 
 BattleDojo_Event_Surge_Text_24:
-# 254 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 236 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Another well fought battle\n"
 	.string "{PLAYER}!\l"
 	.string "Congratulations on making it to the\l"
@@ -1363,17 +1408,17 @@ BattleDojo_Event_Surge_Text_24:
 	.string "battles were.$"
 
 BattleDojo_Event_Surge_Text_25:
-# 267 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 246 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job Champion!\n"
 	.string "Go rest for now, I'll talk with {COLOR LIGHT_GRAY}The\l"
 	.string "Leader{COLOR DARK_GRAY} tomorrow about your reward!$"
 
 BattleDojo_Event_Surge_Text_26:
-# 274 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 252 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Are you ready for the Finals?$"
 
 BattleDojo_Event_Surge_Text_27:
-# 278 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 256 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: The Finals...\p"
 	.string "The best and second best are also the\n"
 	.string "best and second best pokemon trainers,\l"
@@ -1385,17 +1430,17 @@ BattleDojo_Event_Surge_Text_27:
 	.string "the Tournament?$"
 
 BattleDojo_Event_Surge_Text_28:
-# 285 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 260 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Excellent!\n"
 	.string "So please {PLAYER}, for the last time\l"
 	.string "this tournament...$"
 
 BattleDojo_Event_Surge_Text_29:
-# 288 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 263 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: FIONA, IT IS TIME!$"
 
 BattleDojo_Event_Surge_Text_30:
-# 292 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 267 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: So, you have kept your promise\n"
 	.string "and also made it to the finals?\p"
 	.string "Good!\p"
@@ -1405,7 +1450,7 @@ BattleDojo_Event_Surge_Text_30:
 	.string "you'll do the same to me!$"
 
 BattleDojo_Event_Surge_Text_31:
-# 296 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 268 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: INITIATIVES! You two have\n"
 	.string "already proved from your first battle\l"
 	.string "you're responsible, capable trainers\l"
@@ -1420,11 +1465,11 @@ BattleDojo_Event_Surge_Text_31:
 	.string "than you can start!$"
 
 BattleDojo_Event_Surge_Text_32:
-# 299 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 269 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Let's do this {PLAYER}!$"
 
 BattleDojo_Event_Surge_Text_33:
-# 310 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 280 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: I...\p"
 	.string "I'm speechless!\p"
 	.string "It seems you're even more skilled than I\n"
@@ -1437,28 +1482,28 @@ BattleDojo_Event_Surge_Text_33:
 	.string "Mark my words!$"
 
 BattleDojo_Event_Surge_Text_34:
-# 322 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 287 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Congratulations {PLAYER}, I\n"
 	.string "knew you would come out victorious!\p"
 	.string "You know {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was also watching\n"
 	.string "this battle and is very impressed, he\l"
 	.string "says he has big plans preparred for\l"
 	.string "you!\p"
-	.string "I'll go talk with the leader to see about\n"
-	.string "your reward.\l"
+	.string "I'll go talk with {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} to see\n"
+	.string "about your reward.\l"
 	.string "Go rest and relax from this fight,\l"
 	.string "tomorrow you'll get your reward and\l"
 	.string "than you'll be able to go explore the\l"
 	.string "world with your new pokemon!$"
 
 BattleDojo_Event_Surge_Text_35:
-# 330 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 292 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Don't keep everyone waiting for\n"
 	.string "too long, we all want to see how this\l"
 	.string "next battle is gonna go!$"
 
 BattleDojo_Event_Surge_Text_36:
-# 339 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 301 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Welcome back {PLAYER}.\p"
 	.string "Maria asked some things around and\n"
 	.string "came with a proposition for us to use\l"
@@ -1474,7 +1519,7 @@ BattleDojo_Event_Surge_Text_36:
 	.string "fight you.$"
 
 BattleDojo_Event_Surge_Text_37:
-# 343 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 302 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "You can use it to train, to expand your\n"
 	.string "pokedex, to earn some money, or to test\l"
 	.string "out new strategies.\l"
@@ -1483,192 +1528,192 @@ BattleDojo_Event_Surge_Text_37:
 	.string "so...$"
 
 BattleDojo_Event_Surge_Text_38:
-# 348 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 305 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Here for another fight?$"
 
 BattleDojo_Event_Surge_Text_39:
-# 355 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 312 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, talk to me if you ever\n"
 	.string "want to fight one of your colleagues.$"
 
 BattleDojo_GridChoice_Text_0:
-# 379 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 336 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Who do you want to fight?$"
 
 BattleDojo_GridChoice_Text_1:
-# 432 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 404 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Changed your mind?\n"
 	.string "Talk to me if you want to battle one of\l"
 	.string "your colleagues!$"
 
 BattleDojo_GridChoice_Text_2:
-# 437 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 408 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Do you want to fight\n"
 	.string "{STR_VAR_1}?$"
 
 BattleDojo_GridChoice_Text_3:
-# 440 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 411 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, frist things first.$"
 
 BattleDojo_GridChoice_Text_4:
-# 446 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 417 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, you know what to do.$"
 
 BattleDojo_GridChoice_Text_5:
-# 458 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}$"
+# 429 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}.$"
 
 BattleDojo_BattleDojoBattles_Text_0:
-# 472 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 443 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: {STR_VAR_1}, YOU'VE BEEN\n"
 	.string "CALLED FOR BATTLE!$"
 
 BattleDojo_BattleDojoBattles_Text_1:
-# 480 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 451 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I'm not here expecting to win,\n"
 	.string "but that does not mean I'm not going to\l"
 	.string "try!$"
 
 BattleDojo_BattleDojoBattles_Text_2:
-# 482 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 453 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: I'm getting a bit too\n"
 	.string "comfortable with winning. Let me feel\l"
 	.string "again how it is to lose!$"
 
 BattleDojo_BattleDojoBattles_Text_3:
-# 484 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 455 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Hope you had fun dear.\n"
 	.string "It's time to show you how a real\l"
 	.string "upcoming MOD LORD fights!$"
 
 BattleDojo_BattleDojoBattles_Text_4:
-# 489 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 459 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Alright, let's do this {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_5:
-# 493 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 463 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: This time, I'm coming to win!$"
 
 BattleDojo_BattleDojoBattles_Text_6:
-# 496 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 466 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Show me what makes you so\n"
 	.string "special!$"
 
 BattleDojo_BattleDojoBattles_Text_7:
-# 498 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 468 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: Time to test out my new\n"
 	.string "strategy!$"
 
 BattleDojo_BattleDojoBattles_Text_8:
-# 500 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 470 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Vera{COLOR DARK_GRAY}: Let's see what you have learned\n"
 	.string "in your journey {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_9:
-# 535 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 505 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: I never mind losing against you\n"
 	.string "{PLAYER}, you can call me anything if\l"
 	.string "you want an easy Pokemon battle!$"
 
 BattleDojo_BattleDojoBattles_Text_10:
-# 537 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 507 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: Well I better go out there and\n"
 	.string "train some more if I ever want to beat\l"
 	.string "you.\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_11:
-# 540 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 509 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Just because you defeated me,\n"
 	.string "doesn't mean your better than me dear.\l"
 	.string "Soon enough you'll have to listen to my\l"
 	.string "commands wether you like it or not.$"
 
 BattleDojo_BattleDojoBattles_Text_12:
-# 544 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 513 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Seems like you haven't sit still\n"
 	.string "either! I'll keep training and won't make\l"
 	.string "it as easy on you next time!$"
 
 BattleDojo_BattleDojoBattles_Text_13:
-# 548 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 517 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: It seems like I still not strong\n"
 	.string "enough. But mark my words, I won't make\l"
 	.string "it as easy for you the next time!$"
 
 BattleDojo_BattleDojoBattles_Text_14:
-# 551 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Raoul{COLOR DARK_GRAY}: I got losts of things to think\n"
+# 520 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I got lots of things to think\n"
 	.string "about after this battle, I better go\l"
 	.string "and start doing that.\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_15:
-# 554 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 522 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: I need some more training to be\n"
 	.string "able to use my knowledge in battle...\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_16:
-# 557 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 524 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "{COLOR BLUE}Vera{COLOR DARK_GRAY}: You have quite the interesting\n"
 	.string "set of pokemon on your team, I'll love\l"
 	.string "to battle your more often!\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_17:
-# 566 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 532 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Well done {PLAYER}!\p"
 	.string "Come talk to me if you ever want to\n"
 	.string "fight another one of your colleagues.$"
 
 Fabian_LostTournament::
-# 643 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 608 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Hé, I thought we would take it easy!$"
 
 Bella_LostTournament::
-# 647 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 612 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Wait... that doesn't count!$"
 
 Herald_LostTournament::
-# 651 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 616 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "What... just happened?$"
 
 Fiona_LostTournament::
-# 655 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 620 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Is this... is this how I lose it all?$"
 
 Fiona_LostShiny::
-# 659 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 624 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Wow, you've grown a lot since our last\n"
 	.string "battle!$"
 
 Fiona_LostNormal::
-# 663 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 628 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "It's clear that my training is not yet\n"
 	.string "complete!$"
 
 Fabian_Lost::
-# 667 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 632 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "HAHAHAHA! Yet another lose!$"
 
 Herald_Lost::
-# 671 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 636 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Back to ground zero once again!$"
 
 Bella_Lost::
-# 675 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 640 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "Hmpf!$"
 
 Tristan_Lost::
-# 679 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "I understand now$"
+# 644 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+	.string "I understand now!$"
 
 Victor_Lost::
-# 683 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 648 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "I still need some more field experience\n"
 	.string "it seems.$"
 
 Vera_Lost::
-# 687 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
+# 652 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	.string "How can I already been defeated?$"

@@ -7339,6 +7339,7 @@ static const u16 sEeveeTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_SWAGGER,
     MOVE_SWIFT,
+    MOVE_BABY_DOLL_EYES,
     MOVE_UNAVAILABLE,
 };
 
