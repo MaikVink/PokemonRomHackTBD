@@ -1,4 +1,4 @@
-mapscripts CommonDormRoom_MapScripts {
+mapscripts MODHeadquarters_CommonDormRoom_MapScripts {
     MAP_SCRIPT_ON_LOAD: CommonDormRoom_OnLoad
 }
 
@@ -12,27 +12,27 @@ script CommonDormRoom_OnLoad{
         case 3:
             setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL1, 26, 1)
         case 4:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 4, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 4, 1)
         case 5:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 10, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 9, 1)
         case 6:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 16, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 14, 1)
         case 7:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 22, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 19, 1)
         case 8:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 28, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL2, 24, 1)
         case 9:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 5, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 5, 1)
         case 10:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 10, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 10, 1)
         case 11:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 15, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 15, 1)
         case 12:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 20, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 20, 1)
         case 13:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 25, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 25, 1)
         case 14:
-            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 30, 2)
+            setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL3, 30, 1)
         default:
             setdynamicwarp(MAP_MODHEADQUARTERS_DORM_HALL1, 6, 1)
 

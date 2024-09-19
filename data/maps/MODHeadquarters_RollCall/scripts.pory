@@ -13,7 +13,7 @@ const WOMAN5_LOCALID = 8
 const LEADER_LOCALID = 14
 const BODYGUARD_LOCALID = 3
 
-mapscripts RollCall_MapScripts {
+mapscripts MODHeadquarters_RollCall_MapScripts {
     
 }
 
@@ -178,7 +178,7 @@ script RollCall_Trigger_MeetTheLeaderRight{
 script RollCall_MeetTheLeader{
     msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: I see you finally got your pokemon as well!"))
     applymovement(GUARD_LOCALID, RollCall_Movement_WalkOutOfTheWay)
-    showobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+    showobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_InFrame)
     msgbox(format("Now we both have a pokemon, I think this could be a good time to do our first pok-"))
     waitmovement(0)
@@ -187,7 +187,7 @@ script RollCall_MeetTheLeader{
     applymovement(FIONA_LOCALID, RollCall_Movement_JumpScare)
     waitmovement(0)
     msgbox(format("Oh, I guess we have to hold off on that fight for now then."))
-    //hideobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+    hideobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     
     applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_Player)
     applymovement(FIONA_LOCALID, RollCall_Movement_Fiona)
@@ -203,7 +203,7 @@ script RollCall_MeetTheLeader{
     waitmovement(2)
     applymovement(MAN5_LOCALID, RollCall_Movement_Man5)
     waitmovement(0)
-    showobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+    showobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: Initiatives, while according to any of my calculations it does not make sense you get rewarded this way, {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} has decided to speak to you directly today.\p
     Please show respect and keep your mouth shut while {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is talking.\p
@@ -211,7 +211,7 @@ script RollCall_MeetTheLeader{
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_BodyGuard_MakeSpace)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: They are ready, sir!"))
-    showobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+    showobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     applymovement(LEADER_LOCALID, RollCall_Movement_Leader_Enter)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Thank you Airanea.\p
@@ -234,14 +234,14 @@ script RollCall_MeetTheLeader{
     With that being said, go rest and good luck with the tournament. May the best rookie win!"))
     applymovement(LEADER_LOCALID, RollCall_Movement_Leader_Exit)
     waitmovement(0)
-    //hideobjectat(LEADER_LOCALID, MAP_ROLL_CALL)
+    hideobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_TakePlace)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: You heard {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} Initiatives, go to your room set yourself in sleep mode! Tomorrow we need your mind and body to be fully charged."))
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_OutOfFrame)
     waitmovement(0)
-    //hideobjectat(BODYGUARD_LOCALID, MAP_ROLL_CALL)
+    hideobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     applymovement(GUARD_LOCALID, RollCall_Movement_Guard_BlockDoor)
     applymovement(FIONA_LOCALID, RollCall_Movement_WalkLeft)
     applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookRight)
@@ -263,18 +263,18 @@ script RollCall_MeetTheLeader{
     I'll do the same for you!\p
     Good luck and good night {PLAYER}!"))
     waitmovement(0)
-    //removeobject(MAN3_LOCALID, MAP_ROLL_CALL)
-    //removeobject(MAN5_LOCALID, MAP_ROLL_CALL)
-    //removeobject(MOM_LOCALID, MAP_ROLL_CALL)
-    //removeobject(NINJABOY_LOCALID, MAP_ROLL_CALL)
-    //removeobject(WOMAN5_LOCALID, MAP_ROLL_CALL)
-    //removeobject(HIKER_LOCALID, MAP_ROLL_CALL)
-    //removeobject(POKEFANF_LOCALID, MAP_ROLL_CALL)
+    removeobject(MAN3_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(MAN5_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(MOM_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(NINJABOY_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(WOMAN5_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(HIKER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
+    removeobject(POKEFANF_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookDown)
     applymovement(FIONA_LOCALID, RollCall_Movement_WalkAwayLong)
     waitmovement(0)
-    //removeobject(FIONA_LOCALID, MAP_ROLL_CALL)
+    removeobject(FIONA_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     setflag(FLAG_REVERSE_ROLLCALL_FLAG)
     setflag(FLAG_FIONA_REVERSE_ROLLCALL_FLAG)

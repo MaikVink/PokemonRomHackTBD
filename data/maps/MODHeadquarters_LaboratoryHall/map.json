@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_MODHEADQUARTERS_HALL1",
+      "offset": -23,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
@@ -72,7 +78,7 @@
       "x": 14,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_MODHEADQUARTERS_LABORATORY_HALL",
+      "dest_map": "MAP_MODHEADQUARTERS_LABORATORY",
       "dest_warp_id": "0"
     },
     {

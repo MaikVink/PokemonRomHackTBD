@@ -1,9 +1,9 @@
-Hall1_MapScripts::
+MODHeadquarters_Hall1_MapScripts::
 # 2 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Hall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MODHeadquarters_Hall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Hall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+MODHeadquarters_Hall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 3 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	map_script_2 VAR_LABORATORYHALL_STATE, 0, Hall1_OnFrame
 # 4 "data/maps/MODHeadquarters_Hall1/scripts.pory"

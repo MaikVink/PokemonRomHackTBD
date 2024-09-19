@@ -1,9 +1,9 @@
-Laboratory_MapScripts::
+MODHeadquarters_Laboratory_MapScripts::
 # 4 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Laboratory_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MODHeadquarters_Laboratory_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-Laboratory_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+MODHeadquarters_Laboratory_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 5 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	map_script_2 VAR_STORY_PROGRESSION, 3, Laboratory_WarpInto_FirstPokemon
 	.2byte 0

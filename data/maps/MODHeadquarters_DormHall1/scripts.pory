@@ -5,7 +5,7 @@ const LADY_LOCALID = 1
 const GUY_LOCALID = 3
 const LEADER_LOCALID = 2
 
-mapscripts DormHall1_MapScripts {
+mapscripts MODHeadquarters_DormHall1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Dormhall1_OnTransition
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_STORY_PROGRESSION, 1: Dormhall1_Frame
@@ -67,7 +67,7 @@ script Dormhall1_Frame{
     waitmovement(0)
     setflag(FLAG_FIRST_RIVAL_MEETING)
     setvar(VAR_STORY_PROGRESSION, 2)
-    removeobject(FIONA_ID)
+    removeobject(FIONA_ID, MAP_MODHEADQUARTERS_DORM_HALL1)
     release
 }
 

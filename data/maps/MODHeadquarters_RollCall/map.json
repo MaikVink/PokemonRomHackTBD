@@ -207,7 +207,24 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "4",
+      "script": "RollCall_Trigger_MeetTheLeaderRight"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_STORY_PROGRESSION",
+      "var_value": "4",
+      "script": "RollCall_Trigger_MeetTheLeaderLeft"
+    }
   ],
   "bg_events": [
 

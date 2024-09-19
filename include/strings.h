@@ -3085,4 +3085,13 @@ extern const u8 gText_Tessa[];
 
 extern const u8 gText_FabianLost[];
 
+//MoveTutor
+extern const u8 gText_FrenzyPlant[];
+extern const u8 gText_BlastBurn[];
+extern const u8 gText_HydroCannon[];
+extern const u8 gText_VoltTackle[];
+extern const u8 gText_DragonAscent[];
+extern const u8 gText_RelicSong[];
+extern const u8 gText_SecretSword[];
+
 #endif // GUARD_STRINGS_H

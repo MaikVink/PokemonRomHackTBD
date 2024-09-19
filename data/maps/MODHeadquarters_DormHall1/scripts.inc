@@ -1,11 +1,11 @@
-DormHall1_MapScripts::
+MODHeadquarters_DormHall1_MapScripts::
 # 9 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Dormhall1_OnTransition
 # 10 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, DormHall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MODHeadquarters_DormHall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-DormHall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+MODHeadquarters_DormHall1_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 11 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	map_script_2 VAR_STORY_PROGRESSION, 1, Dormhall1_Frame
 # 12 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -97,7 +97,7 @@ Dormhall1_Frame::
 # 69 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	setvar VAR_STORY_PROGRESSION, 2
 # 70 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	removeobject 4
+	removeobject 4, MAP_MODHEADQUARTERS_DORM_HALL1
 # 71 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	release
 	return

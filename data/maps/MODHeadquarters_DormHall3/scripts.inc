@@ -1,4 +1,4 @@
-DormHall3_MapScripts::
+MODHeadquarters_DormHall3_MapScripts::
 	.byte 0
 
 

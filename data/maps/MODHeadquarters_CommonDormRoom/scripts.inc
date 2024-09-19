@@ -1,4 +1,4 @@
-CommonDormRoom_MapScripts::
+MODHeadquarters_CommonDormRoom_MapScripts::
 # 2 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_LOAD, CommonDormRoom_OnLoad
 	.byte 0
@@ -56,57 +56,57 @@ CommonDormRoom_OnLoad_4:
 
 CommonDormRoom_OnLoad_5:
 # 15 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 4, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 4, 1
 	return
 
 CommonDormRoom_OnLoad_6:
 # 17 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 10, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 9, 1
 	return
 
 CommonDormRoom_OnLoad_7:
 # 19 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 16, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 14, 1
 	return
 
 CommonDormRoom_OnLoad_8:
 # 21 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 22, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 19, 1
 	return
 
 CommonDormRoom_OnLoad_9:
 # 23 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 28, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL2, 24, 1
 	return
 
 CommonDormRoom_OnLoad_10:
 # 25 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 5, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 5, 1
 	return
 
 CommonDormRoom_OnLoad_11:
 # 27 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 10, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 10, 1
 	return
 
 CommonDormRoom_OnLoad_12:
 # 29 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 15, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 15, 1
 	return
 
 CommonDormRoom_OnLoad_13:
 # 31 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 20, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 20, 1
 	return
 
 CommonDormRoom_OnLoad_14:
 # 33 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 25, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 25, 1
 	return
 
 CommonDormRoom_OnLoad_15:
 # 35 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 30, 2
+	setdynamicwarp MAP_MODHEADQUARTERS_DORM_HALL3, 30, 1
 	return
 
 
