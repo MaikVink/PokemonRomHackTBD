@@ -816,6 +816,7 @@ static const struct MenuAction MultichoiceList_MoveTutor[]=
     {gText_BlastBurn},
     {gText_HydroCannon},
     {gText_VoltTackle},
+    {gText_DracoMeteor},
     {gText_DragonAscent},
     {gText_RelicSong},
     {gText_SecretSword}

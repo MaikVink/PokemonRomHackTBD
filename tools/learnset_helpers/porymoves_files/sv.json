@@ -10807,7 +10807,8 @@
       "MOVE_WEATHER_BALL",
       "MOVE_DOUBLE_EDGE",
       "MOVE_CURSE",
-      "MOVE_ALLURING_VOICE"
+      "MOVE_ALLURING_VOICE",
+      "MOVE_BABY_DOLL_EYES"
     ],
     "EggMoves": [
       "MOVE_CURSE",
@@ -51660,7 +51661,9 @@
       "MOVE_IRON_TAIL",
       "MOVE_NIGHT_SLASH"
     ],
-    "TutorMoves": []
+    "TutorMoves": [
+      "MOVE_DRACO_METEOR"
+    ]
   },
   "FRAXURE": {
     "LevelMoves": [
