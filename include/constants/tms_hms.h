@@ -51,7 +51,8 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT)\
+    F(BABY_DOLL_EYES)
 
 #define FOREACH_HM(F) \
     F(CUT) \

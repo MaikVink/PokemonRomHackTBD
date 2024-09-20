@@ -268,3 +268,14 @@ MoveTutor_EventScript_OpenPartyMenu::
 MoveTutor_EventScript_CanOnlyBeLearnedOnce::
 	msgbox MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce, MSGBOX_YESNO
 	return
+
+MoveTutor_EventScript_Test::
+	setvar VAR_0x8005, MOVE_DRACO_METEOR
+	setvar VAR_0x8005, MOVE_VOLT_TACKLE
+	setvar VAR_0x8005, MOVE_RELIC_SONG
+	setvar VAR_0x8005, MOVE_SECRET_SWORD
+	setvar VAR_0x8005, MOVE_FRENZY_PLANT
+	setvar VAR_0x8005, MOVE_BLAST_BURN
+	setvar VAR_0x8005, MOVE_HYDRO_CANNON
+	setvar VAR_0x8005, MOVE_DRAGON_ASCENT
+	return;	

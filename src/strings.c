@@ -1872,6 +1872,7 @@ const u8 gText_FrenzyPlant[] = _("Frenzy Plant");
 const u8 gText_BlastBurn[] = _("Bast Burn");
 const u8 gText_HydroCannon[] = _("Hydro Cannon");
 const u8 gText_VoltTackle[] = _("Volt Tackle");
+const u8 gText_DracoMeteor[] = _("Draco Meteor");
 const u8 gText_DragonAscent[] = _("Dragon Ascent");
 const u8 gText_RelicSong[] = _("Relic Song");
 const u8 gText_SecretSword[] = _("Secret Sword");

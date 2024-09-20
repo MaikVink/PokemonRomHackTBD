@@ -198,7 +198,55 @@ script MoveMasters_ObjectScript_MoveTutor{
 
 script MoveTutor_DecideMove
 {
-    
+    message(format("What move would you like me to learn your pokemon?"))
+    multichoicegrid(10, 0, MULTI_MOVE_TUTOR, 2, 0)
+    closemessage
+    switch(var(VAR_RESULT))
+    {
+        case 0:
+            buffermovename(STR_VAR_1, MOVE_FRENZY_PLANT)
+            setvar(VAR_0x8005 MOVE_FRENZY_PLANT)
+        case 1:
+            buffermovename(STR_VAR_1, MOVE_BLAST_BURN)
+            setvar(VAR_0x8005 MOVE_BLAST_BURN)
+        case 2:
+            buffermovename(STR_VAR_1, MOVE_HYDRO_CANNON)
+            setvar(VAR_0x8005 MOVE_HYDRO_CANNON)
+        case 3:
+            buffermovename(STR_VAR_1, MOVE_VOLT_TACKLE)
+            setvar(VAR_0x8005 MOVE_VOLT_TACKLE)
+        case 4:
+            buffermovename(STR_VAR_1, MOVE_DRACO_METEOR)
+            setvar(VAR_0x8005 MOVE_DRACO_METEOR)
+        case 5:
+            buffermovename(STR_VAR_1, MOVE_DRAGON_ASCENT)
+            setvar(VAR_0x8005 MOVE_DRAGON_ASCENT)
+        case 6:
+            buffermovename(STR_VAR_1, MOVE_RELIC_SONG)
+            setvar(VAR_0x8005 MOVE_RELIC_SONG)
+        case 7:
+            buffermovename(STR_VAR_1, MOVE_SECRET_SWORD)
+            setvar(VAR_0x8005 MOVE_SECRET_SWORD)
+        default:
+            msgbox(format("Just what I though...\p
+            Come back when you have a pokemon worthy of my abilities!"))
+    }
+
+    msgbox(format("Which pokemon would you like me to learn {STR_VAR_1} to?"))
+    call(MoveTutor_EventScript_OpenPartyMenu)
+    if(var(VAR_RESULT) == 0)
+    {
+        msgbox(format("Changed your mind?
+        \n Or would you maybe try another move?"))
+        call(MoveTutor_DecideMove)
+    }
+    else
+    {
+        msgbox(format("Done! Your pokemon now knows {STR_VAR_1}!\p 
+        Now if you don't mind paying me for my work..."))
+        removemoney(1000)
+        msgbox("Come again if you need me!")
+    }
 }
 
 
