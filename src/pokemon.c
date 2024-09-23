@@ -6611,6 +6611,12 @@ u16 GetSpeciesPreEvolution(u16 species)
     return SPECIES_NONE;
 }
 
+void MaximizeFriendShip(struct Pokemon *mon)
+{
+    u16 maxFriendship = 255;   
+    SetMonData(mon, MON_DATA_FRIENDSHIP, &maxFriendship);
+}
+
 const u8 *GetMoveName(u16 moveId)
 {
     return gMovesInfo[moveId].name;

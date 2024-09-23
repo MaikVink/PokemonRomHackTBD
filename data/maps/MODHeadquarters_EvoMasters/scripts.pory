@@ -34,7 +34,7 @@ script EvoMAsters_ObjectScript_Masseuse{
         checkmoney(1000)
         if(var(VAR_RESULT))
         {
-            msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
+            call(EvoMasters_GiveMassage)
             releaseall
         }
         else
@@ -59,7 +59,10 @@ script EvoMasters_CheckFreeMassageEevee{
     }
     else
     {
-        msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
+        call(EvoMasters_GiveMassage)
+        releaseall
+        end
+        //msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
     }
 }
 
@@ -74,6 +77,24 @@ script EvoMasters_CheckDeclineMassage{
         msgbox(format("That is what I thought!\n So..."))
         call(EvoMasters_CheckFreeMassageEevee)
     }
+}
+
+script EvoMasters_GiveMassage
+{
+    msgbox(format("Which Pokemon would you like me to give a massage?"))
+    special(ChooseMonForFriendShip)
+    waitstate
+    if(var(VAR_0x8004) == 0xFF)
+    {
+        msgbox(format("please come again if you want me to give one of your pokemon a massage"))
+    }
+    else
+    {
+        msgbox(format("My work is done, they should now consider you a close friend.\p Now for my payment"))
+        removemoney(1000)
+        msgbox(format("Thank you for your patronage, may your friendship grow ever more!"))
+    }
+    return
 }
 
 script EvoMasters_ObjectScript_Simulator
