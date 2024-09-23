@@ -144,7 +144,8 @@ script MoveMasters_ObjectScript_EggTutor{
         checkmoney(1000)
         if(var(VAR_RESULT))
         {
-            msgbox(format("I'm sorry dear, I'm still working on my skills, please check again later."))
+            call(MoveMasters_LearnEggMove)
+            //msgbox(format("I'm sorry dear, I'm still working on my skills, please check again later."))
         }
         else
         {
@@ -158,6 +159,51 @@ script MoveMasters_ObjectScript_EggTutor{
         Go ahead, relief your concerns to Granny, I'll listen."))
     }
     releaseall
+}
+
+script MoveMasters_LearnEggMove
+{
+    msgbox(format("Who would you like me to learn one of their egg moves?"))
+    special(ChooseMonForEggMoves)
+    waitstate
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN)
+    {
+        msgbox(format("Changed your mind? \n 
+        Speak to me again if you want to learn an egg move"))
+        return
+    }
+    else
+    {
+        special(IsSelectedMonEgg)
+        if(var(VAR_RESULT))
+        {
+            msgbox(format("I'm sorry dear, but I can't teach a pokemon their egg moves until they are hatched\p
+            Please come again if you have a pokemon you would like to learn their egg moves"))
+        }
+        elif(var(VAR_0x8005) == 0)
+        {
+            msgbox(format("I'm terribly sorry dear, but it seems this pokemon does not learn any egg moves.\p
+            Please come again if you have a pokemon you would like to learn their egg moves"))
+        }
+        else
+        {
+            msgbox(format("What move would you like them to learn?"))
+            special(TeachMoveEggMove)
+            waitstate
+            if(var(VAR_0x8004) == 0)
+            {
+                msgbox(format("Changed your mind? Or is there another pokemon you would like me to teach their egg moves?"))
+                call(MoveMasters_LearnEggMove)
+            }
+            else
+            {
+                msgbox(format("Thank you for using my services dear. I hope you don't mind my payment...\l
+                I need to feed my children somehow..."))
+                removemoney(1000)
+                msgbox(format("Please, come back again."))
+            }
+        }
+    }
 }
 
 script MoveMasters_ObjectScript_MoveTutor{
