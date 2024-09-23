@@ -470,6 +470,8 @@ static void Task_ChooseMonForMoveRelearner(u8);
 static void CB2_ChooseMonForMoveRelearner(void);
 static void Task_ChooseMonForEggMoves(u8);
 static void CB2_ChooseMonForEggMoves(void);
+static void Task_ChooseMonForFriendShip(u8);
+static void CB2_ChooseMonForFriendShip(void);
 static void Task_BattlePyramidChooseMonHeldItems(u8);
 static void ShiftMoveSlot(struct Pokemon *, u8, u8);
 static void BlitBitmapToPartyWindow_LeftColumn(u8, u8, u8, u8, u8, bool8);
@@ -7769,4 +7771,32 @@ void IsLastMonThatKnowsSurf(void)
         if (AnyStorageMonWithMove(move) != TRUE)
             gSpecialVar_Result = TRUE;
     }
+}
+
+void ChooseMonForFriendShip(void)
+{
+    LockPlayerFieldControls();
+    FadeScreen(FADE_TO_BLACK, 0);
+    CreateTask(Task_ChooseMonForFriendShip, 10);
+}
+
+static void Task_ChooseMonForFriendShip(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        InitPartyMenu(PARTY_MENU_TYPE_MOVE_RELEARNER, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+        DestroyTask(taskId);
+    }
+}
+
+static void CB2_ChooseMonForFriendShip(void)
+{
+    gSpecialVar_0x8004 = GetCursorSelectionMonId();
+    if (gSpecialVar_0x8004 >= PARTY_SIZE)
+        gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
+    else
+        MaximizeFriendShip(&gPlayerParty[gSpecialVar_0x8004]);
+    gFieldCallback2 = CB2_FadeFromPartyMenu;
+    SetMainCallback2(CB2_ReturnToField);
 }
