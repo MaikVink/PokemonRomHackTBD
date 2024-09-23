@@ -11,6 +11,7 @@
 #include "menu.h"
 #include "menu_specialized.h"
 #include "move_relearner.h"
+#include "egg_move_learner.h"
 #include "palette.h"
 #include "player_pc.h"
 #include "pokemon_summary_screen.h"

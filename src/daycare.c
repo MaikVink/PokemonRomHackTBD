@@ -1620,3 +1620,35 @@ static u8 ModifyBreedingScoreForOvalCharm(u8 score)
     return score;
 }
 
+u8 GetMoveEggMoves(struct Pokemon *mon, u16 *eggset)
+{
+    u16 eggMoveIdx = 0;
+    u8 numMoves = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    u16 i;
+
+    for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
+    {
+        eggset[i] = 0;
+    }
+
+    for (i = 0; i < ARRAY_COUNT(gEggMoves) - 1; i++)
+    {
+        if (gEggMoves[i] == species + EGG_MOVES_SPECIES_OFFSET)
+        {
+            eggMoveIdx = i + 1;
+            break;
+        }
+    }
+
+    for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
+    {
+        if (gEggMoves[eggMoveIdx + i] > EGG_MOVES_SPECIES_OFFSET)
+            break;
+
+        eggset[i] = gEggMoves[eggMoveIdx + i];
+        numMoves++;
+    }
+
+    return numMoves;
+}

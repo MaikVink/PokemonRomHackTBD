@@ -11,6 +11,7 @@
 #include "battle_tower.h"
 #include "battle_z_move.h"
 #include "data.h"
+#include "daycare.h"
 #include "event_data.h"
 #include "evolution_scene.h"
 #include "field_specials.h"
@@ -56,6 +57,8 @@
 #include "constants/trainers.h"
 #include "constants/union_room.h"
 #include "constants/weather.h"
+//#include "data/pokemon/egg_moves.h"
+
 
 #define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_9) ? 160 : 220)
 
@@ -5360,6 +5363,45 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
                 if (k == numMoves)
                     moves[numMoves++] = learnset[i].move;
             }
+        }
+    }
+
+    return numMoves;
+}
+
+u8 GetNumberOfEggMoves(struct Pokemon *mon)
+{
+    u16 learnedMoves[MAX_MON_MOVES];
+    u16 moves[EGG_MOVES_ARRAY_COUNT];
+    u16 eggset[EGG_MOVES_ARRAY_COUNT] = {0};
+
+    u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG, 0);
+    int i, j, k;
+
+    u8 numMoves = GetEggMovesBySpecies(species, eggset);
+
+    if (species == SPECIES_EGG)
+        return 0;
+
+    // Get learned moves
+    for (i = 0; i < MAX_MON_MOVES; i++)
+        learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
+
+    // Compare learned moves with egg moves
+    for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
+    {
+        for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != eggset[i]; j++)
+            ;
+
+        // If the Pokémon hasn't learned the move
+        if (j == MAX_MON_MOVES)
+        {
+            for (k = 0; k < numMoves && moves[k] != eggset[i]; k++)
+                ;
+
+            // If it's a new move, count it as relearnable
+            if (k == numMoves)
+                moves[numMoves++] = moves[i];
         }
     }
 
