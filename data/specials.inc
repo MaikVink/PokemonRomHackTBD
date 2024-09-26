@@ -232,6 +232,7 @@ gSpecials::
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner
 	def_special ChooseMonForEggMoves
+	def_special ChooseMonForEvoCheck
 	def_special MoveDeleterChooseMoveToForget
 	def_special MoveDeleterForgetMove
 	def_special BufferMoveDeleterNicknameAndMove

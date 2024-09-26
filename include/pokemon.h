@@ -805,6 +805,8 @@ u16 GetCryIdBySpecies(u16 species);
 u16 GetSpeciesPreEvolution(u16 species);
 void HealPokemon(struct Pokemon *mon);
 void HealBoxPokemon(struct BoxPokemon *boxMon);
+void MaximizeFriendShip(struct Pokemon *mon);
+u16 GetSpeciesNumber(struct Pokemon *mon);
 const u8 *GetMoveName(u16 moveId);
 
 #endif // GUARD_POKEMON_H

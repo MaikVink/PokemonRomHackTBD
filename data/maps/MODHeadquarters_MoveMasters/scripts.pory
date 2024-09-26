@@ -346,6 +346,7 @@ mart ModHeadquarters_TMNoBadges{
     ITEM_TM44
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMOne{
@@ -369,6 +370,7 @@ mart ModHeadquarters_TMOne{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMTwo{
@@ -400,6 +402,7 @@ mart ModHeadquarters_TMTwo{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMThree{
@@ -437,6 +440,7 @@ mart ModHeadquarters_TMThree{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMFour{
@@ -474,6 +478,7 @@ mart ModHeadquarters_TMFour{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMFive{
@@ -517,6 +522,7 @@ mart ModHeadquarters_TMFive{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMSix{
@@ -565,6 +571,7 @@ mart ModHeadquarters_TMSix{
     ITEM_TM48
     ITEM_TM49
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMSeven{
@@ -618,6 +625,7 @@ mart ModHeadquarters_TMSeven{
     ITEM_TM49
     ITEM_TM50
     ITEM_TM51
+    ITEM_TM52
 }
 
 mart ModHeadquarters_TMEight{
@@ -672,4 +680,5 @@ mart ModHeadquarters_TMEight{
     ITEM_TM49
     ITEM_TM50
     ITEM_TM51
+    ITEM_TM52
 }

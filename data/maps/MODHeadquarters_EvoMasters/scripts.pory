@@ -20,7 +20,7 @@ script EvoMAsters_ObjectScript_Masseuse{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Hello, I'm the Soothing Sister!\p I can help your pokemon relax and feel very affectioness towards you!\p ...\p In a good way...\p Many pokemon require some love to evolve. If you use my service I can help you speed up the process and allow them to evolve almost instantly! Still, I would require sovme compensation if you don't mind. A 1000 good for you?"))
+        msgbox(format("Hello, I'm the Soothing Sister!\p I can help your pokemon relax and feel very affectioness towards you!\p ...\p In a good way...\p Many pokemon require some love to evolve them. If you use my service I can help you speed up the process and allow them to evolve almost instantly! Still, I would require sovme compensation if you don't mind. A 1000 good for you?"))
     }
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_FREE_MASSAGE))
     {
@@ -103,7 +103,7 @@ script EvoMasters_ObjectScript_Simulator
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Good day, I'm the Simulation Sister!\p Some pokemon require specific circumanstance to evolve into their new form.\l Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments. Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
+        msgbox(format("Good day, I'm the Simulation Sister!\p Some pokemon require specific circumanstance to evolve them into their new form.\l Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments. Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
         if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
         {
             msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p Would you like to try out this simulation for free?"), MSGBOX_YESNO)
@@ -142,12 +142,21 @@ script EvoMasters_ObjectScript_EvoChecker{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Hi, I'm the Strategic Sister!\p I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
+        msgbox(format("Hi, I'm the Strategic Sister!\p I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p Even if you think you know how they evolve, you might be surprised to learn that some will have different or multiple ways to evolve! \p Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
     }
     msgbox(format("Do you want to know how you need to evolve one of your pokemon?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
-        msgbox(format("Sorry, it seems like I still need to study some more before I'm ready to offer up my services."))
+        special(ChooseMonForEvoCheck)
+        waitstate
+        if(var(VAR_0x8004) == 0xFF)
+        {
+            msgbox(format("You don't need my knowledge?\n that is fine!\l Come back and find me if you ever need to know how to evolve a pokemon!"))
+        }
+        else
+        {
+            call(EvoMasters_EvoCheckForMon)
+        }
     }
     else
     {
@@ -177,6 +186,1888 @@ script EvoMasters_ObjectScript_MartEmployer{
     pokemart(MODHeadquarters_EvoShop)
     msgbox("Please come again!")
     releaseall
+}
+
+script EvoMasters_EvoCheckForMon
+{
+    msgbox(format("Now let's see..."))
+    switch(var(VAR_0x8005))
+    {
+        case 0:
+            msgbox(format("hm... this should not have happened..."))
+        case 3:
+        case 6:
+        case 9:
+        case 12:
+        case 15:
+        case 18:
+        case 20:
+        case 22:
+        case 24:
+        case 26:
+        case 28:
+        case 31:
+        case 34:
+        case 36:
+        case 38:
+        case 40:
+        case 45:
+        case 47:
+        case 49:
+        case 51:
+        case 53:
+        case 55:
+        case 59:
+        case 62:
+        case 65:
+        case 68:
+        case 71:
+        case 73:
+        case 76:
+        case 78:
+        case 80:
+        case 85:
+        case 87:
+        case 89:
+        case 91:
+        case 94:
+        case 97:
+        case 99:
+        case 101:
+        case 103:
+        case 105:
+        case 106:
+        case 107:
+        case 110:
+        case 119:
+        case 121:
+        case 122:
+        case 124:
+        case 130:
+        case 134:
+        case 135:
+        case 136:
+        case 139:
+        case 141:
+        case 143:
+        case 149:
+        case 154:
+        case 157:
+        case 160:
+        case 162:
+        case 164:
+        case 166:
+        case 168:
+        case 169:
+        case 171:
+        case 178:
+        case 181:
+        case 182:
+        case 184:
+        case 185:
+        case 186:
+        case 189:
+        case 192:
+        case 195:
+        case 196:
+        case 197:
+        case 199:
+        case 202:
+        case 205:
+        case 208:
+        case 210:
+        case 212:
+        case 219:
+        case 224:
+        case 226:
+        case 229:
+        case 230:
+        case 232:
+        case 237:
+        case 242:
+        case 248:
+        case 254:
+        case 257:
+        case 260:
+        case 262:
+        case 264:
+        case 267:
+        case 269:
+        case 272:
+        case 275:
+        case 277:
+        case 279:
+        case 282:
+        case 284:
+        case 286:
+        case 289:
+        case 291:
+        case 292:
+        case 295:
+        case 297:
+        case 301:
+        case 306:
+        case 308:
+        case 310:
+        case 317:
+        case 319:
+        case 321:
+        case 323:
+        case 326:
+        case 330:
+        case 332:
+        case 334:
+        case 340:
+        case 342:
+        case 344:
+        case 346:
+        case 348:
+        case 350:
+        case 354:
+        case 358:
+        case 362:
+        case 365:
+        case 367:
+        case 368:
+        case 373:
+        case 376:
+        case 389:
+        case 392:
+        case 395:
+        case 398:
+        case 400:
+        case 402:
+        case 405:
+        case 407:
+        case 409:
+        case 411:
+        case 413:
+        case 414:
+        case 416:
+        case 419:
+        case 421:
+        case 423:
+        case 424:
+        case 426:
+        case 428:
+        case 429:
+        case 430:
+        case 432:
+        case 435:
+        case 437:
+        case 445:
+        case 448:
+        case 450:
+        case 452:
+        case 454:
+        case 457:
+        case 460:
+        case 461:
+        case 462:
+        case 463:
+        case 464:
+        case 465:
+        case 466:
+        case 467:
+        case 468:
+        case 469:
+        case 470:
+        case 471:
+        case 472:
+        case 473:
+        case 474:
+        case 475:
+        case 476:
+        case 477:
+        case 478:
+        case 497:
+        case 500:
+        case 503:
+        case 505:
+        case 508:
+        case 510:
+        case 512:
+        case 514:
+        case 516:
+        case 518:
+        case 521:
+        case 523:
+        case 526:
+        case 528:
+        case 530:
+        case 534:
+        case 537:
+        case 542:
+        case 545:
+        case 547:
+        case 549:
+        case 553:
+        case 555:
+        case 558:
+        case 560:
+        case 563:
+        case 565:
+        case 567:
+        case 569:
+        case 571:
+        case 573:
+        case 576:
+        case 579:
+        case 581:
+        case 584:
+        case 586:
+        case 589:
+        case 591:
+        case 593:
+        case 596:
+        case 598:
+        case 601:
+        case 604:
+        case 606:
+        case 609:
+        case 612:
+        case 614:
+        case 617:
+        case 620:
+        case 623:
+        case 628:
+        case 630:
+        case 635:
+        case 637:
+        case 652:
+        case 655:
+        case 658:
+        case 660:
+        case 663:
+        case 666:
+        case 668:
+        case 671:
+        case 673:
+        case 675:
+        case 678:
+        case 681:
+        case 683:
+        case 685:
+        case 687:
+        case 689:
+        case 691:
+        case 693:
+        case 695:
+        case 697:
+        case 699:
+        case 700:
+        case 706:
+        case 709:
+        case 711:
+        case 713:
+        case 715:
+        case 724:
+        case 727:
+        case 730:
+        case 733:
+        case 735:
+        case 738:
+        case 740:
+        case 743:
+        case 745:
+        case 748:
+        case 750:
+        case 752:
+        case 754:
+        case 756:
+        case 758:
+        case 760:
+        case 763:
+        case 768:
+        case 770:
+        case 773:
+        case 784:
+        case 804:
+        case 809:
+        case 812:
+        case 815:
+        case 818:
+        case 820:
+        case 823:
+        case 826:
+        case 828:
+        case 830:
+        case 832:
+        case 834:
+        case 836:
+        case 839:
+        case 841:
+        case 842:
+        case 844:
+        case 847:
+        case 849:
+        case 851:
+        case 853:
+        case 855:
+        case 858:
+        case 861:
+        case 862:
+        case 863:
+        case 864:
+        case 865:
+        case 866:
+        case 867:
+        case 869:
+        case 873:
+        case 879:
+        case 887:
+        case 899:
+        case 900:
+        case 901:
+        case 902:
+        case 903:
+        case 904:
+        case 957:
+        case 958:
+        case 960:
+        case 962:
+        case 964:
+        case 966:
+        case 969:
+        case 971:
+        case 972:
+        case 973:
+        case 976:
+        case 978:
+        case 979:
+        case 980:
+        case 985:
+        case 990:
+        case 992:
+        case 994:
+        case 996:
+        case 1000:
+        case 1001:
+        case 1003:
+        case 1004:
+        case 1006:
+        case 1007:
+        case 1008:
+        case 1059:
+        case 1060:
+        case 1063:
+        case 1097:
+        case 1098:
+        case 1099:
+        case 1114:
+        case 1115:
+        case 1116:
+        case 1117:
+        case 1118:
+        case 1119:
+        case 1120:
+        case 1121:
+        case 1122:
+        case 1123:
+        case 1124:
+        case 1125:
+        case 1126:
+        case 1127:
+        case 1128:
+        case 1129:
+        case 1130:
+        case 1131:
+        case 1132:
+        case 1142:
+        case 1143:
+        case 1144:
+        case 1145:
+        case 1155:
+        case 1160:
+        case 1161:
+        case 1162:
+        case 1173:
+        case 1174:
+        case 1176:
+        case 1177:
+        case 1178:
+        case 1179:
+        case 1180:
+        case 1181:
+        case 1182:
+        case 1183:
+        case 1184:
+        case 1185:
+        case 1186:
+        case 1187:
+        case 1188:
+        case 1189:
+        case 1190:
+        case 1191:
+        case 1192:
+        case 1213:
+        case 1215:
+        case 1216:
+        case 1217:
+        case 1218:
+        case 1219:
+        case 1220:
+        case 1221:
+        case 1222:
+        case 1223:
+        case 1225:
+        case 1234:
+        case 1235:
+        case 1236:
+        case 1237:
+        case 1238:
+        case 1239:
+        case 1240:
+        case 1241:
+        case 1242:
+        case 1243:
+        case 1244:
+        case 1245:
+        case 1246:
+        case 1247:
+        case 1248:
+        case 1249:
+        case 1250:
+        case 1251:
+        case 1252:
+        case 1253:
+        case 1254:
+        case 1255:
+        case 1256:
+        case 1257:
+        case 1258:
+        case 1259:
+        case 1260:
+        case 1261:
+        case 1262:
+        case 1263:
+        case 1264:
+        case 1265:
+        case 1266:
+        case 1267:
+        case 1268:
+        case 1269:
+        case 1270:
+        case 1271:
+        case 1272:
+        case 1273:
+        case 1274:
+        case 1275:
+        case 1276:
+        case 1277:
+        case 1278:
+        case 1279:
+        case 1280:
+        case 1281:
+        case 1282:
+        case 1283:
+        case 1284:
+        case 1285:
+        case 1286:
+        case 1287:
+        case 1288:
+        case 1291:
+        case 1294:
+        case 1297:
+        case 1299:
+        case 1300:
+        case 1302:
+        case 1304:
+        case 1307:
+        case 1309:
+        case 1310:
+        case 1312:
+        case 1315:
+        case 1322:
+        case 1324:
+        case 1325:
+        case 1327:
+        case 1329:
+        case 1331:
+        case 1333:
+        case 1335:
+        case 1337:
+        case 1340:
+        case 1342:
+        case 1344:
+        case 1347:
+        case 1349:
+        case 1352:
+        case 1355:
+        case 1359:
+        case 1361:
+        case 1364:
+        case 1370:
+        case 1371:
+        case 1372:
+        case 1373:
+        case 1374:
+        case 1375:
+        case 1390:
+        case 1393:
+        case 1409:
+        case 1410:
+        case 1424:
+        case 1425:
+        case 1436:
+        case 1437:
+            msgbox(format("Hm... This pokemon seems to be in peak condition!"))
+        case 115:
+        case 127:
+        case 128:
+        case 131:
+        case 132:
+        case 142:
+        case 201:
+        case 211:
+        case 213:
+        case 214:
+        case 222:
+        case 225:
+        case 227:
+        case 235:
+        case 241:
+        case 302:
+        case 303:
+        case 311:
+        case 312:
+        case 313:
+        case 314:
+        case 324:
+        case 327:
+        case 335:
+        case 336:
+        case 337:
+        case 338:
+        case 351:
+        case 352:
+        case 357:
+        case 359:
+        case 369:
+        case 370:
+        case 417:
+        case 441:
+        case 442:
+        case 455:
+        case 531:
+        case 538:
+        case 539:
+        case 550:
+        case 556:
+        case 561:
+        case 587:
+        case 594:
+        case 615:
+        case 618:
+        case 621:
+        case 626:
+        case 631:
+        case 632:
+        case 676:
+        case 701:
+        case 702:
+        case 703:
+        case 707:
+        case 741:
+        case 746:
+        case 764:
+        case 765:
+        case 766:
+        case 771:
+        case 774:
+        case 775:
+        case 776:
+        case 777:
+        case 778:
+        case 779:
+        case 780:
+        case 781:
+        case 845:
+        case 870:
+        case 871:
+        case 874:
+        case 875:
+        case 876:
+        case 877:
+        case 880:
+        case 881:
+        case 882:
+        case 883:
+        case 1024:
+        case 1025:
+        case 1026:
+        case 1027:
+        case 1028:
+        case 1029:
+        case 1030:
+        case 1031:
+        case 1032:
+        case 1033:
+        case 1034:
+        case 1035:
+        case 1036:
+        case 1037:
+        case 1038:
+        case 1039:
+        case 1040:
+        case 1041:
+        case 1042:
+        case 1043:
+        case 1044:
+        case 1045:
+        case 1046:
+        case 1047:
+        case 1048:
+        case 1049:
+        case 1050:
+        case 1064:
+        case 1065:
+        case 1066:
+        case 1067:
+        case 1068:
+        case 1090:
+        case 1146:
+        case 1147:
+        case 1148:
+        case 1149:
+        case 1150:
+        case 1151:
+        case 1153:
+        case 1154:
+        case 1169:
+        case 1170:
+        case 1171:
+        case 1193:
+        case 1194:
+        case 1195:
+        case 1196:
+        case 1197:
+        case 1198:
+        case 1316:
+        case 1317:
+        case 1318:
+        case 1319:
+        case 1338:
+        case 1350:
+        case 1356:
+        case 1357:
+        case 1362:
+        case 1365:
+        case 1366:
+        case 1367:
+        case 1368:
+        case 1369:
+        case 1402:
+        case 1403:
+        case 1404:
+            msgbox(format("Oh? It seems like this pokemon doesn't evolve at all!"))
+        case 793:
+        case 794:
+        case 795:
+        case 796:
+        case 797:
+        case 798:
+        case 799:
+        case 803:
+        case 805:
+        case 806:
+            msgbox(format("Is that an Ultra beast? I'm sorry but I'm not that familiar with their evolutions. Though, I have never seen them evovle though!"))
+        case 144:
+        case 145:
+        case 146:
+        case 150:
+        case 243:
+        case 244:
+        case 245:
+        case 249:
+        case 250:
+        case 377:
+        case 378:
+        case 379:
+        case 380:
+        case 381:
+        case 382:
+        case 383:
+        case 384:
+        case 480:
+        case 481:
+        case 482:
+        case 483:
+        case 484:
+        case 485:
+        case 486:
+        case 487:
+        case 488:
+        case 638:
+        case 639:
+        case 640:
+        case 641:
+        case 642:
+        case 643:
+        case 644:
+        case 645:
+        case 646:
+        case 716:
+        case 717:
+        case 718:
+        case 785:
+        case 786:
+        case 787:
+        case 788:
+        case 791:
+        case 792:
+        case 800:
+        case 888:
+        case 889:
+        case 890:
+        case 894:
+        case 895:
+        case 892:
+        case 905:
+        case 982:
+        case 983:
+        case 984:
+        case 1054:
+        case 1055:
+        case 1056:
+        case 1069:
+        case 1070:
+        case 1071:
+        case 1072:
+        case 1100:
+        case 1101:
+        case 1102:
+        case 1103:
+        case 1104:
+        case 1105:
+        case 1164:
+        case 1165:
+        case 1166:
+        case 1167:
+        case 1207:
+        case 1208:
+        case 1227:
+        case 1228:
+        case 1232:
+        case 1233:
+        case 1394:
+        case 1395:
+        case 1396:
+        case 1397:
+        case 1400:
+        case 1401:
+        case 1413:
+        case 1414:
+        case 1415:
+        case 1416:
+        case 1417:
+        case 1418:
+        case 1419:
+        case 1431:
+        case 1432:
+        case 1434:
+            msgbox(format("WOW, a legendary pokemon! \n I'm pretty sure these ones don't evolve at all!"))
+        case 151:
+        case 251:
+        case 385:
+        case 386:
+        case 491:
+        case 492:
+        case 494:
+        case 647:
+        case 648:
+        case 649:
+        case 719:
+        case 720:
+        case 721:
+        case 801:
+        case 802:
+        case 807:
+        case 893:
+        case 1106:
+        case 1108:
+        case 1109:
+        case 1110:
+        case 1111:
+        case 1210:
+        case 1231:
+            msgbox(format("How did you manage to get your hands on a mythical pokemon?!\l Don't look at me, as far as I know these definetly don't evolve!"))
+        case 1:
+            msgbox(format("You need to train your Bulbasaur to level 16 to evolve them."))
+        case 2:
+            msgbox(format("You need to train your Ivasaur to level 32 to evolve them."))
+        case 4:
+            msgbox(format("You need to train your Charmander to level 16 to evolve them."))
+        case 5:
+            msgbox(format("You need to train your Charmeleon to level 36 to evolve them."))
+        case 7:
+            msgbox(format("You need to train your Squirtle to level 16 to evolve them."))
+        case 8:
+            msgbox(format("You need to train your Wartortle to level 36 to evolve them."))
+        case 10:
+            msgbox(format("You need to train your Caterpie to level 7 to evolve them."))
+        case 11:
+            msgbox(format("You need to train your Metapod to level 10 to evolve them."))
+        case 13:
+            msgbox(format("You need to train your Weedle to level 7 to evolve them."))
+        case 14:
+            msgbox(format("You need to train your Kakuna to level 10 to evolve them."))
+        case 16:
+            msgbox(format("You need to train your Pidgey to level 18 to evolve them."))
+        case 17:
+            msgbox(format("You need to train your Pidgeotto to level 36 to evolve them."))
+        case 19:
+            msgbox(format("You need to train your Rattata to level 20 to evolve them."))
+        case 21:
+            msgbox(format("You need to train your Spearow to level 20 to evolve them."))
+        case 23:
+            msgbox(format("You need to train your Ekans to level 22 to evolve them."))
+        case 25:
+            msgbox(format("Your Pickachu can evolve into two different forms.\p You can give them a Thunder Stone to evolve them normally or you can give them an Electrizer if you want to evolve them in a special form."))
+        case 27:
+            msgbox(format("You need to train your Sandshrew to level 22 to evolve them."))
+        case 29:
+        case 32:
+            msgbox(format("You need to train your Nidoran to level 16 to evolve them."))
+        case 30:
+            msgbox(format("Your Nidorina needs a Moon Stone to evolve."))
+        case 33:
+            msgbox(format("Your Nidorino needs a Moon Stone to evolve."))
+        case 35:
+            msgbox(format("Your Clefairy needs a Moon Stone to evolve."))
+        case 37:
+            msgbox(format("Your Vulpix needs a Fire Stone to evolve."))
+        case 39:
+            msgbox(format("Your Jigglypuff needs a Moon Stone to evolve."))
+        case 41:
+            msgbox(format("You need to train your Zubat to level 22 to evolve them."))
+        case 42:
+            msgbox(format("Your Golbat will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 43:
+            msgbox(format("You need to train your Oddish to level 21 to evolve them."))
+        case 44:
+            msgbox(format("Your Gloom can evolve into two different forms.\p You can either give them a Leaf Stone or a Sun Stone to evolve."))
+        case 46:
+            msgbox(format("You need to train your Paras to level 24 to evolve them."))
+        case 48:
+            msgbox(format("You need to train your Venonat to level 31 to evolve them."))
+        case 50:
+        case 963:
+            msgbox(format("You need to train your Diglett to level 26 to evolve them."))
+        case 52:
+        case 974:
+            msgbox(format("You need to train your Meowth to level 28 to evolve them."))
+        case 54:
+            msgbox(format("You need to train your Psyduck to level 33 to evolve them."))
+        case 56:
+            msgbox(format("You need to train your Mankey to level 28 to evolve them."))
+        case 57:
+            msgbox(format("Your Primeape needs to use the move Rage fist 20 times in order to evolve them \p ... \p What?\n I'm serious!"))
+        case 58:
+        case 993:
+            msgbox(format("Your Growlithe needs a Fire Stone to evolve."))
+        case 60:
+            msgbox(format("You need to train your Poliwag to level 25 to evolve them."))
+        case 61:
+            msgbox(format("Your Poliwirl can evolve into two different forms. \p You can either give them a Water Stone or a Kings Rock to evolve them."))
+        case 63:
+            msgbox(format("You need to train your Abra to level 16 to evolve them."))
+        case 64:
+            msgbox(format("Your Kadabra needs a Linking Cord to evolve."))
+        case 66:
+            msgbox(format("You need to train your Machop to level 28 to evolve them."))
+        case 67:
+            msgbox(format("Your Machoke needs a Linking Cord to evolve."))
+        case 69:
+            msgbox(format("You need to train your Bellsprout to level 21 to evolve them."))
+        case 70:
+            msgbox(format("Your Weepingbell needs a Leaf Stone to evolve."))
+        case 72:
+            msgbox(format("You need to train your Tentacool to level 30 to evolve them."))
+        case 74:
+        case 967:
+            msgbox(format("You need to train your Geodude to level 25 to evolve them."))
+        case 75:
+        case 968:
+            msgbox(format("Your Graveler needs a Linking Cord to evolve."))
+        case 77:
+        case 975:
+            msgbox(format("Your Ponyta needs a Fire Stone to evolve."))
+        case 79:
+            msgbox(format("You need to train your Slowpoke to level 37 to evolve them.\p Alternatively you can also give them a Kings Rock to evolve them."))
+        case 81:
+            msgbox(format("You need to train your Magnemite to level 30 to evolve them."))
+        case 82:
+            msgbox(format("Your Magneton needs a Thunder Stonder to evolve."))
+        case 83:
+            msgbox(format("Your Farfetched need to hit 3 critical hits in the same fight to evolve them. \p JUST KIDDING! \p He will evolve after hitting one critical hit!"))
+        case 84:
+            msgbox(format("You need to train your Doduo to level 31 to evolve them."))
+        case 86:
+            msgbox(format("You need to train your Seel to level 34 to evolve them."))
+        case 88:
+        case 970:
+            msgbox(format("You need to train your Grimer to level 38 to evolve them."))
+        case 90:
+            msgbox(format("Your Shellder needs a Water Stone to evolve."))
+        case 92:
+            msgbox(format("You need to train your Gastly to level 25 to evolve them."))
+        case 93:
+            msgbox(format("Your Haunter needs a Linking Cord to evolve."))
+        case 95:
+            msgbox(format("Your Onix needs a Metal Coat to evolve."))
+        case 96:
+            msgbox(format("You need to train your Drowzee to level 26 to evolve them."))
+        case 98:
+            msgbox(format("You need to train your Krabby to level 28 to evolve them."))
+        case 100:
+            msgbox(format("You need to train your Voltorb to level 30 to evolve them."))
+        case 102:
+            msgbox(format("Your Execute can evolve into two different forms. \p You can give them a Leaf Stone to evolve them normally or you can give them a Dragon Fang if you want to evolve them into their special form."))
+        case 104:
+            msgbox(format("You need to train your cubone to level 28 to evolve them. \p Alternatively, you can give them a Magmarizer to evolve them as well."))
+        case 108:
+            msgbox(format("Your Lickitung needs to learn Rollout in order to evolve them. \p I believe he learns this around level 6."))
+        case 109:
+            msgbox(format("You need to train your Koffing to level 35 to evolve them. \p Alternatively, you can give them a Reaper Cloth to evolve them."))
+        case 111:
+            msgbox(format("You need to train your Rhyhorn to level 42 to evolve them."))
+        case 112:
+            msgbox(format("Your Rhydon needs a Protector to evolve them."))
+        case 113:
+            msgbox(format("Your Chansey will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 114:
+            msgbox(format("Your Tangela needs to learn Ancient Power in order to evolve them. \p I believe he learns this around level 24"))
+        case 116:
+            msgbox(format("You need to train your Horsea to level 32 to evolve them."))
+        case 117:
+            msgbox(format("Your Seadra needs a Dragon Scale to evolve."))
+        case 118:
+            msgbox(format("You need to train your Goldeen to level 33 to evolve them."))
+        case 120:
+            msgbox(format("Your Staryu needs a Water Stone to evolve"))
+        case 123:
+            msgbox(format("Scyther can evolve into two different forms. You can either give them either a Metal Coat or a Black Augurite to evolve them."))
+        case 125:
+            msgbox(format("Your Electabuzz needs an Electirizer to evolve."))
+        case 126:
+            msgbox(format("Your Magmag needs a Magmarizer to evolve."))
+        case 129:
+            msgbox(format("You need to train your Magikarp to level 20 to evolve them."))
+        case 133:
+            msgbox(format("Now this...\p This one is interesting! \p Do you want them to become a Water type? Give them a Water stone! \l An Electric type? Thunder Stone! \l A Fire type? Fire Stone! \l A Grass type? Leaf Stone! \l An Ice Type? Ice Stone! \p But that is not all!\p talk to my sister or create a natural bond with them naturally. If they consider you a close friend they will either evolve into a Dark type during the night or Psychic type during the day.\l Or, if they already know a Fairy Type move, they will turn into a Fairy Type!\p You have endless choices with this one, so choose wisely!"))
+        case 137:
+            msgbox(format("Your Porygon needs an Upgrade to evolve."))
+        case 138:
+            msgbox(format("You need to train your Omanyte to level 40 to evolve them."))
+        case 140:
+            msgbox(format("You need to train your Kabuto to level 40 to evolve them."))
+        case 147:
+            msgbox(format("You need to train your Dratini to level 30 to evolve them."))
+        case 148:
+            msgbox(format("You need to train your Dragonair to level 55 to evolve them."))
+        case 152:
+            msgbox(format("You need to train your Chikorita to level 16 to evolve them."))
+        case 153:
+            msgbox(format("You need to train your Bayleef to level 32 to evolve them."))
+        case 155:
+            msgbox(format("You need to train your Cyndaquil to level 14 to evolve them."))
+        case 156:
+            msgbox(format("Your Quilava can evolve into two different forms. \p You can train them to level 36 to evolve them normally, or you can give them a Reaper Cloth to evolve them in their special form."))
+        case 158:
+            msgbox(format("You need to train your Totodile to level 18 to evolve them."))
+        case 159:
+            msgbox(format("You need to train your Croconaw to level 30 to evolve them."))
+        case 161:
+            msgbox(format("You need to train your Sentret to level 15 to evolve them."))
+        case 163:
+            msgbox(format("You need to train your Hoothoot to level 20 to evolve them."))
+        case 165:
+            msgbox(format("You need to train your Ledyba to level 18 to evolve them."))
+        case 167:
+            msgbox(format("You need to train your Spinarak to level 22 to evolve them."))
+        case 170:
+            msgbox(format("You need to train your Chinchou to level 27 to evolve them."))
+        case 172:
+            msgbox(format("Your Pichu  will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 173:
+            msgbox(format("Your Cleffa will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 174:
+            msgbox(format("Your Igglybuff will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 175:
+            msgbox(format("Your Togepi will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 176:
+            msgbox(format("Your Togetic needs a Shiny Stone to evolve."))
+        case 177:
+            msgbox(format("You need to train your Natu to level 25 to evolve them."))
+        case 179:
+            msgbox(format("You need to train your Mareep to level 15 to evolve them."))
+        case 180:
+            msgbox(format("You need to train your Flaaffy to level 30 to evolve them."))
+        case 183:
+            msgbox(format("You need to train your Marill to level 18 to evolve them."))
+        case 187:
+            msgbox(format("You need to train your Hoppip to level 18 to evolve them."))
+        case 188:
+            msgbox(format("You need to train your Skiploom to level 27 to evolve them."))
+        case 190:
+            msgbox(format("Your Aipom needs to learn Double Hit in order to evolve them. \p I believe they learn this at level 32."))
+        case 191:
+            msgbox(format("Your Sunkern needs a Sun Stone to evolve."))
+        case 193:
+            msgbox(format("Your Yanma needs to learn Ancient Power in order to evolve them. \p I believe they learn this at level 33."))
+        case 194:
+        case 1405:
+            msgbox(format("You need to train your Wooper to level 20 to evolve them."))
+        case 198:
+            msgbox(format("Your Murkow needs a Dusk Stone to evolve."))
+        case 200:
+            msgbox(format("Your Misdreavus needs a Dusk Stone to evolve."))
+        case 203:
+            msgbox(format("Your Girafarig needs to learn Twin Beam in order to evolve them. \p I believe they learn this at level 32."))
+        case 204:
+            msgbox(format("You need to train your Pineco to level 31 to evolve them."))
+        case 206:
+            msgbox(format("Your Dunsparce needs to learn Hyper Drill in order to evolve them. \p I believe they learn this at level 32."))
+        case 207:
+            msgbox(format("Your Gligar needs a Razor Fang at night to evolve."))
+        case 209:
+            msgbox(format("You need to train your Snubbull to level 23 to evolve them."))
+        case 215:
+            msgbox(format("Your Sneasel needs a Razor Claw at night to evolve."))
+        case 216:
+            msgbox(format("You need to train your Teddiursa to level 30 to evolve them."))
+        case 217:
+            msgbox(format("Your Ursaring can evolve into two different forms. You can give them either a Peat Block or Reaper Cloth at night to evolve them."))
+        case 218:
+            msgbox(format("You need to train your Slugma to level 38 to evolve them."))
+        case 220:
+            msgbox(format("You need to train your Swinub to level 33 to evolve them."))
+        case 221:
+            msgbox(format("Your Piloswine needs to learn Ancient Power in order to evolve them. \p Hm... I believe it should have already learned that by now..."))
+        case 223:
+            msgbox(format("You need to train your Remoraid to level 25 to evolve them."))
+        case 228:
+            msgbox(format("You need to train your Houndour to level 24 to evolve them."))
+        case 231:
+            msgbox(format("You need to train your Phanpy to level 25 to evolve them."))
+        case 233:
+            msgbox(format("Your Porygon2 needs a Dubious Disc to evolve."))
+        case 234:
+            msgbox(format("Your Stantler needs to use the move Psyshiled Bash 20 times in order to evolve them \p ... \p What?\n I'm serious."))
+        case 236:
+            msgbox(format("You need to train your Tyrogue to level 20 to evolve them. \p They actually can evolve into three different forms based on their stats. \p They have one form if their Attack is higher as their Defense, one form if their Defense is higher than their Defense and one form if their Defense and Attack are equal. \p Maybe the general store next door has some items if you want your Tyrogue to evolve into a specific one!"))
+        case 238:
+            msgbox(format("You need to train your Smoochum to level 30 to evolve them."))
+        case 239:
+            msgbox(format("You need to train your Elekid to level 30 to evolve them."))
+        case 240:
+            msgbox(format("You need to train your Magby to level 30 to evolve them."))
+        case 246:
+            msgbox(format("You need to train your Larvitar to level 30 to evolve them."))
+        case 247:
+            msgbox(format("You need to train your Pupitar to level 55 to evolve them."))
+        case 252:
+            msgbox(format("You need to train your Treecko to level 16 to evolve them."))
+        case 253:
+            msgbox(format("You need to train your Grovyle to level 36 to evolve them."))
+        case 255:
+            msgbox(format("You need to train your Torchic to level 16 to evolve them."))
+        case 256:
+            msgbox(format("You need to train your Combusken to level 36 to evolve them."))
+        case 258:
+            msgbox(format("You need to train your Mudkip to level 16 to evolve them."))
+        case 259:
+            msgbox(format("You need to train your MarshTomp to level 36 to evolve them."))
+        case 261:
+            msgbox(format("You need to train your Poochyena to level 18 to evolve them."))
+        case 263:
+        case 987:
+            msgbox(format("You need to train your Zigzagoon to level 20 to evolve them."))
+        case 265:
+            msgbox(format("You need to train your Wurmple to level 7 to evolve them."))
+        case 266:
+            msgbox(format("You need to train your Silcoon to level 10 to evolve them."))
+        case 268:
+            msgbox(format("You need to train your Cascoon to level 10 to evolve them."))
+        case 270:
+            msgbox(format("You need to train your Lotad to level 14 to evolve them."))
+        case 271:
+            msgbox(format("Your Lombre needs a Water Stone to evolve."))
+        case 273:
+            msgbox(format("You need to train your Seedot to level 14 to evolve them."))
+        case 274:
+            msgbox(format("Your Nuzleaf needs a Leaf Stone to evolve."))
+        case 276:
+            msgbox(format("You need to train your Taillow to level 22 to evolve them."))
+        case 278:
+            msgbox(format("You need to train your Wingull to level 25 to evolve them."))
+        case 280:
+            msgbox(format("You need to train your Ralts to level 20 to evolve them."))
+        case 281:
+            msgbox(format("Your Kirlia can evolve into two different forms. You can either train it to level 30 or, if it is a male, you can give it a Dawn Stone to evolve them."))
+        case 283:
+            msgbox(format("You need to train your Surskit to level 22 to evolve them."))
+        case 285:
+            msgbox(format("You need to train your Shroomish to level 23 to evolve them."))
+        case 287:
+            msgbox(format("You need to train your Slakoth to level 18 to evolve them."))
+        case 288:
+            msgbox(format("You need to train your Vigoroth to level 36 to evolve them."))
+        case 290:
+            msgbox(format("You need to train your Nincada to level 20 to evolve them. \p I also heard a rumor that if you have an empty spot left in your party a second pokemon will appear after they have evolved!"))
+        case 293:
+            msgbox(format("You need to train your Whismur to level 20 to evolve them."))
+        case 294:
+            msgbox(format("You need to train your Loudred to level 40 to evolve them."))
+        case 296:
+            msgbox(format("You need to train your Makhuita to level 24 to evolve them."))
+        case 298:
+            msgbox(format("Your Azurill will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 299:
+            msgbox(format("Your Nosepass needs a Thunder Stone to evolve."))
+        case 300:
+            msgbox(format("Your Skitty needs a Moon Stone to evolve."))
+        case 304:
+            msgbox(format("You need to train your Aron to level 32 to evolve them."))
+        case 305:
+            msgbox(format("You need to train your Lairon to level 42 to evolve them."))
+        case 307:
+            msgbox(format("You need to train your Meditite to level 37 to evolve them."))
+        case 309:
+            msgbox(format("You need to train your Electrike to level 26 to evolve them."))
+        case 315:
+            msgbox(format("Your Roselia needs a Shiny Stone to evolve."))
+        case 316:
+            msgbox(format("You need to train your Gulpin to level 26 to evolve them."))
+        case 318:
+            msgbox(format("You need to train your Carvanha to level 30 to evolve them."))
+        case 320:
+            msgbox(format("You need to train your Wailmer to level 40 to evolve them."))
+        case 322:
+            msgbox(format("You need to train your Numel to level 33 to evolve them."))
+        case 325:
+            msgbox(format("You need to train your Spoink to level 32 to evolve them."))
+        case 328:
+            msgbox(format("You need to train your Trapinch to level 35 to evolve them."))
+        case 329:
+            msgbox(format("You need to train your Vibrava to level 45 to evolve them."))
+        case 331:
+            msgbox(format("You need to train your Cacnea to level 32 to evolve them."))
+        case 333:
+            msgbox(format("You need to train your Swablu to level 35 to evolve them."))
+        case 339:
+            msgbox(format("You need to train your Barboach to level 30 to evolve them."))
+        case 341:
+            msgbox(format("You need to train your Corphish to level 30 to evolve them."))
+        case 343:
+            msgbox(format("You need to train your Baltoy to level 36 to evolve them."))
+        case 345:
+            msgbox(format("You need to train your Lileep to level 40 to evolve them."))
+        case 347:
+            msgbox(format("You need to train your Anorith to level 40 to evolve them."))
+        case 349:
+            msgbox(format("You need to make your Feedbas feel beautifull by feeding it poke blocks, then it'll evolve on its own. \p Just joking, you just need to give it a Prism Scale to evolve it."))
+        case 353:
+            msgbox(format("You need to train your Shuppet to level 37 to evolve them."))
+        case 355:
+            msgbox(format("You need to train your Duskull to level 37 to evolve them."))
+        case 356:
+            msgbox(format("Your Dusclops needs a Reaper Cloth to evolve."))
+        case 360:
+            msgbox(format("You need to train your Wynaut to level 15 to evolve them."))
+        case 361:
+            msgbox(format("Your Snorunt can evolve into two different forms. \p You can either train them to level 42 or, if they are female, give them a Dawn Stone to evolve."))
+        case 363:
+            msgbox(format("You need to train your Spheal to level 32 to evolve them."))
+        case 364:
+            msgbox(format("You need to train your Sealeo to level 44 to evolve them."))
+        case 366:
+            msgbox(format("Your Clamperl can evolve into two different forms. \p You can give it either a Deep Sea Tooth or a Deep Sea Scale to evolve."))
+        case 371:
+            msgbox(format("You need to train your Bagon to level 30 to evolve them."))
+        case 372:
+            msgbox(format("You need to train your Shelgon to level 50 to evolve them."))
+        case 374:
+            msgbox(format("You need to train your Beldum to level 20 to evolve them."))
+        case 375:
+            msgbox(format("You need to train your Metang to level 45 to evolve them."))
+        case 387:
+            msgbox(format("You need to train your Turtwig to level 18 to evolve them."))
+        case 388:
+            msgbox(format("You need to train your Grotle to level 32 to evolve them."))
+        case 390:
+            msgbox(format("You need to train your Chimcar to level 14 to evolve them."))
+        case 391:
+            msgbox(format("You need to train your Monferno to level 36 to evolve them."))
+        case 393:
+            msgbox(format("You need to train your Piplup to level 16 to evolve them."))
+        case 394:
+            msgbox(format("You need to train your Prinplup to level 36 to evolve them."))
+        case 396:
+            msgbox(format("You need to train your Starley to level 14 to evolve them."))
+        case 397:
+            msgbox(format("You need to train your Staravia to level 34 to evolve them."))
+        case 399:
+            msgbox(format("You need to train your Bidoof to level 15 to evolve them."))
+        case 401:
+            msgbox(format("You need to train your Kricketot to level 10 to evolve them."))
+        case 403:
+            msgbox(format("You need to train your Shinx to level 15 to evolve them."))
+        case 404:
+            msgbox(format("You need to train your Luxio to level 30 to evolve them."))
+        case 406:
+            msgbox(format("Your Budew will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 408:
+            msgbox(format("You need to train your Cranidos to level 30 to evolve them."))
+        case 410:
+            msgbox(format("You need to train your Shieldon to level 30 to evolve them."))
+        case 412:
+        case 1057:
+        case 1058:
+            msgbox(format("You need to train your Burmy to level 20 to evolve them. \p I heard btw that the male and female species evolve into different pokemon!"))
+        case 415:
+            msgbox(format("You need to train your Combee, if it is a female, to level 21 to evolve them. \p If you have a male Combee than I'm sorry to dissapoint you, but that one does not evolve..."))
+        case 418:
+            msgbox(format("You need to train your Buizel to level 26 to evolve them."))
+        case 420:
+            msgbox(format("You need to train your Cherubi to level 25 to evolve them."))
+        case 422:
+        case 1062:
+            msgbox(format("You need to train your Shellos to level 30 to evolve them."))
+        case 425:
+            msgbox(format("You need to train your Drifloon to level 28 to evolve them."))
+        case 427:
+            msgbox(format("Your Buneary will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 431:
+            msgbox(format("You need to train your Glameow to level 38 to evolve them."))
+        case 433:
+            msgbox(format("Your Chingling will evolve naturally after you create a bond with them at night. \p You can talk to my sister if you want to speed this process up!"))
+        case 434:
+            msgbox(format("You need to train your Stunky to level 34 to evolve them."))
+        case 436:
+            msgbox(format("You need to train your Bronzor to level 33 to evolve them."))
+        case 438:
+            msgbox(format("Your Bonsly needs to learn Mimic in order to evolve them. \p I believe they learn this at level 16."))
+        case 439:
+            msgbox(format("Your Mime Jr will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 440:
+            msgbox(format("Your Happiny will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 443:
+            msgbox(format("You need to train your Gible to level 24 to evolve them."))
+        case 444:
+            msgbox(format("You need to train your Gabite to level 48 to evolve them."))
+        case 446:
+            msgbox(format("Your Munchlax will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 447:
+            msgbox(format("Your Riolu will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 449:
+            msgbox(format("You need to train your Hippopotas to level 34 to evolve them."))
+        case 451:
+            msgbox(format("You need to train your Skorupi to level 40 to evolve them."))
+        case 453:
+            msgbox(format("You need to train your Croagunk to level 37 to evolve them."))
+        case 456:
+            msgbox(format("You need to train your Finneon to level 31 to evolve them."))
+        case 458:
+            msgbox(format("Your Mantyke will evolve if you have a Remoraid in your party.\p ... \p What? I'm serious!"))
+        case 459:
+            msgbox(format("You need to train your Snover to level 40 to evolve them."))
+        case 479:
+            msgbox(format("Oh? It seems like this pokemon doesn't evolve at all!\p hm... I do believe one of my sisters has something that could change his form though..."))
+        case 489:
+            msgbox(format("How did you manage to get your hands on a mythical pokemon?!\l Don't look at me, as far as I know these definetly don't evolve!\p...\p What do you mean you got it from breeding a Manaphy?\p Don't look at me I have no idea how it would evolve into another Manaphy!"))
+        case 490:
+            msgbox(format("How did you manage to get your hands on a mythical pokemon?!\l Don't look at me, as far as I know these definetly don't evolve!\p Though, I did hear it is the only breedable mythical pokemon..."))
+        case 493:
+        case 1073:
+        case 1074:
+        case 1075:
+        case 1076:
+        case 1077:
+        case 1078:
+        case 1079:
+        case 1080:
+        case 1081:
+        case 1082:
+        case 1083:
+        case 1084:
+        case 1085:
+        case 1086:
+        case 1087:
+        case 1088:
+        case 1089:
+            msgbox(format("Isn't God perfect as he is? I don't think we need to concern us about an evolution of God."))
+        case 495:
+            msgbox(format("You need to train your Snivy to level 17 to evolve them."))
+        case 496:
+            msgbox(format("You need to train your Servine to level 36 to evolve them."))
+        case 498:
+            msgbox(format("You need to train your Tepig to level 17 to evolve them."))
+        case 499:
+            msgbox(format("You need to train your Pignite to level 36 to evolve them."))
+        case 501:
+            msgbox(format("You need to train your Oshawott to level 17 to evolve them."))
+        case 502:
+            msgbox(format("Your Dewott can evolve into two different forms. You can train them to level 36 to evolve them normally, or you can give them a Dubious Disc to evolve them into their special form."))
+        case 504:
+            msgbox(format("You need to train your Patrat to level 20 to evolve them."))
+        case 506:
+            msgbox(format("You need to train your Lillipup to level 16 to evolve them."))
+        case 507:
+            msgbox(format("You need to train your Herdier to level 32 to evolve them."))
+        case 509:
+            msgbox(format("You need to train your Purrloin to level 20 to evolve them."))
+        case 511:
+            msgbox(format("Your Pansage needs a Leaf Stone to evolve."))
+        case 513:
+            msgbox(format("Your Pansear needs a Fire Stone to evolve."))
+        case 515:
+            msgbox(format("Your Panpour needs a Water Stone to evolve."))
+        case 517:
+            msgbox(format("Your Munna needs a Moon Stone to evolve."))
+        case 519:
+            msgbox(format("You need to train your Pidove to level 21 to evolve them."))
+        case 520:
+            msgbox(format("You need to train your Tranquill to level 32 to evolve them."))
+        case 522:
+            msgbox(format("You need to train your Blitzle to level 27 to evolve them."))
+        case 524:
+            msgbox(format("You need to train your Roggenrola to level 25 to evolve them."))
+        case 525:
+            msgbox(format("Your Boldore needs a Linking Cord to evolve."))
+        case 527:
+            msgbox(format("Your Woobat will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 529:
+            msgbox(format("You need to train your Dilbur to level 31 to evolve them."))
+        case 532:
+            msgbox(format("You need to train your Timburr to level 25 to evolve them."))
+        case 533:
+            msgbox(format("Your Gurdurr needs a Linking Cord to evolve."))
+        case 535:
+            msgbox(format("You need to train your Tympole to level 25 to evolve them."))
+        case 536:
+            msgbox(format("You need to train your Palpitoad to level 36 to evolve them."))
+        case 540:
+            msgbox(format("You need to train your Sewaddle to level 20 to evolve them."))
+        case 541:
+            msgbox(format("Your Swadloon will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 543:
+            msgbox(format("You need to train your Venipede to level 22 to evolve them."))
+        case 544:
+            msgbox(format("You need to train your Whirlipede to level 30 to evolve them."))
+        case 546:
+            msgbox(format("Your Cottonee needs a Sun Stone to evolve"))
+        case 548:
+            msgbox(format("Your Petilil can transform into two different forms. \p You can give it either a Sun Stone or a Shiny Stone to evolve them."))
+        case 551:
+            msgbox(format("You need to train your Sandile to level 29 to evolve them."))
+        case 552:
+            msgbox(format("You need to train your Krokorok to level 40 to evolve them."))
+        case 554:
+            msgbox(format("You need to train your Darumaka to level 35 to evolve them."))
+        case 557:
+            msgbox(format("You need to train your Dwebble to level 34 to evolve them."))
+        case 559:
+            msgbox(format("You need to train your Scraggy to level 39 to evolve them."))
+        case 562:
+            msgbox(format("You need to train your Yamask to level 34 to evolve them."))
+        case 564:
+            msgbox(format("You need to train your Tirtouga to level 37 to evolve them."))
+        case 566:
+            msgbox(format("You need to train your Archen to level 37 to evolve them."))
+        case 568:
+            msgbox(format("You need to train your Trubbish to level 36 to evolve them."))
+        case 570:
+        case 1002:
+            msgbox(format("You need to train your Zorua to level 30 to evolve them."))
+        case 572:
+            msgbox(format("Your Minccino needs a Shiny Stone to evolve."))
+        case 574:
+            msgbox(format("You need to train your Gothita to level 32 to evolve them."))
+        case 575:
+            msgbox(format("You need to train your Gothorita to level 41 to evolve them."))
+        case 577:
+            msgbox(format("You need to train your Solosis to level 32 to evolve them."))
+        case 578:
+            msgbox(format("You need to train your Duosion to level 41 to evolve them."))
+        case 580:
+            msgbox(format("You need to train your Ducklett to level 35 to evolve them."))
+        case 582:
+            msgbox(format("You need to train your Vanillite to level 35 to evolve them."))
+        case 583:
+            msgbox(format("You need to train your Vanillish to level 47 to evolve them."))
+        case 585:
+        case 1094:
+        case 1095:
+        case 1096:
+            msgbox(format("You need to train your Deerling to level 34 to evolve them."))
+        case 588:
+            msgbox(format("Your Karrablast will evolve if you have either a Shelmet or Accelgor in your party."))
+        case 590:
+            msgbox(format("You need to train your Foongus to level 39 to evolve them."))
+        case 592:
+            msgbox(format("You need to train your Frillish to level 40 to evolve them."))
+        case 595:
+            msgbox(format("You need to train your Joltik to level 36 to evolve them."))
+        case 597:
+            msgbox(format("You need to train your Ferroseed to level 40 to evolve them."))
+        case 599:
+            msgbox(format("You need to train your Klink to level 38 to evolve them."))
+        case 600:
+            msgbox(format("You need to train your Klang to level 49 to evolve them."))
+        case 602:
+            msgbox(format("You need to train your Tynamo to level 39 to evolve them."))
+        case 603:
+            msgbox(format("Your Eelektrik needs a Thunder Stone to evolve."))
+        case 605:
+            msgbox(format("You need to train your Elgyem to level 42 to evolve them."))
+        case 607:
+            msgbox(format("You need to train your Litwick to level 41 to evolve them."))
+        case 608:
+            msgbox(format("Your Lampent needs a Dusk Stone to evolve."))
+        case 610:
+            msgbox(format("You need to train your Axew to level 38 to evolve them."))
+        case 611:
+            msgbox(format("You need to train your Fraxure to level 48 to evolve them."))
+        case 613:
+            msgbox(format("You need to train your Cubchoo to level 37 to evolve them."))
+        case 616:
+            msgbox(format("Your Shelmet will evolve if you have either a Karrablast or an Escavalier in your party."))
+        case 619:
+            msgbox(format("You need to train your Mienfoo to level 50 to evolve them."))
+        case 622:
+            msgbox(format("You need to train your Golett to level 43 to evolve them."))
+        case 624:
+            msgbox(format("You need to train your Pawniard to level 52 to evolve them."))
+        case 625:
+            msgbox(format("Your Bisharp needs a Leader Crest to evolve it."))
+        case 627:
+            msgbox(format("Your Rufflet can evolve into two different forms. \p You can either train them to level 54 to evolve them normally, or you can give them a Prism Scale to evolve them into their special form"))
+        case 629:
+            msgbox(format("You need to train your Vullaby to level 54 to evolve them."))
+        case 633:
+            msgbox(format("You need to train your Deino to level 50 to evolve them."))
+        case 634:
+            msgbox(format("You need to train your Zweilous to level 64 to evolve them."))
+        case 636:
+            msgbox(format("You need to train your Larvesta to level 59 to evolve them."))
+        case 650:
+            msgbox(format("You need to train your Chespin to level 16 to evolve them."))
+        case 651:
+            msgbox(format("You need to train your Quilladin to level 36 to evolve them."))
+        case 653:
+            msgbox(format("You need to train your Fennekin to level 16 to evolve them."))
+        case 654:
+            msgbox(format("You need to train your Braixen to level 36 to evolve them."))
+        case 656:
+            msgbox(format("You need to train your Froakie to level 16 to evolve them."))
+        case 657:
+            msgbox(format("You need to train your Frogadier to level 36 to evolve them."))
+        case 659:
+            msgbox(format("You need to train your Bunnelby to level 20 to evolve them."))
+        case 661:
+            msgbox(format("You need to train your Fletchling to level 17 to evolve them."))
+        case 662:
+            msgbox(format("You need to train your Fletchinder to level 35 to evolve them."))
+        case 664:
+        case 1438:
+        case 1439:
+        case 1440:
+        case 1441:
+        case 1442:
+        case 1443:
+        case 1444:
+        case 1445:
+        case 1446:
+        case 1447:
+        case 1448:
+        case 1449:
+        case 1450:
+        case 1451:
+        case 1452:
+        case 1453:
+        case 1454:
+        case 1455:
+        case 1456:
+            msgbox(format("You need to train your Scatterbug to level 9 to evolve them."))
+        case 665:
+        case 1457:
+        case 1458:
+        case 1459:
+        case 1460:
+        case 1461:
+        case 1462:
+        case 1463:
+        case 1464:
+        case 1465:
+        case 1466:
+        case 1467:
+        case 1468:
+        case 1469:
+        case 1470:
+        case 1471:
+        case 1472:
+        case 1473:
+        case 1474:
+        case 1475:
+            msgbox(format("You need to train your Spewpa to level 12 to evolve them."))
+        case 667:
+            msgbox(format("You need to train your Litleo to level 35 to evolve them."))
+        case 669:
+        case 1133:
+        case 1134:
+        case 1135:
+        case 1136:
+            msgbox(format("You need to train your Flabebe to level 19 to evolve them."))
+        case 670:
+        case 1137:
+        case 1138:
+        case 1139:
+        case 1140:
+            msgbox(format("Your Floette needs a Shiny Stone to evolve."))
+        case 672:
+            msgbox(format("You need to train your Skiddo to level 32 to evolve them."))
+        case 674:
+            msgbox(format("You need to train your Pancham to level 32, while having a dark type on your team to evolve them. \p ... \p What? I'm serious!"))
+        case 677:
+            msgbox(format("You need to train your Espurr to level 25 to evolve them."))
+        case 679:
+            msgbox(format("You need to train your Honedge to level 35 to evolve them."))
+        case 680:
+            msgbox(format("Your Doublade needs a Dusk Stone to evolve."))
+        case 682:
+            msgbox(format("Your Spritzee needs a Sachet to evolve."))
+        case 684:
+            msgbox(format("Your Swirlix needs a Whipped Dream to evolve."))
+        case 686:
+            msgbox(format("You need to train your Inkay to level 30 and hold your console upside down to evolve them. \p Just kidding, you only need to train it to level 30."))
+        case 688:
+            msgbox(format("You need to train your Binacle to level 39 to evolve them."))
+        case 690:
+            msgbox(format("You need to train your Skrelp to level 48 to evolve them."))
+        case 692:
+            msgbox(format("You need to train your Clauncher to level 37 to evolve them."))
+        case 694:
+            msgbox(format("Your Helioptile needs a Sun Stone to evolve."))
+        case 696:
+            msgbox(format("You need to train your Tyrunt to level 39 to evolve them."))
+        case 698:
+            msgbox(format("You need to train your Amaura to level 39 to evolve them."))
+        case 704:
+            msgbox(format("Your Goomy can evolve into two different forms. You can either train them to level 40 to evolve them normally or you can give them a Metal Alloy to evolve them in their special form."))
+        case 705:
+        case 1005:
+            msgbox(format("You need to train your Sliggoo to level 50 while them is raining or it's foggy to evolve them."))
+        case 708:
+            msgbox(format("Your Phantump needs a Linking Cord to evolve."))
+        case 710:
+        case 1157:
+        case 1158:
+        case 1159:
+            msgbox(format("Your Pumpkaboo needs a Linking Cord to evolve."))
+        case 712:
+            msgbox(format("Your Bergmite can evolve into two different forms. You can train them to level 37 to evolve them normally or you can give them a Razor Claw to evolve them into their special form."))
+        case 714:
+            msgbox(format("You need to train your Noibat to level 48 to evolve them."))
+        case 722:
+            msgbox(format("You need to train your Rowlet to level 17 to evolve them."))
+        case 723:
+            msgbox(format("Your Dartrix can evolve into two different forms. You can train them to level 34 to evolve them normally or you can give them a Protector to evolve them into their special form."))
+        case 725:
+            msgbox(format("You need to train your Litten to level 17 to evolve them."))
+        case 726:
+            msgbox(format("You need to train your Torracat to level 34 to evolve them."))
+        case 728:
+            msgbox(format("You need to train your Popplio to level 17 to evolve them."))
+        case 729:
+            msgbox(format("You need to train your Brionne to level 34 to evolve them."))
+        case 731:
+            msgbox(format("You need to train your Pikipek to level 14 to evolve them."))
+        case 732:
+            msgbox(format("You need to train your Trumbeak to level 28 to evolve them."))
+        case 734:
+            msgbox(format("You need to train your Yungoos to level 20 during the day to evolve them."))
+        case 736:
+            msgbox(format("You need to train your Grubbin to level 20 to evolve them."))
+        case 737:
+            msgbox(format("Your Charjabug needs a Thunder Stone to evolve."))
+        case 739:
+            msgbox(format("Your Crabrawler needs a Ice Stone to evolve."))
+        case 742:
+            msgbox(format("You need to train your Cutiefly to level 25 to evolve them."))
+        case 744:
+            msgbox(format("You need to train your Rockruff to level 25 to evolve them. \p Depending on the time --morning, dusk or night-- it will evolve into a different form."))
+        case 747:
+            msgbox(format("You need to train your Mareanie to level 38 to evolve them."))
+        case 749:
+            msgbox(format("You need to train your Mudbray to level 30 to evolve them."))
+        case 751:
+            msgbox(format("You need to train your Dewpider to level 22 to evolve them."))
+        case 753:
+            msgbox(format("You need to train your Fomantis to level 34 during the day to evolve them."))
+        case 755:
+            msgbox(format("You need to train your Morelull to level 24 to evolve them."))
+        case 757:
+            msgbox(format("You need to train your Salandit, if it is a female, to level 21 to evolve them. \p If you have a male Combee than I'm sorry to dissapoint you, but that one does not evolve..."))
+        case 759:
+            msgbox(format("You need to train your Stufful to level 27 to evolve them."))
+        case 761:
+            msgbox(format("You need to train your Bounsweet to level 18 to evolve them."))
+        case 762:
+            msgbox(format("Your Steenee needs to learn Stomp in order to evolve them. \p I believe they learn this at level 28."))
+        case 767:
+            msgbox(format("You need to train your Wimpod to level 30 to evolve them."))
+        case 769:
+            msgbox(format("You need to train your Sandygast to level 42 to evolve them."))
+        case 772:
+            msgbox(format("Your Type_Null will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 782:
+            msgbox(format("You need to train your Jango-o to level 35 to evolve them."))
+        case 783:
+            msgbox(format("You need to train your Hakamo-o to level 45 to evolve them."))
+        case 789:
+            msgbox(format("Is that a Legendary pokemon? I thought they never evolved, but I would swear this little one does at level 43!"))
+        case 790:
+            msgbox(format("Is that a Legendary pokemon? I thought they never evolved, but I would swear this little one does! \p What's more, I believe it can even evolve into two different forms.\l One form during the day and another during the night.\p For both versions they need to be trained to level 53."))
+        case 808:
+            msgbox(format("Well if that is not a strange fellow. \p Many people that he can only evolve if you have like catch over a 100 versions of him, but as far as I can tell you just need to level them up to level 40!"))
+        case 810:
+            msgbox(format("You need to train your Grookey to level 16 to evolve them."))
+        case 811:
+            msgbox(format("You need to train your Rillaboom to level 35 to evolve them."))
+        case 813:
+            msgbox(format("You need to train your Scorbunny to level 16 to evolve them."))
+        case 814:
+            msgbox(format("You need to train your Raboot to level 35 to evolve them."))
+        case 816:
+            msgbox(format("You need to train your Sobble to level 16 to evolve them."))
+        case 817:
+            msgbox(format("You need to train your Drizzile to level 35 to evolve them."))
+        case 819:
+            msgbox(format("You need to train your Skwovet to level 24 to evolve them."))
+        case 821:
+            msgbox(format("You need to train your Rookidee to level 18 to evolve them."))
+        case 822:
+            msgbox(format("You need to train your Corvisquire to level 38 to evolve them."))
+        case 824:
+            msgbox(format("You need to train your Blipbug to level 10 to evolve them."))
+        case 825:
+            msgbox(format("You need to train your Dottler to level 30 to evolve them."))
+        case 827:
+            msgbox(format("You need to train your Nickit to level 18 to evolve them."))
+        case 829:
+            msgbox(format("You need to train your Gossifleur to level 20 to evolve them."))
+        case 831:
+            msgbox(format("You need to train your Wooloo to level 24 to evolve them."))
+        case 833:
+            msgbox(format("You need to train your Chewtle to level 22 to evolve them."))
+        case 835:
+            msgbox(format("You need to train your Yamper to level 25 to evolve them."))
+        case 837:
+            msgbox(format("You need to train your Rolycoly to level 18 to evolve them."))
+        case 838:
+            msgbox(format("You need to train your Carkol to level 34 to evolve them."))
+        case 840:
+            msgbox(format("Your Applin can evolve into three different forms. You can evolve them either with a Tart Apple, Sweet Apple or a Syrupy apple."))
+        case 843:
+            msgbox(format("You need to train your Silicobra to level 36 to evolve them."))
+        case 846:
+            msgbox(format("You need to train your Arrokuda to level 26 to evolve them."))
+        case 848:
+            msgbox(format("You need to train your Toxel to level 30 to evolve them."))
+        case 850:
+            msgbox(format("You need to train your Sizzilipede to level 28 to evolve them."))
+        case 852:
+            msgbox(format("Your Clobbopus needs to learn Taunt in order to evolve them. \p I believe they learn this at level 35."))
+        case 854:
+            msgbox(format("Your Sinistea needs a Cracked Pot to evolve."))
+        case 856:
+            msgbox(format("You need to train your Hatenna to level 32 to evolve them."))
+        case 857:
+            msgbox(format("You need to train your Hattrem to level 42 to evolve them."))
+        case 859:
+            msgbox(format("You need to train your Impidimp to level 32 to evolve them."))
+        case 860:
+            msgbox(format("You need to train your Morgrem to level 42 to evolve them."))
+        case 868:
+            msgbox(format("Your Milcery has.... many forms. I'm still working on figuring out how to exactly all their evolutions work"))
+        case 872:
+            msgbox(format("Your Snom will evolve naturally after you create a bond with them at night.. \p You can talk to my sister if you want to speed this process up!"))
+        case 878:
+            msgbox(format("You need to train your Cufant to level 34 to evolve them."))
+        case 884:
+            msgbox(format("Your Duraludon needs a Metal Alloy to evolve."))
+        case 885:
+            msgbox(format("You need to train your Dreepy to level 50 to evolve them."))
+        case 886:
+            msgbox(format("You need to train your Drakloak to level 60 to evolve them."))
+        case 891:
+            msgbox(format("Is that a legendary pokemon? I thought they never evolved, but I would swear this little one does! \p What's more, I believe it can even evolve into two different forms.\l One form during the day and another during the night.\p You'll need to give it the Scroll Of Darkness or the Scroll Of Waters to evolve them."))
+        case 896:
+        case 897:
+        case 898:
+            msgbox(format("WOW, a legendary pokemon! \n I'm pretty sure these ones don't evolve at all! \p Though I do believe you can make it change form somehow..."))
+        case 956:
+            msgbox(format("You need to train your Rattata to level 20 at night to evolve them."))
+        case 959:
+            msgbox(format("Your Sanshrew needs a Ice Stone to evolve."))
+        case 961:
+            msgbox(format("Your Vulpix needs a Ice Stone to evolve."))
+        case 965:
+            msgbox(format("Your Meowth will evolve naturally after you create a bond with them. \p You can talk to my sister if you want to speed this process up!"))
+        case 977:
+            msgbox(format("Your Slowpoke can evolve into two different forms. \p You can either give it a Glarica Cuff or a Glarica Wreath to evolve them."))
+        case 981:
+            msgbox(format(""))
+        case 986:
+            msgbox(format("You need to train your Corsola to level 38 to evolve them."))
+        case 988:
+            msgbox(format("You need to train your Linoone to level 35 at night to evolve them."))
+        case 989:
+            msgbox(format("Your Darumaka needs an Ice Stone to evolve"))
+        case 991:
+            msgbox(format("Your Yamask needs to take 49 damage and then walk under a very specific point. \p Just kidding! \p You just need to train the to level 34"))
+        case 995:
+            msgbox(format("Your Voltorb needs a Leaf Stone to evolve."))
+        case 997:
+            msgbox(format(""))
+        case 998:
+            msgbox(format("Your Qwilfish needs to learn Barb Barrage in order to evolve them. \p I believe they learn this at level 16."))
+        case 999:
+            msgbox(format("Your Sneasel needs a Razor Claw during the day to evolve."))
+        case 1009:
+        case 1010:
+        case 1011:
+        case 1012:
+        case 1013:
+        case 1014:
+        case 1015:
+        case 1016:
+        case 1017:
+        case 1018:
+        case 1019:
+        case 1020:
+        case 1021:
+        case 1022:
+        case 1023:
+            msgbox(format("Your Pikachu is quite special, it seems like your Pikachu can't evolve at all!"))
+        case 1091:
+            msgbox(format("Your Basculin needs to take 294 recoil damage to evolve. \p ... \p What? I'm serious!"))
+        case 1141:
+            msgbox(format("Your Floette is quite special, it seems like your Floette can't evolve at all!"))
+        case 1172:
+            msgbox(format("Hm... I'm not sure about this one I'm afraid..."))
+        case 1214:
+            msgbox(format("Your Sinistea needs a Cracked... \p No wait, this design, is marvelous!\p You'll need a Chipped Pot to evolve this one!"))
+        case 1289:
+            msgbox(format("You need to train your Sprigatito to level 16 to evolve them."))
+        case 1290:
+            msgbox(format("You need to train your Floragato to level 36 to evolve them."))
+        case 1292:
+            msgbox(format("You need to train your Fuecoco to level 16 to evolve them."))
+        case 1293:
+            msgbox(format("You need to train your Crocalor to level 36 to evolve them."))
+        case 1295:
+            msgbox(format("You need to train your Quaxly to level 16 to evolve them."))
+        case 1296:
+            msgbox(format("You need to train your Quaxwell to level 36 to evolve them."))
+        case 1298:
+            msgbox(format("You need to train your Lechonk to level 18 to evolve them."))
+        case 1301:
+            msgbox(format("You need to train your Tarountula to level 15 to evolve them."))
+        case 1303:
+            msgbox(format("You need to train your Nymble to level 24 to evolve them."))
+        case 1305:
+            msgbox(format("You need to train your Pawmi to level 18 to evolve them."))
+        case 1306:
+            msgbox(format("Your Pawmo needs a Thunder Stone to evolve."))
+        case 1308:
+            msgbox(format("You need to train your Tandemaus to level 25 to evolve them."))
+        case 1311:
+            msgbox(format("You need to train your Fidough to level 26 to evolve them."))
+        case 1313:
+            msgbox(format("You need to train your Smoliv to level 25 to evolve them."))
+        case 1314:
+            msgbox(format("You need to train your Dolliv to level 35 to evolve them."))
+        case 1320:
+            msgbox(format("You need to train your Nacli to level 24 to evolve them."))
+        case 1321:
+            msgbox(format("You need to train your Naclstack to level 38 to evolve them."))
+        case 1323:
+            msgbox(format("Your Charcadet can evolve into two different forms. You can either give them an Auspicious Armour or a Malicious Armour to evolve them."))
+        case 1326:
+            msgbox(format("Your Tadbulb needs a Thunder Stone to evolve."))
+        case 1328:
+            msgbox(format("You need to train your Wattrel to level 25 to evolve them."))
+        case 1330:
+            msgbox(format("You need to train your Maschiff to level 30 to evolve them."))
+        case 1332:
+            msgbox(format("You need to train your Shroodle to level 28 to evolve them."))
+        case 1334:
+            msgbox(format("Your Brablin needs a Leaf Stone to evolve."))
+        case 1336:
+            msgbox(format("You need to train your Toadscool to level 30 to evolve them."))
+        case 1339:
+            msgbox(format("Your Capsakid needs a Fire Stone to evolve."))
+        case 1341:
+            msgbox(format("Your Rellor needs a Peat Block to evolve."))
+        case 1343:
+            msgbox(format("You need to train your Flittle to level 35 to evolve them."))
+        case 1345:
+            msgbox(format("You need to train your Tinkatink to level 24 to evolve them."))
+        case 1346:
+            msgbox(format("You need to train your Tinkatuff to level 38 to evolve them."))
+        case 1348:
+            msgbox(format("You need to train your Wiglett to level 26 to evolve them."))
+        case 1351:
+            msgbox(format("You need to train your Finizen to level 38 to evolve them."))
+        case 1354:
+            msgbox(format("You need to train your Varoom to level 40 to evolve them."))
+        case 1358:
+            msgbox(format("You need to train your Glimmet to level 35 to evolve them."))
+        case 1360:
+            msgbox(format("You need to train your Greavard to level 35 at night to evolve them."))
+        case 1363:
+            msgbox(format("Your Cetoddle needs an Ice Stone to evolve."))
+        case 1376:
+        case 1377:
+        case 1378:
+        case 1379:
+        case 1380:
+        case 1381:
+        case 1382:
+        case 1383:
+        case 1384:
+        case 1385:
+        case 1386:
+        case 1387:
+        case 1398:
+        case 1399:
+        case 1406:
+        case 1407:
+        case 1427:
+        case 1428:
+        case 1429:
+        case 1430:
+            msgbox(format("What a strange pokemon? I have never seen this pokemon before. I don't believe it evolves though...")) 
+        case 1388:
+            msgbox(format("You need to train your Frigibax to level 35 to evolve them."))
+        case 1389:
+            msgbox(format("You need to train your Articbax to level 54 to evolve them."))
+        case 1391:
+            msgbox(format("You need to to collete 999 Gimmighoul Coins to evolve your Gimmighoul. \p Just kidding! You can just give it a Kings Rock to evolve them."))
+        case 1408:
+            msgbox(format("Your Dipplin needs to learn Dragon Cheer in order to evolve them. \p hm... I believe it doesn't learn that by himself, but the TM Store further down the hall should be able to sell you that move."))
+        case 1411:
+            msgbox(format("Your Poltchageist needs an Unremarkable Teacup to evolve."))
+        case 1412:
+            msgbox(format("Your Polterchageist needs an Unremarkable... \p Wait, this design is real! you'll need an Masterpiece Teacup to evolve them!"))
+        case 1435:
+            msgbox(format("WOW, a legendary pokemon! \n I'm pretty sure these ones don't evolve at all!\p Wait... why does it look like that?"))
+        default:
+            msgbox(format("This pokemon does not evolve"))
+    }
 }
 
 mart MODHeadquarters_EvoShop {
@@ -338,3 +2229,5 @@ mart MODHeadquarters_EvoShop {
     ITEM_HEARTHFLAME_MASK
     ITEM_METAL_ALLOY
 }
+
+

@@ -6617,6 +6617,12 @@ void MaximizeFriendShip(struct Pokemon *mon)
     SetMonData(mon, MON_DATA_FRIENDSHIP, &maxFriendship);
 }
 
+u16 GetSpeciesNumber(struct Pokemon *mon)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    return species;
+}
+
 const u8 *GetMoveName(u16 moveId)
 {
     return gMovesInfo[moveId].name;

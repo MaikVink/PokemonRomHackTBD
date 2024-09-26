@@ -1014,6 +1014,8 @@
 #define SPECIES_RAYQUAZA_MEGA                           953
 #define SPECIES_KYOGRE_PRIMAL                           954
 #define SPECIES_GROUDON_PRIMAL                          955
+
+//Alolan forms
 #define SPECIES_RATTATA_ALOLAN                          956
 #define SPECIES_RATICATE_ALOLAN                         957
 #define SPECIES_RAICHU_ALOLAN                           958
@@ -1032,6 +1034,8 @@
 #define SPECIES_MUK_ALOLAN                              971
 #define SPECIES_EXEGGUTOR_ALOLAN                        972
 #define SPECIES_MAROWAK_ALOLAN                          973
+
+//Galarian forms
 #define SPECIES_MEOWTH_GALARIAN                         974
 #define SPECIES_PONYTA_GALARIAN                         975
 #define SPECIES_RAPIDASH_GALARIAN                       976
@@ -1579,6 +1583,8 @@
 #define SPECIES_SPEWPA_JUNGLE                           1473
 #define SPECIES_SPEWPA_FANCY                            1474
 #define SPECIES_SPEWPA_POKE_BALL                        1475
+
+//Totem pokemon
 #define SPECIES_RATICATE_ALOLAN_TOTEM                   1476
 #define SPECIES_GUMSHOOS_TOTEM                          1477
 #define SPECIES_VIKAVOLT_TOTEM                          1478
@@ -1591,8 +1597,12 @@
 #define SPECIES_RIBOMBEE_TOTEM                          1484
 #define SPECIES_ARAQUANID_TOTEM                         1485
 #define SPECIES_TOGEDEMARU_TOTEM                        1486
+
+//Partner pokemon
 #define SPECIES_PIKACHU_PARTNER                         1487
 #define SPECIES_EEVEE_PARTNER                           1488
+
+//Gigantamax pokemon
 #define SPECIES_VENUSAUR_GIGANTAMAX                     1489
 #define SPECIES_BLASTOISE_GIGANTAMAX                    1490
 #define SPECIES_CHARIZARD_GIGANTAMAX                    1491
@@ -1627,6 +1637,8 @@
 #define SPECIES_DURALUDON_GIGANTAMAX                    1520
 #define SPECIES_URSHIFU_SINGLE_STRIKE_STYLE_GIGANTAMAX  1521
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GIGANTAMAX   1522
+
+//Extra
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    1523
 
 #define SPECIES_EGG (SPECIES_MIMIKYU_TOTEM_BUSTED + 1)
