@@ -109,7 +109,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .levelUpLearnset = sDartrixLevelUpLearnset,
         .teachableLearnset = sDartrixTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_DECIDUEYE},
-                                {EVO_NONE, 0, SPECIES_DECIDUEYE_HISUIAN}),
+                                {EVO_ITEM, ITEM_PROTECTOR, SPECIES_DECIDUEYE_HISUIAN}),
     },
 
     [SPECIES_DECIDUEYE] =
@@ -1616,7 +1616,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .teachableLearnset = sRockruffTeachableLearnset,
         .formSpeciesIdTable = sRockruffFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL_DAY, 25, SPECIES_LYCANROC_MIDDAY},
-                                {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT}),
+                                {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT},
+                                {EVO_LEVEL_DUSK, 25, SPECIES_LYCANROC_DUSK}),
     },
 
     [SPECIES_ROCKRUFF_OWN_TEMPO] =
@@ -6044,6 +6045,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .isMythical = TRUE,
         .levelUpLearnset = sMeltanLevelUpLearnset,
         .teachableLearnset = sMeltanTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_MELMETAL})
     },
 
     [SPECIES_MELMETAL] =

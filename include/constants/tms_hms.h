@@ -52,7 +52,8 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT)\
-    F(BABY_DOLL_EYES)
+    F(BABY_DOLL_EYES)\
+    F(DRAGON_CHEER)
 
 #define FOREACH_HM(F) \
     F(CUT) \
