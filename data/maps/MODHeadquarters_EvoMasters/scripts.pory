@@ -207,7 +207,7 @@ script EvoMasters_StartSimulation{
     waitmovement(0)
     if(var(VAR_TEMP_0) == 0)
     {
-        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_DAY_CLEAR, 11, 5)
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_SUNNY, 11, 5)
     }
     elif(var(VAR_TEMP_0) == 1)
     {

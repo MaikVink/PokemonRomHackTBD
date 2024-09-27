@@ -387,7 +387,7 @@ EvoMasters_StartSimulation_12:
 
 EvoMasters_StartSimulation_17:
 # 210 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	warp MAP_MODHEADQUARTERS_EVO_MASTERS_DAY_CLEAR, 11, 5
+	warp MAP_MODHEADQUARTERS_EVO_MASTERS_SUNNY, 11, 5
 	goto EvoMasters_StartSimulation_16
 
 EvoMasters_StartSimulation_18:
