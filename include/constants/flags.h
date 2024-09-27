@@ -1505,9 +1505,9 @@
 #define FLAG_UNUSED                   (SYSTEM_FLAGS + 0x85) // Unused Flag
 #define FLAG_FIONA_HALL_ENCOUNTER                   (SYSTEM_FLAGS + 0x86) // Unused Flag
 #define FLAG_FREE_SIMULATION                        (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_GIFT_GENERALSTORE                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
+#define FLAG_GIFT_GENERALSTORE                      (SYSTEM_FLAGS + 0x88) // Unused Flag
+#define FLAG_SIMULATION_ENTERED                     (SYSTEM_FLAGS + 0x89) // Unused Flag
+#define FLAG_HIDE_REPLICA_SIMULATION_SISTER         (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag

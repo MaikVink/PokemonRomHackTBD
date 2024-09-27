@@ -822,6 +822,20 @@ static const struct MenuAction MultichoiceList_MoveTutor[]=
     {gText_SecretSword}
 };
 
+static const struct MenuAction MultichoiceList_DayTimeSimulation[]=
+{
+    {gText_Day},
+    {gText_Dusk},
+    {gText_Night}
+};
+
+static const struct MenuAction MultichoiceList_WeatherSimulation[]=
+{
+    {gText_Sunny},
+    {gText_Raining},
+    {gText_Foggy}
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -948,6 +962,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TEST_CHOICE]                = MULTICHOICE(MultichoiceList_Quiz),
     [MULTI_DOJO_GRID]                  = MULTICHOICE(MultichoiceList_DojoGrid),
     [MULTI_MOVE_TUTOR]                 = MULTICHOICE(MultichoiceList_MoveTutor),
+    [MULTI_TIME_SIMULATION]            = MULTICHOICE(MultichoiceList_DayTimeSimulation),
+    [MULTI_WEATHER_SIMULATION]         = MULTICHOICE(MultichoiceList_WeatherSimulation)
 };
 
 const u8 *const gStdStrings[] =

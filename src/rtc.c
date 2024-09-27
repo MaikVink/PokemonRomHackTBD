@@ -318,6 +318,30 @@ void RtcInitLocalTimeOffset(s32 hour, s32 minute)
     RtcCalcLocalTimeOffset(0, hour, minute, 0);
 }
 
+void RtcSetTimeToDay(void)
+{
+    gLocalTime.hours = 12;
+    gLocalTime.minutes = 0;
+    RtcGetInfo(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gSaveBlock2Ptr->localTimeOffset, &gLocalTime);
+}
+
+void RtcSetTimeToDusk(void)
+{
+    gLocalTime.hours = 19;
+    gLocalTime.minutes = 30;
+    RtcGetInfo(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gSaveBlock2Ptr->localTimeOffset, &gLocalTime);
+}
+
+void RtcSetTimeToNight(void)
+{
+    gLocalTime.hours = 1;
+    gLocalTime.minutes = 0;
+    RtcGetInfo(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gSaveBlock2Ptr->localTimeOffset, &gLocalTime);
+}
+
 void RtcCalcLocalTimeOffset(s32 days, s32 hours, s32 minutes, s32 seconds)
 {
     gLocalTime.days = days;

@@ -27,6 +27,7 @@ script Dormhall1_OnTransition{
         setflag(FLAG_REVERSED_GUARD)
         setflag(FLAG_HIDE_LEADER)
         setflag(FLAG_HIDE_DENEITH)
+        setflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
     }
     if(flag(FLAG_TOURNAMENT_LOST))
     {
