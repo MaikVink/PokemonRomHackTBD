@@ -4612,24 +4612,14 @@
       "blockdata_filepath": "data/layouts/MODHeadquarters_MoveMasters/map.bin"
     },
     {
-      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_DAY_CLEAR",
-      "name": "MODHeadquarters_EvoMasters_DayClear_Layout",
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_SUNNY",
+      "name": "MODHeadquarters_EvoMasters_Sunny_Layout",
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_DayClear/border.bin",
-      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_DayClear/map.bin"
-    },
-    {
-      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_NIGHT_CLEAR",
-      "name": "MODHeadquarters_EvoMasters_NightClear_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_NightClear/border.bin",
-      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_NightClear/map.bin"
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_Sunny/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_Sunny/map.bin"
     },
     {
       "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_RAINY",

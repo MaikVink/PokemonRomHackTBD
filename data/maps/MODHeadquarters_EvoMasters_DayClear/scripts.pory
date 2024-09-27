@@ -1,9 +1,0 @@
-mapscripts MODHeadquarters_EvoMasters_DayClear_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: SimulationClear_OnTransition
-}
-
-script SimulationClear_OnTransition{
-    setflag(FLAG_SIMULATION_ENTERED)
-    clearflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
-    setvar(VAR_SIMULATION_STATUS, 1)
-}

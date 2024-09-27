@@ -640,13 +640,12 @@
     "MODHeadquarters_MoveMasters",
     "MODHeadquarters_General_Store",
     "MODHeadquarters_EvoMasters",
+    "MODHeadquarters_EvoMasters_Sunny",
+    "MODHeadquarters_EvoMasters_Rainy",
+    "MODHeadquarters_EvoMasters_Fog",
     "MODHeadquarters_SpecialStore",
     "MODHeadquarters_SpecialShop_FlashCave",
-    "MODHeadquarters_SpecialShop_Underwater",
-    "MODHeadquarters_EvoMasters_DayClear",
-    "MODHeadquarters_EvoMasters_NightClear",
-    "MODHeadquarters_EvoMasters_Rainy",
-    "MODHeadquarters_EvoMasters_Fog"
+    "MODHeadquarters_SpecialShop_Underwater"
   ],
   "gMapGroup_CliffToNowhere": [
     "CliffToNowhere"

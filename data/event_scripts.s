@@ -1113,9 +1113,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/MODHeadquarters_MoveMasters/scripts.inc"
 
-	.include "data/maps/MODHeadquarters_EvoMasters_DayClear/scripts.inc"
-
-	.include "data/maps/MODHeadquarters_EvoMasters_NightClear/scripts.inc"
+	.include "data/maps/MODHeadquarters_EvoMasters_Sunny/scripts.inc"
 
 	.include "data/maps/MODHeadquarters_EvoMasters_Rainy/scripts.inc"
 
