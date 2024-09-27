@@ -1,0 +1,9 @@
+mapscripts MODHeadquarters_EvoMasters_Fog_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SimulationFoggy_OnTransition
+}
+
+script SimulationFoggy_OnTransition{
+    setflag(FLAG_SIMULATION_ENTERED)
+    clearflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
+    setvar(VAR_SIMULATION_STATUS, 1)
+}

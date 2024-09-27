@@ -1,5 +1,11 @@
+const SSIDNormal = 2
+const SSIDReturn = 5
+
 mapscripts MODHeadquarters_EvoMasters_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: EvoMasters_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SIMULATION_STATUS, 1: EvoMasters_ExitSimulation
+    ]
 }
 
 script EvoMasters_OnTransition{
@@ -13,6 +19,19 @@ script EvoMasters_OnTransition{
     {
         clearflag(FLAG_HIDE_DENEITH)
     }
+}
+
+script EvoMasters_ExitSimulation{
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, EvoMasters_MoveDown)
+    waitmovement(0)
+    applymovement(SSIDReturn, EvoMasters_MoveBackToSpot)
+    waitmovement(0)
+    msgbox(format("Hope the simulation was usefull for you! Please come again if you ever need something else simulated!"))
+    setflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
+    clearflag(FLAG_SIMULATION_ENTERED)
+    setvar(VAR_SIMULATION_STATUS, 0)
+    releaseall
 }
 
 script EvoMAsters_ObjectScript_Masseuse{
@@ -62,7 +81,6 @@ script EvoMasters_CheckFreeMassageEevee{
         call(EvoMasters_GiveMassage)
         releaseall
         end
-        //msgbox(format("Oh, I'm sorry, it seems like my skills are not yet ready to perform this task. Please come again!"))
     }
 }
 
@@ -104,17 +122,20 @@ script EvoMasters_ObjectScript_Simulator
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
         msgbox(format("Good day, I'm the Simulation Sister!\p Some pokemon require specific circumanstance to evolve them into their new form.\l Thanks to Team MOD state of the art technologicial progression, we have created this room to simulate these environments. Just answer some questions and I will simulate the environment you need to evolve your pokemon. You'll also get one rare candy on the house to evolve your pokemon.\l Setting up the simulation is not easy, so we will require 2500 to simulate your required environment."))
-        if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
+        if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_FREE_SIMULATION))
         {
             msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p Would you like to try out this simulation for free?"), MSGBOX_YESNO)
             if(var(VAR_RESULT))
             {
-                msgbox(format("I'm sorry sir, it seems that our simulation is still under construction."))
+                call(EvoMasters_StartSimulation)
+                setflag(FLAG_FREE_SIMULATION)
             }
             else
             {
                 msgbox(format("Please talk to me again before you move on if you want to use my services for free, otherwise I'll require some compensation."))
             }
+            releaseall
+            end
         }
     }
     msgbox(format("Would you require us to simulate a specific environment for you?\l We have a processing fee of 2500 to do so."), MSGBOX_YESNO)
@@ -123,7 +144,7 @@ script EvoMasters_ObjectScript_Simulator
         checkmoney(2500)
         if(var(VAR_RESULT))
         {
-            msgbox(format("I'm sorry sir, it seems that our simulation is still under construction."))
+            call(EvoMasters_StartSimulation)
         }
         else
         {
@@ -135,6 +156,69 @@ script EvoMasters_ObjectScript_Simulator
         msgbox(format("If you need something simulated, you know where to find me!"))        
     }
     releaseall
+}
+
+script EvoMasters_StartSimulation{
+    msgbox(format("Alright, before I can start up the simulation, I first need to know a couple of things from you:"))
+    message(format("What time of day would you like the simulation to have?"))
+    waitmessage
+    multichoice(25, 6, MULTI_TIME_SIMULATION, 0)
+    closemessage
+    if(var(VAR_RESULT) == 0)
+    {
+        special(RtcSetTimeToDay)
+    }
+    elif(var(VAR_RESULT) == 1)
+    {
+        special(RtcSetTimeToDusk)
+    }
+    elif(var(VAR_RESULT) == 2)
+    {
+        special(RtcSetTimeToNight)
+    }
+    else
+    {
+        msgbox(format("Changed your mind? If you need something simulated, you know where to find me!"))
+        return
+    }
+    msgbox(format("Understood!\p Do note that the time might not be clear while you're inside the simulation, but I can garuantee you that the pokemon will notice the time of day! \p Alright next question."))
+    message(format("What kind of weather do you require in the simulation?"))
+    waitmessage
+    multichoice(25, 6, MULTI_WEATHER_SIMULATION, 0)
+    if(var(VAR_RESULT) != 0 && var(VAR_RESULT) != 1 && var(VAR_RESULT) != 2)
+    {
+        msgbox(format("Changed your mind? If you need something simulated, you know where to find me!"))
+        return
+    }
+    copyvar(VAR_TEMP_0, VAR_RESULT)
+    msgbox(format("Alright, we're all set! \p Now first, my fee."))
+    removemoney(2500)
+    msgbox(format("Now, as promised, one free Rare Candy as thanks for using our services:"))
+    giveitem(ITEM_RARE_CANDY, 1)
+    msgbox(format("And lastly, you're free to enter the simulation. You can walk out any time you're done what you came to do."))
+    applymovement(SSIDNormal, EvoMasters_MoveOutOfTheWay)
+    applymovement(SSIDReturn, EvoMasters_MoveOutOfTheWay)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp)
+    waitmovement(0)
+    opendoor(9,1)
+    waitdooranim
+    applymovement(OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp)
+    waitmovement(0)
+    if(var(VAR_TEMP_0) == 0)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_DAY_CLEAR, 11, 5)
+    }
+    elif(var(VAR_TEMP_0) == 1)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_RAINY, 11, 5)
+    }
+    elif(var(VAR_TEMP_0) == 2)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_FOG, 11, 5)
+    }
+    releaseall
+    end
 }
 
 script EvoMasters_ObjectScript_EvoChecker{
@@ -2230,4 +2314,21 @@ mart MODHeadquarters_EvoShop {
     ITEM_METAL_ALLOY
 }
 
+movement EvoMasters_MoveOutOfTheWay {
+    walk_left
+    face_right
+}
 
+movement EvoMasters_MoveBackToSpot {
+    walk_right
+    face_down
+}
+
+movement EvoMasters_MoveUp{
+    walk_up
+}
+
+movement EvoMasters_MoveDown{
+    walk_down
+    face_up
+}

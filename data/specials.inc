@@ -558,3 +558,6 @@ gSpecials::
 	def_special Script_GetChosenMonOffensiveIVs
 	def_special Script_GetChosenMonDefensiveIVs
 	def_special ChooseMonForFriendShip
+	def_special RtcSetTimeToDay
+	def_special RtcSetTimeToDusk
+	def_special RtcSetTimeToNight

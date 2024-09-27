@@ -3095,4 +3095,11 @@ extern const u8 gText_DragonAscent[];
 extern const u8 gText_RelicSong[];
 extern const u8 gText_SecretSword[];
 
+//Simulation
+extern const u8 gText_Dusk[];
+extern const u8 gText_Night[];
+extern const u8 gText_Raining[];
+extern const u8 gText_Foggy[];
+extern const u8 gText_Sunny[];
+
 #endif // GUARD_STRINGS_H

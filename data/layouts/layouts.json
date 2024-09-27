@@ -4610,6 +4610,46 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/MODHeadquarters_MoveMasters/border.bin",
       "blockdata_filepath": "data/layouts/MODHeadquarters_MoveMasters/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_DAY_CLEAR",
+      "name": "MODHeadquarters_EvoMasters_DayClear_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_DayClear/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_DayClear/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_NIGHT_CLEAR",
+      "name": "MODHeadquarters_EvoMasters_NightClear_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_NightClear/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_NightClear/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_RAINY",
+      "name": "MODHeadquarters_EvoMasters_Rainy_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_Rainy/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_Rainy/map.bin"
+    },
+    {
+      "id": "LAYOUT_MODHEADQUARTERS_EVO_MASTERS_FOG",
+      "name": "MODHeadquarters_EvoMasters_Fog_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MODHeadquarters_EvoMasters_Fog/border.bin",
+      "blockdata_filepath": "data/layouts/MODHeadquarters_EvoMasters_Fog/map.bin"
     }
   ]
 }

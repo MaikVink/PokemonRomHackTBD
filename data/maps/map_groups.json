@@ -642,7 +642,11 @@
     "MODHeadquarters_EvoMasters",
     "MODHeadquarters_SpecialStore",
     "MODHeadquarters_SpecialShop_FlashCave",
-    "MODHeadquarters_SpecialShop_Underwater"
+    "MODHeadquarters_SpecialShop_Underwater",
+    "MODHeadquarters_EvoMasters_DayClear",
+    "MODHeadquarters_EvoMasters_NightClear",
+    "MODHeadquarters_EvoMasters_Rainy",
+    "MODHeadquarters_EvoMasters_Fog"
   ],
   "gMapGroup_CliffToNowhere": [
     "CliffToNowhere"

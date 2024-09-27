@@ -126,6 +126,8 @@
 #define MULTI_TEST_CHOICE                  115
 #define MULTI_DOJO_GRID                    116
 #define MULTI_MOVE_TUTOR                   117
+#define MULTI_TIME_SIMULATION              118
+#define MULTI_WEATHER_SIMULATION           119
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
