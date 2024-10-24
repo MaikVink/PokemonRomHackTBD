@@ -39,8 +39,56 @@ SpecialStore_ObjectScript_MartEmployer_1:
 # 30 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	pokemart MODHeadquarters_SpecialShopShop
 # 31 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	msgbox SpecialStore_ObjectScript_MartEmployer_Text_2
+	checkitem ITEM_AXE, 1
 # 32 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_6
+SpecialStore_ObjectScript_MartEmployer_4:
+# 43 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_LANTERN, 1
+# 44 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_11
+SpecialStore_ObjectScript_MartEmployer_9:
+# 55 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_ROCK_SMASHER, 1
+# 56 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_16
+SpecialStore_ObjectScript_MartEmployer_14:
+# 67 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_BOLDER_PUSHER, 1
+# 68 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_21
+SpecialStore_ObjectScript_MartEmployer_19:
+# 79 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_SURFBOARD, 1
+# 80 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_26
+SpecialStore_ObjectScript_MartEmployer_24:
+# 91 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_BIRD_FLUTE, 1
+# 92 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_31
+SpecialStore_ObjectScript_MartEmployer_29:
+# 103 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_DIVING_EQUIPMENT, 1
+# 104 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_36
+SpecialStore_ObjectScript_MartEmployer_34:
+# 115 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	checkitem ITEM_REVERSE_WATERFALL, 1
+# 116 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne SpecialStore_ObjectScript_MartEmployer_41
+SpecialStore_ObjectScript_MartEmployer_39:
+# 127 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_11
+# 128 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	releaseall
 	return
 
@@ -49,146 +97,292 @@ SpecialStore_ObjectScript_MartEmployer_2:
 	msgbox SpecialStore_ObjectScript_MartEmployer_Text_0
 	goto SpecialStore_ObjectScript_MartEmployer_1
 
+SpecialStore_ObjectScript_MartEmployer_5:
+# 34 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_2
+# 37 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM01
+# 38 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 41 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE01_GET
+	goto SpecialStore_ObjectScript_MartEmployer_4
+
+SpecialStore_ObjectScript_MartEmployer_6:
+# 32 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE01_GET, SpecialStore_ObjectScript_MartEmployer_5
+	goto SpecialStore_ObjectScript_MartEmployer_4
+
+SpecialStore_ObjectScript_MartEmployer_10:
+# 46 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_4
+# 49 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM05
+# 50 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 53 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE02_GET
+	goto SpecialStore_ObjectScript_MartEmployer_9
+
+SpecialStore_ObjectScript_MartEmployer_11:
+# 44 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE02_GET, SpecialStore_ObjectScript_MartEmployer_10
+	goto SpecialStore_ObjectScript_MartEmployer_9
+
+SpecialStore_ObjectScript_MartEmployer_15:
+# 58 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_5
+# 61 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM06
+# 62 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 65 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE03_GET
+	goto SpecialStore_ObjectScript_MartEmployer_14
+
+SpecialStore_ObjectScript_MartEmployer_16:
+# 56 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE03_GET, SpecialStore_ObjectScript_MartEmployer_15
+	goto SpecialStore_ObjectScript_MartEmployer_14
+
+SpecialStore_ObjectScript_MartEmployer_20:
+# 70 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_6
+# 73 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM04
+# 74 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 77 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE04_GET
+	goto SpecialStore_ObjectScript_MartEmployer_19
+
+SpecialStore_ObjectScript_MartEmployer_21:
+# 68 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE04_GET, SpecialStore_ObjectScript_MartEmployer_20
+	goto SpecialStore_ObjectScript_MartEmployer_19
+
+SpecialStore_ObjectScript_MartEmployer_25:
+# 82 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_7
+# 85 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM03
+# 86 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 89 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE05_GET
+	goto SpecialStore_ObjectScript_MartEmployer_24
+
+SpecialStore_ObjectScript_MartEmployer_26:
+# 80 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE05_GET, SpecialStore_ObjectScript_MartEmployer_25
+	goto SpecialStore_ObjectScript_MartEmployer_24
+
+SpecialStore_ObjectScript_MartEmployer_30:
+# 94 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_8
+# 97 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM02
+# 98 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 101 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE06_GET
+	goto SpecialStore_ObjectScript_MartEmployer_29
+
+SpecialStore_ObjectScript_MartEmployer_31:
+# 92 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE06_GET, SpecialStore_ObjectScript_MartEmployer_30
+	goto SpecialStore_ObjectScript_MartEmployer_29
+
+SpecialStore_ObjectScript_MartEmployer_35:
+# 106 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_9
+# 109 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM08
+# 110 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 113 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE07_GET
+	goto SpecialStore_ObjectScript_MartEmployer_34
+
+SpecialStore_ObjectScript_MartEmployer_36:
+# 104 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE07_GET, SpecialStore_ObjectScript_MartEmployer_35
+	goto SpecialStore_ObjectScript_MartEmployer_34
+
+SpecialStore_ObjectScript_MartEmployer_40:
+# 118 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_10
+# 121 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	giveitem ITEM_HM07
+# 122 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	msgbox SpecialStore_ObjectScript_MartEmployer_Text_3
+# 125 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	setflag FLAG_BADGE08_GET
+	goto SpecialStore_ObjectScript_MartEmployer_39
+
+SpecialStore_ObjectScript_MartEmployer_41:
+# 116 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	goto_if_unset FLAG_BADGE08_GET, SpecialStore_ObjectScript_MartEmployer_40
+	goto SpecialStore_ObjectScript_MartEmployer_39
+
 
 	.align 2
-# 35 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 131 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 MODHeadquarters_SpecialShopShop:
-# 36 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 132 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_BLUE_FLUTE
-# 37 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 133 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_YELLOW_FLUTE
-# 38 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 134 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_RED_FLUTE
-# 39 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 135 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_BLACK_FLUTE
-# 40 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 136 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_WHITE_FLUTE
-# 41 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_HELIX_FOSSIL
-# 42 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_DOME_FOSSIL
-# 43 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_OLD_AMBER
-# 44 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ROOT_FOSSIL
-# 45 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_CLAW_FOSSIL
-# 46 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ARMOR_FOSSIL
-# 47 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_SKULL_FOSSIL
-# 48 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_COVER_FOSSIL
-# 49 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_PLUME_FOSSIL
-# 50 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_JAW_FOSSIL
-# 51 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_SAIL_FOSSIL
-# 52 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FOSSILIZED_BIRD
-# 53 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FOSSILIZED_FISH
-# 54 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FOSSILIZED_DRAKE
-# 55 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FOSSILIZED_DINO
-# 56 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_NORMALIUM_Z
-# 57 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FIRIUM_Z
-# 58 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_WATERIUM_Z
-# 59 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ELECTRIUM_Z
-# 60 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_GRASSIUM_Z
-# 61 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ICIUM_Z
-# 62 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FIGHTINIUM_Z
-# 63 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_POISONIUM_Z
-# 64 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_GROUNDIUM_Z
-# 65 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FLYINIUM_Z
-# 66 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_PSYCHIUM_Z
-# 67 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_BUGINIUM_Z
-# 68 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ROCKIUM_Z
-# 69 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_GHOSTIUM_Z
-# 70 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_DRAGONIUM_Z
-# 71 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_DARKINIUM_Z
-# 72 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_STEELIUM_Z
-# 73 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_FAIRIUM_Z
-# 74 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_PIKANIUM_Z
-# 75 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_EEVIUM_Z
-# 76 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_SNORLIUM_Z
-# 77 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_DECIDIUM_Z
-# 78 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_INCINIUM_Z
-# 79 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_PRIMARIUM_Z
-# 80 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_LYCANIUM_Z
-# 81 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_MIMIKIUM_Z
-# 82 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_KOMMONIUM_Z
-# 83 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_TAPUNIUM_Z
-# 84 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_SOLGANIUM_Z
-# 85 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_LUNALIUM_Z
-# 86 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_MARSHADIUM_Z
-# 87 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ALORAICHIUM_Z
-# 88 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_PIKASHUNIUM_Z
-# 89 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ULTRANECROZIUM_Z
-# 90 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 137 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_OVAL_CHARM
-# 91 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 138 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_SHINY_CHARM
-# 92 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 139 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_CATCHING_CHARM
-# 93 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 140 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_EXP_CHARM
-# 94 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 141 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_MEGA_RING
-# 95 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 142 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_Z_POWER_RING
-# 96 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 143 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_MACH_BIKE
-# 97 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 144 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_ACRO_BIKE
-# 98 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 145 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_OLD_ROD
-# 99 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 146 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_GOOD_ROD
-# 100 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 147 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_SUPER_ROD
-# 101 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 148 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_DOWSING_MACHINE
-# 102 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 149 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_POKEMON_BOX_LINK
-# 103 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 150 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_POKE_RADAR
+# 151 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_AXE
+# 152 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_LANTERN
+# 153 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ROCK_SMASHER
+# 154 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_BOLDER_PUSHER
+# 155 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_SURFBOARD
+# 156 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_BIRD_FLUTE
+# 157 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_DIVING_EQUIPMENT
+# 158 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_REVERSE_WATERFALL
+# 159 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_CAMPING_EQUIPMENT
+# 160 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_HELIX_FOSSIL
+# 161 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_DOME_FOSSIL
+# 162 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_OLD_AMBER
+# 163 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ROOT_FOSSIL
+# 164 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_CLAW_FOSSIL
+# 165 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ARMOR_FOSSIL
+# 166 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_SKULL_FOSSIL
+# 167 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_COVER_FOSSIL
+# 168 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_PLUME_FOSSIL
+# 169 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_JAW_FOSSIL
+# 170 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_SAIL_FOSSIL
+# 171 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FOSSILIZED_BIRD
+# 172 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FOSSILIZED_FISH
+# 173 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FOSSILIZED_DRAKE
+# 174 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FOSSILIZED_DINO
+# 175 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_NORMALIUM_Z
+# 176 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FIRIUM_Z
+# 177 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_WATERIUM_Z
+# 178 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ELECTRIUM_Z
+# 179 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_GRASSIUM_Z
+# 180 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ICIUM_Z
+# 181 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FIGHTINIUM_Z
+# 182 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_POISONIUM_Z
+# 183 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_GROUNDIUM_Z
+# 184 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FLYINIUM_Z
+# 185 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_PSYCHIUM_Z
+# 186 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_BUGINIUM_Z
+# 187 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ROCKIUM_Z
+# 188 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_GHOSTIUM_Z
+# 189 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_DRAGONIUM_Z
+# 190 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_DARKINIUM_Z
+# 191 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_STEELIUM_Z
+# 192 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_FAIRIUM_Z
+# 193 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_PIKANIUM_Z
+# 194 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_EEVIUM_Z
+# 195 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_SNORLIUM_Z
+# 196 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_DECIDIUM_Z
+# 197 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_INCINIUM_Z
+# 198 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_PRIMARIUM_Z
+# 199 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_LYCANIUM_Z
+# 200 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_MIMIKIUM_Z
+# 201 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_KOMMONIUM_Z
+# 202 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_TAPUNIUM_Z
+# 203 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_SOLGANIUM_Z
+# 204 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_LUNALIUM_Z
+# 205 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_MARSHADIUM_Z
+# 206 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ALORAICHIUM_Z
+# 207 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_PIKASHUNIUM_Z
+# 208 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.2byte ITEM_ULTRANECROZIUM_Z
 	.2byte ITEM_NONE
 
 SpecialStore_ObjectScript_MartEmployer_Text_0:
@@ -212,5 +406,83 @@ SpecialStore_ObjectScript_MartEmployer_Text_1:
 	.string "Where can N.U.T. help you with today?$"
 
 SpecialStore_ObjectScript_MartEmployer_Text_2:
-# 31 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+# 34 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought an Axe!\n"
+	.string "A great tool for if you need to get rid\l"
+	.string "of some pesky trees!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_3:
+# 38 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "I the older days we used to need\n"
+	.string "pokemon with HMs to travel around and\l"
+	.string "clear stuff up.\l"
+	.string "Nowadays we just use tools that can do\l"
+	.string "the job for us, so these HMs have\l"
+	.string "become quite useless.\p"
+	.string "Hope they still provide usefull to you!$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_4:
+# 46 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought a Lantern!\n"
+	.string "A great tool for exploring those dark\l"
+	.string "places!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_5:
+# 58 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought the Rock Smasher!\n"
+	.string "A great tool for if you need to get rid\l"
+	.string "of those annoying rocks!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_6:
+# 70 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought the Bolder Pusher!\n"
+	.string "A great tool for when big boulders are\l"
+	.string "blocking your way!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_7:
+# 82 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought a surfboard!\n"
+	.string "A great item if you want to travel over\l"
+	.string "water! Here, allow me to give you a gift\l"
+	.string "as well with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_8:
+# 94 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought a bird flute!\n"
+	.string "This simple flute will allow you to lure a\l"
+	.string "friendly bird pokemon to you and bring\l"
+	.string "you to any place you have visited\l"
+	.string "before!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_9:
+# 106 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought some Diving\n"
+	.string "Equipment!\n"
+	.string "Very usefull if you want to explore the\l"
+	.string "deeper waters in {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_10:
+# 118 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
+	.string "Oh, I see you bought the Reverse\n"
+	.string "Waterfall!\n"
+	.string "A small, but fantastic gadget that will\l"
+	.string "allow you to travel up a waterfall\l"
+	.string "without any trouble!\l"
+	.string "Here, allow me to give you a gift as well\l"
+	.string "with it:$"
+
+SpecialStore_ObjectScript_MartEmployer_Text_11:
+# 127 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.string "Please come again!$"

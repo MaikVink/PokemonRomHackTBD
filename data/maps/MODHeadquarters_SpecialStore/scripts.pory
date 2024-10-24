@@ -28,6 +28,102 @@ script SpecialStore_ObjectScript_MartEmployer{
     }
     msgbox(format("Where can N.U.T. help you with today?"))
     pokemart(MODHeadquarters_SpecialShopShop)
+    checkitem(ITEM_AXE, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE01_GET))
+    {
+        msgbox(format("Oh, I see you bought an Axe! \n
+        A great tool for if you need to get rid of some pesky trees!\l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM01)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE01_GET)
+    }
+    checkitem(ITEM_LANTERN, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE02_GET))
+    {
+        msgbox(format("Oh, I see you bought a Lantern! \n
+        A great tool for exploring those dark places!\l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM05)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE02_GET)
+    }
+    checkitem(ITEM_ROCK_SMASHER, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE03_GET))
+    {
+        msgbox(format("Oh, I see you bought the Rock Smasher! \n
+        A great tool for if you need to get rid of those annoying rocks! \l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM06)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE03_GET)
+    }
+    checkitem(ITEM_BOLDER_PUSHER, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE04_GET))
+    {
+        msgbox(format("Oh, I see you bought the Bolder Pusher! \n
+        A great tool for when big boulders are blocking your way! \l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM04)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE04_GET)
+    }
+    checkitem(ITEM_SURFBOARD, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE05_GET))
+    {
+        msgbox(format("Oh, I see you bought a surfboard! \n
+        A great item if you want to travel over water!
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM03)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE05_GET)
+    }
+    checkitem(ITEM_BIRD_FLUTE, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE06_GET))
+    {
+        msgbox(format("Oh, I see you bought a bird flute! \n
+        This simple flute will allow you to lure a friendly bird pokemon to you and bring you to any place you have visited before! \l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM02)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE06_GET)
+    }
+    checkitem(ITEM_DIVING_EQUIPMENT, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE07_GET))
+    {
+        msgbox(format("Oh, I see you bought some Diving Equipment! \n
+        Very usefull if you want to explore the deeper waters in {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}!\l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM08)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE07_GET)
+    }
+    checkitem(ITEM_REVERSE_WATERFALL, 1)
+    if(var(VAR_RESULT) && !flag(FLAG_BADGE08_GET))
+    {
+        msgbox(format("Oh, I see you bought the Reverse Waterfall! \n
+        A small, but fantastic gadget that will allow you to travel up a waterfall without any trouble! \l
+        Here, allow me to give you a gift as well with it:"))
+        giveitem(ITEM_HM07)
+        msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
+        Nowadays we just use tools that can do the job for us, so these HMs have become quite useless.\p
+        Hope they still provide usefull to you!"))
+        setflag(FLAG_BADGE08_GET)
+    }
     msgbox(format("Please come again!"))
     releaseall
 }
@@ -38,6 +134,29 @@ mart MODHeadquarters_SpecialShopShop{
     ITEM_RED_FLUTE
     ITEM_BLACK_FLUTE
     ITEM_WHITE_FLUTE
+    ITEM_OVAL_CHARM
+    ITEM_SHINY_CHARM
+    ITEM_CATCHING_CHARM
+    ITEM_EXP_CHARM
+    ITEM_MEGA_RING
+    ITEM_Z_POWER_RING
+    ITEM_MACH_BIKE
+    ITEM_ACRO_BIKE
+    ITEM_OLD_ROD
+    ITEM_GOOD_ROD
+    ITEM_SUPER_ROD
+    ITEM_DOWSING_MACHINE
+    ITEM_POKEMON_BOX_LINK
+    ITEM_POKE_RADAR
+    ITEM_AXE
+    ITEM_LANTERN
+    ITEM_ROCK_SMASHER
+    ITEM_BOLDER_PUSHER
+    ITEM_SURFBOARD
+    ITEM_BIRD_FLUTE
+    ITEM_DIVING_EQUIPMENT
+    ITEM_REVERSE_WATERFALL
+    ITEM_CAMPING_EQUIPMENT
     ITEM_HELIX_FOSSIL
     ITEM_DOME_FOSSIL
     ITEM_OLD_AMBER
@@ -87,27 +206,4 @@ mart MODHeadquarters_SpecialShopShop{
     ITEM_ALORAICHIUM_Z
     ITEM_PIKASHUNIUM_Z
     ITEM_ULTRANECROZIUM_Z
-    ITEM_OVAL_CHARM
-    ITEM_SHINY_CHARM
-    ITEM_CATCHING_CHARM
-    ITEM_EXP_CHARM
-    ITEM_MEGA_RING
-    ITEM_Z_POWER_RING
-    ITEM_MACH_BIKE
-    ITEM_ACRO_BIKE
-    ITEM_OLD_ROD
-    ITEM_GOOD_ROD
-    ITEM_SUPER_ROD
-    ITEM_DOWSING_MACHINE
-    ITEM_POKEMON_BOX_LINK
-    ITEM_POKE_RADAR
-    //ITEM_AXE
-    //ITEM_LAMP
-    //ITEM_ROCK_SMASHER
-    //ITEM_BOLDER_PUSHER
-    //ITEM_SURFBOARD
-    //ITEM_BIRD_CALLER
-    //ITEM_DIVING_EQUIPMENT
-    //ITEM_REVERSE_WATERFALL
-    //ITEM_CAMPING_EQUIPMENT
 }

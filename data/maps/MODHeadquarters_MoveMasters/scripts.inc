@@ -361,56 +361,56 @@ MoveTutor_DecideMove_3:
 # 253 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_FRENZY_PLANT
 # 254 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_FRENZY_PLANT
+	setvar VAR_0x8005, MOVE_FRENZY_PLANT
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_4:
 # 256 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_BLAST_BURN
 # 257 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_BLAST_BURN
+	setvar VAR_0x8005, MOVE_BLAST_BURN
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_5:
 # 259 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_HYDRO_CANNON
 # 260 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_HYDRO_CANNON
+	setvar VAR_0x8005, MOVE_HYDRO_CANNON
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_6:
 # 262 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_VOLT_TACKLE
 # 263 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_VOLT_TACKLE
+	setvar VAR_0x8005, MOVE_VOLT_TACKLE
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_7:
 # 265 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_DRACO_METEOR
 # 266 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_DRACO_METEOR
+	setvar VAR_0x8005, MOVE_DRACO_METEOR
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_8:
 # 268 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_DRAGON_ASCENT
 # 269 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_DRAGON_ASCENT
+	setvar VAR_0x8005, MOVE_DRAGON_ASCENT
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_9:
 # 271 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_RELIC_SONG
 # 272 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_RELIC_SONG
+	setvar VAR_0x8005, MOVE_RELIC_SONG
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_10:
 # 274 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_SECRET_SWORD
 # 275 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	setvar VAR_0x8005 MOVE_SECRET_SWORD
+	setvar VAR_0x8005, MOVE_SECRET_SWORD
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_12:

@@ -873,6 +873,15 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SWAP_SNACK] = {gItemIcon_SwapSnack, gItemIconPalette_SwapSnack},
     [ITEM_TWICE_SPICED_RADISH] = {gItemIcon_TwiceSpicedRadish, gItemIconPalette_TwiceSpicedRadish},
     [ITEM_POKESHI_DOLL] = {gItemIcon_PokeshiDoll, gItemIconPalette_PokeshiDoll},
+    [ITEM_AXE] = {gItemIcon_Axe, gItemIconPalette_Axe},
+    [ITEM_LANTERN] = {gItemIcon_Lantern, gItemIconPalette_Lantern},
+    [ITEM_ROCK_SMASHER] = {gItemIcon_RockSmasher, gItemIconPalette_RockSmasher},
+    [ITEM_BOLDER_PUSHER] = {gItemIcon_BolderPusher, gItemIconPalette_BolderPusher},
+    [ITEM_SURFBOARD] = {gItemIcon_Surfboard, gItemIconPalette_Surfboard},
+    [ITEM_BIRD_FLUTE] = {gItemIcon_BirdFlute, gItemIconPalette_BirdFlute},
+    [ITEM_DIVING_EQUIPMENT] = {gItemIcon_DivingEquipment, gItemIconPalette_DivingEquipment},
+    [ITEM_REVERSE_WATERFALL] = {gItemIcon_ReverseWaterfall, gItemIconPalette_ReverseWaterfall},
+    [ITEM_CAMPING_EQUIPMENT] = {gItemIcon_CampingEquipment, gItemIconPalette_CampingEquipment},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

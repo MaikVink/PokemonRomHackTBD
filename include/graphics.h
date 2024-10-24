@@ -1738,6 +1738,26 @@ extern const u32 gItemIconPalette_TwiceSpicedRadish[];
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];
 
+//new items
+extern const u32 gItemIcon_Axe[];
+extern const u32 gItemIconPalette_Axe[];
+extern const u32 gItemIcon_Lantern[];
+extern const u32 gItemIconPalette_Lantern[];
+extern const u32 gItemIcon_RockSmasher[];
+extern const u32 gItemIconPalette_RockSmasher[];
+extern const u32 gItemIcon_BolderPusher[];
+extern const u32 gItemIconPalette_BolderPusher[];
+extern const u32 gItemIcon_Surfboard[];
+extern const u32 gItemIconPalette_Surfboard[];
+extern const u32 gItemIcon_BirdFlute[];
+extern const u32 gItemIconPalette_BirdFlute[];
+extern const u32 gItemIcon_DivingEquipment[];
+extern const u32 gItemIconPalette_DivingEquipment[];
+extern const u32 gItemIcon_ReverseWaterfall[];
+extern const u32 gItemIconPalette_ReverseWaterfall[];
+extern const u32 gItemIcon_CampingEquipment[];
+extern const u32 gItemIconPalette_CampingEquipment[];
+
 //menu graphics
 extern const u16 gMenuInfoElements1_Pal[16];
 extern const u16 gMenuInfoElements2_Pal[16];

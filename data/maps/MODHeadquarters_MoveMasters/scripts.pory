@@ -251,28 +251,28 @@ script MoveTutor_DecideMove
     {
         case 0:
             buffermovename(STR_VAR_1, MOVE_FRENZY_PLANT)
-            setvar(VAR_0x8005 MOVE_FRENZY_PLANT)
+            setvar(VAR_0x8005, MOVE_FRENZY_PLANT)
         case 1:
             buffermovename(STR_VAR_1, MOVE_BLAST_BURN)
-            setvar(VAR_0x8005 MOVE_BLAST_BURN)
+            setvar(VAR_0x8005, MOVE_BLAST_BURN)
         case 2:
             buffermovename(STR_VAR_1, MOVE_HYDRO_CANNON)
-            setvar(VAR_0x8005 MOVE_HYDRO_CANNON)
+            setvar(VAR_0x8005, MOVE_HYDRO_CANNON)
         case 3:
             buffermovename(STR_VAR_1, MOVE_VOLT_TACKLE)
-            setvar(VAR_0x8005 MOVE_VOLT_TACKLE)
+            setvar(VAR_0x8005, MOVE_VOLT_TACKLE)
         case 4:
             buffermovename(STR_VAR_1, MOVE_DRACO_METEOR)
-            setvar(VAR_0x8005 MOVE_DRACO_METEOR)
+            setvar(VAR_0x8005, MOVE_DRACO_METEOR)
         case 5:
             buffermovename(STR_VAR_1, MOVE_DRAGON_ASCENT)
-            setvar(VAR_0x8005 MOVE_DRAGON_ASCENT)
+            setvar(VAR_0x8005, MOVE_DRAGON_ASCENT)
         case 6:
             buffermovename(STR_VAR_1, MOVE_RELIC_SONG)
-            setvar(VAR_0x8005 MOVE_RELIC_SONG)
+            setvar(VAR_0x8005, MOVE_RELIC_SONG)
         case 7:
             buffermovename(STR_VAR_1, MOVE_SECRET_SWORD)
-            setvar(VAR_0x8005 MOVE_SECRET_SWORD)
+            setvar(VAR_0x8005, MOVE_SECRET_SWORD)
         default:
             msgbox(format("Just what I though...\p
             Come back when you have a pokemon worthy of my abilities!"))

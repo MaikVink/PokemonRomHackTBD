@@ -12635,4 +12635,130 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_AXE] =
+    {
+        .name = _("Axe"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "An sturdy axe\n"
+            "Perfect to chop\n"
+            "small trees."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_Axe, 
+    },
+
+    [ITEM_LANTERN] =
+    {
+        .name = _("Lantern"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A small latern\n"
+            "that can light up\n"
+            "dark places."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_ROCK_SMASHER] =
+    {
+        .name = _("Rock Smasher"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "An small tool\n"
+            "that is able to\n"
+            "smash small rocks."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_BOLDER_PUSHER] =
+    {
+        .name = _("Bolder Pusher"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A small tool\n"
+            "that is able to\n"
+            "push large bolders"
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_SURFBOARD] =
+    {
+        .name = _("Surfboard"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A small board\n"
+            "to travel over\n"
+            "water."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_BIRD_FLUTE] =
+    {
+        .name = _("Bird Flute"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A flute to call\n"
+            "friendly birds to\n"
+            "fly around."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_DIVING_EQUIPMENT] =
+    {
+        .name = _("Diving Equipm"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A small set of\n"
+            "equipment to dive\n"
+            "into deep waters."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_REVERSE_WATERFALL] =
+    {
+        .name = _("Waterfall Kit"),
+        .price = 100,
+        .description = COMPOUND_STRING(
+            "A small device\n"
+            "that allows you to\n"
+            "climb waterfalls."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
+
+    [ITEM_CAMPING_EQUIPMENT] =
+    {
+        .name = _("Camping Kit"),
+        .price = 5000,
+        .description = COMPOUND_STRING(
+            "Some equipment which\n"
+            "you can use to sleep\n"
+            "out in the wild."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD, 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+    },
 };
