@@ -65,6 +65,7 @@ static void ItemUseOnFieldCB_Itemfinder(u8);
 static void ItemUseOnFieldCB_Berry(u8);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
+static void ItemUseOnFieldCB_Axe(u8);
 static bool8 TryToWaterSudowoodo(void);
 static void BootUpSoundTMHM(u8);
 static void Task_ShowTMHMContainedMessage(u8);
@@ -230,7 +231,7 @@ void ItemUseOutOfBattle_ExpShare(u8 taskId)
 #endif
 }
 
-void ItemUseOutOfBattle_Bike(u8 taskId)
+void  ItemUseOutOfBattle_Bike(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     s16 coordsY;
@@ -1431,6 +1432,34 @@ void ItemUseOutOfBattle_Honey(u8 taskId)
     gFieldCallback = FieldCB_UseItemOnField;
     gBagMenu->newScreenCallback = CB2_ReturnToField;
     Task_FadeAndCloseBagMenu(taskId);
+}
+
+extern const u8 EventScript_UseCut[];
+
+void ItemUseOutOfBattle_Axe(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Axe;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Axe;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_Axe(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
+    {
+        gSpecialVar_LastTalked = OBJ_EVENT_GFX_CUTTABLE_TREE;
+        ScriptContext_SetupScript(EventScript_UseCut);
+    }
+    DestroyTask(taskId);
 }
 
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
