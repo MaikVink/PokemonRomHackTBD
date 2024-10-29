@@ -103,7 +103,7 @@ script SpecialStore_ObjectScript_MartEmployer{
     checkitem(ITEM_DIVING_EQUIPMENT, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE07_GET))
     {
-        msgbox(format("Oh, I see you bought some Diving Equipment! \n
+        msgbox(format("Oh, I see you bought some Diving Equipment! \l
         Very usefull if you want to explore the deeper waters in {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}!\l
         Here, allow me to give you a gift as well with it:"))
         giveitem(ITEM_HM08)
@@ -115,7 +115,7 @@ script SpecialStore_ObjectScript_MartEmployer{
     checkitem(ITEM_REVERSE_WATERFALL, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE08_GET))
     {
-        msgbox(format("Oh, I see you bought the Reverse Waterfall! \n
+        msgbox(format("Oh, I see you bought the Reverse Waterfall! \l
         A small, but fantastic gadget that will allow you to travel up a waterfall without any trouble! \l
         Here, allow me to give you a gift as well with it:"))
         giveitem(ITEM_HM07)

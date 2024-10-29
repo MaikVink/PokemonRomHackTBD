@@ -17,6 +17,7 @@
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
+#include "field_control_avatar.h"
 #include "field_weather.h"
 #include "fldeff.h"
 #include "item.h"
@@ -66,6 +67,13 @@ static void ItemUseOnFieldCB_Berry(u8);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static void ItemUseOnFieldCB_Axe(u8);
+static void ItemUseOnFieldCB_Lantern(u8);
+static void ItemUseOnFieldCB_RockSmasher(u8);
+static void ItemUseOnFieldCB_BolderPusher(u8);
+static void ItemUseOnFieldCB_SurfBoard(u8);
+static void ItemUseOnFieldCB_BirdFlute(u8);
+static void ItemUseOnFieldCB_DivingEquipment(u8);
+static void ItemUseOnFieldCB_ReverseWaterfall(u8);
 static bool8 TryToWaterSudowoodo(void);
 static void BootUpSoundTMHM(u8);
 static void Task_ShowTMHMContainedMessage(u8);
@@ -1456,10 +1464,222 @@ void ItemUseOnFieldCB_Axe(u8 taskId)
     LockPlayerFieldControls();
     if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
     {
-        gSpecialVar_LastTalked = OBJ_EVENT_GFX_CUTTABLE_TREE;
+        GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
+        gPlayerFacingPosition.elevation = PlayerGetElevation();
+        gSpecialVar_LastTalked = GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
         ScriptContext_SetupScript(EventScript_UseCut);
     }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
     DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_Lantern(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Lantern;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Lantern;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_Lantern(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if(gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
+    {
+        ScriptContext_SetupScript(EventScript_UseFlash);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_RockSmasher(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_RockSmasher;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_RockSmasher;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_RockSmasher(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
+    {
+        GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
+        gPlayerFacingPosition.elevation = PlayerGetElevation();
+        gSpecialVar_LastTalked = GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
+        ScriptContext_SetupScript(EventScript_UseRockSmash);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_BolderPusher(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_BolderPusher;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_BolderPusher;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_BolderPusher(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER) == TRUE)
+    {
+        GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
+        gPlayerFacingPosition.elevation = PlayerGetElevation();
+        gSpecialVar_LastTalked = GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
+        ScriptContext_SetupScript(EventScript_UseStrength);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_SurfBoard(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_SurfBoard;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_SurfBoard;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_SurfBoard(u8 taskId)
+{           
+    LockPlayerFieldControls();
+    if(IsPlayerFacingSurfableFishableWater() == TRUE)
+    {
+        ScriptContext_SetupScript(EventScript_QuickSurf);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+    UnlockPlayerFieldControls();
+}
+
+void ItemUseOutOfBattle_BirdFlute(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_BirdFlute;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_BirdFlute;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_BirdFlute(u8 taskId)
+{    
+}
+
+void ItemUseOutOfBattle_DivingEquipment(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_DivingEquipment;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_DivingEquipment;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_DivingEquipment(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    {
+        ScriptContext_SetupScript(EventScript_QuickDiveUnderwater);
+    }
+    else if (TrySetDiveWarp() == 2)
+    {
+        ScriptContext_SetupScript(EventScript_QuickDive);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+    UnlockPlayerFieldControls();
+}
+
+void ItemUseOutOfBattle_ReverseWaterfall(u8 taskId)
+{
+    if(!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_ReverseWaterfall;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseOnFieldCB_ReverseWaterfall;
+        SetUpItemUseOnFieldCallback(taskId); 
+    }
+}
+
+void ItemUseOnFieldCB_ReverseWaterfall(u8 taskId)
+{
+    LockPlayerFieldControls();
+    if(IsPlayerSurfingNorth() == TRUE)
+    {
+        ScriptContext_SetupScript(EventScript_QuickWaterfall);
+    }
+    else
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    DestroyTask(taskId);
+    UnlockPlayerFieldControls();
 }
 
 void ItemUseOutOfBattle_CannotUse(u8 taskId)

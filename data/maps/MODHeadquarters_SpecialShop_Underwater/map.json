@@ -6,13 +6,19 @@
   "region_map_section": "MAPSEC_MOD_HEADQUARTERS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNDERWATER",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_MODHEADQUARTERS_SPECIAL_STORE",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
   "object_events": [
 
   ],

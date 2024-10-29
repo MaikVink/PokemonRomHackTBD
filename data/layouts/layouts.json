@@ -4584,7 +4584,7 @@
     {
       "id": "LAYOUT_MODHEADQUARTERS_SPECIAL_SHOP_UNDERWATER",
       "name": "MODHeadquarters_SpecialShop_Underwater_Layout",
-      "width": 31,
+      "width": 38,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",
