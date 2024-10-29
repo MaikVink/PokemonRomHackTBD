@@ -12661,7 +12661,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_Lantern, 
     },
 
     [ITEM_ROCK_SMASHER] =
@@ -12675,7 +12675,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_RockSmasher, 
     },
 
     [ITEM_BOLDER_PUSHER] =
@@ -12689,7 +12689,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_BolderPusher, 
     },
 
     [ITEM_SURFBOARD] =
@@ -12703,7 +12703,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_SurfBoard, 
     },
 
     [ITEM_BIRD_FLUTE] =
@@ -12717,7 +12717,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_BirdFlute, 
     },
 
     [ITEM_DIVING_EQUIPMENT] =
@@ -12731,7 +12731,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_DivingEquipment, 
     },
 
     [ITEM_REVERSE_WATERFALL] =
@@ -12745,7 +12745,7 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
+        .fieldUseFunc = ItemUseOutOfBattle_ReverseWaterfall, 
     },
 
     [ITEM_CAMPING_EQUIPMENT] =

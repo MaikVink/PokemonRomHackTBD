@@ -467,7 +467,7 @@ SpecialStore_ObjectScript_MartEmployer_Text_8:
 SpecialStore_ObjectScript_MartEmployer_Text_9:
 # 106 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.string "Oh, I see you bought some Diving\n"
-	.string "Equipment!\n"
+	.string "Equipment!\l"
 	.string "Very usefull if you want to explore the\l"
 	.string "deeper waters in {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}!\l"
 	.string "Here, allow me to give you a gift as well\l"
@@ -476,7 +476,7 @@ SpecialStore_ObjectScript_MartEmployer_Text_9:
 SpecialStore_ObjectScript_MartEmployer_Text_10:
 # 118 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.string "Oh, I see you bought the Reverse\n"
-	.string "Waterfall!\n"
+	.string "Waterfall!\l"
 	.string "A small, but fantastic gadget that will\l"
 	.string "allow you to travel up a waterfall\l"
 	.string "without any trouble!\l"

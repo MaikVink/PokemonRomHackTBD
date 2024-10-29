@@ -111,6 +111,16 @@ EventScript_CancelSmash::
 	releaseall
 	end
 
+EventScript_FailedFieldEffect::
+	msgbox Text_Dad_Advice, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Text_Dad_Advice:
+	.string "DAD's advice…\n"
+	.string "{PLAYER}, there's a time and place for\l"
+	.string "everything!$"
+
 Text_WantToSmash:
 	.string "This rock appears to be breakable.\n"
 	.string "Would you like to use ROCK SMASH?$"
@@ -204,6 +214,15 @@ EventScript_EndWaterfall::
 	releaseall
 	end
 
+EventScript_QuickWaterfall::
+	lockall
+	setvar VAR_RESULT, 0
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_WATERFALL
+	goto EventScript_EndWaterfall
+
 Text_CantWaterfall:
 	.string "A wall of water is crashing down with\n"
 	.string "a mighty roar.$"
@@ -260,6 +279,29 @@ EventScript_CantSurface::
 
 EventScript_EndSurface::
 	releaseall
+	end
+
+EventScript_QuickDive::
+	lockall
+	setvar VAR_RESULT, 0
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndDive
+	end
+
+EventScript_QuickDiveUnderwater::
+	lockall
+	setvar VAR_RESULT, 0
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndSurface
 	end
 
 Text_CantDive:
