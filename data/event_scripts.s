@@ -1118,3 +1118,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MODHeadquarters_EvoMasters_Rainy/scripts.inc"
 
 	.include "data/maps/MODHeadquarters_EvoMasters_Fog/scripts.inc"
+
+	.include "data/maps/Empty/scripts.inc"

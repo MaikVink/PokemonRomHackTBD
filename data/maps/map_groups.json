@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorMODQuarters",
-    "gMapGroup_CliffToNowhere"
+    "gMapGroup_CliffToNowhere",
+    "gMapGroup_Dev"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -649,5 +650,8 @@
   ],
   "gMapGroup_CliffToNowhere": [
     "CliffToNowhere"
+  ],
+  "gMapGroup_Dev": [
+    "Empty"
   ]
 }

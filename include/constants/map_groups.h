@@ -618,6 +618,9 @@
 // gMapGroup_CliffToNowhere
 #define MAP_CLIFF_TO_NOWHERE (0 | (35 << 8))
 
-#define MAP_GROUPS_COUNT 36
+// gMapGroup_Dev
+#define MAP_EMPTY (0 | (36 << 8))
+
+#define MAP_GROUPS_COUNT 37
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

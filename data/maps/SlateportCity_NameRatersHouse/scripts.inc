@@ -10,10 +10,18 @@ SlateportCity_NameRatersHouse_EventScript_NameRater::
 	end
 
 SlateportCity_NameRatersHouse_EventScript_ChooseMonToRate::
+	showmoneybox 0, 0
+	msgbox SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, SlateportCity_NameRatersHouse_EventScript_RateMonNickname
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SlateportCity_NameRatersHouse_EventScript_DeclineNameRate
 	end
 
 SlateportCity_NameRatersHouse_EventScript_DeclineNameRate::
+	msgbox SlateportCity_NameRatersHouse_Text_Refund, MSGBOX_DEFAULT
 	msgbox SlateportCity_NameRatersHouse_Text_DoVisitAgain, MSGBOX_DEFAULT
+	hidemoneybox
 	release
 	end
 
@@ -43,7 +51,9 @@ SlateportCity_NameRatersHouse_EventScript_PlayerNotMonsOT::
 
 SlateportCity_NameRatersHouse_EventScript_ChangeNickname::
 	msgbox SlateportCity_NameRatersHouse_Text_Payment, MSGBOX_DEFAULT
+	playse SE_SHOP
 	removemoney 100
+	updatemoneybox
 	msgbox SlateportCity_NameRatersHouse_Text_WhatShallNewNameBe, MSGBOX_DEFAULT
 	call Common_EventScript_NameReceivedPartyMon
 	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
@@ -108,3 +118,7 @@ SlateportCity_NameRatersHouse_Text_Payment:
 	.string "First off, my payment if you\n"
 	.string "don't mind.$"
 
+SlateportCity_NameRatersHouse_Text_Refund:
+	.string "changed your mind?\n"
+	.string "well IN that case, here\l"
+	.string "is your money back!$"

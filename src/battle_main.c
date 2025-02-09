@@ -675,6 +675,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(PYRAMID_KING, "PYRAMID KING"),
     TRAINER_CLASS(RS_PROTAG, "{PKMN} TRAINER"),
     TRAINER_CLASS(INITIATIVE, "INITIATIVE", 4, ITEM_MASTER_BALL),
+    TRAINER_CLASS(AS_MEMBER, "A.S. Member", 5, ITEM_ULTRA_BALL),
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =
