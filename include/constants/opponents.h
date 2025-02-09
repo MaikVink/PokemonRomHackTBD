@@ -26,7 +26,7 @@
 #define TRAINER_TESSA_B0                      19 // Woman 2
 #define TRAINER_FIONA_B0_SHINY                20
 
-#define TRAINER_GRUNT_MUSEUM_2               21
+#define TRAINER_DENEITH_1                    21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
 #define TRAINER_GRUNT_MT_PYRE_1              23
 #define TRAINER_GRUNT_MT_PYRE_2              24

@@ -47,6 +47,7 @@ script EvoMAsters_ObjectScript_Masseuse{
         msgbox(format("Oh? Is that an Eevee I see in your party?\p alright, for this once I allow you to use my services for free if you want."))
         call(EvoMasters_CheckFreeMassageEevee)
     }
+    showmoneybox(0, 0)
     msgbox(format("Welcome!\p Want to give a pokemon a massage for 1000?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
@@ -102,6 +103,7 @@ script EvoMasters_GiveMassage
     msgbox(format("Which Pokemon would you like me to give a massage?"))
     special(ChooseMonForFriendShip)
     waitstate
+    showmoneybox(0, 0)
     if(var(VAR_0x8004) == 0xFF)
     {
         msgbox(format("please come again if you want me to give one of your pokemon a massage"))
@@ -109,9 +111,12 @@ script EvoMasters_GiveMassage
     else
     {
         msgbox(format("My work is done, they should now consider you a close friend.\p Now for my payment"))
+        playse(SE_SHOP)
         removemoney(1000)
+        updatemoneybox
         msgbox(format("Thank you for your patronage, may your friendship grow ever more!"))
     }
+    hidemoneybox
     return
 }
 
@@ -138,6 +143,7 @@ script EvoMasters_ObjectScript_Simulator
             end
         }
     }
+    showmoneybox(0, 0)
     msgbox(format("Would you require us to simulate a specific environment for you?\l We have a processing fee of 2500 to do so."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
@@ -155,6 +161,7 @@ script EvoMasters_ObjectScript_Simulator
     {
         msgbox(format("If you need something simulated, you know where to find me!"))        
     }
+    hidemoneybox
     releaseall
 }
 
@@ -192,7 +199,11 @@ script EvoMasters_StartSimulation{
     }
     copyvar(VAR_TEMP_0, VAR_RESULT)
     msgbox(format("Alright, we're all set! \p Now first, my fee."))
+    playse(SE_SHOP)
     removemoney(2500)
+    updatemoneybox
+    waitse
+    hidemoneybox
     msgbox(format("Now, as promised, one free Rare Candy as thanks for using our services:"))
     giveitem(ITEM_RARE_CANDY, 1)
     msgbox(format("And lastly, you're free to enter the simulation. You can walk out any time you're done what you came to do."))

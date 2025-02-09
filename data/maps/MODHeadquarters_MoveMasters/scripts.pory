@@ -30,6 +30,7 @@ script MoveMasters_ObjectScript_NameRater
         That being said, it is not easy to make your pokemon understand he has to listen to a new name, so I do require some compensation for my services\l
         How does 100 sound?"))
     }
+    showmoneybox(0,0)
     msgbox(format("So, do you want to rename one of your pokemon?\l
     My services will cost you 100."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -49,6 +50,7 @@ script MoveMasters_ObjectScript_NameRater
     {
         msgbox(format("Understood!\n Come back any time you want to change one of your pokemons names!"))
     }
+    hidemoneybox
     releaseall
 }
 
@@ -66,6 +68,7 @@ script MoveMasters_ObjectScript_MoveRememberer
         I don't care how you call me, as long as your pokemon has forgotten a move you would like him to relearn again, come talk to me.\p
         It'll cost you 500, but in return you can relearn any move your pokemon has once forgotten."))
     }
+    showmoneybox(0, 0)
     msgbox(format("Do you need one of your pokemons to remember something?\l
     Remember, it will cost you 500, HAHAHA!"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -77,7 +80,7 @@ script MoveMasters_ObjectScript_MoveRememberer
         }
         else
         {
-            msgbox(format("seems like you need ot remember to bring your money next time!\l
+            msgbox(format("Seems like you need ot remember to bring your money next time!\l
             HAHAHAHAHAHA!\p
             Ha...\p
             ha...\p
@@ -89,6 +92,7 @@ script MoveMasters_ObjectScript_MoveRememberer
     {
         msgbox(format("As long as you don't forget my services, your pokemons can remember any move they learned!"))
     }
+    hidemoneybox
     releaseall
 }
 
@@ -103,6 +107,7 @@ script MoveMasters_ObjectScript_MoveDeleter
         Does one of your pokemon refuse to forget one move? do you have some new tactic that requires your pokemon to forget everything he knows?
         Than you have come to the right guy! pay me 100 and I can let your pokemon forget any move you want."))
     }
+    showmoneybox(0, 0)
     msgbox(format("Does one of your pokemon need to forget something?\l
     Doing so will cost you 100"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -123,6 +128,7 @@ script MoveMasters_ObjectScript_MoveDeleter
     {
         msgbox(format("You know where to find me if you change your mind!"))
     }
+    hidemoneybox
     releaseall
 }
 
@@ -137,6 +143,7 @@ script MoveMasters_ObjectScript_EggTutor{
         It is quite difficult to do this, so I would need some compensation for my services... \p
         Does a 1000 sound agreeable with you?"))
     }
+    showmoneybox(0, 0)
     msgbox(format("Would you like one of your pokemon remember their egg move?\l
     I hope you don't mind that it will cost you 1000 to do this."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -145,7 +152,6 @@ script MoveMasters_ObjectScript_EggTutor{
         if(var(VAR_RESULT))
         {
             call(MoveMasters_LearnEggMove)
-            //msgbox(format("I'm sorry dear, I'm still working on my skills, please check again later."))
         }
         else
         {
@@ -158,6 +164,7 @@ script MoveMasters_ObjectScript_EggTutor{
         msgbox(format("Oh? Did you just come here to talk with me?\l
         Go ahead, relief your concerns to Granny, I'll listen."))
     }
+    hidemoneybox
     releaseall
 }
 
@@ -166,6 +173,7 @@ script MoveMasters_LearnEggMove
     msgbox(format("Who would you like me to learn one of their egg moves?"))
     special(ChooseMonForEggMoves)
     waitstate
+    showmoneybox(0, 0)
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN)
     {
         msgbox(format("Changed your mind? \n 
@@ -197,9 +205,12 @@ script MoveMasters_LearnEggMove
             }
             else
             {
+                showmoneybox(0, 0)
                 msgbox(format("Thank you for using my services dear. I hope you don't mind my payment...\l
                 I need to feed my children somehow..."))
+                playse(SE_SHOP)
                 removemoney(1000)
+                updatemoneybox
                 msgbox(format("Please, come back again."))
             }
         }
@@ -220,6 +231,7 @@ script MoveMasters_ObjectScript_MoveTutor{
         Frenzy Plant, Hydro Cannon, Blast Burn, Dragon Ascent, and many others I can offer you.
         It took me years to master these moves so I'll require some compensation. About a 1000 would work for me."))
     }
+    showmoneybox(0, 0)
     msgbox(format("So, have a pokemon worthy for my services?\l
     a 1000 to learn such a move seems only fair to me."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
@@ -239,12 +251,14 @@ script MoveMasters_ObjectScript_MoveTutor{
     {
         msgbox(format("I thought so. Do come back when you have a pokemon worthy of my time."))
     }
+    hidemoneybox
     releaseall
 }
 
 script MoveTutor_DecideMove
 {
     message(format("What move would you like me to learn your pokemon?"))
+    hidemoneybox
     multichoicegrid(10, 0, MULTI_MOVE_TUTOR, 2, 0)
     closemessage
     switch(var(VAR_RESULT))
@@ -276,6 +290,8 @@ script MoveTutor_DecideMove
         default:
             msgbox(format("Just what I though...\p
             Come back when you have a pokemon worthy of my abilities!"))
+            releaseall
+            end
     }
 
     msgbox(format("Which pokemon would you like me to learn {STR_VAR_1} to?"))
@@ -288,9 +304,12 @@ script MoveTutor_DecideMove
     }
     else
     {
+        showmoneybox(0, 0)
         msgbox(format("Done! Your pokemon now knows {STR_VAR_1}!\p 
         Now if you don't mind paying me for my work..."))
+        playse(SE_SHOP)
         removemoney(1000)
+        updatemoneybox
         msgbox("Come again if you need me!")
     }
 }

@@ -252,16 +252,16 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_FionaNoBadgesShiny),
     },
 
-    [TRAINER_GRUNT_MUSEUM_2] =
+    [TRAINER_DENEITH_1] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
+        .trainerClass = TRAINER_CLASS_AS_MEMBER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_PIKE_QUEEN_LUCY,
+        .trainerName = _("Deneith"),
+        .items = {ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_GruntMuseum2),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .party = TRAINER_PARTY(sParty_Deneith1),
     },
 
     [TRAINER_GRUNT_SPACE_CENTER_1] =

@@ -1,0 +1,11 @@
+mapscripts Empty_MapScripts {}
+
+movement CommonMovement_NoticeUp {
+    face_up
+    emote_exclamation_mark    
+}
+
+movement CommonMovement_NoticeDown {
+    face_down
+    emote_exclamation_mark
+}

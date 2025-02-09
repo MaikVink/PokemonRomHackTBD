@@ -36,8 +36,11 @@ FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove::
 	special TeachMoveRelearnerMove
 	waitstate
 	goto_if_eq VAR_0x8004, 0, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
+	showmoneybox 0, 0
 	msgbox FallarborTown_MoveRelearnersHouse_Text_Payment, MSGBOX_DEFAULT
+	playse SE_SHOP
 	removemoney 500
+	updatemoneybox
 	goto FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	end
 
@@ -53,6 +56,7 @@ FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg::
 
 FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	msgbox FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
+	hidemoneybox
 	releaseall
 	end
 

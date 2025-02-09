@@ -41,8 +41,13 @@ LilycoveCity_MoveDeletersHouse_EventScript_TryForgetMove::
 	playfanfare MUS_MOVE_DELETED
 	waitfanfare
 	msgbox LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove, MSGBOX_DEFAULT
-	msgbox LilycoveCity_MoveDeletersHouse_Text_EggCantForgetMoves, MSGBOX_DEFAULT
+	showmoneybox 0, 0
+	msgbox LilycoveCity_MoveDeletersHouse_Text_Payment, MSGBOX_DEFAULT
+	playse SE_SHOP
 	removemoney 100
+	updatemoneybox
+	msgbox LilycoveCity_MoveDeletersHouse_Text_ComeAgain, MSGBOX_DEFAULT
+	hidemoneybox
 	releaseall
 	end
 

@@ -153,14 +153,21 @@ static const struct TrainerMon sParty_FionaNoBadgesShiny[] = {
     }
 };
 
-static const struct TrainerMon sParty_GruntMuseum2[] = {
+static const struct TrainerMon sParty_Deneith1[] = {
     {
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+        .lvl = 5,
+        .species = SPECIES_SHIELDON,
+        .moves = {MOVE_PROTECT, MOVE_TACKLE, MOVE_METAL_SOUND}
     },
     {
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+        .lvl = 8,
+        .species = SPECIES_CHARCADET,
+        .ability = ABILITY_FLAME_BODY
+    },
+    {
+        .lvl = 10,
+        .species = SPECIES_HONEDGE,
+        .moves = {MOVE_AUTOTOMIZE, MOVE_SHADOW_SNEAK, MOVE_FURY_CUTTER, MOVE_SLASH}
     }
 };
 
