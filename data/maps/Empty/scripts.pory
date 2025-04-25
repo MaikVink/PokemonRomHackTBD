@@ -1,4 +1,9 @@
+const NPC_LOCALID = 1
+
 mapscripts Empty_MapScripts {}
+
+script Debug_Trigger_TestFlying{
+}
 
 movement CommonMovement_NoticeUp {
     face_up
@@ -7,5 +12,26 @@ movement CommonMovement_NoticeUp {
 
 movement CommonMovement_NoticeDown {
     face_down
+    emote_exclamation_mark
+}
+
+movement CommonMovement_LookLeft {
+    face_left
+}
+
+movement CommonMovement_LookRight {
+    face_right
+}
+
+movement CommonMovement_WalkDown1 {
+    walk_down
+}
+
+movement CommonMovement_WalkUp1{
+    walk_up
+}
+
+movement CommonMovement_WalkDownAndNotice {
+    walk_down
     emote_exclamation_mark
 }

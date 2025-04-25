@@ -3127,6 +3127,49 @@ u8 FldEff_NPCFlyOut(void)
     return spriteId;
 }
 
+static void SpriteCB_CustomNPCFlyOut(struct Sprite *sprite)
+{
+    struct Sprite *npcSprite;
+
+    sprite->x2 = Cos(sprite->data[2], 0x8c);
+    sprite->y2 = Sin(sprite->data[2], 0x48);
+    sprite->data[2] = (sprite->data[2] + 4) & 0xff;
+    if (sprite->data[0])
+    {
+        npcSprite = &gSprites[sprite->data[1]];
+        npcSprite->invisible = TRUE;
+        npcSprite->x = sprite->x + sprite->x2;
+        npcSprite->y = sprite->y + sprite->y2 - 8;
+        npcSprite->x2 = 0;
+        npcSprite->y2 = 0;
+    }
+
+    if (sprite->data[2] >= 0x80)
+        FieldEffectStop(sprite, FLDEFF_NPCFLY_OUT_CUSTOM);
+}
+
+u8 FldEff_NPCFlyOut_Custom(void)
+{
+    s16 x, y;
+    u8 spriteId;
+
+    x = gFieldEffectArguments[1] * 16;
+    y = gFieldEffectArguments[2] * 16;
+    spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], x, y, 1);
+    struct Sprite *sprite = &gSprites[spriteId];
+
+    sprite->oam.paletteNum = 0;
+    sprite->oam.priority = 1;
+    sprite->callback = SpriteCB_CustomNPCFlyOut;
+
+    // Save data
+    sprite->data[0] = 1;
+    sprite->data[1] = gFieldEffectArguments[0]; 
+
+    PlaySE(SE_M_FLY);
+    return spriteId;
+}
+
 static void SpriteCB_NPCFlyOut(struct Sprite *sprite)
 {
     struct Sprite *npcSprite;
@@ -3137,7 +3180,6 @@ static void SpriteCB_NPCFlyOut(struct Sprite *sprite)
     if (sprite->data[0])
     {
         npcSprite = &gSprites[sprite->data[1]];
-        npcSprite->coordOffsetEnabled = FALSE;
         npcSprite->x = sprite->x + sprite->x2;
         npcSprite->y = sprite->y + sprite->y2 - 8;
         npcSprite->x2 = 0;
