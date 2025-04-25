@@ -4644,9 +4644,9 @@
     {
       "id": "LAYOUT_EMPTY",
       "name": "Empty_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_SecretBase",
+      "width": 5,
+      "height": 5,
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Unused1",
       "border_filepath": "data/layouts/Empty/border.bin",
       "blockdata_filepath": "data/layouts/Empty/map.bin"
