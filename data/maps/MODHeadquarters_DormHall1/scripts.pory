@@ -4,12 +4,14 @@ const STATUEGUY_LOCALID = 8
 const LADY_LOCALID = 1
 const GUY_LOCALID = 3
 const LEADER_LOCALID = 2
+const AIRANEA_LOCALID = 9
 
 mapscripts MODHeadquarters_DormHall1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Dormhall1_OnTransition
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_STORY_PROGRESSION, 1: Dormhall1_Frame
+        VAR_STORY_PROGRESSION, 1: Dormhall1_Frame_FirstTimeEnter
         VAR_STORY_PROGRESSION, 10: Dormhall1_Frame_TournamentOver
+        VAR_STORY_PROGRESSION, 14: Dormhall1_Frame_DeneithDefeat
     ]
 }
 
@@ -27,6 +29,7 @@ script Dormhall1_OnTransition{
         setflag(FLAG_REVERSED_GUARD)
         setflag(FLAG_HIDE_LEADER)
         setflag(FLAG_HIDE_DENEITH)
+        setflag(FLAG_HIDE_AIRANEA)
         setflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
     }
     if(flag(FLAG_TOURNAMENT_LOST))
@@ -35,21 +38,14 @@ script Dormhall1_OnTransition{
         clearflag(FLAG_FIRST_RIVAL_MEETING)
         clearflag(FLAG_HIDE_LEADER)
     }
+    if(var(VAR_STORY_PROGRESSION) == 14)
+    {
+        setflag(FLAG_HIDE_DENEITH)
+        clearflag(FLAG_HIDE_AIRANEA)
+    }
 }
 
-script Dormhall1_Frame_TournamentOver{
-    lockall
-    if(flag(FLAG_TOURNAMENT_LOST))
-    {
-    }
-    else
-    {
-        call(DormHall1_WonTournament)
-    }
-    releaseall
-}
-
-script Dormhall1_Frame{
+script Dormhall1_Frame_FirstTimeEnter{
     lock
     applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
     waitmovement(0)
@@ -70,6 +66,94 @@ script Dormhall1_Frame{
     setvar(VAR_STORY_PROGRESSION, 2)
     removeobject(FIONA_ID, MAP_MODHEADQUARTERS_DORM_HALL1)
     release
+}
+
+script Dormhall1_Frame_TournamentOver{
+    lockall
+    if(flag(FLAG_TOURNAMENT_LOST))
+    {
+        call(DormHall1_LostTournament)
+    }
+    else
+    {
+        call(DormHall1_WonTournament)
+    }
+    releaseall
+}
+
+script DormHall1_LostTournament{
+    applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
+    waitmovement(0)
+    applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
+    waitmovement(0)
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh {PLAYER}, you're finally awake!\p
+    After you lost you kinda seemed to be out of it for a while...\l
+    this is the first time you left your room since the tournament is over!\p
+    Oh in case you don't know already, I've won that tournament!\p
+    They give me this interesting price...\l 
+    If you have time I would like to show you..."))
+    msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: Hold that thought Fiona."))
+    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_ShockLeft)
+    applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
+    applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
+    applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
+    applymovement(FIONA_ID, Dormhall1_Movement_ShockLeft)
+    closemessage
+    applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerLost)
+    applymovement(FIONA_ID, Dormhall1_Movemement_DelayedLookDown)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}Leader{COLOR DARK_GRAY}: Excuse me Fiona, but I'm here for {PLAYER}"))
+    msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh... Oké"))
+    applymovement(FIONA_ID, Dormhall1_Movement_MoveOutOfTheWay)
+    waitmovement(0)
+    applymovement(LEADER_LOCALID, CommonMovement_WalkUpSlow1)
+    msgbox(format("{COLOR LIGHT_GRAY}Leader{COLOR DARK_GRAY}: I would like to talk to you personally, if you wouldn't mind.\p
+    But let's do that somewhere with less prying eyes and gawking mounths.\l
+    If you would please follow me."))
+    warp(MAP_MODHEADQUARTERS_ENTRANCE_HALL, 2, 2)
+}
+
+script DormHall1_WonTournament{
+    msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a moment"))
+    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_ShockLeft)
+    applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
+    applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
+    applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
+    closemessage
+    applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerWon)
+    waitmovement(0)
+    msgbox(format("{COLOR LIGHT_GRAY}Leader{COLOR DARK_GRAY}: I would like to talk to you personally, if you wouldn't mind.\p
+    But let's do that somewhere with less prying eyes and gawking mounths.\l
+    If you would please follow me."))
+    warp(MAP_MODHEADQUARTERS_ENTRANCE_HALL, 2, 2)
+}
+
+script Dormhall1_Frame_DeneithDefeat{
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookLeft)
+    applymovement(AIRANEA_LOCALID, CommonMovement_LookRight)
+    waitmovement(0)
+    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Ah {PLAYER}, you're awake again!\l  
+    That is great to see.\p
+    I applaud your bravely, not many people would dare to fight against a team A.S. member, let alone someone like you who just started their journey.\p
+    From what I could see through the door, that girl, Deneith, knocked you out, after she beat your pokemon up.\l
+    By the time we got the door open, she was long gone...\l
+    and whatever she stole with it.\p
+    Don't blame yourself, you should never have been in that position anyways.\l
+    We're all just glad you're oké.\p"))
+    msgbox(format("If you're wandering you haven't been out for long, so don't worry. I was just standing guard on orders of {COLOR LIGHT_GRAY}the Leader{COLOR DARK_GRAY}.\l
+    Now you're back up again, I'll be going. I have other important stuff to take care off.\p
+    A warning though before I go: watch out of these Team A.S. members, they don't honour the basic rules of pokemon battle like you do.\l
+    If you win, they might still attack you directly without a care, and if they win... well you experienced that first hand didn't you? \p
+    If you would manage to bring in a Team A.S. member you would be rewardly greatly, but I would advice against it, because it might caused you your life.\l
+    It would be a shame to lose such a valuable member like you are."))
+    closemessage
+    applymovement(AIRANEA_LOCALID, Dormhall1_Movemement_MoveAway)
+    waitmovement(0)
+    removeobject(AIRANEA_LOCALID, MAP_MODHEADQUARTERS_DORM_HALL1)
+    setflag(FLAG_HIDE_AIRANEA)
+    setvar(VAR_STORY_PROGRESSION, 15)
+    releaseall
 }
 
 script DormHall1_EventScript_LadyInitiative{
@@ -270,22 +354,6 @@ script Dormhall1_Trigger_SetWarpValue3{
     release
 }
 
-script DormHall1_WonTournament{
-    msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a moment"))
-    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    closemessage
-    applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerWon)
-    waitmovement(0)
-    msgbox(format("{COLOR LIGHT_GRAY}Leader{COLOR DARK_GRAY}: I would like to talk to you personally, if you wouldn't mind.\p
-    But let's do that somewhere with less prying eyes and gawking mounths.\l
-    If you would please follow me."))
-    warp(MAP_MODHEADQUARTERS_ENTRANCE_HALL, 2, 2)
-}
-
-
 movement Dormhall1_Movement_NoticePlayer{
     emote_exclamation_mark
 }
@@ -316,4 +384,26 @@ movement Dormhall1_Movement_LookOriginalDireciton{
 movement Dormhall1_Movement_Move_To_PlayerWon{
     walk_slow_right*8
     walk_slow_up*2
+}
+
+movement Dormhall1_Movement_Move_To_PlayerLost{
+    walk_slow_right*8
+    walk_slow_up
+}
+
+movement Dormhall1_Movemement_DelayedLookDown{
+    delay_8 * 6
+    face_down
+}
+
+movement Dormhall1_Movement_MoveOutOfTheWay{
+    face_right
+    lock_facing_direction
+    walk_left
+    unlock_facing_direction
+}
+
+movement Dormhall1_Movemement_MoveAway{
+    walk_down*3
+    walk_left*7
 }

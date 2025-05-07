@@ -101,6 +101,7 @@ script EvoMasters_CheckDeclineMassage{
 script EvoMasters_GiveMassage
 {
     msgbox(format("Which Pokemon would you like me to give a massage?"))
+    setfieldeffectargument(1, 523)
     special(ChooseMonForFriendShip)
     waitstate
     showmoneybox(0, 0)

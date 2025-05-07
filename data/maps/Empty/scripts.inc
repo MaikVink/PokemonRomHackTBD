@@ -47,9 +47,15 @@ CommonMovement_WalkUp1:
 	step_end
 
 # 34 "data/maps/Empty/scripts.pory"
-CommonMovement_WalkDownAndNotice:
+CommonMovement_WalkUpSlow1:
 # 35 "data/maps/Empty/scripts.pory"
+	walk_slow_up
+	step_end
+
+# 38 "data/maps/Empty/scripts.pory"
+CommonMovement_WalkDownAndNotice:
+# 39 "data/maps/Empty/scripts.pory"
 	walk_down
-# 36 "data/maps/Empty/scripts.pory"
+# 40 "data/maps/Empty/scripts.pory"
 	emote_exclamation_mark
 	step_end

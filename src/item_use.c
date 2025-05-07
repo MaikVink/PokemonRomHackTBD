@@ -33,6 +33,7 @@
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokemon.h"
+#include "region_map.h"
 #include "script.h"
 #include "sound.h"
 #include "strings.h"
@@ -1608,7 +1609,8 @@ void ItemUseOutOfBattle_BirdFlute(u8 taskId)
         gBagMenu->newScreenCallback = CB2_ReturnToField;
         Task_FadeAndCloseBagMenu(taskId);
     }
-    else{
+    else
+    {
         sItemUseOnFieldCB = ItemUseOnFieldCB_BirdFlute;
         SetUpItemUseOnFieldCallback(taskId); 
     }
@@ -1616,6 +1618,16 @@ void ItemUseOutOfBattle_BirdFlute(u8 taskId)
 
 void ItemUseOnFieldCB_BirdFlute(u8 taskId)
 {    
+    if(!Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType))
+    {
+        ScriptContext_SetupScript(EventScript_FailedFieldEffect);
+    }
+    else
+    {
+        SetMainCallback2(CB2_OpenFlyMap);
+    }
+    DestroyTask(taskId);
+    UnlockPlayerFieldControls();
 }
 
 void ItemUseOutOfBattle_DivingEquipment(u8 taskId)

@@ -31,6 +31,10 @@ movement CommonMovement_WalkUp1{
     walk_up
 }
 
+movement CommonMovement_WalkUpSlow1{
+    walk_slow_up
+}
+
 movement CommonMovement_WalkDownAndNotice {
     walk_down
     emote_exclamation_mark
