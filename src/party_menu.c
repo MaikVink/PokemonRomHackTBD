@@ -7824,10 +7824,24 @@ static void Task_ChooseMonForFriendShip(u8 taskId)
 static void CB2_ChooseMonForFriendShip(void)
 {
     gSpecialVar_0x8004 = GetCursorSelectionMonId();
-    if (gSpecialVar_0x8004 >= PARTY_SIZE)
+    if(gSpecialVar_0x8004 >= PARTY_SIZE)
+    {
         gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
-    else
+    }
+    else if(gFieldEffectArguments[1] == 523)
+    {
+        if(GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES) != SPECIES_EEVEE)
+        {
+            CleanupOverworldWindowsAndTilemaps();
+            InitPartyMenu(PARTY_MENU_TYPE_MOVE_RELEARNER, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+            return;
+        }
         MaximizeFriendShip(&gPlayerParty[gSpecialVar_0x8004]);
+    }
+    else
+    {
+        MaximizeFriendShip(&gPlayerParty[gSpecialVar_0x8004]);
+    }
     gFieldCallback2 = CB2_FadeFromPartyMenu;
     SetMainCallback2(CB2_ReturnToField);
 }

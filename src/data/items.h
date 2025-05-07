@@ -12709,7 +12709,7 @@ const struct Item gItemsInfo[] =
     [ITEM_BIRD_FLUTE] =
     {
         .name = _("Bird Flute"),
-        .price = 1,
+        .price = 10000,
         .description = COMPOUND_STRING(
             "A flute to call\n"
             "friendly birds to\n"

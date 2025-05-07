@@ -3102,4 +3102,7 @@ extern const u8 gText_Raining[];
 extern const u8 gText_Foggy[];
 extern const u8 gText_Sunny[];
 
+//EvoMasters
+extern const u8 gText_NotEevee[];
+
 #endif // GUARD_STRINGS_H

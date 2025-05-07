@@ -113,7 +113,7 @@
       "elevation": 0,
       "var": "VAR_STORY_PROGRESSION",
       "var_value": "13",
-      "script": "CliffToNowhere_Trigger_EscapeLeft"
+      "script": "CliffToNowhere_Trigger_EscapeRight"
     }
   ],
   "bg_events": [

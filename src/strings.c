@@ -1878,3 +1878,4 @@ const u8 gText_RelicSong[] = _("Relic Song");
 const u8 gText_SecretSword[] = _("Secret Sword");
 const u8 gText_Dusk[] = _("Dusk");
 const u8 gText_Night[] = _("Night");
+const u8 gText_NotEevee[] = _("I'm sorry, but that is not an Eevee!");
