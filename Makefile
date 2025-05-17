@@ -70,12 +70,12 @@ else
   CPP := $(PREFIX)cpp
 endif
 
-ROM_NAME := pokeemerald_agbcc.gba
+ROM_NAME := pokemod_agbcc.gba
 ELF_NAME := $(ROM_NAME:.gba=.elf)
 MAP_NAME := $(ROM_NAME:.gba=.map)
 OBJ_DIR_NAME := build/emerald
 
-MODERN_ROM_NAME := pokeemerald.gba
+MODERN_ROM_NAME := pokemod.gba
 MODERN_ELF_NAME := $(MODERN_ROM_NAME:.gba=.elf)
 MODERN_MAP_NAME := $(MODERN_ROM_NAME:.gba=.map)
 MODERN_OBJ_DIR_NAME := build/modern
@@ -258,7 +258,7 @@ endif
 
 AUTO_GEN_TARGETS :=
 
-all: history rom
+all: history rom postbuild
 
 history:
 	@bash ./check_history.sh
@@ -541,3 +541,13 @@ libagbsyscall:
 
 $(SYM): $(ELF)
 	$(OBJDUMP) -t $< | sort -u | grep -E "^0[2389]" | $(PERL) -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$$/\1 \2 \3 \4/g' > $@
+
+.PHONY: postbuild
+
+FINAL_OUTPUT_DIR := /mnt/c/Users/Windows/Development/Personal\ project/pokemon\ rom/Roms/Pokemon\ MOD/
+
+postbuild: $(ROM) $(ELF) $(MAP)
+	mkdir -p $(FINAL_OUTPUT_DIR)
+	cp $(ROM) $(FINAL_OUTPUT_DIR)
+	cp $(ELF) $(FINAL_OUTPUT_DIR)
+	cp $(MAP) $(FINAL_OUTPUT_DIR)
