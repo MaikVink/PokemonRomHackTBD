@@ -10,484 +10,486 @@ CliffToNowhere_ShowDeneith::
 # 12 "data/maps/CliffToNowhere/scripts.pory"
 	setflag FLAG_HIDE_AIRANEA
 # 13 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
+	setflag FLAG_FREE_SIMULATION
 # 14 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
+# 15 "data/maps/CliffToNowhere/scripts.pory"
 	hideobjectat 2, MAP_CLIFF_TO_NOWHERE
 	return
 
 
 CliffToNowhere_Trigger_EscapeLeft::
-# 18 "data/maps/CliffToNowhere/scripts.pory"
-	lockall
 # 19 "data/maps/CliffToNowhere/scripts.pory"
-	clearflag FLAG_HIDE_DENEITH
+	lockall
 # 20 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1
+	clearflag FLAG_HIDE_DENEITH
 # 21 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1
 # 22 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 2, MAP_CLIFF_TO_NOWHERE
+	waitmovement 0
 # 23 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
+	hideobjectat 2, MAP_CLIFF_TO_NOWHERE
 # 24 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_0, MSGBOX_DEFAULT
+	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
 # 25 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_0, MSGBOX_DEFAULT
 # 26 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp
 # 27 "data/maps/CliffToNowhere/scripts.pory"
-	opendoor 16, 15
+	waitmovement 0
 # 28 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 29 "data/maps/CliffToNowhere/scripts.pory"
-	showobjectat 1, MAP_CLIFF_TO_NOWHERE
-# 30 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 1, CliffToNowhere_RunDown
-# 31 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 32 "data/maps/CliffToNowhere/scripts.pory"
-	closedoor 16, 15
-# 33 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 34 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 1, CliffToNowhere_BreakDoor
-# 35 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 36 "data/maps/CliffToNowhere/scripts.pory"
-	playse SE_BREAKABLE_DOOR
-# 37 "data/maps/CliffToNowhere/scripts.pory"
-	waitse
-# 38 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_1
-# 41 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_2
-# 42 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_3
-# 43 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_4
-# 44 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 1, CommonMovement_WalkDownAndNotice
-# 45 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 46 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_5
-# 54 "data/maps/CliffToNowhere/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 14
-# 55 "data/maps/CliffToNowhere/scripts.pory"
-	trainerbattle_no_intro TRAINER_DENEITH_1, CliffToNowhere_DeneithLost
-# 56 "data/maps/CliffToNowhere/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 15
-# 57 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_6
-# 63 "data/maps/CliffToNowhere/scripts.pory"
-	closemessage
-# 64 "data/maps/CliffToNowhere/scripts.pory"
-	clearflag FLAG_HIDE_AIRANEA
-# 65 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_USB_STICK
-# 66 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack
-# 67 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 1, CliffToNowhere_Jumpoff
-# 68 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 69 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
-# 70 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
-# 71 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 0, 1
-# 72 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 1, 2
-# 73 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 2, 6
-# 74 "data/maps/CliffToNowhere/scripts.pory"
-	dofieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
-# 75 "data/maps/CliffToNowhere/scripts.pory"
-	playse SE_M_FLY
-# 76 "data/maps/CliffToNowhere/scripts.pory"
-	waitfieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
-# 77 "data/maps/CliffToNowhere/scripts.pory"
-	removeobject 1, MAP_CLIFF_TO_NOWHERE
-# 78 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_HIDE_DENEITH
-# 79 "data/maps/CliffToNowhere/scripts.pory"
 	opendoor 16, 15
-# 80 "data/maps/CliffToNowhere/scripts.pory"
+# 29 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
-# 81 "data/maps/CliffToNowhere/scripts.pory"
-	showobjectat 3, MAP_CLIFF_TO_NOWHERE
-# 82 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 3, CliffToNowhere_Pursue
-# 83 "data/maps/CliffToNowhere/scripts.pory"
+# 30 "data/maps/CliffToNowhere/scripts.pory"
+	showobjectat 1, MAP_CLIFF_TO_NOWHERE
+# 31 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 1, CliffToNowhere_RunDown
+# 32 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
-# 84 "data/maps/CliffToNowhere/scripts.pory"
+# 33 "data/maps/CliffToNowhere/scripts.pory"
 	closedoor 16, 15
-# 85 "data/maps/CliffToNowhere/scripts.pory"
+# 34 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
+# 35 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 1, CliffToNowhere_BreakDoor
+# 36 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 37 "data/maps/CliffToNowhere/scripts.pory"
+	playse SE_BREAKABLE_DOOR
+# 38 "data/maps/CliffToNowhere/scripts.pory"
+	waitse
+# 39 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_1
+# 42 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_2
+# 43 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_3
+# 44 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_4
+# 45 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 1, CommonMovement_WalkDownAndNotice
+# 46 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 47 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_5
+# 55 "data/maps/CliffToNowhere/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 14
+# 56 "data/maps/CliffToNowhere/scripts.pory"
+	trainerbattle_no_intro TRAINER_DENEITH_1, CliffToNowhere_DeneithLost
+# 57 "data/maps/CliffToNowhere/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 15
+# 58 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_6
+# 64 "data/maps/CliffToNowhere/scripts.pory"
+	closemessage
+# 65 "data/maps/CliffToNowhere/scripts.pory"
+	clearflag FLAG_HIDE_AIRANEA
+# 66 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_USB_STICK
+# 67 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack
+# 68 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 1, CliffToNowhere_Jumpoff
+# 69 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 70 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
+# 71 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
+# 72 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 0, 1
+# 73 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 1, 2
+# 74 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 2, 6
+# 75 "data/maps/CliffToNowhere/scripts.pory"
+	dofieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
+# 76 "data/maps/CliffToNowhere/scripts.pory"
+	playse SE_M_FLY
+# 77 "data/maps/CliffToNowhere/scripts.pory"
+	waitfieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
+# 78 "data/maps/CliffToNowhere/scripts.pory"
+	removeobject 1, MAP_CLIFF_TO_NOWHERE
+# 79 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_HIDE_DENEITH
+# 80 "data/maps/CliffToNowhere/scripts.pory"
+	opendoor 16, 15
+# 81 "data/maps/CliffToNowhere/scripts.pory"
+	waitdooranim
+# 82 "data/maps/CliffToNowhere/scripts.pory"
+	showobjectat 3, MAP_CLIFF_TO_NOWHERE
+# 83 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 3, CliffToNowhere_Pursue
+# 84 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 85 "data/maps/CliffToNowhere/scripts.pory"
+	closedoor 16, 15
 # 86 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_7
+	waitdooranim
 # 87 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 3, CliffToNowhere_BackToPlayer
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_7
 # 88 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement 3, CliffToNowhere_BackToPlayer
 # 89 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
-# 90 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
+# 90 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
 # 91 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 92 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_8, MSGBOX_YESNO
-# 95 "data/maps/CliffToNowhere/scripts.pory"
+# 96 "data/maps/CliffToNowhere/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne CliffToNowhere_Trigger_EscapeLeft_2
-# 106 "data/maps/CliffToNowhere/scripts.pory"
+# 107 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_10
 CliffToNowhere_Trigger_EscapeLeft_1:
-# 110 "data/maps/CliffToNowhere/scripts.pory"
+# 111 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_11, MSGBOX_DEFAULT
-# 115 "data/maps/CliffToNowhere/scripts.pory"
-	closemessage
 # 116 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 3, CliffToNowhere_BackToEntrance
+	closemessage
 # 117 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement 3, CliffToNowhere_BackToEntrance
 # 118 "data/maps/CliffToNowhere/scripts.pory"
-	opendoor 16, 15
-# 119 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 120 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 3, CommonMovement_WalkUp1
-# 121 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
-# 122 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
-# 123 "data/maps/CliffToNowhere/scripts.pory"
-	closedoor 16, 15
-# 124 "data/maps/CliffToNowhere/scripts.pory"
+# 119 "data/maps/CliffToNowhere/scripts.pory"
+	opendoor 16, 15
+# 120 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
+# 121 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 3, CommonMovement_WalkUp1
+# 122 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 123 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
+# 124 "data/maps/CliffToNowhere/scripts.pory"
+	closedoor 16, 15
 # 125 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_HIDE_AIRANEA
+	waitdooranim
 # 126 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_HIDE_AIRANEA
+# 127 "data/maps/CliffToNowhere/scripts.pory"
 	releaseall
 	return
 
 CliffToNowhere_Trigger_EscapeLeft_2:
-# 97 "data/maps/CliffToNowhere/scripts.pory"
+# 98 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_9
-# 101 "data/maps/CliffToNowhere/scripts.pory"
-	giveitem ITEM_BIG_NUGGET, 1
 # 102 "data/maps/CliffToNowhere/scripts.pory"
+	giveitem ITEM_BIG_NUGGET, 1
+# 103 "data/maps/CliffToNowhere/scripts.pory"
 	clearflag FLAG_USB_STICK
 	goto CliffToNowhere_Trigger_EscapeLeft_1
 
 
 CliffToNowhere_Trigger_EscapeRight::
-# 130 "data/maps/CliffToNowhere/scripts.pory"
-	lockall
 # 131 "data/maps/CliffToNowhere/scripts.pory"
-	clearflag FLAG_HIDE_DENEITH
+	lockall
 # 132 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1
+	clearflag FLAG_HIDE_DENEITH
 # 133 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1
 # 134 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 2, MAP_CLIFF_TO_NOWHERE
+	waitmovement 0
 # 135 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
+	hideobjectat 2, MAP_CLIFF_TO_NOWHERE
 # 136 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_0, MSGBOX_DEFAULT
+	hideobjectat 1, MAP_CLIFF_TO_NOWHERE
 # 137 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_0, MSGBOX_DEFAULT
 # 138 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp
 # 139 "data/maps/CliffToNowhere/scripts.pory"
-	opendoor 17, 15
+	waitmovement 0
 # 140 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 141 "data/maps/CliffToNowhere/scripts.pory"
-	showobjectat 2, MAP_CLIFF_TO_NOWHERE
-# 142 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 2, CliffToNowhere_RunDown
-# 143 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 144 "data/maps/CliffToNowhere/scripts.pory"
-	closedoor 17, 15
-# 145 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 146 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 2, CliffToNowhere_BreakDoor
-# 147 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 148 "data/maps/CliffToNowhere/scripts.pory"
-	playse SE_BREAKABLE_DOOR
-# 149 "data/maps/CliffToNowhere/scripts.pory"
-	waitse
-# 150 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_1
-# 153 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_2
-# 154 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_3
-# 155 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_4
-# 156 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 2, CommonMovement_WalkDownAndNotice
-# 157 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 158 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_5
-# 166 "data/maps/CliffToNowhere/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 14
-# 167 "data/maps/CliffToNowhere/scripts.pory"
-	trainerbattle_no_intro TRAINER_DENEITH_1, CliffToNowhere_DeneithLost
-# 168 "data/maps/CliffToNowhere/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 15
-# 169 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_6
-# 175 "data/maps/CliffToNowhere/scripts.pory"
-	closemessage
-# 176 "data/maps/CliffToNowhere/scripts.pory"
-	clearflag FLAG_HIDE_AIRANEA
-# 177 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_USB_STICK
-# 178 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack
-# 179 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 2, CliffToNowhere_Jumpoff
-# 180 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
-# 181 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
-# 182 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
-# 183 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 0, 2
-# 184 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 1, 2
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	setfieldeffectargument 2, 6
-# 186 "data/maps/CliffToNowhere/scripts.pory"
-	dofieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
-# 187 "data/maps/CliffToNowhere/scripts.pory"
-	playse SE_M_FLY
-# 188 "data/maps/CliffToNowhere/scripts.pory"
-	waitfieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
-# 189 "data/maps/CliffToNowhere/scripts.pory"
-	removeobject 2, MAP_CLIFF_TO_NOWHERE
-# 190 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_HIDE_DENEITH
-# 191 "data/maps/CliffToNowhere/scripts.pory"
 	opendoor 17, 15
-# 192 "data/maps/CliffToNowhere/scripts.pory"
+# 141 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
-# 193 "data/maps/CliffToNowhere/scripts.pory"
-	showobjectat 4, MAP_CLIFF_TO_NOWHERE
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 4, CliffToNowhere_Pursue
-# 195 "data/maps/CliffToNowhere/scripts.pory"
+# 142 "data/maps/CliffToNowhere/scripts.pory"
+	showobjectat 2, MAP_CLIFF_TO_NOWHERE
+# 143 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 2, CliffToNowhere_RunDown
+# 144 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
-# 196 "data/maps/CliffToNowhere/scripts.pory"
+# 145 "data/maps/CliffToNowhere/scripts.pory"
 	closedoor 17, 15
-# 197 "data/maps/CliffToNowhere/scripts.pory"
+# 146 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
+# 147 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 2, CliffToNowhere_BreakDoor
+# 148 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 149 "data/maps/CliffToNowhere/scripts.pory"
+	playse SE_BREAKABLE_DOOR
+# 150 "data/maps/CliffToNowhere/scripts.pory"
+	waitse
+# 151 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_1
+# 154 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_2
+# 155 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_3
+# 156 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_4
+# 157 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 2, CommonMovement_WalkDownAndNotice
+# 158 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 159 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_5
+# 167 "data/maps/CliffToNowhere/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 14
+# 168 "data/maps/CliffToNowhere/scripts.pory"
+	trainerbattle_no_intro TRAINER_DENEITH_1, CliffToNowhere_DeneithLost
+# 169 "data/maps/CliffToNowhere/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 15
+# 170 "data/maps/CliffToNowhere/scripts.pory"
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_6
+# 176 "data/maps/CliffToNowhere/scripts.pory"
+	closemessage
+# 177 "data/maps/CliffToNowhere/scripts.pory"
+	clearflag FLAG_HIDE_AIRANEA
+# 178 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_USB_STICK
+# 179 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack
+# 180 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 2, CliffToNowhere_Jumpoff
+# 181 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 182 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 3, MAP_CLIFF_TO_NOWHERE
+# 183 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
+# 184 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 0, 2
+# 185 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 1, 2
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	setfieldeffectargument 2, 6
+# 187 "data/maps/CliffToNowhere/scripts.pory"
+	dofieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
+# 188 "data/maps/CliffToNowhere/scripts.pory"
+	playse SE_M_FLY
+# 189 "data/maps/CliffToNowhere/scripts.pory"
+	waitfieldeffect FLDEFF_NPCFLY_OUT_CUSTOM
+# 190 "data/maps/CliffToNowhere/scripts.pory"
+	removeobject 2, MAP_CLIFF_TO_NOWHERE
+# 191 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_HIDE_DENEITH
+# 192 "data/maps/CliffToNowhere/scripts.pory"
+	opendoor 17, 15
+# 193 "data/maps/CliffToNowhere/scripts.pory"
+	waitdooranim
+# 194 "data/maps/CliffToNowhere/scripts.pory"
+	showobjectat 4, MAP_CLIFF_TO_NOWHERE
+# 195 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 4, CliffToNowhere_Pursue
+# 196 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 197 "data/maps/CliffToNowhere/scripts.pory"
+	closedoor 17, 15
 # 198 "data/maps/CliffToNowhere/scripts.pory"
-	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_7
+	waitdooranim
 # 199 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 4, CliffToNowhere_BackToPlayer
+	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_7
 # 200 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement 4, CliffToNowhere_BackToPlayer
 # 201 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
-# 202 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
+# 202 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
 # 203 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 204 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_8, MSGBOX_YESNO
-# 207 "data/maps/CliffToNowhere/scripts.pory"
+# 208 "data/maps/CliffToNowhere/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne CliffToNowhere_Trigger_EscapeRight_2
-# 218 "data/maps/CliffToNowhere/scripts.pory"
+# 219 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_10
 CliffToNowhere_Trigger_EscapeRight_1:
-# 222 "data/maps/CliffToNowhere/scripts.pory"
+# 223 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_11, MSGBOX_DEFAULT
-# 227 "data/maps/CliffToNowhere/scripts.pory"
-	closemessage
 # 228 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 4, CliffToNowhere_BackToEntrance
+	closemessage
 # 229 "data/maps/CliffToNowhere/scripts.pory"
-	waitmovement 0
+	applymovement 4, CliffToNowhere_BackToEntrance
 # 230 "data/maps/CliffToNowhere/scripts.pory"
-	opendoor 17, 15
-# 231 "data/maps/CliffToNowhere/scripts.pory"
-	waitdooranim
-# 232 "data/maps/CliffToNowhere/scripts.pory"
-	applymovement 4, CommonMovement_WalkUp1
-# 233 "data/maps/CliffToNowhere/scripts.pory"
 	waitmovement 0
-# 234 "data/maps/CliffToNowhere/scripts.pory"
-	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
-# 235 "data/maps/CliffToNowhere/scripts.pory"
-	closedoor 17, 15
-# 236 "data/maps/CliffToNowhere/scripts.pory"
+# 231 "data/maps/CliffToNowhere/scripts.pory"
+	opendoor 17, 15
+# 232 "data/maps/CliffToNowhere/scripts.pory"
 	waitdooranim
+# 233 "data/maps/CliffToNowhere/scripts.pory"
+	applymovement 4, CommonMovement_WalkUp1
+# 234 "data/maps/CliffToNowhere/scripts.pory"
+	waitmovement 0
+# 235 "data/maps/CliffToNowhere/scripts.pory"
+	hideobjectat 4, MAP_CLIFF_TO_NOWHERE
+# 236 "data/maps/CliffToNowhere/scripts.pory"
+	closedoor 17, 15
 # 237 "data/maps/CliffToNowhere/scripts.pory"
-	setflag FLAG_HIDE_AIRANEA
+	waitdooranim
 # 238 "data/maps/CliffToNowhere/scripts.pory"
+	setflag FLAG_HIDE_AIRANEA
+# 239 "data/maps/CliffToNowhere/scripts.pory"
 	releaseall
 	return
 
 CliffToNowhere_Trigger_EscapeRight_2:
-# 209 "data/maps/CliffToNowhere/scripts.pory"
+# 210 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Trigger_EscapeLeft_Text_9
-# 213 "data/maps/CliffToNowhere/scripts.pory"
-	giveitem ITEM_BIG_NUGGET, 1
 # 214 "data/maps/CliffToNowhere/scripts.pory"
+	giveitem ITEM_BIG_NUGGET, 1
+# 215 "data/maps/CliffToNowhere/scripts.pory"
 	clearflag FLAG_USB_STICK
 	goto CliffToNowhere_Trigger_EscapeRight_1
 
 
 CliffToNowhere_Event_DemoEnding::
-# 243 "data/maps/CliffToNowhere/scripts.pory"
-	lockall
 # 244 "data/maps/CliffToNowhere/scripts.pory"
-	faceplayer
+	lockall
 # 245 "data/maps/CliffToNowhere/scripts.pory"
+	faceplayer
+# 246 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Event_DemoEnding_Text_0
-# 254 "data/maps/CliffToNowhere/scripts.pory"
+# 255 "data/maps/CliffToNowhere/scripts.pory"
 	releaseall
 	return
 
 
-# 261 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_RunDown:
 # 262 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
+CliffToNowhere_RunDown:
 # 263 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 # 264 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 265 "data/maps/CliffToNowhere/scripts.pory"
 	face_up
 	step_end
 
-# 267 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_BreakDoor:
 # 268 "data/maps/CliffToNowhere/scripts.pory"
-	walk_in_place_fast_up
+CliffToNowhere_BreakDoor:
 # 269 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 270 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 271 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_up
+	walk_in_place_fast_up
 # 272 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+	walk_fast_up
 # 273 "data/maps/CliffToNowhere/scripts.pory"
-	jump_down
+	lock_facing_direction
 # 274 "data/maps/CliffToNowhere/scripts.pory"
+	jump_down
+# 275 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 277 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_PushedBack:
 # 278 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+CliffToNowhere_PushedBack:
 # 279 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 280 "data/maps/CliffToNowhere/scripts.pory"
-	unlock_facing_direction
-# 281 "data/maps/CliffToNowhere/scripts.pory"
-	face_right
-# 282 "data/maps/CliffToNowhere/scripts.pory"
 	lock_facing_direction
-# 283 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_left
-# 284 "data/maps/CliffToNowhere/scripts.pory"
+# 280 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 281 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
+# 282 "data/maps/CliffToNowhere/scripts.pory"
+	face_right
+# 283 "data/maps/CliffToNowhere/scripts.pory"
+	lock_facing_direction
+# 284 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_left
 # 285 "data/maps/CliffToNowhere/scripts.pory"
+	unlock_facing_direction
+# 286 "data/maps/CliffToNowhere/scripts.pory"
 	face_down
 	step_end
 
-# 288 "data/maps/CliffToNowhere/scripts.pory"
+# 289 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Jumpoff:
-# 289 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 289 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 289 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 289 "data/maps/CliffToNowhere/scripts.pory"
+# 290 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 # 290 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 290 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 290 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 291 "data/maps/CliffToNowhere/scripts.pory"
 	jump_2_down
 	step_end
 
-# 293 "data/maps/CliffToNowhere/scripts.pory"
+# 294 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Pursue:
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 294 "data/maps/CliffToNowhere/scripts.pory"
+# 295 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 297 "data/maps/CliffToNowhere/scripts.pory"
+# 298 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToPlayer:
-# 298 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 298 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 298 "data/maps/CliffToNowhere/scripts.pory"
+# 299 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 # 299 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 299 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 300 "data/maps/CliffToNowhere/scripts.pory"
 	face_left
 	step_end
 
-# 302 "data/maps/CliffToNowhere/scripts.pory"
+# 303 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToEntrance:
-# 303 "data/maps/CliffToNowhere/scripts.pory"
+# 304 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
-# 303 "data/maps/CliffToNowhere/scripts.pory"
+# 304 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
-# 303 "data/maps/CliffToNowhere/scripts.pory"
+# 304 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 	step_end
 
 CliffToNowhere_Trigger_EscapeLeft_Text_0:
-# 24 "data/maps/CliffToNowhere/scripts.pory"
+# 25 "data/maps/CliffToNowhere/scripts.pory"
 	.string "???: STOP HER, RIGHT NOW!$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_1:
-# 38 "data/maps/CliffToNowhere/scripts.pory"
+# 39 "data/maps/CliffToNowhere/scripts.pory"
 	.string "???: What are you doing?\n"
 	.string "Open this door right now!\l"
 	.string "We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_2:
-# 41 "data/maps/CliffToNowhere/scripts.pory"
+# 42 "data/maps/CliffToNowhere/scripts.pory"
 	.string "???: W-w-we're trying {COLOR RED}Airanea{COLOR DARK_GRAY}, but it\n"
 	.string "seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door...$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_3:
-# 42 "data/maps/CliffToNowhere/scripts.pory"
+# 43 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: Then go fix it!$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_4:
-# 43 "data/maps/CliffToNowhere/scripts.pory"
+# 44 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: that should keep them busy at\n"
 	.string "least...$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_5:
-# 46 "data/maps/CliffToNowhere/scripts.pory"
+# 47 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: Damn, seems like I didn't manage to\n"
 	.string "outsmart all {COLOR LIGHT_GRAY}his{COLOR DARK_GRAY} henchman.\p"
 	.string "Wait... I know you!\n"
@@ -505,7 +507,7 @@ CliffToNowhere_Trigger_EscapeLeft_Text_5:
 	.string "Bring it on Hotshot!$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_6:
-# 57 "data/maps/CliffToNowhere/scripts.pory"
+# 58 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Deneith{COLOR DARK_GRAY}: And I would have gotten away\n"
 	.string "with it if it wasn't for you...\p"
 	.string "No matter, hear take your stupid usb\n"
@@ -521,11 +523,11 @@ CliffToNowhere_Trigger_EscapeLeft_Text_6:
 	.string "Until our next encounter Hotshot!$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_7:
-# 86 "data/maps/CliffToNowhere/scripts.pory"
+# 87 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them.$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_8:
-# 91 "data/maps/CliffToNowhere/scripts.pory"
+# 92 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: I thank you for your services\n"
 	.string "{PLAYER}. You managed to distract her\l"
 	.string "almost long enough for us to catch her\l"
@@ -541,7 +543,7 @@ CliffToNowhere_Trigger_EscapeLeft_Text_8:
 	.string "anything at all from her?$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_9:
-# 97 "data/maps/CliffToNowhere/scripts.pory"
+# 98 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this\n"
 	.string "{PLAYER}!\l"
 	.string "This usb contains some very sensative\l"
@@ -553,7 +555,7 @@ CliffToNowhere_Trigger_EscapeLeft_Text_9:
 	.string "hard work and loyalty.$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_10:
-# 106 "data/maps/CliffToNowhere/scripts.pory"
+# 107 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p"
 	.string "...\p"
 	.string "You don't need to worry too much about\n"
@@ -563,7 +565,7 @@ CliffToNowhere_Trigger_EscapeLeft_Text_10:
 	.string "time.$"
 
 CliffToNowhere_Trigger_EscapeLeft_Text_11:
-# 110 "data/maps/CliffToNowhere/scripts.pory"
+# 111 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: One more thing though, be\n"
 	.string "carefull around these A.S. Members\p"
 	.string "They don't honour the rules of normal\n"
@@ -581,7 +583,7 @@ CliffToNowhere_Trigger_EscapeLeft_Text_11:
 	.string "hands.$"
 
 CliffToNowhere_Event_DemoEnding_Text_0:
-# 245 "data/maps/CliffToNowhere/scripts.pory"
+# 246 "data/maps/CliffToNowhere/scripts.pory"
 	.string "Congratulations!\p"
 	.string "This is the ending of the demo, the rest\n"
 	.string "of the game will be worked on in the\l"
@@ -606,6 +608,6 @@ CliffToNowhere_Event_DemoEnding_Text_0:
 	.string "playing this demo!$"
 
 CliffToNowhere_DeneithLost::
-# 257 "data/maps/CliffToNowhere/scripts.pory"
+# 258 "data/maps/CliffToNowhere/scripts.pory"
 	.string "Damn, I guess I should have been beter\n"
 	.string "prepared for this$"

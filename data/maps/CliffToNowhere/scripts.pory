@@ -10,6 +10,7 @@ mapscripts CliffToNowhere_MapScripts {
 script CliffToNowhere_ShowDeneith{
     setflag(FLAG_HIDE_DENEITH)
     setflag(FLAG_HIDE_AIRANEA)
+    setflag(FLAG_FREE_SIMULATION)
     hideobjectat(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
     hideobjectat(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
 }
