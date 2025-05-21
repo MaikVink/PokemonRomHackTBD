@@ -264,9 +264,9 @@ EventScript_UseDiveUnderwater::
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
-	msgbox Text_MonSurfaced, MSGBOX_YESNO
+	msgbox Text_WantToSurface, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndSurface
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	msgbox Text_MonSurfaced, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
 	end
