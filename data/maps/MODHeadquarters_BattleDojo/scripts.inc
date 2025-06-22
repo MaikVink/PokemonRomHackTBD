@@ -119,19 +119,19 @@ BattleDojo_HideNPCs_OnTransition::
 # 64 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	hideobjectat 6, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 65 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 8, 6, 12
+	setobjectxy 8, 6, 11
 # 66 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 3, 6, 12
+	setobjectxy 3, 6, 11
 # 67 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 4, 6, 12
+	setobjectxy 4, 6, 11
 # 68 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 5, 6, 12
+	setobjectxy 5, 6, 11
 # 69 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 2, 6, 12
+	setobjectxy 2, 6, 11
 # 70 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 7, 6, 12
+	setobjectxy 7, 6, 11
 # 71 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 6, 6, 12
+	setobjectxy 6, 6, 11
 # 72 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 2
 	return
@@ -153,19 +153,19 @@ BattleDojo_HideNPCs::
 # 82 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	hideobjectat 6, MAP_MODHEADQUARTERS_BATTLE_DOJO
 # 83 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 8, 6, 12
+	setobjectxy 8, 6, 11
 # 84 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 3, 6, 12
+	setobjectxy 3, 6, 11
 # 85 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 4, 6, 12
+	setobjectxy 4, 6, 11
 # 86 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 5, 6, 12
+	setobjectxy 5, 6, 11
 # 87 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 2, 6, 12
+	setobjectxy 2, 6, 11
 # 88 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 7, 6, 12
+	setobjectxy 7, 6, 11
 # 89 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	setobjectxy 6, 6, 12
+	setobjectxy 6, 6, 11
 # 90 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 2
 	return
@@ -849,7 +849,7 @@ BattleDojo_GridChoice_25:
 # 441 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	msgbox BattleDojo_GridChoice_Text_5
 # 442 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	warp MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA, 3, 6
+	warp MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA, 3, 5
 	end
 
 

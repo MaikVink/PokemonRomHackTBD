@@ -62,13 +62,13 @@ script BattleDojo_HideNPCs_OnTransition{
     hideobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(MAN3_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(WOMAN5_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
-    setobjectxy(FIONA_LOCALID, 6, 12)
-    setobjectxy(BEAUTY_LOCALID, 6, 12)
-    setobjectxy(HIKER_LOCALID, 6, 12)
-    setobjectxy(MAN5_LOCALID, 6, 12)
-    setobjectxy(FATMAN_LOCALID, 6, 12)
-    setobjectxy(MAN3_LOCALID, 6, 12)
-    setobjectxy(WOMAN5_LOCALID, 6, 12)
+    setobjectxy(FIONA_LOCALID, 6, 11)
+    setobjectxy(BEAUTY_LOCALID, 6, 11)
+    setobjectxy(HIKER_LOCALID, 6, 11)
+    setobjectxy(MAN5_LOCALID, 6, 11)
+    setobjectxy(FATMAN_LOCALID, 6, 11)
+    setobjectxy(MAN3_LOCALID, 6, 11)
+    setobjectxy(WOMAN5_LOCALID, 6, 11)
     setvar(VAR_HIDE_OBJECTS, 2)
 }
 
@@ -80,13 +80,13 @@ script BattleDojo_HideNPCs{
     hideobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(MAN3_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(WOMAN5_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
-    setobjectxy(FIONA_LOCALID, 6, 12)
-    setobjectxy(BEAUTY_LOCALID, 6, 12)
-    setobjectxy(HIKER_LOCALID, 6, 12)
-    setobjectxy(MAN5_LOCALID, 6, 12)
-    setobjectxy(FATMAN_LOCALID, 6, 12)
-    setobjectxy(MAN3_LOCALID, 6, 12)
-    setobjectxy(WOMAN5_LOCALID, 6, 12)
+    setobjectxy(FIONA_LOCALID, 6, 11)
+    setobjectxy(BEAUTY_LOCALID, 6, 11)
+    setobjectxy(HIKER_LOCALID, 6, 11)
+    setobjectxy(MAN5_LOCALID, 6, 11)
+    setobjectxy(FATMAN_LOCALID, 6, 11)
+    setobjectxy(MAN3_LOCALID, 6, 11)
+    setobjectxy(WOMAN5_LOCALID, 6, 11)
     setvar(VAR_HIDE_OBJECTS, 2)
 }
 
@@ -439,7 +439,7 @@ script BattleDojo_GridChoice{
             case 7:
             case 8:
                 msgbox("{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}.")
-                warp(MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA, 3, 6)
+                warp(MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA, 3, 5)
                 end
         }
         call(BattleDojo_BattleDojoBattles)      

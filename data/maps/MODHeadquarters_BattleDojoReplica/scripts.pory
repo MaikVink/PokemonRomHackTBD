@@ -66,14 +66,6 @@ script BattleDojoReplica_HideNPCs{
     hideobjectat(POKEFANF_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA)
     hideobjectat(HEXMANIAC_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA)
     hideobjectat(RECEPTIONIST_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA)
-    setobjectxy(MOM_LOCALID, 6, 12)
-    setobjectxy(WOMAN2_LOCALID, 6, 12)
-    setobjectxy(NINJABOY_LOCALID, 6, 12)
-    setobjectxy(TRIATHLETE_LOCALID, 6, 12)
-    setobjectxy(PSYCHICM_LOCALID, 6, 12)
-    setobjectxy(POKEFANF_LOCALID, 6, 12)
-    setobjectxy(HEXMANIAC_LOCALID, 6, 12)
-    setobjectxy(RECEPTIONIST_LOCALID, 6, 12)
     setvar(VAR_HIDE_OBJECTS, 2)
 }
 
@@ -204,7 +196,7 @@ script BattleDojoReplica_GridChoice{
             case 14:
             case 15:
                 msgbox("{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}")
-                warp(MAP_MODHEADQUARTERS_BATTLE_DOJO, 3, 6)
+                warp(MAP_MODHEADQUARTERS_BATTLE_DOJO, 3, 5)
                 end
         }
         call(BattleDojoReplica_BattleDojoReplicaBattles)      

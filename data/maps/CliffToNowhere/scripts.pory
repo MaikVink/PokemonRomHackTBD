@@ -1,38 +1,48 @@
-const DENEITHLEFT_LOCALID = 1
-const DENEITHRIGHT_LOCALID = 2
-const AIRANEALEFT_LOCALID = 3
-const AIRANEARIGHT_LOCALID = 4
+const DENEITH_LOCALID = 1
+const AIRANEA_LOCALID = 2
 
 mapscripts CliffToNowhere_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: CliffToNowhere_ShowDeneith
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_STORY_PROGRESSION, 13: CliffToNowhere_EscapeSequence
+    ]
 }
 
 script CliffToNowhere_ShowDeneith{
-    setflag(FLAG_HIDE_DENEITH)
-    setflag(FLAG_HIDE_AIRANEA)
-    setflag(FLAG_FREE_SIMULATION)
-    hideobjectat(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    hideobjectat(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    if(var(VAR_STORY_PROGRESSION) == 13)
+    {
+        setflag(FLAG_FREE_SIMULATION)
+        clearflag(FLAG_HIDE_DENEITH)
+        clearflag(FLAG_HIDE_AIRANEA)
+    }
+    else
+    {
+        setflag(FLAG_HIDE_DENEITH)
+        setflag(FLAG_HIDE_AIRANEA)
+    }
 }
 
-script CliffToNowhere_Trigger_EscapeLeft{
+script CliffToNowhere_EscapeSequence{
     lockall
-    clearflag(FLAG_HIDE_DENEITH)
+    hideobjectat(DENEITH_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    hideobjectat(AIRANEA_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    setobjectxy(DENEITH_LOCALID, 16, 15)
+    setobjectxy(AIRANEA_LOCALID, 16, 15)
+
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1)
     waitmovement(0)
-    hideobjectat(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    hideobjectat(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
+
     msgbox(format("???: STOP HER, RIGHT NOW!"), MSGBOX_DEFAULT)
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp)
     waitmovement(0)
     opendoor(16, 15)
     waitdooranim
-    showobjectat(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    applymovement(DENEITHLEFT_LOCALID, CliffToNowhere_RunDown)
+    showobjectat(DENEITH_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    applymovement(DENEITH_LOCALID, CliffToNowhere_RunDown)
     waitmovement(0)
     closedoor(16, 15)
     waitdooranim
-    applymovement(DENEITHLEFT_LOCALID, CliffToNowhere_BreakDoor)
+    applymovement(DENEITH_LOCALID, CliffToNowhere_BreakDoor)
     waitmovement(0)
     playse(SE_BREAKABLE_DOOR)
     waitse
@@ -42,7 +52,7 @@ script CliffToNowhere_Trigger_EscapeLeft{
     msgbox(format("???: W-w-we're trying {COLOR RED}Airanea{COLOR DARK_GRAY}, but it seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door..."))
     msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Then go fix it!"))
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: that should keep them busy at least..."))
-    applymovement(DENEITHLEFT_LOCALID, CommonMovement_WalkDownAndNotice)
+    applymovement(DENEITH_LOCALID, CommonMovement_NoticeDown)
     waitmovement(0)
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: Damn, seems like I didn't manage to outsmart all {COLOR LIGHT_GRAY}his{COLOR DARK_GRAY} henchman.\p
     Wait... I know you!\n
@@ -53,6 +63,7 @@ script CliffToNowhere_Trigger_EscapeLeft{
     sigh... I'm not really prepared for a fight like this, but I've gotten too far to let someone stop me now!\l
     Bring it on Hotshot!"))
     setvar(VAR_STORY_PROGRESSION, 14)
+    special(HealPlayerParty)
     trainerbattle_no_intro(TRAINER_DENEITH_1, CliffToNowhere_DeneithLost)
     setvar(VAR_STORY_PROGRESSION, 15)
     msgbox(format("{COLOR RED}Deneith{COLOR DARK_GRAY}: And I would have gotten away with it if it wasn't for you...\p
@@ -62,30 +73,27 @@ script CliffToNowhere_Trigger_EscapeLeft{
     It'll contain some secrets of team MOD they will never disclose to you personally.\p
     Until our next encounter Hotshot!"))
     closemessage
-    clearflag(FLAG_HIDE_AIRANEA)
     setflag(FLAG_USB_STICK)
     applymovement(OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack)
-    applymovement(DENEITHLEFT_LOCALID, CliffToNowhere_Jumpoff)
+    applymovement(DENEITH_LOCALID, CliffToNowhere_Jumpoff)
     waitmovement(0)
-    hideobjectat(AIRANEARIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    hideobjectat(AIRANEALEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    setfieldeffectargument(0, DENEITHLEFT_LOCALID)
+    setfieldeffectargument(0, DENEITH_LOCALID)
     setfieldeffectargument(1, 2)
     setfieldeffectargument(2, 6)
     dofieldeffect(FLDEFF_NPCFLY_OUT_CUSTOM)
     playse(SE_M_FLY)
     waitfieldeffect(FLDEFF_NPCFLY_OUT_CUSTOM)
-    removeobject(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    removeobject(DENEITH_LOCALID, MAP_CLIFF_TO_NOWHERE)
     setflag(FLAG_HIDE_DENEITH)
     opendoor(16, 15)
     waitdooranim
-    showobjectat(AIRANEALEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    applymovement(AIRANEALEFT_LOCALID, CliffToNowhere_Pursue)
+    showobjectat(AIRANEA_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    applymovement(AIRANEA_LOCALID, CliffToNowhere_Pursue)
     waitmovement(0)
     closedoor(16, 15)
     waitdooranim
     msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them."))
-    applymovement(AIRANEALEFT_LOCALID, CliffToNowhere_BackToPlayer)
+    applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToPlayer)
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight)
     waitmovement(0)
@@ -114,126 +122,14 @@ script CliffToNowhere_Trigger_EscapeLeft{
     Furthermore, we have high hopes for you, so please be very carefull around them. \l
     It would be a shame if you died by their hands."), MSGBOX_DEFAULT)
     closemessage
-    applymovement(AIRANEALEFT_LOCALID, CliffToNowhere_BackToEntrance)
+    applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToEntrance)
     waitmovement(0)
     opendoor(16, 15)
     waitdooranim
-    applymovement(AIRANEALEFT_LOCALID, CommonMovement_WalkUp1)
+    applymovement(AIRANEA_LOCALID, CommonMovement_WalkUp1)
     waitmovement(0)
-    hideobjectat(AIRANEALEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
+    hideobjectat(AIRANEA_LOCALID, MAP_CLIFF_TO_NOWHERE)
     closedoor(16, 15)
-    waitdooranim
-    setflag(FLAG_HIDE_AIRANEA)
-    releaseall
-}
-
-script CliffToNowhere_Trigger_EscapeRight{
-    lockall
-    clearflag(FLAG_HIDE_DENEITH)
-    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkDown1)
-    waitmovement(0)
-    hideobjectat(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    hideobjectat(DENEITHLEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    msgbox(format("???: STOP HER, RIGHT NOW!"), MSGBOX_DEFAULT)
-    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_NoticeUp)
-    waitmovement(0)
-    opendoor(17, 15)
-    waitdooranim
-    showobjectat(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    applymovement(DENEITHRIGHT_LOCALID, CliffToNowhere_RunDown)
-    waitmovement(0)
-    closedoor(17, 15)
-    waitdooranim
-    applymovement(DENEITHRIGHT_LOCALID, CliffToNowhere_BreakDoor)
-    waitmovement(0)
-    playse(SE_BREAKABLE_DOOR)
-    waitse
-    msgbox(format("???: What are you doing? \n
-    Open this door right now!\l
-    We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!"))
-    msgbox(format("???: W-w-we're trying {COLOR RED}Airanea{COLOR DARK_GRAY}, but it seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door..."))
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Then go fix it!"))
-    msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: that should keep them busy at least..."))
-    applymovement(DENEITHRIGHT_LOCALID, CommonMovement_WalkDownAndNotice)
-    waitmovement(0)
-    msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: Damn, seems like I didn't manage to outsmart all {COLOR LIGHT_GRAY}his{COLOR DARK_GRAY} henchman.\p
-    Wait... I know you!\n
-    You're that Special Initiative that was talking to {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!\p
-    I would love to stick around and talk some more with you, but I've places to be.\p
-    ...\p
-    What do you mean you're not going to let me go?\p
-    sigh... I'm not really prepared for a fight like this, but I've gotten too far to let someone stop me now!\l
-    Bring it on Hotshot!"))
-    setvar(VAR_STORY_PROGRESSION, 14)
-    trainerbattle_no_intro(TRAINER_DENEITH_1, CliffToNowhere_DeneithLost)
-    setvar(VAR_STORY_PROGRESSION, 15)
-    msgbox(format("{COLOR RED}Deneith{COLOR DARK_GRAY}: And I would have gotten away with it if it wasn't for you...\p
-    No matter, hear take your stupid usb back, we don't need it anyways.\l
-    I was just a distraction so that nobody would notice Zero hacking their PCs and get all the data we needed.\p
-    Still, I would recommend you watch what is on that stick.\l
-    It'll contain some secrets of team MOD they will never disclose to you personally.\p
-    Until our next encounter Hotshot!"))
-    closemessage
-    clearflag(FLAG_HIDE_AIRANEA)
-    setflag(FLAG_USB_STICK)
-    applymovement(OBJ_EVENT_ID_PLAYER, CliffToNowhere_PushedBack)
-    applymovement(DENEITHRIGHT_LOCALID, CliffToNowhere_Jumpoff)
-    waitmovement(0)
-    hideobjectat(AIRANEALEFT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    hideobjectat(AIRANEARIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    setfieldeffectargument(0, DENEITHRIGHT_LOCALID)
-    setfieldeffectargument(1, 2)
-    setfieldeffectargument(2, 6)
-    dofieldeffect(FLDEFF_NPCFLY_OUT_CUSTOM)
-    playse(SE_M_FLY)
-    waitfieldeffect(FLDEFF_NPCFLY_OUT_CUSTOM)
-    removeobject(DENEITHRIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    setflag(FLAG_HIDE_DENEITH)
-    opendoor(17, 15)
-    waitdooranim
-    showobjectat(AIRANEARIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    applymovement(AIRANEARIGHT_LOCALID, CliffToNowhere_Pursue)
-    waitmovement(0)
-    closedoor(17, 15)
-    waitdooranim
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them."))
-    applymovement(AIRANEARIGHT_LOCALID, CliffToNowhere_BackToPlayer)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight)
-    waitmovement(0)
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: I thank you for your services {PLAYER}. You managed to distract her almost long enough for us to catch her before she escaped.\p
-    I know you tried your best, but sadly these team A.S. members don't care for the result in a pokemon battle.\p
-    This is important though, did you by any chance manage to snatch something of her or did she drop something by accident?\l
-    I mean anything, did you manage to get anything at all from her?"), MSGBOX_YESNO)
-    if(var(VAR_RESULT))
-    {
-        msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this {PLAYER}! \l   
-        This usb contains some very sensative data we would prefer to not fall in the enemies hands.\p
-        We will take it over from here {PLAYER}.\p
-        Please take this as thanks for your hard work and loyalty."))
-        giveitem(ITEM_BIG_NUGGET, 1)
-        clearflag(FLAG_USB_STICK)
-    }
-    else
-    {
-        msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p
-        ...\p
-        You don't need to worry too much about it {PLAYER}, let me take care of it from here, you go on your quest now, we will probably speak each other another time."))
-    }
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: One more thing though, be carefull around these A.S. Members \p
-    They don't honour the rules of normal Pokemon battles, so even if you win, they will not give themselves over so easily. \p
-    You'll certainly be handsomely rewarded if you can bring any of them in, but I doubt a little initiative like you will be able to do so. \p
-    Furthermore, we have high hopes for you, so please be very carefull around them. \l
-    It would be a shame if you died by their hands."), MSGBOX_DEFAULT)
-    closemessage
-    applymovement(AIRANEARIGHT_LOCALID, CliffToNowhere_BackToEntrance)
-    waitmovement(0)
-    opendoor(17, 15)
-    waitdooranim
-    applymovement(AIRANEARIGHT_LOCALID, CommonMovement_WalkUp1)
-    waitmovement(0)
-    hideobjectat(AIRANEARIGHT_LOCALID, MAP_CLIFF_TO_NOWHERE)
-    closedoor(17, 15)
     waitdooranim
     setflag(FLAG_HIDE_AIRANEA)
     releaseall
@@ -261,7 +157,6 @@ text CliffToNowhere_DeneithLost {
 
 movement CliffToNowhere_RunDown {
     walk_fast_down
-    walk_fast_down
     face_up
 }
 
@@ -287,19 +182,19 @@ movement CliffToNowhere_PushedBack{
 }
 
 movement CliffToNowhere_Jumpoff{
-    walk_fast_down * 4
+    walk_fast_down * 5
     jump_2_down
 }
 
 movement CliffToNowhere_Pursue{
-    walk_fast_down * 8
+    walk_fast_down * 7
 }
 
 movement CliffToNowhere_BackToPlayer{
-    walk_up * 3
+    walk_up * 4
     face_left
 }
 
 movement CliffToNowhere_BackToEntrance {
-    walk_up * 3    
+    walk_up * 2    
 }
