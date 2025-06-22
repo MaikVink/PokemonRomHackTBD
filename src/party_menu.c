@@ -340,6 +340,7 @@ static void Task_ReturnToChooseMonAfterText(u8);
 static void UpdateCurrentPartySelection(s8 *, s8);
 static void UpdatePartySelectionSingleLayout(s8 *, s8);
 static void UpdatePartySelectionDoubleLayout(s8 *, s8);
+static void Task_PartyMenuWaitForMessage(u8 taskId);
 static s8 GetNewSlotDoubleLayout(s8, s8);
 static void PrintMessage(const u8 *);
 static void Task_PrintAndWaitForText(u8);
@@ -1527,6 +1528,24 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             }
             break;
         }
+        case PARTY_ACTION_CHOOSE_EEVEE:
+        {
+            u8 partyId = GetPartyIdFromBattleSlot((u8)*slotPtr);
+            if(GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES) != SPECIES_EEVEE)
+            {
+                PlaySE(SE_FAILURE);
+                PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+                DisplayPartyMenuMessage(gText_NotEevee, FALSE);
+                gTasks[taskId].func = Task_PartyMenuWaitForMessage;
+            }
+            else
+            {
+                PlaySE(SE_SELECT);
+                gSelectedMonPartyId = partyId;
+                Task_ClosePartyMenu(taskId);
+            }
+            break;
+        }
         default:
         case PARTY_ACTION_ABILITY_PREVENTS:
         case PARTY_ACTION_SWITCHING:
@@ -1853,6 +1872,21 @@ static void UpdatePartySelectionDoubleLayout(s8 *slotPtr, s8 movementDir)
             *slotPtr = 1;
         }
         break;
+    }
+}
+
+void Task_PartyMenuWaitForMessage(u8 taskId)
+{
+    if (!RunTextPrintersRetIsActive(6)) // wait until message done
+    {
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+            ClearWindowTilemap(sPartyMenuInternal->windowId[1]);
+            DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON); // resets prompt text
+            gTasks[taskId].func = Task_HandleChooseMonInput;
+        }
     }
 }
 
@@ -7816,7 +7850,15 @@ static void Task_ChooseMonForFriendShip(u8 taskId)
     if (!gPaletteFade.active)
     {
         CleanupOverworldWindowsAndTilemaps();
-        InitPartyMenu(PARTY_MENU_TYPE_MOVE_RELEARNER, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+        if(gFieldEffectArguments[1] == 523)
+        {
+            
+            InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_EEVEE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+        }
+        else
+        {
+            InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+        }
         DestroyTask(taskId);
     }
 }
@@ -7827,16 +7869,6 @@ static void CB2_ChooseMonForFriendShip(void)
     if(gSpecialVar_0x8004 >= PARTY_SIZE)
     {
         gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
-    }
-    else if(gFieldEffectArguments[1] == 523)
-    {
-        if(GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES) != SPECIES_EEVEE)
-        {
-            CleanupOverworldWindowsAndTilemaps();
-            InitPartyMenu(PARTY_MENU_TYPE_MOVE_RELEARNER, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
-            return;
-        }
-        MaximizeFriendShip(&gPlayerParty[gSpecialVar_0x8004]);
     }
     else
     {
