@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -82,7 +82,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -95,7 +95,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -108,7 +108,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -121,7 +121,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
       "x": 6,
-      "y": 12,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -156,132 +156,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "2",
-      "script": "BattleDojo_HNS1"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_HIDE_OBJECTS",
-      "var_value": "3",
-      "script": "BattleDojo_HideNPCs"
-    }
+
   ],
   "bg_events": [
 
