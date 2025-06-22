@@ -79,7 +79,7 @@ script EvoMasters_CheckFreeMassageEevee{
     }
     else
     {
-        call(EvoMasters_GiveMassage)
+        call(EvoMasters_GiveMassageEevee)
         releaseall
         end
     }
@@ -94,14 +94,14 @@ script EvoMasters_CheckDeclineMassage{
     else
     {
         msgbox(format("That is what I thought!\n So..."))
-        call(EvoMasters_CheckFreeMassageEevee)
+        call(EvoMasters_GiveMassageEevee)
     }
 }
 
 script EvoMasters_GiveMassage
 {
     msgbox(format("Which Pokemon would you like me to give a massage?"))
-    setfieldeffectargument(1, 523)
+    setfieldeffectargument(1, 0)
     special(ChooseMonForFriendShip)
     waitstate
     showmoneybox(0, 0)
@@ -121,6 +121,24 @@ script EvoMasters_GiveMassage
     return
 }
 
+script EvoMasters_GiveMassageEevee
+{
+    msgbox(format("Please present me your Eevee"))
+    setfieldeffectargument(1, 523)
+    special(ChooseMonForFriendShip)
+    waitstate
+    if(var(VAR_0x8004) == 0xFF)
+    {
+        call(EvoMasters_CheckDeclineMassage)
+    }
+    else
+    {
+        msgbox(format("My work is done, they should now consider you a close friend.\p
+        This was a one time offer though, so I do expect some payment in return next time!\p
+        Hope to see you again!"))
+    }
+}
+
 script EvoMasters_ObjectScript_Simulator
 {
     lockall
@@ -133,8 +151,7 @@ script EvoMasters_ObjectScript_Simulator
             msgbox(format("Oh? Is that an Eevee I see in your party? Well I probably can let you experience this simulation just once, but I would recommend you talk to my other sisters first before you take me on that offer.\p Would you like to try out this simulation for free?"), MSGBOX_YESNO)
             if(var(VAR_RESULT))
             {
-                call(EvoMasters_StartSimulation)
-                setflag(FLAG_FREE_SIMULATION)
+                call(EvoMasters_StartSimulationEevee)
             }
             else
             {
@@ -205,6 +222,68 @@ script EvoMasters_StartSimulation{
     updatemoneybox
     waitse
     hidemoneybox
+    msgbox(format("Now, as promised, one free Rare Candy as thanks for using our services:"))
+    giveitem(ITEM_RARE_CANDY, 1)
+    msgbox(format("And lastly, you're free to enter the simulation. You can walk out any time you're done what you came to do."))
+    applymovement(SSIDNormal, EvoMasters_MoveOutOfTheWay)
+    applymovement(SSIDReturn, EvoMasters_MoveOutOfTheWay)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp)
+    waitmovement(0)
+    opendoor(9,1)
+    waitdooranim
+    applymovement(OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp)
+    waitmovement(0)
+    if(var(VAR_TEMP_0) == 0)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_SUNNY, 11, 5)
+    }
+    elif(var(VAR_TEMP_0) == 1)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_RAINY, 11, 5)
+    }
+    elif(var(VAR_TEMP_0) == 2)
+    {
+        warp(MAP_MODHEADQUARTERS_EVO_MASTERS_FOG, 11, 5)
+    }
+    releaseall
+    end
+}
+
+script EvoMasters_StartSimulationEevee{
+    msgbox(format("Alright, before I can start up the simulation, I first need to know a couple of things from you:"))
+    message(format("What time of day would you like the simulation to have?"))
+    waitmessage
+    multichoice(25, 6, MULTI_TIME_SIMULATION, 0)
+    closemessage
+    if(var(VAR_RESULT) == 0)
+    {
+        special(RtcSetTimeToDay)
+    }
+    elif(var(VAR_RESULT) == 1)
+    {
+        special(RtcSetTimeToDusk)
+    }
+    elif(var(VAR_RESULT) == 2)
+    {
+        special(RtcSetTimeToNight)
+    }
+    else
+    {
+        msgbox(format("Changed your mind? If you need something simulated, you know where to find me!"))
+        return
+    }
+    msgbox(format("Understood!\p Do note that the time might not be clear while you're inside the simulation, but I can garuantee you that the pokemon will notice the time of day! \p Alright next question."))
+    message(format("What kind of weather do you require in the simulation?"))
+    waitmessage
+    multichoice(25, 6, MULTI_WEATHER_SIMULATION, 0)
+    if(var(VAR_RESULT) != 0 && var(VAR_RESULT) != 1 && var(VAR_RESULT) != 2)
+    {
+        msgbox(format("Changed your mind? If you need something simulated, you know where to find me!"))
+        return
+    }
+    copyvar(VAR_TEMP_0, VAR_RESULT)
+    setflag(FLAG_FREE_SIMULATION)
     msgbox(format("Now, as promised, one free Rare Candy as thanks for using our services:"))
     giveitem(ITEM_RARE_CANDY, 1)
     msgbox(format("And lastly, you're free to enter the simulation. You can walk out any time you're done what you came to do."))
