@@ -55,7 +55,6 @@ script BattleDojo_Return{
 }
 
 script BattleDojo_HideNPCs_OnTransition{
-    fadescreen(1)
     hideobjectat(FIONA_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(BEAUTY_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(HIKER_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
@@ -63,8 +62,14 @@ script BattleDojo_HideNPCs_OnTransition{
     hideobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(MAN3_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(WOMAN5_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
+    setobjectxy(FIONA_LOCALID, 6, 12)
+    setobjectxy(BEAUTY_LOCALID, 6, 12)
+    setobjectxy(HIKER_LOCALID, 6, 12)
+    setobjectxy(MAN5_LOCALID, 6, 12)
+    setobjectxy(FATMAN_LOCALID, 6, 12)
+    setobjectxy(MAN3_LOCALID, 6, 12)
+    setobjectxy(WOMAN5_LOCALID, 6, 12)
     setvar(VAR_HIDE_OBJECTS, 2)
-    fadescreen(0)
 }
 
 script BattleDojo_HideNPCs{
@@ -75,6 +80,13 @@ script BattleDojo_HideNPCs{
     hideobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(MAN3_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
     hideobjectat(WOMAN5_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
+    setobjectxy(FIONA_LOCALID, 6, 12)
+    setobjectxy(BEAUTY_LOCALID, 6, 12)
+    setobjectxy(HIKER_LOCALID, 6, 12)
+    setobjectxy(MAN5_LOCALID, 6, 12)
+    setobjectxy(FATMAN_LOCALID, 6, 12)
+    setobjectxy(MAN3_LOCALID, 6, 12)
+    setobjectxy(WOMAN5_LOCALID, 6, 12)
     setvar(VAR_HIDE_OBJECTS, 2)
 }
 
