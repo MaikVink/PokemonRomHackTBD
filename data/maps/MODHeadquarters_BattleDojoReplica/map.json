@@ -156,7 +156,78 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "BattleDojoReplica_HNS1"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "BattleDojoReplica_HNS1"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "BattleDojoReplica_HNS1"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "BattleDojoReplica_HNS1"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_HIDE_OBJECTS",
+      "var_value": "3",
+      "script": "BattleDojoReplica_HideNPCs"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_HIDE_OBJECTS",
+      "var_value": "3",
+      "script": "BattleDojoReplica_HideNPCs"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_HIDE_OBJECTS",
+      "var_value": "3",
+      "script": "BattleDojoReplica_HideNPCs"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_HIDE_OBJECTS",
+      "var_value": "3",
+      "script": "BattleDojoReplica_HideNPCs"
+    }
   ],
   "bg_events": [
 
