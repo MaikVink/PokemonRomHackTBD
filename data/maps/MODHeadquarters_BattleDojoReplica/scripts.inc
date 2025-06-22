@@ -130,698 +130,714 @@ BattleDojoReplica_HideNPCs::
 # 68 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	hideobjectat 5, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA
 # 69 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 8, 6, 12
+# 70 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 6, 6, 12
+# 71 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 7, 6, 12
+# 72 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 9, 6, 12
+# 73 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 3, 6, 12
+# 74 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 2, 6, 12
+# 75 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 4, 6, 12
+# 76 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setobjectxy 5, 6, 12
+# 77 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 2
 	return
 
 
 BattleDojoReplica_HNS1::
-# 74 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 82 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_HIDE_OBJECTS, 3
 	return
 
 
 BattleDojoReplica_Event_Surge::
-# 78 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 86 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_Event_Surge_Text_0, MSGBOX_YESNO
-# 79 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 87 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojoReplica_Event_Surge_1
-# 85 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 93 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_Event_Surge_Text_1
 	return
 
 BattleDojoReplica_Event_Surge_1:
-# 81 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 89 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	call BattleDojoReplica_GridChoice
 	return
 
 
 BattleDojoReplica_PLayerMoveToBattleSpot::
-# 90 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 98 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 91 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_RESULT
-# 93 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 1, BattleDojoReplica_PLayerMoveToBattleSpot_3
-# 95 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 2, BattleDojoReplica_PLayerMoveToBattleSpot_4
-# 97 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 3, BattleDojoReplica_PLayerMoveToBattleSpot_5
 # 99 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	switch VAR_RESULT
+# 101 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 1, BattleDojoReplica_PLayerMoveToBattleSpot_3
+# 103 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 2, BattleDojoReplica_PLayerMoveToBattleSpot_4
+# 105 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 3, BattleDojoReplica_PLayerMoveToBattleSpot_5
+# 107 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	case 4, BattleDojoReplica_PLayerMoveToBattleSpot_6
 BattleDojoReplica_PLayerMoveToBattleSpot_1:
-# 102 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 110 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	waitmovement 0
 	return
 
 BattleDojoReplica_PLayerMoveToBattleSpot_3:
-# 94 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 102 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotDown
 	goto BattleDojoReplica_PLayerMoveToBattleSpot_1
 
 BattleDojoReplica_PLayerMoveToBattleSpot_4:
-# 96 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 104 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotUp
 	goto BattleDojoReplica_PLayerMoveToBattleSpot_1
 
 BattleDojoReplica_PLayerMoveToBattleSpot_5:
-# 98 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 106 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotRight
 	goto BattleDojoReplica_PLayerMoveToBattleSpot_1
 
 BattleDojoReplica_PLayerMoveToBattleSpot_6:
-# 100 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 108 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalksToSpotLeft
 	goto BattleDojoReplica_PLayerMoveToBattleSpot_1
 
 
 BattleDojoReplica_GridChoice::
-# 107 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 115 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_GridChoice_Text_0
-# 108 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 116 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	multichoicegrid 0, 0, MULTI_DOJO_GRID, 3, 0
-# 109 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	closemessage
-# 110 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 0
-# 111 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_RESULT
-# 113 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 0, BattleDojoReplica_GridChoice_3
 # 117 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 1, BattleDojoReplica_GridChoice_4
+	closemessage
+# 118 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 0
+# 119 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	switch VAR_RESULT
 # 121 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 2, BattleDojoReplica_GridChoice_5
+	case 0, BattleDojoReplica_GridChoice_3
 # 125 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 3, BattleDojoReplica_GridChoice_6
+	case 1, BattleDojoReplica_GridChoice_4
 # 129 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 4, BattleDojoReplica_GridChoice_7
+	case 2, BattleDojoReplica_GridChoice_5
 # 133 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 5, BattleDojoReplica_GridChoice_8
+	case 3, BattleDojoReplica_GridChoice_6
 # 137 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 6, BattleDojoReplica_GridChoice_9
+	case 4, BattleDojoReplica_GridChoice_7
 # 141 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 7, BattleDojoReplica_GridChoice_10
+	case 5, BattleDojoReplica_GridChoice_8
 # 145 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 8, BattleDojoReplica_GridChoice_11
+	case 6, BattleDojoReplica_GridChoice_9
 # 149 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 9, BattleDojoReplica_GridChoice_12
+	case 7, BattleDojoReplica_GridChoice_10
 # 153 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 10, BattleDojoReplica_GridChoice_13
+	case 8, BattleDojoReplica_GridChoice_11
 # 157 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 11, BattleDojoReplica_GridChoice_14
+	case 9, BattleDojoReplica_GridChoice_12
 # 161 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 12, BattleDojoReplica_GridChoice_15
+	case 10, BattleDojoReplica_GridChoice_13
 # 165 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 13, BattleDojoReplica_GridChoice_16
+	case 11, BattleDojoReplica_GridChoice_14
 # 169 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 12, BattleDojoReplica_GridChoice_15
+# 173 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 13, BattleDojoReplica_GridChoice_16
+# 177 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	case 14, BattleDojoReplica_GridChoice_17
-# 174 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 182 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_GridChoice_Text_1
-# 175 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 183 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	releaseall
 	end
 
 BattleDojoReplica_GridChoice_1:
-# 178 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 186 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_GridChoice_Text_2, MSGBOX_YESNO
-# 179 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 187 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne BattleDojoReplica_GridChoice_19
-# 206 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 214 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	call BattleDojoReplica_GridChoice
 	return
 
 BattleDojoReplica_GridChoice_3:
-# 114 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 122 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 5
-# 115 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 123 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 0
-# 116 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 124 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 9
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_4:
-# 118 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 126 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 6
-# 119 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 127 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 1
-# 120 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 128 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 10
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_5:
-# 122 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 130 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 7
-# 123 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 131 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 2
-# 124 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 132 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 11
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_6:
-# 126 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 134 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 8
-# 127 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 135 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 3
-# 128 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 136 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 12
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_7:
-# 130 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 138 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 9
-# 131 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 139 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 4
-# 132 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 140 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 13
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_8:
-# 134 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 142 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 10
-# 135 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 143 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 5
-# 136 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 144 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 14
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_9:
-# 138 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 146 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 11
-# 139 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 147 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 6
-# 140 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 148 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_BATTLE_DOJO_STATE, 15
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_10:
-# 142 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 150 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 12
-# 143 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 151 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 7
-# 144 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 152 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 7
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_11:
-# 146 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 154 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 13
-# 147 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 155 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 8
-# 148 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 156 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 4
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_12:
-# 150 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 158 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 14
-# 151 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 159 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 9
-# 152 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 160 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 9
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_13:
-# 154 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 162 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 15
-# 155 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 163 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 10
-# 156 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 164 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 2
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_14:
-# 158 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 166 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 16
-# 159 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 167 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 11
-# 160 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 168 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 8
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_15:
-# 162 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 170 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 17
-# 163 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 171 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 12
-# 164 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 172 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 3
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_16:
-# 166 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 174 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 18
-# 167 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 175 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 13
-# 168 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 176 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 5
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_17:
-# 170 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 178 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	buffertrainername STR_VAR_1, 19
-# 171 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 179 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_2, 14
-# 172 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 180 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	setvar VAR_TEMP_1, 6
 	goto BattleDojoReplica_GridChoice_1
 
 BattleDojoReplica_GridChoice_19:
-# 181 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	msgbox BattleDojoReplica_GridChoice_Text_3
-# 182 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 183 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	playfanfare MUS_HEAL
-# 184 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	special HealPlayerParty
-# 185 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	waitfanfare
-# 186 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 187 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	msgbox BattleDojoReplica_GridChoice_Text_4
-# 188 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	call BattleDojoReplica_PLayerMoveToBattleSpot
 # 189 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_BATTLE_DOJO_STATE
+	msgbox BattleDojoReplica_GridChoice_Text_3
+# 190 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	fadescreen FADE_TO_BLACK
 # 191 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 9, BattleDojoReplica_GridChoice_24
+	playfanfare MUS_HEAL
 # 192 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 10, BattleDojoReplica_GridChoice_24
+	special HealPlayerParty
 # 193 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 11, BattleDojoReplica_GridChoice_24
+	waitfanfare
 # 194 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 12, BattleDojoReplica_GridChoice_24
+	fadescreen FADE_FROM_BLACK
 # 195 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 13, BattleDojoReplica_GridChoice_24
+	msgbox BattleDojoReplica_GridChoice_Text_4
 # 196 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 14, BattleDojoReplica_GridChoice_24
+	call BattleDojoReplica_PLayerMoveToBattleSpot
 # 197 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 15, BattleDojoReplica_GridChoice_24
+	switch VAR_BATTLE_DOJO_STATE
+# 199 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 9, BattleDojoReplica_GridChoice_24
+# 200 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 10, BattleDojoReplica_GridChoice_24
+# 201 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 11, BattleDojoReplica_GridChoice_24
 # 202 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 12, BattleDojoReplica_GridChoice_24
+# 203 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 13, BattleDojoReplica_GridChoice_24
+# 204 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 14, BattleDojoReplica_GridChoice_24
+# 205 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 15, BattleDojoReplica_GridChoice_24
+# 210 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	call BattleDojoReplica_BattleDojoReplicaBattles
 	return
 
 BattleDojoReplica_GridChoice_24:
-# 198 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 206 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_GridChoice_Text_5
-# 199 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 207 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	warp MAP_MODHEADQUARTERS_BATTLE_DOJO, 3, 6
 	end
 
 
 BattleDojoReplica_BattleDojoReplicaBattles::
-# 211 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_0
-# 212 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	setvar VAR_BATTLE_DOJO_STATE, 0
-# 213 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	showobjectat VAR_TEMP_1, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA
-# 214 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	applymovement VAR_TEMP_1, BattleDojoReplica_Movement_OpponentWalksToSpot
-# 215 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	waitmovement 0
-# 216 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_TEMP_2
-# 217 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 12, BattleDojoReplica_BattleDojoReplicaBattles_3
 # 219 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 10, BattleDojoReplica_BattleDojoReplicaBattles_4
+	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_0
+# 220 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	setvar VAR_BATTLE_DOJO_STATE, 0
 # 221 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 8, BattleDojoReplica_BattleDojoReplicaBattles_5
+	showobjectat VAR_TEMP_1, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA
+# 222 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	applymovement VAR_TEMP_1, BattleDojoReplica_Movement_OpponentWalksToSpot
 # 223 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 7, BattleDojoReplica_BattleDojoReplicaBattles_6
+	waitmovement 0
+# 224 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	switch VAR_TEMP_2
 # 225 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 11, BattleDojoReplica_BattleDojoReplicaBattles_7
+	case 12, BattleDojoReplica_BattleDojoReplicaBattles_3
 # 227 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 13, BattleDojoReplica_BattleDojoReplicaBattles_8
+	case 10, BattleDojoReplica_BattleDojoReplicaBattles_4
 # 229 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 14, BattleDojoReplica_BattleDojoReplicaBattles_9
+	case 8, BattleDojoReplica_BattleDojoReplicaBattles_5
 # 231 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 7, BattleDojoReplica_BattleDojoReplicaBattles_6
+# 233 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 11, BattleDojoReplica_BattleDojoReplicaBattles_7
+# 235 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 13, BattleDojoReplica_BattleDojoReplicaBattles_8
+# 237 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 14, BattleDojoReplica_BattleDojoReplicaBattles_9
+# 239 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	case 9, BattleDojoReplica_BattleDojoReplicaBattles_10
 BattleDojoReplica_BattleDojoReplicaBattles_1:
-# 234 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 242 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojoReplica_Movement_WalkLeft
-# 235 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkRight
-# 236 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	waitmovement 0
-# 237 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_TEMP_2
-# 239 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 12, BattleDojoReplica_BattleDojoReplicaBattles_13
-# 241 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 10, BattleDojoReplica_BattleDojoReplicaBattles_14
 # 243 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 8, BattleDojoReplica_BattleDojoReplicaBattles_15
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkRight
+# 244 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	waitmovement 0
 # 245 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 7, BattleDojoReplica_BattleDojoReplicaBattles_16
+	switch VAR_TEMP_2
 # 247 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 11, BattleDojoReplica_BattleDojoReplicaBattles_17
+	case 12, BattleDojoReplica_BattleDojoReplicaBattles_13
 # 249 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 13, BattleDojoReplica_BattleDojoReplicaBattles_18
+	case 10, BattleDojoReplica_BattleDojoReplicaBattles_14
 # 251 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 14, BattleDojoReplica_BattleDojoReplicaBattles_19
+	case 8, BattleDojoReplica_BattleDojoReplicaBattles_15
 # 253 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 7, BattleDojoReplica_BattleDojoReplicaBattles_16
+# 255 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 11, BattleDojoReplica_BattleDojoReplicaBattles_17
+# 257 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 13, BattleDojoReplica_BattleDojoReplicaBattles_18
+# 259 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 14, BattleDojoReplica_BattleDojoReplicaBattles_19
+# 261 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	case 9, BattleDojoReplica_BattleDojoReplicaBattles_20
 BattleDojoReplica_BattleDojoReplicaBattles_11:
-# 256 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 264 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojoReplica_Movement_WalkRightBackwards
-# 257 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkLeftBackwards
-# 258 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	waitmovement 0
-# 259 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	switch VAR_TEMP_2
-# 261 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 12, BattleDojoReplica_BattleDojoReplicaBattles_23
-# 263 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 10, BattleDojoReplica_BattleDojoReplicaBattles_24
 # 265 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 8, BattleDojoReplica_BattleDojoReplicaBattles_25
+	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_Movement_WalkLeftBackwards
+# 266 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	waitmovement 0
 # 267 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 7, BattleDojoReplica_BattleDojoReplicaBattles_26
+	switch VAR_TEMP_2
 # 269 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 11, BattleDojoReplica_BattleDojoReplicaBattles_27
+	case 12, BattleDojoReplica_BattleDojoReplicaBattles_23
 # 271 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 13, BattleDojoReplica_BattleDojoReplicaBattles_28
+	case 10, BattleDojoReplica_BattleDojoReplicaBattles_24
 # 273 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	case 14, BattleDojoReplica_BattleDojoReplicaBattles_29
+	case 8, BattleDojoReplica_BattleDojoReplicaBattles_25
 # 275 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 7, BattleDojoReplica_BattleDojoReplicaBattles_26
+# 277 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 11, BattleDojoReplica_BattleDojoReplicaBattles_27
+# 279 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 13, BattleDojoReplica_BattleDojoReplicaBattles_28
+# 281 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	case 14, BattleDojoReplica_BattleDojoReplicaBattles_29
+# 283 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	case 9, BattleDojoReplica_BattleDojoReplicaBattles_30
 BattleDojoReplica_BattleDojoReplicaBattles_21:
-# 278 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 286 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojoReplica_Movement_OpponentLeave
-# 279 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 287 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	waitmovement 0
-# 280 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 288 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	hideobjectat VAR_TEMP_1, MAP_MODHEADQUARTERS_BATTLE_DOJO_REPLICA
-# 281 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 289 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, BattleDojoReplica_movement_PlayerWalkBackSurge
-# 282 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 290 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	waitmovement 0
-# 283 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 291 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	applymovement 1, BattleDojoReplica_Movement_FaceLeft
-# 284 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 292 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_17
-# 285 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 293 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	releaseall
 	return
 
 BattleDojoReplica_BattleDojoReplicaBattles_3:
-# 218 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 226 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_1
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_4:
-# 220 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 228 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_2
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_5:
-# 222 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 230 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_3
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_6:
-# 224 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 232 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_4
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_7:
-# 226 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 234 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_5
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_8:
-# 228 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 236 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_6
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_9:
-# 230 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 238 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_7
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_10:
-# 232 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 240 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_8
 	goto BattleDojoReplica_BattleDojoReplicaBattles_1
 
 BattleDojoReplica_BattleDojoReplicaBattles_13:
-# 240 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 248 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_PHOENIX_B0, Phoenix_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_14:
-# 242 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 250 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_PAULA_B0, Paula_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_15:
-# 244 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 252 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_HERA_B0, Hera_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_16:
-# 246 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 254 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_NIKO_B0, Niko_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_17:
-# 248 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 256 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_MARIA_B0, Maria_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_18:
-# 250 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 258 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_ROSANNE_B0, Rosanne_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_19:
-# 252 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 260 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_TESSA_B0, Tessa_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_20:
-# 254 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 262 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	trainerbattle_no_intro TRAINER_RAOUL_B0, Raoul_Lost
 	goto BattleDojoReplica_BattleDojoReplicaBattles_11
 
 BattleDojoReplica_BattleDojoReplicaBattles_23:
-# 262 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 270 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_9
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_24:
-# 264 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 272 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_10
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_25:
-# 266 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 274 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_11
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_26:
-# 268 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 276 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_12
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_27:
-# 270 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 278 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_13
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_28:
-# 272 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 280 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_14
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_29:
-# 274 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 282 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_15
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 BattleDojoReplica_BattleDojoReplicaBattles_30:
-# 276 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 284 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	msgbox BattleDojoReplica_BattleDojoReplicaBattles_Text_16
 	goto BattleDojoReplica_BattleDojoReplicaBattles_21
 
 
-# 288 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 296 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_movement_PlayerWalksToSpotUp:
-# 289 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 289 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 289 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 290 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
-# 291 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	face_right
-	step_end
-
-# 294 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-BattleDojoReplica_movement_PlayerWalksToSpotLeft:
-# 295 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 295 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 296 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
-# 296 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
 # 297 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 297 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 297 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 298 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 299 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_right
 	step_end
 
-# 300 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-BattleDojoReplica_movement_PlayerWalksToSpotDown:
-# 301 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 301 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 301 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
 # 302 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
-# 302 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
-# 302 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
+BattleDojoReplica_movement_PlayerWalksToSpotLeft:
 # 303 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 303 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 304 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 304 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 305 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_right
 	step_end
 
-# 306 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-BattleDojoReplica_movement_PlayerWalksToSpotRight:
-# 307 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_down
 # 308 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 308 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 308 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
-	walk_left
-# 308 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+BattleDojoReplica_movement_PlayerWalksToSpotDown:
+# 309 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
 # 309 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 309 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 310 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
 # 310 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 310 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 311 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_right
 	step_end
 
-# 313 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 314 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+BattleDojoReplica_movement_PlayerWalksToSpotRight:
+# 315 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 316 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 316 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 316 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 316 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_left
+# 317 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	walk_down
+# 318 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+	face_right
+	step_end
+
+# 321 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_movement_PlayerWalkBackSurge:
-# 314 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 322 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 314 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 322 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 315 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 323 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
-# 315 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 323 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
 	step_end
 
-# 318 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 326 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_OpponentWalksToSpot:
-# 319 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 327 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 319 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 327 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 320 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 328 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
-# 320 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 328 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
-# 320 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 328 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
-# 321 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 329 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 321 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 329 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 321 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 329 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 321 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 329 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_up
-# 322 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 330 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_left
 	step_end
 
-# 325 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 333 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_OpponentLeave:
-# 326 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 334 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 326 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 334 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 326 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 334 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 326 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 334 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 327 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 335 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
-# 327 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 335 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
-# 327 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 335 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 336 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 328 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 336 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_down
-# 329 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 337 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 332 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 340 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_FaceDown:
-# 333 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 341 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_down
 	step_end
 
-# 336 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 344 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_FaceLeft:
-# 337 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 345 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_left
 	step_end
 
-# 340 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 348 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_FaceRight:
-# 341 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 349 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	face_right
 	step_end
 
-# 344 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 352 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_WalkLeft:
-# 345 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 353 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
 	step_end
 
-# 348 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 356 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_WalkRight:
-# 349 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 357 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
 	step_end
 
-# 352 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 360 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_WalkLeftBackwards:
-# 353 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 361 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	lock_facing_direction
-# 354 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 362 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_left
-# 355 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 363 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 358 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 366 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 BattleDojoReplica_Movement_WalkRightBackwards:
-# 359 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 367 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	lock_facing_direction
-# 360 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 368 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	walk_right
-# 361 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 369 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	unlock_facing_direction
 	step_end
 
@@ -830,122 +846,122 @@ BattleDojoReplica_HideNPCs_OnTransition_Text_0:
 	.string "var was invalid$"
 
 BattleDojoReplica_Event_Surge_Text_0:
-# 78 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 86 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Here for another fight?$"
 
 BattleDojoReplica_Event_Surge_Text_1:
-# 85 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 93 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, talk to me if you ever\n"
 	.string "want to fight one of your colleagues.$"
 
 BattleDojoReplica_GridChoice_Text_0:
-# 107 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 115 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Who do you want to fight?$"
 
 BattleDojoReplica_GridChoice_Text_1:
-# 174 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 182 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Changed your mind?\n"
 	.string "Talk to me if you want to battle one of\l"
 	.string "your colleagues!$"
 
 BattleDojoReplica_GridChoice_Text_2:
-# 178 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 186 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Do you want to fight\n"
 	.string "{STR_VAR_1}?$"
 
 BattleDojoReplica_GridChoice_Text_3:
-# 181 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 189 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Alright, frist things first.$"
 
 BattleDojoReplica_GridChoice_Text_4:
-# 187 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 195 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, you know what to do.$"
 
 BattleDojoReplica_GridChoice_Text_5:
-# 198 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 206 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: give me a moment to get {STR_VAR_1}$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_0:
-# 211 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 219 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR GREEN}Surge{COLOR DARK_GRAY}: {STR_VAR_1}, YOU'VE BEEN\n"
 	.string "CALLED FOR BATTLE!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_1:
-# 218 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 226 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: I can forsee that this will be\n"
 	.string "an interesting battle!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_2:
-# 220 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 228 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Paula{COLOR DARK_GRAY}: I hope you have taken good care\n"
 	.string "of your pokemon throughout your\l"
 	.string "journey.\l"
 	.string "Now let's see how strong you've become!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_3:
-# 222 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 230 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Hera{COLOR DARK_GRAY}: Have you already gone out with\n"
 	.string "your pokemon?$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_4:
-# 224 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 232 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Niko{COLOR DARK_GRAY}: ...\p"
 	.string "SNEAK ATTACK!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_5:
-# 226 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 234 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Maria{COLOR DARK_GRAY}: Glad you have found the training\n"
 	.string "field\p"
 	.string "Now let's see if the experience I\n"
 	.string "anything as I imagined!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_6:
-# 228 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 236 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: Every battle is a new\n"
 	.string "experience, so bring your worst!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_7:
-# 230 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 238 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I have to warn you, my starter is\n"
 	.string "very strong!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_8:
-# 232 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 240 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Raoul{COLOR DARK_GRAY}: Alright Raoul, stay focussed and\n"
 	.string "don't panic.\p"
 	.string "Let's do this!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_9:
-# 262 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 270 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Phoenix{COLOR DARK_GRAY}: I forsee a lot more training\n"
 	.string "for me if I ever want to defeat you. Well\l"
 	.string "fought {PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_10:
-# 264 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 272 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Paula{COLOR DARK_GRAY}: I see you have taken excellent\n"
 	.string "care of your pokemon. Keep it up\l"
 	.string "{PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_11:
-# 266 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 274 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Hera{COLOR DARK_GRAY}: You're skills are far beyond what\n"
 	.string "I had expected. Good battle {PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_12:
-# 268 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 276 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Niko{COLOR DARK_GRAY}: My tactics were not hidden\n"
 	.string "enough. I'll keep training and next time\l"
 	.string "you won't see me coming!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_13:
-# 270 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 278 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Maria{COLOR DARK_GRAY}: Thank you {PLAYER}, this was\n"
 	.string "the exact experience I hoped to get\l"
 	.string "when asking for this training ground.$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_14:
-# 272 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 280 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: Every battle is a new\n"
 	.string "experience, so it does not matter if you\l"
 	.string "lose or win, as long as you learn\l"
@@ -953,56 +969,56 @@ BattleDojoReplica_BattleDojoReplicaBattles_Text_14:
 	.string "{PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_15:
-# 274 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 282 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Tessa{COLOR DARK_GRAY}: I guess I should not be\n"
 	.string "surprised everyone had gotten a strong\l"
 	.string "Starter. Keep up the good work\l"
 	.string "{PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_16:
-# 276 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 284 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Raoul{COLOR DARK_GRAY}: I got a lot of things to think\n"
 	.string "about after this battle, I better go\l"
 	.string "and start doing that.\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_17:
-# 284 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 292 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "Well done {PLAYER}!\p"
 	.string "Come talk to me if you ever want to\n"
 	.string "fight another one of your colleagues.$"
 
 Niko_Lost::
-# 364 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 372 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "You saw straight through me!$"
 
 Hera_Lost::
-# 368 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 376 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "I seem to still not yet be ready.$"
 
 Raoul_Lost::
-# 372 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 380 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "Wait! Just give me a second to catch my\n"
 	.string "breath!$"
 
 Paula_Lost::
-# 376 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 384 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "You really are something else, aren't\n"
 	.string "you?$"
 
 Maria_Lost::
-# 380 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 388 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "This is exactly the experience I hoped\n"
 	.string "for!$"
 
 Phoenix_Lost::
-# 384 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 392 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "If I only could forsee that I lost!$"
 
 Rosanne_Lost::
-# 388 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 396 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "I guess we're done here!$"
 
 Tessa_Lost::
-# 392 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
+# 400 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "Your starter is also quite strong I see!$"
