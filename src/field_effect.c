@@ -911,7 +911,7 @@ static void UNUSED LoadTrainerGfx_TrainerCard(u8 gender, u16 palOffset, u8 *dest
     LoadCompressedPalette(gTrainerSprites[gender].palette.data, palOffset, PLTT_SIZE_4BPP);
 }
 
-u8 AddNewGameBirchObject(s16 x, s16 y, u8 subpriority)
+u8 AddNewGameKectorObject(s16 x, s16 y, u8 subpriority)
 {
     LoadSpritePalette(&sSpritePalette_NewGameBirch);
     return CreateSprite(&sSpriteTemplate_NewGameBirch, x, y, subpriority);
