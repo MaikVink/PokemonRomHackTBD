@@ -1907,9 +1907,9 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
     sprite->data[0] = y;
 }
 
-static u8 NewGameKectorSpeech_CreateLotadSprite(u8 x, u8 y)
+static u8 NewGameKectorSpeech_CreateHoundoomSprite(u8 x, u8 y)
 {
-    return CreateMonPicSprite_Affine(SPECIES_LOTAD, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
+    return CreateMonPicSprite_Affine(SPECIES_HOUNDOOM, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
 }
 
 static void AddKectorSpeechObjects(u8 taskId)
@@ -1924,7 +1924,7 @@ static void AddKectorSpeechObjects(u8 taskId)
     gSprites[kectorSpriteId].oam.priority = 0;
     gSprites[kectorSpriteId].invisible = TRUE;
     gTasks[taskId].tKectorSpriteId = kectorSpriteId;
-    lotadSpriteId = NewGameKectorSpeech_CreateLotadSprite(100, 0x4B);
+    lotadSpriteId = NewGameKectorSpeech_CreateHoundoomSprite(100, 0x4B);
     gSprites[lotadSpriteId].callback = SpriteCB_Null;
     gSprites[lotadSpriteId].oam.priority = 0;
     gSprites[lotadSpriteId].invisible = TRUE;
