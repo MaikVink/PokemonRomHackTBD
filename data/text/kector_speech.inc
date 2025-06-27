@@ -57,7 +57,7 @@ gText_Kector_Screening::
 	.string "controlling pokemon, but only few are\l"
 	.string "actually worthy of handling it.\l"
 	.string "Having completed the screening test\l"
-	.string means you don't want to own\l"
+	.string "means you don't want to own\l"
 	.string "pokemon for power, control or\l"
 	.string "other selfish reasons.\p"
 	.string "Whatever you reasons or goals are with\n"
@@ -101,7 +101,7 @@ gText_Kector_SoItsPlayer::
 
 gText_Kector_YourePlayer::
 	.string "Great, thank you!\n"
-	.string "That is all I need.\p"
+	.string "That is all I need!\p"
 	.string "Hope to see you at M.O.D. Headquarters\n"
 	.string "soon {PLAYER}{KUN}, at the Cliff To\l"
 	.string "Nowhere, the building is hard to miss\l"
@@ -118,3 +118,4 @@ gText_Kector_AreYouReady::
 	.string "true adventure soon enough.\p"
 	.string "Until next time {PLAYER}{KUN}!\p"
 	.string "$"
+	
