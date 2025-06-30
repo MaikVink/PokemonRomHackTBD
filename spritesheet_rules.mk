@@ -54,7 +54,7 @@ $(OBJEVENTGFXDIR)/people/frontier_brains/brandon.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/frontier_brains/greta.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/frontier_brains/lucy_old.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/frontier_brains/fiona.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 $(OBJEVENTGFXDIR)/people/frontier_brains/deneith.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

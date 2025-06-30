@@ -283,6 +283,9 @@ const u32 gTrainerPalette_RubySapphireMay[] = INCBIN_U32("graphics/trainers/pale
 const u32 gTrainerFrontPic_Deneith[] = INCBIN_U32("graphics/trainers/front_pics/deneith.4bpp.lz");
 const u32 gTrainerPalette_Deneith[] = INCBIN_U32("graphics/trainers/palettes/deneith.gbapal.lz");
 
+const u32 gTrainerFrontPic_Fiona[] = INCBIN_U32("graphics/trainers/front_pics/fiona.4bpp.lz");
+const u32 gTrainerPalette_Fiona[] = INCBIN_U32("graphics/trainers/palettes/fiona.gbapal.lz");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -404,7 +407,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(LEAF, Leaf),
     TRAINER_SPRITE(RS_BRENDAN, RubySapphireBrendan),
     TRAINER_SPRITE(RS_MAY, RubySapphireMay),
-    TRAINER_SPRITE(DENEITH, Deneith)
+    TRAINER_SPRITE(DENEITH, Deneith),
+    TRAINER_SPRITE(FIONA, Fiona),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
