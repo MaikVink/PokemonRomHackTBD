@@ -125,11 +125,11 @@
 #define OBJ_EVENT_GFX_SIDNEY                     121
 #define OBJ_EVENT_GFX_PHOEBE                     122
 #define OBJ_EVENT_GFX_GLACIA                     123
-#define OBJ_EVENT_GFX_DRAKE                      124
+#define OBJ_EVENT_GFX_Daemion                    124
 #define OBJ_EVENT_GFX_ROXANNE                    125
 #define OBJ_EVENT_GFX_BRAWLY                     126
 #define OBJ_EVENT_GFX_WATTSON                    127
-#define OBJ_EVENT_GFX_FLANNERY                   128
+#define OBJ_EVENT_GFX_AIRANEA                    128
 #define OBJ_EVENT_GFX_NORMAN                     129
 #define OBJ_EVENT_GFX_WINONA                     130
 #define OBJ_EVENT_GFX_LIZA                       131
