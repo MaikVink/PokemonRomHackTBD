@@ -533,16 +533,16 @@ static const struct SpriteFrameImage sPicTable_Glacia[] = {
     overworld_frame(gObjectEventPic_Glacia, 2, 4, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_Drake[] = {
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Drake, 2, 4, 2),
+static const struct SpriteFrameImage sPicTable_Daemion[] = {
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Roxanne[] = {
@@ -581,16 +581,16 @@ static const struct SpriteFrameImage sPicTable_Wattson[] = {
     overworld_frame(gObjectEventPic_Wattson, 2, 4, 2),
 };
 
-static const struct SpriteFrameImage sPicTable_Flannery[] = {
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
+static const struct SpriteFrameImage sPicTable_Airanea[] = {
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Norman[] = {
