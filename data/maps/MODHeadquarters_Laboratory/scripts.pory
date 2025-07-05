@@ -787,7 +787,7 @@ script Laboratory_SignScript_BookJournal{
     Want to look through the file?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
-        applymovement(PROF_KECTOR_ID, Laboratory_Movement_LookUp)
+        applymovement(PROF_KECTOR_ID, CommonMovement_FacePlayer)
         if(flag(FLAG_TRIED_TO_LOOK))
         {
             msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: I told you already, you're not allowed to look at it, just leave it alone."))
@@ -854,10 +854,6 @@ script Laboratory_EventScript_Professor{
             keep up the good work, this data will help us greatly in the future."))
     }
     releaseall
-}
-
-movement Laboratory_Movement_LookUp {
-    face_player
 }
 
 movement Laboratory_Movement_MoveToProfessor{

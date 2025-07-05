@@ -116,11 +116,7 @@ script Hall1_EventScript_Beauty{
 
 script Hall1_Trigger_NotYet{
     lock
-    applymovement(OBJ_EVENT_ID_PLAYER, Hall1_Movement_MoveBack)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1)
     msgbox(format("You don't have any reason yet to go this way."))
     release
-}
-
-movement Hall1_Movement_MoveBack{
-    walk_up
 }

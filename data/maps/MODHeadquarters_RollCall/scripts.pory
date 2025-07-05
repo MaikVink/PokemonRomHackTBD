@@ -183,20 +183,20 @@ script RollCall_MeetTheLeader{
     msgbox(format("Now we both have a pokemon, I think this could be a good time to do our first pok-"))
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: INITIATIVES, IN FORMATION!"))
-    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_JumpScare)
-    applymovement(FIONA_LOCALID, RollCall_Movement_JumpScare)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp)
+    applymovement(FIONA_LOCALID, CommonMovement_LookUp)
     waitmovement(0)
     msgbox(format("Oh, I guess we have to hold off on that fight for now then."))
     hideobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     
     applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_Player)
     applymovement(FIONA_LOCALID, RollCall_Movement_Fiona)
-    applymovement(POKEFANF_LOCALID, RollCall_Movement_PokeFanF)
+    applymovement(POKEFANF_LOCALID, CommonMovement_WalkUp1)
     applymovement(WOMAN2_LOCALID, RollCall_Movement_Woman2)
     applymovement(MAN3_LOCALID, RollCall_Movement_Man3)
     applymovement(HIKER_LOCALID, RollCall_Movement_Hiker)
     applymovement(RECEPTIONIST_LOCALID, RollCall_Movement_Receptionist)
-    applymovement(WOMAN5_LOCALID, RollCall_Movement_Woman5)
+    applymovement(WOMAN5_LOCALID, CommonMovement_WalkOutOfTheWayDown)
     applymovement(FATGUY_LOCALID, RollCall_Movement_FatGuy)
     applymovement(MOM_LOCALID, RollCall_Movement_Mom)
     applymovement(NINJABOY_LOCALID, RollCall_Movement_NinjaBoy)
@@ -208,7 +208,7 @@ script RollCall_MeetTheLeader{
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: Initiatives, while according to any of my calculations it does not make sense you get rewarded this way, {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} has decided to speak to you directly today.\p
     Please show respect and keep your mouth shut while {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is talking.\p
     Remember, only speak when spoken to!"))
-    applymovement(BODYGUARD_LOCALID, RollCall_Movement_BodyGuard_MakeSpace)
+    applymovement(BODYGUARD_LOCALID, CommonMovement_WalkOutOfTheWayLeft)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: They are ready, sir!"))
     showobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
@@ -243,8 +243,8 @@ script RollCall_MeetTheLeader{
     waitmovement(0)
     hideobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     applymovement(GUARD_LOCALID, RollCall_Movement_Guard_BlockDoor)
-    applymovement(FIONA_LOCALID, RollCall_Movement_WalkLeft)
-    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookRight)
+    applymovement(FIONA_LOCALID, CommonMovement_WalkLeft1)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight)
     waitmovement(0)
     applymovement(MAN3_LOCALID, RollCall_Movement_WalkAwayShort)
     applymovement(MAN5_LOCALID, RollCall_Movement_WalkAwayShort)
@@ -254,7 +254,7 @@ script RollCall_MeetTheLeader{
     applymovement(MOM_LOCALID, RollCall_Movement_WalkAwayShort)
     applymovement(POKEFANF_LOCALID, RollCall_Movement_WalkAwayLong)
     applymovement(FATGUY_LOCALID, RollCall_Movement_FatGuy_Return)
-    applymovement(WOMAN2_LOCALID, RollCall_Movement_WalkDown)
+    applymovement(WOMAN2_LOCALID, CommonMovement_WalkDown1)
     msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Wow, who would have thought that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} would come speak to us directly.\l
     If he is here for official busniness it must be something serious...\p
     Anyways, I think he is right and we should act responsible with our pokemon and not just do a pokemon battle to have 'fun'.\p
@@ -271,7 +271,7 @@ script RollCall_MeetTheLeader{
     removeobject(HIKER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
     removeobject(POKEFANF_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
-    applymovement(OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookDown)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookDown)
     applymovement(FIONA_LOCALID, RollCall_Movement_WalkAwayLong)
     waitmovement(0)
     removeobject(FIONA_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
@@ -302,15 +302,6 @@ movement RollCall_Movement_InFrame{
     walk_down
     walk_left * 3
     face_down
-}
-
-movement RollCall_Movement_JumpScare{
-    face_up
-    emote_exclamation_mark
-}
-
-movement RollCall_Movement_PokeFanF{
-    walk_up
 }
 
 movement RollCall_Movement_Fiona{
@@ -349,11 +340,6 @@ movement RollCall_Movement_Receptionist{
     face_up
 }
 
-movement RollCall_Movement_Woman5{
-    walk_down
-    face_up
-}
-
 movement RollCall_Movement_FatGuy{
     walk_right * 3
     walk_up * 2
@@ -369,11 +355,6 @@ movement RollCall_Movement_Mom{
 
 movement RollCall_Movement_NinjaBoy{
     walk_up * 3
-}
-
-movement RollCall_Movement_BodyGuard_MakeSpace{
-    walk_left
-    face_right
 }
 
 movement RollCall_Movement_Leader_Enter{
@@ -402,28 +383,12 @@ movement RollCall_Movement_Guard_BlockDoor{
     face_down
 }
 
-movement RollCall_Movement_WalkLeft{
-    walk_left
-}
-
-movement RollCall_Movement_LookRight{
-    face_right
-}
-
-movement RollCall_Movement_LookDown{
-    face_down
-}
-
 movement RollCall_Movement_WalkAwayShort{
     walk_down * 6
 }
 
 movement RollCall_Movement_WalkAwayLong{
     walk_down * 8
-}
-
-movement RollCall_Movement_WalkDown{
-    walk_down
 }
 
 movement RollCall_Movement_FatGuy_Return{
