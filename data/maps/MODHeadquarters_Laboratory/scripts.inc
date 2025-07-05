@@ -1371,7 +1371,7 @@ Laboratory_SignScript_BookJournal_1:
 
 Laboratory_SignScript_BookJournal_2:
 # 790 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	applymovement 1, Laboratory_Movement_LookUp
+	applymovement 1, CommonMovement_FacePlayer
 # 791 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	goto_if_set FLAG_TRIED_TO_LOOK, Laboratory_SignScript_BookJournal_5
 # 797 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
@@ -1471,20 +1471,14 @@ Laboratory_EventScript_Professor_8:
 
 
 # 859 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-Laboratory_Movement_LookUp:
-# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	face_player
-	step_end
-
-# 863 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 Laboratory_Movement_MoveToProfessor:
-# 864 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 864 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 864 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 864 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
 	step_end
 

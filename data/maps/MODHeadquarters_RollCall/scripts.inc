@@ -307,9 +307,9 @@ RollCall_MeetTheLeader::
 # 185 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_2
 # 186 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RollCall_Movement_JumpScare
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
 # 187 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 6, RollCall_Movement_JumpScare
+	applymovement 6, CommonMovement_LookUp
 # 188 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
 # 189 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -321,7 +321,7 @@ RollCall_MeetTheLeader::
 # 193 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 6, RollCall_Movement_Fiona
 # 194 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 9, RollCall_Movement_PokeFanF
+	applymovement 9, CommonMovement_WalkUp1
 # 195 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 4, RollCall_Movement_Woman2
 # 196 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -331,7 +331,7 @@ RollCall_MeetTheLeader::
 # 198 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 5, RollCall_Movement_Receptionist
 # 199 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 8, RollCall_Movement_Woman5
+	applymovement 8, CommonMovement_WalkOutOfTheWayDown
 # 200 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 13, RollCall_Movement_FatGuy
 # 201 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -349,7 +349,7 @@ RollCall_MeetTheLeader::
 # 208 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_4
 # 211 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 3, RollCall_Movement_BodyGuard_MakeSpace
+	applymovement 3, CommonMovement_WalkOutOfTheWayLeft
 # 212 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
 # 213 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -391,9 +391,9 @@ RollCall_MeetTheLeader::
 # 245 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 1, RollCall_Movement_Guard_BlockDoor
 # 246 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 6, RollCall_Movement_WalkLeft
+	applymovement 6, CommonMovement_WalkLeft1
 # 247 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookRight
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
 # 248 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	waitmovement 0
 # 249 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -413,7 +413,7 @@ RollCall_MeetTheLeader::
 # 256 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 13, RollCall_Movement_FatGuy_Return
 # 257 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement 4, RollCall_Movement_WalkDown
+	applymovement 4, CommonMovement_WalkDown1
 # 258 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	msgbox RollCall_MeetTheLeader_Text_12
 # 265 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -433,7 +433,7 @@ RollCall_MeetTheLeader::
 # 272 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	removeobject 9, MAP_MODHEADQUARTERS_ROLL_CALL
 # 274 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RollCall_Movement_LookDown
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookDown
 # 275 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	applymovement 6, RollCall_Movement_WalkAwayLong
 # 276 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -506,290 +506,236 @@ RollCall_Movement_InFrame:
 	step_end
 
 # 307 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_JumpScare:
-# 308 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_up
-# 309 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	emote_exclamation_mark
-	step_end
-
-# 312 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_PokeFanF:
-# 313 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-	step_end
-
-# 316 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Fiona:
-# 317 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 308 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
+# 309 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 309 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 310 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+	step_end
+
+# 313 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+RollCall_Movement_Player:
+# 314 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+# 314 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+# 314 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+	step_end
+
+# 317 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+RollCall_Movement_Woman2:
 # 318 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 318 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
+# 319 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
 # 319 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
 	step_end
 
 # 322 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_Player:
-# 323 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-# 323 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-# 323 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-	step_end
-
-# 326 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_Woman2:
-# 327 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 328 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-# 328 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-	step_end
-
-# 331 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Man3:
-# 332 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 323 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 333 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 324 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_up
 	step_end
 
-# 336 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 327 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Man5:
-# 337 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 328 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 338 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_up
 	step_end
 
-# 341 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 332 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Hiker:
-# 342 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 333 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 342 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 333 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 342 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 333 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 342 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 333 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
+# 334 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 335 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	face_up
+	step_end
+
+# 338 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+RollCall_Movement_Receptionist:
+# 339 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 339 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 340 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	face_up
+	step_end
+
 # 343 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+RollCall_Movement_FatGuy:
+# 344 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
 # 344 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_up
-	step_end
-
+	walk_right
+# 344 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 345 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+# 345 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_up
+# 346 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
+# 346 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+	walk_right
 # 347 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_Receptionist:
-# 348 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 348 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 349 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_up
-	step_end
-
-# 352 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_Woman5:
-# 353 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_down
-# 354 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_up
-	step_end
-
-# 357 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_FatGuy:
-# 358 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 358 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 358 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 359 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
-# 359 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-# 360 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 360 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_right
-# 361 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_up
-# 361 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 347 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
 	step_end
 
-# 364 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 350 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Mom:
-# 365 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 351 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
-# 365 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 351 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
-# 366 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 352 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 366 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 352 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 367 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 353 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_up
 	step_end
 
-# 370 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 356 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_NinjaBoy:
-# 371 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 357 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
-# 371 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 357 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
-# 371 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 357 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
 	step_end
 
-# 374 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_BodyGuard_MakeSpace:
-# 375 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_left
-# 376 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_right
-	step_end
-
-# 379 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 360 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Leader_Enter:
-# 380 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 361 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_down
-# 381 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 362 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_left
-# 381 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 362 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_left
-# 381 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 362 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_left
-# 382 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 363 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_down
 	step_end
 
-# 385 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 366 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Leader_Exit:
-# 386 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 367 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_right
-# 386 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 367 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_right
-# 386 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 367 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_right
-# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 368 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_slow_up
 	step_end
 
-# 390 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 371 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_TakePlace:
-# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 372 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 392 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 373 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_down
 	step_end
 
-# 395 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 376 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_OutOfFrame:
-# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 377 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 377 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 377 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_right
-# 397 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 378 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_up
 	step_end
 
-# 400 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 381 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_Guard_BlockDoor:
-# 401 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 382 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 402 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 383 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_down
 	step_end
 
-# 405 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_WalkLeft:
-# 406 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_left
-	step_end
-
-# 409 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_LookRight:
-# 410 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_right
-	step_end
-
-# 413 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_LookDown:
-# 414 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	face_down
-	step_end
-
-# 417 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 386 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_WalkAwayShort:
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 418 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 387 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
 	step_end
 
-# 421 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 390 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_WalkAwayLong:
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 422 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	walk_down
-	step_end
-
-# 425 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-RollCall_Movement_WalkDown:
-# 426 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 391 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
 	step_end
 
-# 429 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 394 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 RollCall_Movement_FatGuy_Return:
-# 430 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 395 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 430 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 395 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 430 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 395 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 430 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 395 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_down
-# 431 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 431 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 431 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 431 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 431 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 396 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	walk_left
-# 432 "data/maps/MODHeadquarters_RollCall/scripts.pory"
+# 397 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	face_right
 	step_end
 

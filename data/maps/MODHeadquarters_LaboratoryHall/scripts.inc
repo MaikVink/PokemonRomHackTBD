@@ -29,7 +29,7 @@ LaboratoryHall_Frame::
 
 LaboratoryHall_Trigger_ToBattleDojo::
 # 21 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveUp
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 22 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	warp MAP_MODHEADQUARTERS_BATTLE_DOJO, 6, 11
 	return
@@ -185,7 +185,7 @@ LaboratoryHall_Trigger_Fiona::
 # 103 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	showobjectat 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
 # 104 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement 3, LaboratoryHalll_NoticePlayer
+	applymovement 3, CommonMovement_Notice
 # 105 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	waitmovement 0
 # 107 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
@@ -193,7 +193,7 @@ LaboratoryHall_Trigger_Fiona::
 # 108 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	applymovement 3, LabrotaryHall_moveDown
 # 109 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveOutOfTheWay
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkOutOfTheWayLeft
 # 110 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	waitmovement 0
 # 111 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
@@ -228,59 +228,39 @@ LaboratoryHall_Trigger_HideFiona::
 
 
 # 131 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-LaboratoryHalll_NoticePlayer:
-# 132 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	emote_exclamation_mark
-	step_end
-
-# 135 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 LabrotaryHall_moveDown:
-# 136 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 132 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_down
-# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 133 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	face_left
 	step_end
 
-# 140 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-LabrotaryHall_moveOutOfTheWay:
-# 141 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	walk_left
-# 142 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	face_right
-	step_end
-
-# 145 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 136 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 LabrotaryHall_moveAway:
-# 146 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_down
-# 146 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_down
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 147 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-	step_end
-
-# 150 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-LabrotaryHall_moveUp:
-# 151 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	walk_up
 	step_end
 
 LaboratoryHall_EventScript_Woman_Text_0:

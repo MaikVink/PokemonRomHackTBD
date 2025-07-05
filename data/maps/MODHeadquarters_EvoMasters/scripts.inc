@@ -372,7 +372,7 @@ EvoMasters_StartSimulation_9:
 # 230 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 231 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 232 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 233 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
@@ -380,7 +380,7 @@ EvoMasters_StartSimulation_9:
 # 234 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitdooranim
 # 235 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 236 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 237 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
@@ -499,7 +499,7 @@ EvoMasters_StartSimulationEevee_9:
 # 292 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 293 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 294 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 295 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
@@ -507,7 +507,7 @@ EvoMasters_StartSimulationEevee_9:
 # 296 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitdooranim
 # 297 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvoMasters_MoveUp
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 298 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	waitmovement 0
 # 299 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
@@ -6209,16 +6209,10 @@ EvoMasters_MoveBackToSpot:
 	step_end
 
 # 2420 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-EvoMasters_MoveUp:
-# 2421 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
-	walk_up
-	step_end
-
-# 2424 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 EvoMasters_MoveDown:
-# 2425 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
+# 2421 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	walk_down
-# 2426 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
+# 2422 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	face_up
 	step_end
 
