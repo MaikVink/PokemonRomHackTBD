@@ -4691,7 +4691,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fiona = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fiona = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kector = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
