@@ -5,6 +5,10 @@ mapscripts Empty_MapScripts {}
 script Debug_Trigger_TestFlying{
 }
 
+movement CommonMovement_Notice {
+    emote_exclamation_mark
+}
+
 movement CommonMovement_NoticeUp {
     face_up
     emote_exclamation_mark    
@@ -15,6 +19,28 @@ movement CommonMovement_NoticeDown {
     emote_exclamation_mark
 }
 
+movement CommonMovement_NoticeLeft {
+    face_left
+    emote_exclamation_mark
+}
+
+movement CommonMovement_NoticeRight {
+    face_right
+    emote_exclamation_mark
+}
+
+movement CommonMovement_FacePlayer {
+    face_player
+}
+
+movement CommonMovement_LookUp {
+    face_up
+}
+
+movement CommonMovement_LookDown {
+    face_down
+}
+
 movement CommonMovement_LookLeft {
     face_left
 }
@@ -23,19 +49,74 @@ movement CommonMovement_LookRight {
     face_right
 }
 
+movement CommonMovement_WalkUp1{
+    walk_up
+}
+
 movement CommonMovement_WalkDown1 {
     walk_down
 }
 
-movement CommonMovement_WalkUp1{
-    walk_up
+movement CommonMovement_WalkLeft1 {
+    walk_left
+}
+
+movement CommonMovement_WalkRight1 {
+    walk_right
 }
 
 movement CommonMovement_WalkUpSlow1{
     walk_slow_up
 }
 
+movement CommonMovement_WalkDownSlow1{
+    walk_slow_down
+}
+
+movement CommonMovement_WalkLeftSlow1{
+    walk_slow_left
+}
+
+movement CommonMovement_WalkRightSlow1{
+    walk_slow_right
+}
+
+movement CommonMovement_WalkOutOfTheWayUp {
+    walk_up
+    face_down
+}
+
+movement CommonMovement_WalkOutOfTheWayDown {
+    walk_down
+    face_up
+}
+
+movement CommonMovement_WalkOutOfTheWayLeft {
+    walk_left
+    face_right
+}
+
+movement CommonMovement_WalkOutOfTheWayRight {
+    walk_right
+    face_left
+}
+
+movement CommonMovement_WalkUpAndNotice {
+    walk_up
+    emote_exclamation_mark
+}
+
 movement CommonMovement_WalkDownAndNotice {
     walk_down
+    emote_exclamation_mark
+}
+
+movement CommonMovement_WalkLeftAndNotice {
+    walk_left
+    emote_exclamation_mark
+}
+
+movement CommonMovement_WalkRightAndNotice {
+    walk_right
     emote_exclamation_mark
 }

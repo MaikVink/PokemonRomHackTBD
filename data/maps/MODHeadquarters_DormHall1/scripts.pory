@@ -47,7 +47,7 @@ script Dormhall1_OnTransition{
 
 script Dormhall1_Frame_FirstTimeEnter{
     lock
-    applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
+    applymovement(FIONA_ID, CommonMovement_Notice)
     waitmovement(0)
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: {COLOR BLUE}{PLAYER}! {COLOR DARK_GRAY}You're awake. I have been waiting for you!"))
 
@@ -82,7 +82,7 @@ script Dormhall1_Frame_TournamentOver{
 }
 
 script DormHall1_LostTournament{
-    applymovement(FIONA_ID, Dormhall1_Movement_NoticePlayer)
+    applymovement(FIONA_ID, CommonMovement_Notice)
     waitmovement(0)
     applymovement(FIONA_ID, Dormhall1_Movement_MoveToPlayer)
     waitmovement(0)
@@ -93,11 +93,11 @@ script DormHall1_LostTournament{
     They give me this interesting price...\l 
     If you have time I would like to show you..."))
     msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: Hold that thought Fiona."))
-    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    applymovement(FIONA_ID, Dormhall1_Movement_ShockLeft)
+    applymovement(NINJABOY_LOCALID, CommonMovement_NoticeLeft)
+    applymovement(GUY_LOCALID, CommonMovement_NoticeLeft)
+    applymovement(LADY_LOCALID, CommonMovement_Notice)
+    applymovement(STATUEGUY_LOCALID, CommonMovement_Notice)
+    applymovement(FIONA_ID, CommonMovement_NoticeLeft)
     closemessage
     applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerLost)
     applymovement(FIONA_ID, Dormhall1_Movemement_DelayedLookDown)
@@ -115,10 +115,10 @@ script DormHall1_LostTournament{
 
 script DormHall1_WonTournament{
     msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a moment"))
-    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(GUY_LOCALID, Dormhall1_Movement_ShockLeft)
-    applymovement(LADY_LOCALID, Dormhall1_Movement_NoticePlayer)
-    applymovement(STATUEGUY_LOCALID, Dormhall1_Movement_NoticePlayer)
+    applymovement(NINJABOY_LOCALID, CommonMovement_NoticeLeft)
+    applymovement(GUY_LOCALID, CommonMovement_NoticeLeft)
+    applymovement(LADY_LOCALID, CommonMovement_Notice)
+    applymovement(STATUEGUY_LOCALID, CommonMovement_Notice)
     closemessage
     applymovement(LEADER_LOCALID, Dormhall1_Movement_Move_To_PlayerWon)
     waitmovement(0)
@@ -290,7 +290,7 @@ script Dormhall1_EventScript_NinjaInitiative{
         default:
             msgbox(format("{COLOR BLUE}Niko{COLOR DARK_GRAY}: Fighting head on is not always the best tactic, I have learned that sneaking about can give you a better idea what is going on than to beat the answers out of people."))
     }
-    applymovement(NINJABOY_LOCALID, Dormhall1_Movement_LookOriginalDireciton)
+    applymovement(NINJABOY_LOCALID, CommonMovement_LookDown)
     releaseall
 }
 
@@ -333,7 +333,7 @@ script Dormhall1_SignScript_SpecialStatueBack{
 
 script Dormhall1_Trigger_NoEntry{
     lockall    
-    applymovement(OBJ_EVENT_ID_PLAYER, Dormhall1_Movement_MoveBack)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkLeft1)
     msgbox(format("Sorry kid, no entry without prior authorization."))
     waitmovement(0)
     releaseall
@@ -354,15 +354,6 @@ script Dormhall1_Trigger_SetWarpValue3{
     release
 }
 
-movement Dormhall1_Movement_NoticePlayer{
-    emote_exclamation_mark
-}
-
-movement Dormhall1_Movement_ShockLeft{
-    emote_exclamation_mark
-    face_right
-}
-
 movement Dormhall1_Movement_MoveToPlayer{
     walk_up * 2
 }
@@ -371,14 +362,6 @@ movement Dormhall1_Movement_WalkAway{
     walk_down * 4
     walk_left * 4
     walk_down
-}
-
-movement Dormhall1_Movement_MoveBack{
-    walk_left
-}
-
-movement Dormhall1_Movement_LookOriginalDireciton{
-    face_down
 }
 
 movement Dormhall1_Movement_Move_To_PlayerWon{
