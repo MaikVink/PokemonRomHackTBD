@@ -54,11 +54,11 @@
 #define TRAINER_PIC_ELITE_FOUR_SIDNEY     36
 #define TRAINER_PIC_ELITE_FOUR_PHOEBE     37
 #define TRAINER_PIC_ELITE_FOUR_GLACIA     38
-#define TRAINER_PIC_ELITE_FOUR_DRAKE      39
+#define TRAINER_PIC_LEADER_DAEMION        39
 #define TRAINER_PIC_LEADER_ROXANNE        40
 #define TRAINER_PIC_LEADER_BRAWLY         41
 #define TRAINER_PIC_LEADER_WATTSON        42
-#define TRAINER_PIC_LEADER_FLANNERY       43
+#define TRAINER_PIC_RIGHT_HAND_AIRANEA    43
 #define TRAINER_PIC_LEADER_NORMAN         44
 #define TRAINER_PIC_LEADER_WINONA         45
 #define TRAINER_PIC_LEADER_TATE_AND_LIZA  46
@@ -108,7 +108,10 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-#define TRAINER_PIC_COUNT                 93
+#define TRAINER_PIC_DENEITH               93
+#define TRAINER_PIC_FIONA                 94
+#define TRAINER_PIC_KECTOR                95
+#define TRAINER_PIC_COUNT                 96
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -202,8 +205,10 @@
 #define FACILITY_CLASS_LEAF                  0x4f
 #define FACILITY_CLASS_RS_BRENDAN            0x50
 #define FACILITY_CLASS_RS_MAY                0x51
+#define FACILITY_CLASS_DENEITH               0x52
+#define FACILITY_CLASS_FIONA                 0x53
 
-#define FACILITY_CLASSES_COUNT               0x52
+#define FACILITY_CLASSES_COUNT               0x54
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
 #define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1

@@ -24,6 +24,7 @@ script Entrancehall_OnTransition
 
 script EntranceHall_FirstEntrace{
     lockall
+    setflag(FLAG_HIDE_LEADER)
     applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_LookRight)
     waitmovement(0)
     if(flag(FLAG_TOURNAMENT_LOST))

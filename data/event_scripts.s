@@ -1071,7 +1071,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/test_signpost.inc"
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
-	.include "data/text/birch_speech.inc"
+	.include "data/text/kector_speech.inc"
 
 	.include "data/maps/MODHeadquarters_General_Store/scripts.inc"
 
