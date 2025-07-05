@@ -211,19 +211,13 @@ Hall1_Trigger_NotYet::
 # 118 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	lock
 # 119 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Hall1_Movement_MoveBack
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 120 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	msgbox Hall1_Trigger_NotYet_Text_0
 # 121 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	release
 	return
 
-
-# 124 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-Hall1_Movement_MoveBack:
-# 125 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-	walk_up
-	step_end
 
 Hall1_SignScript_StatueNormal_Text_0:
 # 14 "data/maps/MODHeadquarters_Hall1/scripts.pory"

@@ -17,7 +17,7 @@ void InitFieldMessageBox(void)
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
-    gTextFlags.forceMidTextSpeed = FALSE;
+    gTextFlags.forceFastTextSpeed = FALSE;
 }
 
 #define tState data[0]

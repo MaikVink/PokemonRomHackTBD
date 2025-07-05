@@ -78,7 +78,7 @@ Dormhall1_Frame_FirstTimeEnter::
 # 49 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	lock
 # 50 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 4, Dormhall1_Movement_NoticePlayer
+	applymovement 4, CommonMovement_Notice
 # 51 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	waitmovement 0
 # 52 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -124,7 +124,7 @@ Dormhall1_Frame_TournamentOver_2:
 
 DormHall1_LostTournament::
 # 85 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 4, Dormhall1_Movement_NoticePlayer
+	applymovement 4, CommonMovement_Notice
 # 86 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	waitmovement 0
 # 87 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -136,15 +136,15 @@ DormHall1_LostTournament::
 # 95 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	msgbox DormHall1_LostTournament_Text_1
 # 96 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 5, Dormhall1_Movement_ShockLeft
+	applymovement 5, CommonMovement_NoticeLeft
 # 97 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 3, Dormhall1_Movement_ShockLeft
+	applymovement 3, CommonMovement_NoticeLeft
 # 98 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 1, Dormhall1_Movement_NoticePlayer
+	applymovement 1, CommonMovement_Notice
 # 99 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 8, Dormhall1_Movement_NoticePlayer
+	applymovement 8, CommonMovement_Notice
 # 100 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 4, Dormhall1_Movement_ShockLeft
+	applymovement 4, CommonMovement_NoticeLeft
 # 101 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	closemessage
 # 102 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -174,13 +174,13 @@ DormHall1_WonTournament::
 # 117 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	msgbox DormHall1_WonTournament_Text_0
 # 118 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 5, Dormhall1_Movement_ShockLeft
+	applymovement 5, CommonMovement_NoticeLeft
 # 119 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 3, Dormhall1_Movement_ShockLeft
+	applymovement 3, CommonMovement_NoticeLeft
 # 120 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 1, Dormhall1_Movement_NoticePlayer
+	applymovement 1, CommonMovement_Notice
 # 121 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 8, Dormhall1_Movement_NoticePlayer
+	applymovement 8, CommonMovement_Notice
 # 122 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	closemessage
 # 123 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -462,7 +462,7 @@ Dormhall1_EventScript_NinjaInitiative::
 	msgbox Dormhall1_EventScript_NinjaInitiative_Text_6
 Dormhall1_EventScript_NinjaInitiative_1:
 # 293 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 5, Dormhall1_Movement_LookOriginalDireciton
+	applymovement 5, CommonMovement_LookDown
 # 294 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	releaseall
 	return
@@ -569,7 +569,7 @@ Dormhall1_Trigger_NoEntry::
 # 335 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	lockall
 # 336 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Dormhall1_Movement_MoveBack
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkLeft1
 # 337 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	msgbox Dormhall1_Trigger_NoEntry_Text_0
 # 338 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -604,158 +604,132 @@ Dormhall1_Trigger_SetWarpValue3::
 
 
 # 357 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-Dormhall1_Movement_NoticePlayer:
+Dormhall1_Movement_MoveToPlayer:
 # 358 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	emote_exclamation_mark
+	walk_up
+# 358 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+	walk_up
 	step_end
 
 # 361 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-Dormhall1_Movement_ShockLeft:
-# 362 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	emote_exclamation_mark
-# 363 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	face_right
-	step_end
-
-# 366 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-Dormhall1_Movement_MoveToPlayer:
-# 367 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	walk_up
-# 367 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	walk_up
-	step_end
-
-# 370 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movement_WalkAway:
-# 371 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 362 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 371 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 362 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 371 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 362 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 371 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 362 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 372 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 363 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 372 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 363 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 372 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 363 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 372 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 363 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 364 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
 	step_end
 
-# 376 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-Dormhall1_Movement_MoveBack:
-# 377 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	walk_left
-	step_end
-
-# 380 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-Dormhall1_Movement_LookOriginalDireciton:
-# 381 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	face_down
-	step_end
-
-# 384 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 367 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movement_Move_To_PlayerWon:
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 368 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 386 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 369 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_up
-# 386 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 369 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_up
 	step_end
 
-# 389 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 372 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movement_Move_To_PlayerLost:
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 373 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_right
-# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 374 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_slow_up
 	step_end
 
-# 394 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 377 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movemement_DelayedLookDown:
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 395 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 378 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	delay_8
-# 396 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 379 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	face_down
 	step_end
 
-# 399 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 382 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movement_MoveOutOfTheWay:
-# 400 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 383 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	face_right
-# 401 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 384 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	lock_facing_direction
-# 402 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 385 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 403 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 386 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 406 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 389 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 Dormhall1_Movemement_MoveAway:
-# 407 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 407 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 407 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 390 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_down
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
-# 408 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+# 391 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	walk_left
 	step_end
 
