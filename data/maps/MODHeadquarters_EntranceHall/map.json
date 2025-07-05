@@ -41,7 +41,7 @@
       "flag": "FLAG_HIDE_DENEITH"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_DRAKE",
+      "graphics_id": "OBJ_EVENT_GFX_Daemion",
       "x": 3,
       "y": 2,
       "elevation": 0,
@@ -87,8 +87,8 @@
       "x": 18,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_MODHEADQUARTERS_GENERAL_STORE",
+      "dest_warp_id": "0"
     },
     {
       "x": 34,

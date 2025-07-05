@@ -35,7 +35,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_DRAKE",
+      "graphics_id": "OBJ_EVENT_GFX_Daemion",
       "x": 8,
       "y": 5,
       "elevation": 0,
@@ -62,7 +62,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_FIONA",
       "x": 16,
       "y": 5,
       "elevation": 0,
@@ -131,7 +131,7 @@
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FLANNERY",
+      "graphics_id": "OBJ_EVENT_GFX_AIRANEA",
       "x": 15,
       "y": 2,
       "elevation": 0,
