@@ -18,7 +18,7 @@ script LaboratoryHall_Frame{
 }
 
 script LaboratoryHall_Trigger_ToBattleDojo{
-    applymovement(OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveUp)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1)
     warp(MAP_MODHEADQUARTERS_BATTLE_DOJO, 6, 11)
 }
 
@@ -101,12 +101,12 @@ script LaboratoryHall_Trigger_Fiona{
     opendoor(14, 1)
     waitdooranim
     showobjectat(FIONA_ID, MAP_MODHEADQUARTERS_LABORATORY_HALL)
-    applymovement(FIONA_ID, LaboratoryHalll_NoticePlayer)
+    applymovement(FIONA_ID, CommonMovement_Notice)
     waitmovement(0)
 
     msgbox(format("Oh {PLAYER}, you came!"))
     applymovement(FIONA_ID, LabrotaryHall_moveDown)
-    applymovement(OBJ_EVENT_ID_PLAYER, LabrotaryHall_moveOutOfTheWay)
+    applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_WalkOutOfTheWayLeft)
     waitmovement(0)
     closedoor(14, 1)
     waitdooranim
@@ -128,25 +128,12 @@ script LaboratoryHall_Trigger_HideFiona{
     releaseall   
 }
 
-movement LaboratoryHalll_NoticePlayer{
-    emote_exclamation_mark
-}
-
 movement LabrotaryHall_moveDown{
     walk_down
     face_left
 }
 
-movement LabrotaryHall_moveOutOfTheWay{
-    walk_left
-    face_right
-}
-
 movement LabrotaryHall_moveAway{
     walk_down * 2
     walk_left * 10
-}
-
-movement LabrotaryHall_moveUp {
-    walk_up
 }

@@ -534,15 +534,7 @@ static const struct SpriteFrameImage sPicTable_Glacia[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Daemion[] = {
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Daemion, 2, 4, 2),
+    overworld_ascending_frames(gObjectEventPic_Daemion, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Roxanne[] = {
@@ -582,15 +574,7 @@ static const struct SpriteFrameImage sPicTable_Wattson[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Airanea[] = {
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Airanea, 2, 4, 2),
+    overworld_ascending_frames(gObjectEventPic_Airanea, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Norman[] = {
@@ -1267,4 +1251,8 @@ static const struct SpriteFrameImage sPicTable_Deneith[] = {
 
 static const struct SpriteFrameImage sPicTable_Fiona[] = {
     overworld_ascending_frames(gObjectEventPic_Fiona, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Kector[] = {
+    overworld_ascending_frames(gObjectEventPic_Kector, 2, 4),
 };
