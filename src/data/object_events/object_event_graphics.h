@@ -374,3 +374,4 @@ const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u32 gObjectEventPic_Deneith[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/deneith.4bpp");
 const u32 gObjectEventPic_Fiona[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/fiona.4bpp");
+const u32 gObjectEventPic_Kector[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/kector.4bpp");
