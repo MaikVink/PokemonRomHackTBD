@@ -2,13 +2,7 @@ static const struct TrainerMon sParty_Fabian1[] = {
     {
     .lvl = 5,
     .species = SPECIES_MUNCHLAX,
-    }
-};
-
-static const struct TrainerMon sParty_Bella1[] = {
-    {
-    .lvl = 6,
-    .species = SPECIES_PETILIL,
+    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL}
     }
 };
 
@@ -16,6 +10,15 @@ static const struct TrainerMon sParty_Herald1[] = {
     {
     .lvl = 5,
     .species = SPECIES_GEODUDE_ALOLAN,
+    }
+};
+
+
+static const struct TrainerMon sParty_Bella1[] = {
+    {
+    .lvl = 6,
+    .species = SPECIES_PETILIL,
+    .moves = {MOVE_POUND, MOVE_GROWTH, MOVE_HELPING_HAND, MOVE_STUN_SPORE}
     }
 };
 
