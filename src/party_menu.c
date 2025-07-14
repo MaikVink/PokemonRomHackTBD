@@ -1531,7 +1531,13 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
         case PARTY_ACTION_CHOOSE_EEVEE:
         {
             u8 partyId = GetPartyIdFromBattleSlot((u8)*slotPtr);
-            if(GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES) != SPECIES_EEVEE)
+            if(GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES) == SPECIES_RIOLU)
+            {
+                PlaySE(SE_SELECT);
+                gSelectedMonPartyId = partyId;
+                Task_ClosePartyMenu(taskId);
+            }
+            else if(GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES) != SPECIES_EEVEE)
             {
                 PlaySE(SE_FAILURE);
                 PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
@@ -7852,7 +7858,6 @@ static void Task_ChooseMonForFriendShip(u8 taskId)
         CleanupOverworldWindowsAndTilemaps();
         if(gFieldEffectArguments[1] == 523)
         {
-            
             InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_EEVEE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
         }
         else

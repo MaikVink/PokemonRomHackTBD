@@ -33,6 +33,11 @@ movement CommonMovement_FacePlayer {
     face_player
 }
 
+movement CommonMovement_FaceOriginalDirection
+{
+    face_original_direction
+}
+
 movement CommonMovement_LookUp {
     face_up
 }

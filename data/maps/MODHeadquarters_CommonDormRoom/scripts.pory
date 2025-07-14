@@ -51,3 +51,23 @@ script CommonDormRoom_SignScript_Drawer{
     msgbox(format("It's a set of drawers, it is filled with different kind of clothes"))
     releaseall
 }
+
+script CommonDormRoom_SignScript_Table{
+    lockall
+    msgbox(format("It's a table"))
+    releaseall
+}
+
+script CommonDormRoom_SignScript_Bed{
+    lockall
+    msgbox(format("Its one of your fellow initiative beds!\p Do you want to sleep in it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT))
+    {
+        msgbox(format("Maybe it's better if you find your own bed, before they come back..."))
+    }
+    else
+    {
+        msgbox(format("Yeah, why would you sleep in another persons bed without permission?"))
+    }
+    releaseall
+}
