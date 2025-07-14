@@ -1362,10 +1362,10 @@ Laboratory_SignScript_BookJournal::
 # 788 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Laboratory_SignScript_BookJournal_2
-# 803 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 804 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_SignScript_BookJournal_Text_3
 Laboratory_SignScript_BookJournal_1:
-# 805 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 806 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	releaseall
 	return
 
@@ -1373,112 +1373,115 @@ Laboratory_SignScript_BookJournal_2:
 # 790 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	applymovement 1, CommonMovement_FacePlayer
 # 791 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	goto_if_set FLAG_TRIED_TO_LOOK, Laboratory_SignScript_BookJournal_5
+	goto_if_set FLAG_TRIED_TO_LOOK, Laboratory_SignScript_BookJournal_6
 # 797 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	setflag FLAG_TRIED_TO_LOOK
 # 798 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_SignScript_BookJournal_Text_2
+Laboratory_SignScript_BookJournal_5:
+# 800 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	applymovement 1, CommonMovement_FaceOriginalDirection
 	goto Laboratory_SignScript_BookJournal_1
 
-Laboratory_SignScript_BookJournal_5:
+Laboratory_SignScript_BookJournal_6:
 # 793 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_SignScript_BookJournal_Text_1
-	goto Laboratory_SignScript_BookJournal_1
+	goto Laboratory_SignScript_BookJournal_5
 
 
 Laboratory_SignScript_Coffee::
-# 809 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	lockall
 # 810 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	lockall
+# 811 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_SignScript_Coffee_Text_0
-# 813 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 814 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	releaseall
 	return
 
 
 Laboratory_SignScript_MainComputer::
-# 817 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	lockall
 # 818 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	msgbox Laboratory_SignScript_MainComputer_Text_0
+	lockall
 # 819 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	msgbox Laboratory_SignScript_MainComputer_Text_0
+# 820 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	releaseall
 	return
 
 
 Laboratory_SignScript_SideComputer::
-# 823 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	lockall
 # 824 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	msgbox Laboratory_SignScript_SideComputer_Text_0
+	lockall
 # 825 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	msgbox Laboratory_SignScript_SideComputer_Text_0
+# 826 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	releaseall
 	return
 
 
 Laboratory_EventScript_Professor::
-# 829 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	lockall
 # 830 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	faceplayer
+	lockall
 # 831 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	faceplayer
+# 832 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	switch VAR_STORY_PROGRESSION
-# 833 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 834 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	case 4, Laboratory_EventScript_Professor_3
-# 836 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 837 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	case 5, Laboratory_EventScript_Professor_4
-# 838 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	case 6, Laboratory_EventScript_Professor_5
 # 839 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	case 7, Laboratory_EventScript_Professor_5
+	case 6, Laboratory_EventScript_Professor_5
 # 840 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+	case 7, Laboratory_EventScript_Professor_5
+# 841 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	case 8, Laboratory_EventScript_Professor_5
-# 842 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 843 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	case 9, Laboratory_EventScript_Professor_6
-# 852 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 853 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_5
 Laboratory_EventScript_Professor_1:
-# 856 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 857 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	releaseall
 	return
 
 Laboratory_EventScript_Professor_3:
-# 834 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 835 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_0
 	goto Laboratory_EventScript_Professor_1
 
 Laboratory_EventScript_Professor_4:
-# 837 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 838 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_1
 	goto Laboratory_EventScript_Professor_1
 
 Laboratory_EventScript_Professor_5:
-# 841 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 842 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_2
 	goto Laboratory_EventScript_Professor_1
 
 Laboratory_EventScript_Professor_6:
-# 843 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 844 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, Laboratory_EventScript_Professor_8
-# 849 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 850 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_4
 	goto Laboratory_EventScript_Professor_1
 
 Laboratory_EventScript_Professor_8:
-# 845 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 846 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	msgbox Laboratory_EventScript_Professor_Text_3
 	goto Laboratory_EventScript_Professor_1
 
 
-# 859 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 Laboratory_Movement_MoveToProfessor:
-# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 861 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 861 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 861 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
-# 860 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 861 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	walk_up
 	step_end
 
@@ -1814,12 +1817,12 @@ Laboratory_SignScript_BookJournal_Text_2:
 	.string "before you just look through my stuff!$"
 
 Laboratory_SignScript_BookJournal_Text_3:
-# 803 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 804 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "Better not touch the professors stuff\n"
 	.string "while the professor is still in the room.$"
 
 Laboratory_SignScript_Coffee_Text_0:
-# 810 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 811 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "You don't know how long this cup of\n"
 	.string "coffee has been standing here, but it\l"
 	.string "is long cold.\p"
@@ -1830,18 +1833,18 @@ Laboratory_SignScript_Coffee_Text_0:
 	.string "table...$"
 
 Laboratory_SignScript_MainComputer_Text_0:
-# 818 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 819 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "It's one of the professors computers.\p"
 	.string "It is locked and the lock screen is\n"
 	.string "bland, so not much you can do on it.$"
 
 Laboratory_SignScript_SideComputer_Text_0:
-# 824 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 825 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "Why does the professor need two\n"
 	.string "computers anyways?$"
 
 Laboratory_EventScript_Professor_Text_0:
-# 834 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 835 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: There is nothing left here\n"
 	.string "for you to do, please go to Roll Call.\p"
 	.string "Roll Call is north from the main hallway,\n"
@@ -1849,7 +1852,7 @@ Laboratory_EventScript_Professor_Text_0:
 	.string "you make {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} mad$"
 
 Laboratory_EventScript_Professor_Text_1:
-# 837 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 838 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Huh?\p"
 	.string "Do you want something?\p"
 	.string "I think you better just go sleep so\n"
@@ -1857,28 +1860,28 @@ Laboratory_EventScript_Professor_Text_1:
 	.string "next.$"
 
 Laboratory_EventScript_Professor_Text_2:
-# 841 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 842 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Huh?\p"
 	.string "Do you want something?\p"
 	.string "Should you not focus on the Tournament\n"
 	.string "in the room next of here?.$"
 
 Laboratory_EventScript_Professor_Text_3:
-# 845 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 846 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n"
 	.string "recruit, continue your progress with\l"
 	.string "your pokedex, you can become a great\l"
 	.string "asset for Team MOD.$"
 
 Laboratory_EventScript_Professor_Text_4:
-# 849 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 850 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Good job on making it on\n"
 	.string "the finals! I'll be watching your battle,\l"
 	.string "I know this will be interesting to\l"
 	.string "watch!$"
 
 Laboratory_EventScript_Professor_Text_5:
-# 852 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
+# 853 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Let me take a look at your\n"
 	.string "pokedex.\p"
 	.string "hm...\p"

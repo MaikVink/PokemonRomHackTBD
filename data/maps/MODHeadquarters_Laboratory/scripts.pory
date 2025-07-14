@@ -797,6 +797,7 @@ script Laboratory_SignScript_BookJournal{
             setflag(FLAG_TRIED_TO_LOOK)
             msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: hé, that is personal! Ask before you just look through my stuff!"))
         }
+        applymovement(PROF_KECTOR_ID, CommonMovement_FaceOriginalDirection)
     }
     else
     {
