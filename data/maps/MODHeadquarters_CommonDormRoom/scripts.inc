@@ -130,6 +130,37 @@ CommonDormRoom_SignScript_Drawer::
 	return
 
 
+CommonDormRoom_SignScript_Table::
+# 56 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	lockall
+# 57 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	msgbox CommonDormRoom_SignScript_Table_Text_0
+# 58 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	releaseall
+	return
+
+
+CommonDormRoom_SignScript_Bed::
+# 62 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	lockall
+# 63 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	msgbox CommonDormRoom_SignScript_Bed_Text_0, MSGBOX_YESNO
+# 64 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne CommonDormRoom_SignScript_Bed_2
+# 70 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	msgbox CommonDormRoom_SignScript_Bed_Text_2
+CommonDormRoom_SignScript_Bed_1:
+# 72 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	releaseall
+	return
+
+CommonDormRoom_SignScript_Bed_2:
+# 66 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	msgbox CommonDormRoom_SignScript_Bed_Text_1
+	goto CommonDormRoom_SignScript_Bed_1
+
+
 CommonDormRoom_SignScript_Computer_Text_0:
 # 45 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
 	.string "It's a computer, and seeing it is not\n"
@@ -142,3 +173,22 @@ CommonDormRoom_SignScript_Drawer_Text_0:
 # 51 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
 	.string "It's a set of drawers, it is filled with\n"
 	.string "different kind of clothes$"
+
+CommonDormRoom_SignScript_Table_Text_0:
+# 57 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	.string "It's a table$"
+
+CommonDormRoom_SignScript_Bed_Text_0:
+# 63 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	.string "Its one of your fellow initiative beds!\p"
+	.string "Do you want to sleep in it?$"
+
+CommonDormRoom_SignScript_Bed_Text_1:
+# 66 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	.string "Maybe it's better if you find your own\n"
+	.string "bed, before they come back...$"
+
+CommonDormRoom_SignScript_Bed_Text_2:
+# 70 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
+	.string "Yeah, why would you sleep in another\n"
+	.string "persons bed without permission?$"
