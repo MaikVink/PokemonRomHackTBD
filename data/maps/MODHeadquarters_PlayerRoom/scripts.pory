@@ -99,6 +99,10 @@ script PlayerRoom_SignScript_Bed{
     lockall
     if(flag(FLAG_RECEIVED_FIRST_POKEMON))
     {
+        if(var(VAR_STORY_PROGRESSION) < 5)
+        {
+            msgbox(format("How come these bed are always perfectly made?"))
+        }
         msgbox(format("You could use a rest if you need it.\p 
         Do you want to sleep and rest up for today?"), MSGBOX_YESNO)
         if(var(VAR_RESULT))
