@@ -12,7 +12,7 @@ script DormhallTopLeft_EventScript_WindowWatcher{
         case 2:
         case 3:
         case 4:
-            msgbox(format("I wonder when we will be allowed to leave this place with our pokemon"))
+            msgbox(format("I wonder when we will be allowed to leave this place with our pokemon."))
         case 5:
             msgbox(format("With the tournament I doubt we will be able to leave this place anything soon huh?"))
         case 6:

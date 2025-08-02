@@ -167,16 +167,16 @@ CommonDormRoom_SignScript_Computer_Text_0:
 	.string "yours, you should probably leave it\l"
 	.string "alone.\l"
 	.string "Not that you can do anything anyways\l"
-	.string "since it is password protected$"
+	.string "since it is password protected.$"
 
 CommonDormRoom_SignScript_Drawer_Text_0:
 # 51 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
 	.string "It's a set of drawers, it is filled with\n"
-	.string "different kind of clothes$"
+	.string "different kind of clothes.$"
 
 CommonDormRoom_SignScript_Table_Text_0:
 # 57 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
-	.string "It's a table$"
+	.string "It's a table.$"
 
 CommonDormRoom_SignScript_Bed_Text_0:
 # 63 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
@@ -191,4 +191,4 @@ CommonDormRoom_SignScript_Bed_Text_1:
 CommonDormRoom_SignScript_Bed_Text_2:
 # 70 "data/maps/MODHeadquarters_CommonDormRoom/scripts.pory"
 	.string "Yeah, why would you sleep in another\n"
-	.string "persons bed without permission?$"
+	.string "person's bed without permission?$"

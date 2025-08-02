@@ -13,8 +13,7 @@ script DormHallBottemLeft_EventScript_Hiker{
         case 3:
         case 4:
             msgbox(format("If you want to look in my room, go ahead!\l
-            As long as you allow me also to look in your room, of course!\l
-            I cannot deny that I'm also curious to see what the other initiatives have done with the limiting house rules we have been given."))
+            As long as you allow me also to look in your room, of course!"))
         case 5:
             msgbox(format("uhm... I mean you still can go in my room if you want, but I do intend to go to bed soon.\l Maybe you should also go to your room sometime soon."))
         case 6:

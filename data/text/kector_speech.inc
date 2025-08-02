@@ -53,7 +53,7 @@ gText_Kector_Screening::
 	.string "You have set your first step into\l" 
 	.string "proving you're capable of owning\l"
 	.string "pokemon.\p"
-	.string "However, if we ever find out you abuse\l"
+	.string "However, if we ever find out you abuse\n"
 	.string "these powers we gave you, there will\l"
 	.string "be dire consequences...\l"
 	.string "Consequences that even your pokemon\n"

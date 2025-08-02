@@ -21,17 +21,75 @@ script Hall1_SignScript_PotNormal{
     releaseall
 }
 
+script Hall1_SignScript_PotEasterEgg{
+    lockall
+    msgbox(format("Hé there is a green rupee inside the pot!"))
+    releaseall
+}
+
 script Hall1_EventScript_GuardLeft{
     lockall
     faceplayer
-    msgbox(format("This room leads to rollcall.\n Once you get you retrieve your pokemon you should return here."))
+        switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            msgbox(format("This room leads to rollcall.\n Once you get you retrieve your pokemon you should return here."))
+        case 4:
+            msgbox(format("This room leads to rollcall.\n You should go ahead, {COLOR LIGHT_GRAY}He{COLOR DARK_GRAY} will be waiting for you."))
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+            msgbox(format("This room leads to rollcall.\n This room will be used if there are any important updates for your training."))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("This room leads to rollcall.\n If {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} intends to meet you here we'll let you know."))
+            }
+            else
+            {
+                msgbox(format("This room leads to rollcall.\n I assume you know that by now."))      
+            }
+        default:
+            msgbox(format("This room leads to rollcall in case you forgot."))
+    }
     releaseall
 }
 
 script Hall1_EventScript_GuardRight{
     lockall
     faceplayer
-    msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today."))
+    switch(var(VAR_STORY_PROGRESSION))
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today."))
+        case 6:
+        case 7:
+        case 8:
+        msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today.\p
+        Huh?\n You want to know what this day makes it so special?\p
+        Well...\n Anyday can be a special day if you make it right?"))
+        case 9:
+            if(flag(FLAG_BATTLE_WON))
+            {
+                msgbox(format("Hahaha, I told you today was an extra special day.\l Well done initiative!\p 
+                At this rate you don't need us to protect you!"))
+            }
+            else
+            {
+                msgbox(format("Today is an extra special day isn't?\n Good luck today!\p And of course don't worry.\l We will make sure nothing goes wrong today."))      
+            }
+        default:
+            msgbox(format("Don't forget to make every day your special day!"))
+    }
     releaseall
 }
 
