@@ -262,7 +262,7 @@
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Hall1_SignScript_PotNormal"
+      "script": "Hall1_SignScript_PotEasterEgg"
     },
     {
       "type": "sign",
