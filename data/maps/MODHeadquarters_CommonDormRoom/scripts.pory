@@ -42,19 +42,19 @@ script CommonDormRoom_OnLoad{
 
 script CommonDormRoom_SignScript_Computer{
     lockall
-    msgbox(format("It's a computer, and seeing it is not yours, you should probably leave it alone.\l Not that you can do anything anyways since it is password protected"))
+    msgbox(format("It's a computer, and seeing it is not yours, you should probably leave it alone.\l Not that you can do anything anyways since it is password protected."))
     releaseall
 }
 
 script CommonDormRoom_SignScript_Drawer{
     lockall
-    msgbox(format("It's a set of drawers, it is filled with different kind of clothes"))
+    msgbox(format("It's a set of drawers, it is filled with different kind of clothes."))
     releaseall
 }
 
 script CommonDormRoom_SignScript_Table{
     lockall
-    msgbox(format("It's a table"))
+    msgbox(format("It's a table."))
     releaseall
 }
 
@@ -67,7 +67,7 @@ script CommonDormRoom_SignScript_Bed{
     }
     else
     {
-        msgbox(format("Yeah, why would you sleep in another persons bed without permission?"))
+        msgbox(format("Yeah, why would you sleep in another person's bed without permission?"))
     }
     releaseall
 }

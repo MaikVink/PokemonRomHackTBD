@@ -111,7 +111,7 @@ script FionasRoom_SignScript_Computer{
         applymovement(FIONA_LOCAL_ID, CommonMovement_NoticeUp)
         msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: What are you trying to do?\p
         Anyways, don't think that I'm just going to tell you my password and good luck guessing it!\p
-        I know how to keep nosey people out of my affairs, if you know what I mean"))
+        I know how to keep nosey people out of my affairs, if you know what I mean."))
         applymovement(FIONA_LOCAL_ID, CommonMovement_FaceOriginalDirection)
     }
     releaseall
@@ -120,31 +120,36 @@ script FionasRoom_SignScript_Computer{
 script FionasRoom_SignScript_Bed{
     lockall
     msgbox(format("It's Fiona's bed!\p
-    do you want to sleep in it?"))
+    do you want to sleep in it?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
         if(var(VAR_STORY_PROGRESSION) < 5)
         {
-            msgbox("Now is not the time to go to bed")
+            msgbox("Now is not the time to go to bed...")
         }
         elif(flag(!FLAG_FIONA_ROOM))
         {
             msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: uhm... please don't take this the wrong way, but I just see you as a friend {PLAYER}.\l
             I... I don't feel that comfortable sharing a bed with you..."))
         }
-        setrespawn(HEAL_LOCATION_FIONASROOM)
-        fadescreen(1)
-        special(HealPlayerParty)
-        playfanfare(MUS_HEAL)
-        waitfanfare
-        fadescreen(0)
+        else
+        {
+            setrespawn(HEAL_LOCATION_FIONASROOM)
+            fadescreen(1)
+            special(HealPlayerParty)
+            playfanfare(MUS_HEAL)
+            waitfanfare
+            fadescreen(0)
+        }
     }
     else
     {
         msgbox(format("Why would you want to sleep in Fiona's bed?"))
     }
+    releaseall
 }
 
 script FionasRoom_SignScript_Table{
     msgbox(format("Why does Fiona also have an unique table and carpet?"))
+    releaseall
 }

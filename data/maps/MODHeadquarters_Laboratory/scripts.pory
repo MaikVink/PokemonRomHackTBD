@@ -16,12 +16,13 @@ script Laboratory_WarpInto_FirstPokemon{
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_GREEN}???{COLOR DARK_GRAY}: While you probably already know who I am, I would like to re-introduce myself to all initiatives that made it this far:\p
     {COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: My name is Professor Kector, I'm the lead scientist of team MOD and I'm the person in charge of giving you your pokemon. \p
-    I'm also researching how we can intrigate pokemon back into our society after... {COLOR RED}'The Incident'{COLOR DARK_GRAY}.\p
+    I'm also researching how we can integrate pokemon back into our society after... {COLOR RED}'The Incident'{COLOR DARK_GRAY}.\p
     Anyways, let's focus on why you're here: your pokemon.\p
     I know you're very excited to come and choose your pokemon. That whole process of getting to choose out of three or more pokemon, etc. etc.\p
     That is however not how it works here.\p
     We have a broad selection of pokemon we can give you and we have a short questoinnaire to make sure we give you a pokemon that fits with your personality and experience.\p
-    There are no right or wrong answers, but there are also no takebacks. Once I gave you your pokemon, you're stuck with it. you can't redo the test to get a different pokemon as result."))
+    There are no right or wrong answers, but there are also no takebacks. Once I gave you your pokemon, you're stuck with it.\p
+    You can't redo the test to get a different pokemon as result."))
     msgbox(format("Unless of course you have some magical ability to turn back time that is...\p
     Anyways, without further ado, let's step into it."))
     call(Laboratory_Test)
@@ -723,7 +724,7 @@ script Laboratory_SignScript_Plant{
 
 script Laboratory_SignScript_Machine{
     lockall
-    msgbox(format("It's one of the strange machines inside the laboratory. You have no idea what it does and you're too scared to touch anything, in case you break anything."))
+    msgbox(format("It's one of the strange machines inside the laboratory. You have no idea what it does and you're too scared to touch anything in case you break anything."))
     releaseall
 }
 
@@ -790,7 +791,7 @@ script Laboratory_SignScript_BookJournal{
         applymovement(PROF_KECTOR_ID, CommonMovement_FacePlayer)
         if(flag(FLAG_TRIED_TO_LOOK))
         {
-            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: I told you already, you're not allowed to look at it, just leave it alone."))
+            msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: I told you already, you're not allowed to look at it, just leave it alone!"))
         }
         else
         {
@@ -833,7 +834,7 @@ script Laboratory_EventScript_Professor{
     {
         case 4:
             msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: There is nothing left here for you to do, please go to Roll Call.\p
-            Roll Call is north from the main hallway, it's hard to mis. Now hurry up, before you make {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} mad"))
+            Roll Call is north from the main hallway, it's hard to mis. Now hurry up, before you make {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} mad!"))
         case 5:
             msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: Huh?\p Do you want something?\p I think you better just go sleep so your well rested for whats to come next."))
         case 6:
@@ -843,7 +844,7 @@ script Laboratory_EventScript_Professor{
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n recruit, continue your progress with your pokedex, you can become a great asset for Team MOD."))
+                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n recruit.\l Continue your progress with your pokedex, you can become a great asset for Team MOD."))
             }
             else
             {

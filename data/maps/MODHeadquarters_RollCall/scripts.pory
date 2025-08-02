@@ -206,7 +206,7 @@ script RollCall_MeetTheLeader{
     showobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: Initiatives, while according to any of my calculations it does not make sense you get rewarded this way, {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} has decided to speak to you directly today.\p
-    Please show respect and keep your mouth shut while {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is talking.\p
+    Please show respect and keep your mouth shut while {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is talking!\p
     Remember, only speak when spoken to!"))
     applymovement(BODYGUARD_LOCALID, CommonMovement_WalkOutOfTheWayLeft)
     waitmovement(0)
@@ -219,26 +219,22 @@ script RollCall_MeetTheLeader{
     usually I don't waste my time talking to you newbloods until you have proven yourself.\p
     You're lucky I had today other business here that I wanted to make today an exception and see what younglins were brought in here with the promise of power."))
     msgbox(format("Each of you will have received a pokemon, tailored specifically to your abilities. I trust in G-,\l
-    I mean Professors Kectors capabilities that he has judged you correctly.\p
+    I mean Professors Kectors capabilities that he has judged you properly.\p
     Having a pokemon might make you feel superior over the general public. But remember: 
     For how useful pokemon can be in our daily life, they are also extremly dangerous.\p
     Each of you have proven yourself responsable and strong enough to take care of these pokemon, but now you have to show that you didn't just luck out."))
     msgbox(format("Over the next 3 days, starting tomorrow, a tournament will be held.\p 
     It will be a one on one battles with your given starter pokemon. The winner continues to next round, the loser has to think about why they lost. \p
     The Tournament winner will, of course, be rightfully rewarded."))
-    msgbox(format("Don't worry about losing, this tournament is more about your performance than your result.\p
-    But don't come to anyone here with bad excuses on why you failed. Owning a pokemon carries a lot of responsabilities, both for the health of the pokemon as the health of everyone around you.\p
-    While you own a pokemon, or even multiple pokemon later down the line, than there doesn't exists something like a good or a bad day.\l
-    It's just a day."))
-    msgbox(format("If you need to be in a good mood to take on the danger that pokemon can bring with them, than you know where the nearest exit is and you don't have to come back.\p
-    With that being said, go rest and good luck with the tournament. May the best rookie win!"))
+    msgbox(format("Don't worry about losing, this tournament is more about your performance than your result."))
+    msgbox(format("With that being said, go rest and good luck with the tournament. May the best rookie win!"))
     applymovement(LEADER_LOCALID, RollCall_Movement_Leader_Exit)
     waitmovement(0)
     hideobjectat(LEADER_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)
 
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_TakePlace)
     waitmovement(0)
-    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: You heard {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} Initiatives, go to your room set yourself in sleep mode! Tomorrow we need your mind and body to be fully charged."))
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: You heard {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} Initiatives, go to your room charge yourself up!\l You better be ready for the days to come."))
     applymovement(BODYGUARD_LOCALID, RollCall_Movement_OutOfFrame)
     waitmovement(0)
     hideobjectat(BODYGUARD_LOCALID, MAP_MODHEADQUARTERS_ROLL_CALL)

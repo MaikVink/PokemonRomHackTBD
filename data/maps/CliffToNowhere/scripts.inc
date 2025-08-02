@@ -153,10 +153,10 @@ CliffToNowhere_EscapeSequence::
 # 104 "data/maps/CliffToNowhere/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne CliffToNowhere_EscapeSequence_2
-# 115 "data/maps/CliffToNowhere/scripts.pory"
+# 116 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_EscapeSequence_Text_10
 CliffToNowhere_EscapeSequence_1:
-# 119 "data/maps/CliffToNowhere/scripts.pory"
+# 120 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_EscapeSequence_Text_11, MSGBOX_DEFAULT
 # 124 "data/maps/CliffToNowhere/scripts.pory"
 	closemessage
@@ -187,9 +187,9 @@ CliffToNowhere_EscapeSequence_1:
 CliffToNowhere_EscapeSequence_2:
 # 106 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_EscapeSequence_Text_9
-# 110 "data/maps/CliffToNowhere/scripts.pory"
-	giveitem ITEM_BIG_NUGGET, 1
 # 111 "data/maps/CliffToNowhere/scripts.pory"
+	giveitem ITEM_BIG_NUGGET, 1
+# 112 "data/maps/CliffToNowhere/scripts.pory"
 	clearflag FLAG_USB_STICK
 	goto CliffToNowhere_EscapeSequence_1
 
@@ -314,18 +314,18 @@ CliffToNowhere_EscapeSequence_Text_0:
 
 CliffToNowhere_EscapeSequence_Text_1:
 # 49 "data/maps/CliffToNowhere/scripts.pory"
-	.string "???: What are you doing?\n"
+	.string "{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: What are you doing?\n"
 	.string "Open this door right now!\l"
 	.string "We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!$"
 
 CliffToNowhere_EscapeSequence_Text_2:
 # 52 "data/maps/CliffToNowhere/scripts.pory"
-	.string "???: W-w-we're trying {COLOR RED}Airanea{COLOR DARK_GRAY}, but it\n"
+	.string "???: W-w-we're trying {COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}, but it\n"
 	.string "seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door...$"
 
 CliffToNowhere_EscapeSequence_Text_3:
 # 53 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: Then go fix it!$"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: Then go fix it!$"
 
 CliffToNowhere_EscapeSequence_Text_4:
 # 54 "data/maps/CliffToNowhere/scripts.pory"
@@ -368,11 +368,11 @@ CliffToNowhere_EscapeSequence_Text_6:
 
 CliffToNowhere_EscapeSequence_Text_7:
 # 95 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them.$"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them.$"
 
 CliffToNowhere_EscapeSequence_Text_8:
 # 100 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: I thank you for your services\n"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: I thank you for your services\n"
 	.string "{PLAYER}. You managed to distract her\l"
 	.string "almost long enough for us to catch her\l"
 	.string "before she escaped.\p"
@@ -388,19 +388,19 @@ CliffToNowhere_EscapeSequence_Text_8:
 
 CliffToNowhere_EscapeSequence_Text_9:
 # 106 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this\n"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this\n"
 	.string "{PLAYER}!\l"
-	.string "This usb contains some very sensative\l"
-	.string "data we would prefer to not fall in the\l"
-	.string "enemies hands.\p"
+	.string "This usb contains some...\l"
+	.string "'sensative' data we would prefer to not\l"
+	.string "fall in the enemies hands.\p"
 	.string "We will take it over from here\n"
 	.string "{PLAYER}.\p"
-	.string "Please take this as thanks for your\n"
+	.string "Please take this, as thanks for your\n"
 	.string "hard work and loyalty.$"
 
 CliffToNowhere_EscapeSequence_Text_10:
-# 115 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p"
+# 116 "data/maps/CliffToNowhere/scripts.pory"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p"
 	.string "...\p"
 	.string "You don't need to worry too much about\n"
 	.string "it {PLAYER}, let me take care of it\l"
@@ -409,22 +409,16 @@ CliffToNowhere_EscapeSequence_Text_10:
 	.string "time.$"
 
 CliffToNowhere_EscapeSequence_Text_11:
-# 119 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR RED}Airanea{COLOR DARK_GRAY}: One more thing though, be\n"
+# 120 "data/maps/CliffToNowhere/scripts.pory"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: One more thing though, be\n"
 	.string "carefull around these A.S. Members\p"
-	.string "They don't honour the rules of normal\n"
-	.string "Pokemon battles, so even if you win,\l"
-	.string "they will not give themselves over so\l"
-	.string "easily.\p"
-	.string "You'll certainly be handsomely\n"
+	.string "Though you'll certainly be handsomely\n"
 	.string "rewarded if you can bring any of them\l"
-	.string "in, but I doubt a little initiative like\l"
-	.string "you will be able to do so.\p"
-	.string "Furthermore, we have high hopes for\n"
-	.string "you, so please be very carefull around\l"
-	.string "them.\l"
-	.string "It would be a shame if you died by their\l"
-	.string "hands.$"
+	.string "in, it has a 99.72% change of ending in\l"
+	.string "your death.\p"
+	.string "So please be very carefull around them,\l"
+	.string "it would be shame to lose such a great\l"
+	.string "asset.$"
 
 CliffToNowhere_Event_DemoEnding_Text_0:
 # 142 "data/maps/CliffToNowhere/scripts.pory"

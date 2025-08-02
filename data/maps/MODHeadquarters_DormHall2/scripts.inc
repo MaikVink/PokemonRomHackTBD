@@ -189,7 +189,7 @@ DormhallTopLeft_Trigger_SetWarpValue5::
 DormhallTopLeft_EventScript_WindowWatcher_Text_0:
 # 15 "data/maps/MODHeadquarters_DormHall2/scripts.pory"
 	.string "I wonder when we will be allowed to\n"
-	.string "leave this place with our pokemon$"
+	.string "leave this place with our pokemon.$"
 
 DormhallTopLeft_EventScript_WindowWatcher_Text_1:
 # 17 "data/maps/MODHeadquarters_DormHall2/scripts.pory"

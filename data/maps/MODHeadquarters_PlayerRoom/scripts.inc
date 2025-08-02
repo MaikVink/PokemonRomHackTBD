@@ -355,4 +355,4 @@ PlayerRoom_SignScript_Bed_Text_4:
 	.string "It's your bed.\n"
 	.string "You don't feel tired though, so there\l"
 	.string "seems to be no reason right now to\l"
-	.string "sleep$"
+	.string "sleep.$"

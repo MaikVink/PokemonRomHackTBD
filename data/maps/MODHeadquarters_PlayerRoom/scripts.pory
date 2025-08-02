@@ -137,7 +137,7 @@ script PlayerRoom_SignScript_Bed{
     }
     else
     {
-        msgbox(format("It's your bed.\n You don't feel tired though, so there seems to be no reason right now to sleep"))
+        msgbox(format("It's your bed.\n You don't feel tired though, so there seems to be no reason right now to sleep."))
     }
     releaseall
 }

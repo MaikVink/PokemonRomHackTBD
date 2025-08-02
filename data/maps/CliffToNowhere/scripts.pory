@@ -46,11 +46,11 @@ script CliffToNowhere_EscapeSequence{
     waitmovement(0)
     playse(SE_BREAKABLE_DOOR)
     waitse
-    msgbox(format("???: What are you doing? \n
+    msgbox(format("{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: What are you doing? \n
     Open this door right now!\l
     We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!"))
-    msgbox(format("???: W-w-we're trying {COLOR RED}Airanea{COLOR DARK_GRAY}, but it seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door..."))
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Then go fix it!"))
+    msgbox(format("???: W-w-we're trying {COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}, but it seems {COLOR RED}she{COLOR DARK_GRAY} has broken the door..."))
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: Then go fix it!"))
     msgbox(format("{COLOR RED}???{COLOR DARK_GRAY}: that should keep them busy at least..."))
     applymovement(DENEITH_LOCALID, CommonMovement_NoticeDown)
     waitmovement(0)
@@ -92,35 +92,35 @@ script CliffToNowhere_EscapeSequence{
     waitmovement(0)
     closedoor(16, 15)
     waitdooranim
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them."))
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them."))
     applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToPlayer)
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight)
     waitmovement(0)
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: I thank you for your services {PLAYER}. You managed to distract her almost long enough for us to catch her before she escaped.\p
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: I thank you for your services {PLAYER}. You managed to distract her almost long enough for us to catch her before she escaped.\p
     I know you tried your best, but sadly these team A.S. members don't care for the result in a pokemon battle.\p
     This is important though, did you by any chance manage to snatch something of her or did she drop something by accident?\l
     I mean anything, did you manage to get anything at all from her?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
-        msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this {PLAYER}! \l   
-        This usb contains some very sensative data we would prefer to not fall in the enemies hands.\p
+        msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this {PLAYER}! \l   
+        This usb contains some...\l
+        'sensative' data we would prefer to not fall in the enemies hands.\p
         We will take it over from here {PLAYER}.\p
-        Please take this as thanks for your hard work and loyalty."))
+        Please take this, as thanks for your hard work and loyalty."))
         giveitem(ITEM_BIG_NUGGET, 1)
         clearflag(FLAG_USB_STICK)
     }
     else
     {
-        msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p
+        msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p
         ...\p
         You don't need to worry too much about it {PLAYER}, let me take care of it from here, you go on your quest now, we will probably speak each other another time."))
     }
-    msgbox(format("{COLOR RED}Airanea{COLOR DARK_GRAY}: One more thing though, be carefull around these A.S. Members \p
-    They don't honour the rules of normal Pokemon battles, so even if you win, they will not give themselves over so easily. \p
-    You'll certainly be handsomely rewarded if you can bring any of them in, but I doubt a little initiative like you will be able to do so. \p
-    Furthermore, we have high hopes for you, so please be very carefull around them. \l
-    It would be a shame if you died by their hands."), MSGBOX_DEFAULT)
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: One more thing though, be carefull around these A.S. Members \p
+    Though you'll certainly be handsomely rewarded if you can bring any of them in, it has a 99.72% change of ending in your death. \p
+    So please be very carefull around them, \l
+    it would be shame to lose such a great asset."), MSGBOX_DEFAULT)
     closemessage
     applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToEntrance)
     waitmovement(0)

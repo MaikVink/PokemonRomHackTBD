@@ -161,49 +161,53 @@ FionasRoom_SignScript_Bed::
 # 121 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	lockall
 # 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Bed_Text_0
+	msgbox FionasRoom_SignScript_Bed_Text_0, MSGBOX_YESNO
 # 124 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne FionasRoom_SignScript_Bed_1
-# 144 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	goto_if_ne FionasRoom_SignScript_Bed_2
+# 147 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_3
+FionasRoom_SignScript_Bed_1:
+# 149 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	releaseall
 	return
 
-FionasRoom_SignScript_Bed_1:
+FionasRoom_SignScript_Bed_2:
 # 126 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	compare VAR_STORY_PROGRESSION, 5
 	goto_if_lt FionasRoom_SignScript_Bed_5
 # 130 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	goto_if_set ! FLAG_FIONA_ROOM, FionasRoom_SignScript_Bed_6
-FionasRoom_SignScript_Bed_4:
-# 135 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	setrespawn HEAL_LOCATION_FIONASROOM
-# 136 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	fadescreen 1
 # 137 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	special HealPlayerParty
+	setrespawn HEAL_LOCATION_FIONASROOM
 # 138 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	playfanfare MUS_HEAL
+	fadescreen 1
 # 139 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	waitfanfare
+	special HealPlayerParty
 # 140 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	playfanfare MUS_HEAL
+# 141 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	waitfanfare
+# 142 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	fadescreen 0
-	return
+	goto FionasRoom_SignScript_Bed_1
 
 FionasRoom_SignScript_Bed_5:
 # 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_1
-	goto FionasRoom_SignScript_Bed_4
+	goto FionasRoom_SignScript_Bed_1
 
 FionasRoom_SignScript_Bed_6:
 # 132 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_2
-	goto FionasRoom_SignScript_Bed_4
+	goto FionasRoom_SignScript_Bed_1
 
 
 FionasRoom_SignScript_Table::
-# 149 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 153 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Table_Text_0
+# 154 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	releaseall
 	return
 
 
@@ -368,7 +372,7 @@ FionasRoom_SignScript_Computer_Text_1:
 	.string "to tell you my password and good luck\l"
 	.string "guessing it!\p"
 	.string "I know how to keep nosey people out of\n"
-	.string "my affairs, if you know what I mean$"
+	.string "my affairs, if you know what I mean.$"
 
 FionasRoom_SignScript_Bed_Text_0:
 # 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
@@ -377,7 +381,7 @@ FionasRoom_SignScript_Bed_Text_0:
 
 FionasRoom_SignScript_Bed_Text_1:
 # 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "Now is not the time to go to bed$"
+	.string "Now is not the time to go to bed...$"
 
 FionasRoom_SignScript_Bed_Text_2:
 # 132 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
@@ -388,11 +392,11 @@ FionasRoom_SignScript_Bed_Text_2:
 	.string "sharing a bed with you...$"
 
 FionasRoom_SignScript_Bed_Text_3:
-# 144 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 147 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Why would you want to sleep in Fiona's\n"
 	.string "bed?$"
 
 FionasRoom_SignScript_Table_Text_0:
-# 149 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 153 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Why does Fiona also have an unique\n"
 	.string "table and carpet?$"
