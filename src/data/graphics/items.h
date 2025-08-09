@@ -2105,11 +2105,11 @@ const u32 gItemIconPalette_Axe[] = INCBIN_U32("graphics/items/icon_palettes/axe.
 const u32 gItemIcon_Lantern[] = INCBIN_U32("graphics/items/icons/lantern.4bpp.lz");
 const u32 gItemIconPalette_Lantern[] = INCBIN_U32("graphics/items/icon_palettes/lantern.gbapal.lz");
 
-const u32 gItemIcon_RockSmasher[] = INCBIN_U32("graphics/items/icons/rock_smasher.4bpp.lz");
-const u32 gItemIconPalette_RockSmasher[] = INCBIN_U32("graphics/items/icon_palettes/rock_smasher.gbapal.lz");
+const u32 gItemIcon_Drill[] = INCBIN_U32("graphics/items/icons/drill.4bpp.lz");
+const u32 gItemIconPalette_Drill[] = INCBIN_U32("graphics/items/icon_palettes/drill.gbapal.lz");
 
-const u32 gItemIcon_BolderPusher[] = INCBIN_U32("graphics/items/icons/bolder_pusher.4bpp.lz");
-const u32 gItemIconPalette_BolderPusher[] = INCBIN_U32("graphics/items/icon_palettes/bolder_pusher.gbapal.lz");
+const u32 gItemIcon_MechanicalArm[] = INCBIN_U32("graphics/items/icons/mechanical_arm.4bpp.lz");
+const u32 gItemIconPalette_MechanicalArm[] = INCBIN_U32("graphics/items/icon_palettes/mechanical_arm.gbapal.lz");
 
 const u32 gItemIcon_Surfboard[] = INCBIN_U32("graphics/items/icons/surfboard.4bpp.lz");
 const u32 gItemIconPalette_Surfboard[] = INCBIN_U32("graphics/items/icon_palettes/surfboard.gbapal.lz");
@@ -2120,8 +2120,8 @@ const u32 gItemIconPalette_BirdFlute[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_DivingEquipment[] = INCBIN_U32("graphics/items/icons/diving_equipment.4bpp.lz");
 const u32 gItemIconPalette_DivingEquipment[] = INCBIN_U32("graphics/items/icon_palettes/diving_equipment.gbapal.lz");
 
-const u32 gItemIcon_ReverseWaterfall[] = INCBIN_U32("graphics/items/icons/reverse_waterfall.4bpp.lz");
-const u32 gItemIconPalette_ReverseWaterfall[] = INCBIN_U32("graphics/items/icon_palettes/reverse_waterfall.gbapal.lz");
+const u32 gItemIcon_AquaJetpack[] = INCBIN_U32("graphics/items/icons/aqua_jetpack.4bpp.lz");
+const u32 gItemIconPalette_AquaJetpack[] = INCBIN_U32("graphics/items/icon_palettes/aqua_jetpack.gbapal.lz");
 
 const u32 gItemIcon_CampingEquipment[] = INCBIN_U32("graphics/items/icons/camping_equipment.4bpp.lz");
 const u32 gItemIconPalette_CampingEquipment[] = INCBIN_U32("graphics/items/icon_palettes/camping_equipment.gbapal.lz");

@@ -51,13 +51,13 @@ SpecialStore_ObjectScript_MartEmployer_4:
 	goto_if_ne SpecialStore_ObjectScript_MartEmployer_11
 SpecialStore_ObjectScript_MartEmployer_9:
 # 55 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	checkitem ITEM_ROCK_SMASHER, 1
+	checkitem ITEM_DRILL, 1
 # 56 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne SpecialStore_ObjectScript_MartEmployer_16
 SpecialStore_ObjectScript_MartEmployer_14:
 # 67 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	checkitem ITEM_BOLDER_PUSHER, 1
+	checkitem ITEM_MECHANICAL_ARM, 1
 # 68 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne SpecialStore_ObjectScript_MartEmployer_21
@@ -81,7 +81,7 @@ SpecialStore_ObjectScript_MartEmployer_29:
 	goto_if_ne SpecialStore_ObjectScript_MartEmployer_36
 SpecialStore_ObjectScript_MartEmployer_34:
 # 115 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	checkitem ITEM_REVERSE_WATERFALL, 1
+	checkitem ITEM_AQUA_JETPACK, 1
 # 116 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne SpecialStore_ObjectScript_MartEmployer_41
@@ -272,9 +272,9 @@ MODHeadquarters_SpecialShopShop:
 # 152 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_LANTERN
 # 153 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_ROCK_SMASHER
+	.2byte ITEM_DRILL
 # 154 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_BOLDER_PUSHER
+	.2byte ITEM_MECHANICAL_ARM
 # 155 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_SURFBOARD
 # 156 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
@@ -282,7 +282,7 @@ MODHeadquarters_SpecialShopShop:
 # 157 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_DIVING_EQUIPMENT
 # 158 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.2byte ITEM_REVERSE_WATERFALL
+	.2byte ITEM_AQUA_JETPACK
 # 159 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	.2byte ITEM_CAMPING_EQUIPMENT
 # 160 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
