@@ -223,7 +223,7 @@ script BattleDojoReplica_BattleDojoReplicaBattles{
             case 7:
                 msgbox(format("{COLOR BLUE}Niko{COLOR DARK_GRAY}: ...\p SNEAK ATTACK!"))
             case 11:
-                msgbox(format("{COLOR BLUE}Maria{COLOR DARK_GRAY}: Glad you have found the training field\p Now let's see if the experience I anything as I imagined!"))
+                msgbox(format("{COLOR BLUE}Maria{COLOR DARK_GRAY}: Glad you have found the training field.\p Now let's see if the experience is anything as I imagined!"))
             case 13:
                 msgbox(format("{COLOR BLUE}Rosanne{COLOR DARK_GRAY}: Every battle is a new experience, so bring your worst!"))
             case 14:

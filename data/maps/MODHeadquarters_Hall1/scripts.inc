@@ -128,8 +128,8 @@ Hall1_EventScript_GuardRight::
 	case 4, Hall1_EventScript_GuardRight_3
 # 72 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	case 5, Hall1_EventScript_GuardRight_3
-# 74 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-	case 6, Hall1_EventScript_GuardRight_4
+# 73 "data/maps/MODHeadquarters_Hall1/scripts.pory"
+	case 6, Hall1_EventScript_GuardRight_3
 # 75 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	case 7, Hall1_EventScript_GuardRight_4
 # 76 "data/maps/MODHeadquarters_Hall1/scripts.pory"
@@ -144,7 +144,7 @@ Hall1_EventScript_GuardRight_1:
 	return
 
 Hall1_EventScript_GuardRight_3:
-# 73 "data/maps/MODHeadquarters_Hall1/scripts.pory"
+# 74 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	msgbox Hall1_EventScript_GuardRight_Text_0
 	goto Hall1_EventScript_GuardRight_1
 
@@ -375,7 +375,7 @@ Hall1_EventScript_GuardLeft_Text_5:
 	.string "forgot.$"
 
 Hall1_EventScript_GuardRight_Text_0:
-# 73 "data/maps/MODHeadquarters_Hall1/scripts.pory"
+# 74 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	.string "Today is a special day huh?\n"
 	.string "Don't worry initiative!\l"
 	.string "We will make sure nothing goes wrong\l"
@@ -406,7 +406,7 @@ Hall1_EventScript_GuardRight_Text_3:
 # 88 "data/maps/MODHeadquarters_Hall1/scripts.pory"
 	.string "Today is an extra special day isn't?\n"
 	.string "Good luck today!\p"
-	.string "And of course don't worry.\l"
+	.string "And of course don't worry.\n"
 	.string "We will make sure nothing goes wrong\l"
 	.string "today.$"
 
@@ -450,8 +450,8 @@ Hall1_EventScript_Wanderer_Text_4:
 
 Hall1_EventScript_Wanderer_Text_5:
 # 119 "data/maps/MODHeadquarters_Hall1/scripts.pory"
-	.string "I guess that people were correct,\n"
-	.string "you're very strong! Even though Fiona\l"
+	.string "I guess that people were correct!\n"
+	.string "You're very strong! Even though Fiona\l"
 	.string "wooped my ass, I would love to fight you\l"
 	.string "as well some day!$"
 
@@ -509,7 +509,7 @@ Hall1_EventScript_Beauty_Text_6:
 	.string "{COLOR BLUE}Bella{COLOR DARK_GRAY}: Frankly, I think neither of you\n"
 	.string "two deserve to be in the finals. I'm\l"
 	.string "clearly the best trainer. But there is\l"
-	.string "little I can do to chance the system\l"
+	.string "little I can do to change the system\l"
 	.string "now.$"
 
 Hall1_EventScript_Beauty_Text_7:

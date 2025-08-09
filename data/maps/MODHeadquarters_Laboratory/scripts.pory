@@ -844,7 +844,7 @@ script Laboratory_EventScript_Professor{
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n recruit.\l Continue your progress with your pokedex, you can become a great asset for Team MOD."))
+                msgbox(format("{COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY}: You're a fascinating...\n recruit.\l Continue your progress with your pokedex and you can become a great asset for Team MOD."))
             }
             else
             {
