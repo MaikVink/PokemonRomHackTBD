@@ -52,7 +52,7 @@ script SpecialStore_ObjectScript_MartEmployer{
         Hope they still provide usefull to you!"))
         setflag(FLAG_BADGE02_GET)
     }
-    checkitem(ITEM_ROCK_SMASHER, 1)
+    checkitem(ITEM_DRILL, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE03_GET))
     {
         msgbox(format("Oh, I see you bought the Rock Smasher! \n
@@ -64,7 +64,7 @@ script SpecialStore_ObjectScript_MartEmployer{
         Hope they still provide usefull to you!"))
         setflag(FLAG_BADGE03_GET)
     }
-    checkitem(ITEM_BOLDER_PUSHER, 1)
+    checkitem(ITEM_MECHANICAL_ARM, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE04_GET))
     {
         msgbox(format("Oh, I see you bought the Bolder Pusher! \n
@@ -112,7 +112,7 @@ script SpecialStore_ObjectScript_MartEmployer{
         Hope they still provide usefull to you!"))
         setflag(FLAG_BADGE07_GET)
     }
-    checkitem(ITEM_REVERSE_WATERFALL, 1)
+    checkitem(ITEM_AQUA_JETPACK, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE08_GET))
     {
         msgbox(format("Oh, I see you bought the Reverse Waterfall! \l
@@ -150,12 +150,12 @@ mart MODHeadquarters_SpecialShopShop{
     ITEM_POKE_RADAR
     ITEM_AXE
     ITEM_LANTERN
-    ITEM_ROCK_SMASHER
-    ITEM_BOLDER_PUSHER
+    ITEM_DRILL
+    ITEM_MECHANICAL_ARM
     ITEM_SURFBOARD
     ITEM_BIRD_FLUTE
     ITEM_DIVING_EQUIPMENT
-    ITEM_REVERSE_WATERFALL
+    ITEM_AQUA_JETPACK
     ITEM_CAMPING_EQUIPMENT
     ITEM_HELIX_FOSSIL
     ITEM_DOME_FOSSIL
