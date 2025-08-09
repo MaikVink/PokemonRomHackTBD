@@ -112,7 +112,7 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_INITIATIVE,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_GUITARIST,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
         .trainerName = _("Victor"),
         .items = {ITEM_HYPER_POTION},
         .doubleBattle = FALSE,
@@ -136,7 +136,7 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_INITIATIVE,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerPic = TRAINER_PIC_GUITARIST,
         .trainerName = _("Tristan"),
         .items = {ITEM_SUPER_POTION},
         .doubleBattle = FALSE,

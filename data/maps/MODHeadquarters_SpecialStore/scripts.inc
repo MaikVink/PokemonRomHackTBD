@@ -393,7 +393,7 @@ SpecialStore_ObjectScript_MartEmployer_Text_0:
 	.string "Do you want to improve your way of\l"
 	.string "travel?\p"
 	.string "Then you have come to right place! Here\n"
-	.string "at National Usefull Tools or\l"
+	.string "at National Useful Tools or\l"
 	.string "N.U.T. we make sure you will have the\l"
 	.string "tools you need most desperate out in\l"
 	.string "the field. 100% customer satisfaction\l"

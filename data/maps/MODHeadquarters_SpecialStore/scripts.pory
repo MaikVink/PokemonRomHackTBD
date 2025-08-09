@@ -21,7 +21,7 @@ script SpecialStore_ObjectScript_MartEmployer{
         msgbox(format("Is a smal tree blocking your path? \n 
         Do you need to push a bolder out of your way? \l 
         Do you want to improve your way of travel?\p
-        Then you have come to right place! Here at National Usefull Tools or \l
+        Then you have come to right place! Here at National Useful Tools or \l
         N.U.T. we make sure you will have the tools you need most desperate out in the field.
         100% customer satisfaction guaranteed or you'll get your money back!
         Feel free to check our catalogue anytime!"))

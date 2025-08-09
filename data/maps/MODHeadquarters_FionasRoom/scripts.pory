@@ -24,7 +24,7 @@ script FionasRoom_SignScript_Book{
     if(!flag(FLAG_FIONA_ROOM))
     {
         applymovement(FIONA_LOCAL_ID, CommonMovement_FacePlayer)
-        msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p, 
+        msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p 
         I hope you understand {PLAYER}, but this stuff is a little bit personal...\p
         So I would appreciate it if you didn't read it."))
         applymovement(FIONA_LOCAL_ID, CommonMovement_FaceOriginalDirection)
@@ -90,11 +90,11 @@ script FionasRoom_EventScript_Fiona{
             }
             else
             {
-                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER}, today we're going to do that pokemon battle you promised me. Once you're ready, go to the Battle Dojo.\l
+                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER}.\n Today we're going to do that pokemon battle we promised each other. Once you're ready, go to the Battle Dojo.\l
                 I'll be ready!"))
             }
         default:
-            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh hé {PLAYER} welcome to my room! Feel free to look around the place!\p
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh, hé {PLAYER}! Welcome to my room!\l Feel free to look around the place!\p
             If you need anything let me know!\p
             I do intend on getting an early night though, so hope you don't mind me going to bed soon.\p
             Maybe you should do the same, but that is entirely up to you!"))
@@ -120,17 +120,17 @@ script FionasRoom_SignScript_Computer{
 script FionasRoom_SignScript_Bed{
     lockall
     msgbox(format("It's Fiona's bed!\p
-    do you want to sleep in it?"), MSGBOX_YESNO)
+    Do you want to sleep in it?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
         if(var(VAR_STORY_PROGRESSION) < 5)
         {
             msgbox("Now is not the time to go to bed...")
         }
-        elif(flag(!FLAG_FIONA_ROOM))
+        elif(!flag(FLAG_FIONA_ROOM))
         {
-            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: uhm... please don't take this the wrong way, but I just see you as a friend {PLAYER}.\l
-            I... I don't feel that comfortable sharing a bed with you..."))
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: uhm... please don't take this the wrong way, but I just see you as a friend {PLAYER}.\p
+            I...\n I don't feel that comfortable sharing a bed with you..."))
         }
         else
         {

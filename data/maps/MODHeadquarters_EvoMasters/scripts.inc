@@ -6240,7 +6240,7 @@ EvoMAsters_ObjectScript_Masseuse_Text_1:
 # 47 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"
 	.string "Oh? Is that an Eevee I see in your\n"
 	.string "party?\p"
-	.string "alright, for this once I allow you to use\n"
+	.string "Alright, for this once I allow you to use\n"
 	.string "my services for free if you want.$"
 
 EvoMAsters_ObjectScript_Masseuse_Text_2:
@@ -6429,7 +6429,7 @@ EvoMasters_ObjectScript_EvoChecker_Text_0:
 	.string "I know of every pokemon what\n"
 	.string "requirements they need to evolve, so if\l"
 	.string "you're ever unsure how you can evolve a\l"
-	.string "certain pokemon, please come to me\p"
+	.string "certain pokemon, please come to me!\p"
 	.string "Even if you think you know how they\n"
 	.string "evolve, you might be surprised to learn\l"
 	.string "that some will have different or\l"

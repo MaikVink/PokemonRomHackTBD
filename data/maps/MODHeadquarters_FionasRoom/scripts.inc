@@ -177,7 +177,7 @@ FionasRoom_SignScript_Bed_2:
 	compare VAR_STORY_PROGRESSION, 5
 	goto_if_lt FionasRoom_SignScript_Bed_5
 # 130 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	goto_if_set ! FLAG_FIONA_ROOM, FionasRoom_SignScript_Bed_6
+	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Bed_6
 # 137 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	setrespawn HEAL_LOCATION_FIONASROOM
 # 138 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
@@ -236,7 +236,7 @@ FionasRoom_SignScript_Book_Text_0:
 FionasRoom_SignScript_Book_Text_1:
 # 27 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p"
-	.string ", I hope you understand {PLAYER}, but\n"
+	.string "I hope you understand {PLAYER}, but\n"
 	.string "this stuff is a little bit personal...\p"
 	.string "So I would appreciate it if you didn't\n"
 	.string "read it.$"
@@ -338,17 +338,17 @@ FionasRoom_EventScript_Fiona_Text_3:
 
 FionasRoom_EventScript_Fiona_Text_4:
 # 93 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER},\n"
-	.string "today we're going to do that pokemon\l"
-	.string "battle you promised me. Once you're\l"
-	.string "ready, go to the Battle Dojo.\l"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER}.\n"
+	.string "Today we're going to do that pokemon\l"
+	.string "battle we promised each other. Once\l"
+	.string "you're ready, go to the Battle Dojo.\l"
 	.string "I'll be ready!$"
 
 FionasRoom_EventScript_Fiona_Text_5:
 # 97 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh hé {PLAYER} welcome to my\n"
-	.string "room! Feel free to look around the\l"
-	.string "place!\p"
+	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh, hé {PLAYER}! Welcome to my\n"
+	.string "room!\l"
+	.string "Feel free to look around the place!\p"
 	.string "If you need anything let me know!\p"
 	.string "I do intend on getting an early night\n"
 	.string "though, so hope you don't mind me going\l"
@@ -377,7 +377,7 @@ FionasRoom_SignScript_Computer_Text_1:
 FionasRoom_SignScript_Bed_Text_0:
 # 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "It's Fiona's bed!\p"
-	.string "do you want to sleep in it?$"
+	.string "Do you want to sleep in it?$"
 
 FionasRoom_SignScript_Bed_Text_1:
 # 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
@@ -387,9 +387,10 @@ FionasRoom_SignScript_Bed_Text_2:
 # 132 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: uhm... please don't take this the\n"
 	.string "wrong way, but I just see you as a\l"
-	.string "friend {PLAYER}.\l"
-	.string "I... I don't feel that comfortable\l"
-	.string "sharing a bed with you...$"
+	.string "friend {PLAYER}.\p"
+	.string "I...\n"
+	.string "I don't feel that comfortable sharing a\l"
+	.string "bed with you...$"
 
 FionasRoom_SignScript_Bed_Text_3:
 # 147 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"

@@ -4009,7 +4009,7 @@ GeneratlStore_ObjectScript_MartEmployer_Text_0:
 	.string "If your looking for anything come check\n"
 	.string "with me, because I will most likely have\l"
 	.string "it somewhere around!\p"
-	.string "That being said... The leader does\n"
+	.string "That being said... {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} does\n"
 	.string "restrict me to sell... 'good' items to low\l"
 	.string "level Initiatives.\p"
 	.string "The higher your rank will become, the\n"

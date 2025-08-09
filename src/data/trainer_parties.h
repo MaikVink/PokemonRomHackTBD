@@ -65,8 +65,7 @@ static const struct TrainerMon sParty_BellaNoBadges[] = {
 static const struct TrainerMon sParty_VictorNoBadges[] = {
     {
     .lvl = 7,
-    .species = SPECIES_ARON,
-    .ability = ABILITY_ROCK_HEAD
+    .species = SPECIES_LARVITAR,
     }
 };
 
@@ -80,7 +79,8 @@ static const struct TrainerMon sParty_VeraNoBadges[] = {
 static const struct TrainerMon sParty_TristanNoBadges[] = {
     {
     .lvl = 7,
-    .species = SPECIES_LARVITAR,
+    .species = SPECIES_ARON,
+    .ability = ABILITY_ROCK_HEAD
     }
 };
 

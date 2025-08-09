@@ -132,134 +132,136 @@ LaboratoryHall_EventScript_GuardOpen::
 	case 7, LaboratoryHall_EventScript_GuardOpen_3
 # 73 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	case 8, LaboratoryHall_EventScript_GuardOpen_3
-# 76 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 74 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	case 9, LaboratoryHall_EventScript_GuardOpen_3
+# 77 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	msgbox LaboratoryHall_EventScript_GuardOpen_Text_1
 LaboratoryHall_EventScript_GuardOpen_1:
-# 78 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 79 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 LaboratoryHall_EventScript_GuardOpen_3:
-# 74 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 75 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	msgbox LaboratoryHall_EventScript_GuardOpen_Text_0
 	goto LaboratoryHall_EventScript_GuardOpen_1
 
 
 LaboratoryHall_SignScript_BookCase::
-# 82 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	lockall
 # 83 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	msgbox LaboratoryHall_SignScript_BookCase_Text_0
+	lockall
 # 84 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	msgbox LaboratoryHall_SignScript_BookCase_Text_0
+# 85 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 
 LaboratoryHall_SignScript_LockedDrawer::
-# 88 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	lockall
 # 89 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	msgbox LaboratoryHall_SignScript_LockedDrawer_Text_0
+	lockall
 # 90 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	msgbox LaboratoryHall_SignScript_LockedDrawer_Text_0
+# 91 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 
 LaboratoryHall_SignScript_Egg::
-# 94 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	lockall
 # 95 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	msgbox LaboratoryHall_SignScript_Egg_Text_0
+	lockall
 # 96 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	msgbox LaboratoryHall_SignScript_Egg_Text_0
+# 97 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 
 LaboratoryHall_Trigger_Fiona::
-# 100 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	lockall
 # 101 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	opendoor 14, 1
+	lockall
 # 102 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	waitdooranim
+	opendoor 14, 1
 # 103 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	showobjectat 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
-# 104 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement 3, CommonMovement_Notice
-# 105 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	waitmovement 0
-# 107 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	msgbox LaboratoryHall_Trigger_Fiona_Text_0
-# 108 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement 3, LabrotaryHall_moveDown
-# 109 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkOutOfTheWayLeft
-# 110 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	waitmovement 0
-# 111 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	closedoor 14, 1
-# 112 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	waitdooranim
-# 114 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	msgbox LaboratoryHall_Trigger_Fiona_Text_1
-# 116 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	applymovement 3, LabrotaryHall_moveAway
-# 117 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 104 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	showobjectat 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
+# 105 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	applymovement 3, CommonMovement_Notice
+# 106 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	waitmovement 0
-# 119 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 3
+# 108 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	msgbox LaboratoryHall_Trigger_Fiona_Text_0
+# 109 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	applymovement 3, LabrotaryHall_moveDown
+# 110 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkOutOfTheWayLeft
+# 111 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	waitmovement 0
+# 112 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	closedoor 14, 1
+# 113 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	waitdooranim
+# 115 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	msgbox LaboratoryHall_Trigger_Fiona_Text_1
+# 117 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	applymovement 3, LabrotaryHall_moveAway
+# 118 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	waitmovement 0
 # 120 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	setflag FLAG_FIONA_HALL_ENCOUNTER
+	setvar VAR_STORY_PROGRESSION, 3
 # 121 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	clearflag FLAG_FIONA_REVERSE_ROLLCALL_FLAG
+	setflag FLAG_FIONA_HALL_ENCOUNTER
 # 122 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	removeobject 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
+	clearflag FLAG_FIONA_REVERSE_ROLLCALL_FLAG
 # 123 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	removeobject 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
+# 124 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 
 LaboratoryHall_Trigger_HideFiona::
-# 127 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	hideobjectat 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
 # 128 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	hideobjectat 3, MAP_MODHEADQUARTERS_LABORATORY_HALL
+# 129 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	releaseall
 	return
 
 
-# 131 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-LabrotaryHall_moveDown:
 # 132 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	walk_down
+LabrotaryHall_moveDown:
 # 133 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	walk_down
+# 134 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	face_left
 	step_end
 
-# 136 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 LabrotaryHall_moveAway:
-# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	walk_down
-# 137 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_down
 # 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	walk_down
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
-# 138 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	walk_left
 	step_end
 
@@ -311,8 +313,9 @@ LaboratoryHall_EventScript_Woman_Text_5:
 LaboratoryHall_EventScript_Woman_Text_6:
 # 51 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "My idea was approved by Surge and {COLOR LIGHT_GRAY}The\n"
-	.string "Leader{COLOR DARK_GRAY}! Good luck with the finals by the\l"
-	.string "way! Afterwards I'm going to ask the\l"
+	.string "Leader{COLOR DARK_GRAY}!\l"
+	.string "Good luck with the finals by the way!\l"
+	.string "Afterwards I'm going to ask the\l"
 	.string "champion for a battle. I want to see\l"
 	.string "what the skill level is at the top!$"
 
@@ -332,19 +335,19 @@ LaboratoryHall_EventScript_GuardBlock_Text_0:
 	.string "this area.$"
 
 LaboratoryHall_EventScript_GuardOpen_Text_0:
-# 74 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
-	.string "This area leads to the battle Dojo, hear\n"
-	.string "you'll be performing the Tournament.\p"
+# 75 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+	.string "This area leads to the battle Dojo, here\n"
+	.string "the Tournament will be held.\p"
 	.string "Once you're ready you can enter.$"
 
 LaboratoryHall_EventScript_GuardOpen_Text_1:
-# 76 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 77 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "This area lead to the battle Dojo.\p"
 	.string "If you want to fight one of your\n"
 	.string "colleagues, this is the place to do it!$"
 
 LaboratoryHall_SignScript_BookCase_Text_0:
-# 83 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 84 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "It seems to be a bookcase filled with\n"
 	.string "books about different topics from\l"
 	.string "pokemon biology to the history of the\l"
@@ -353,22 +356,22 @@ LaboratoryHall_SignScript_BookCase_Text_0:
 	.string "though.$"
 
 LaboratoryHall_SignScript_LockedDrawer_Text_0:
-# 89 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 90 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "It's a locked file cabinet. But why is it\n"
 	.string "standing here out in the open?$"
 
 LaboratoryHall_SignScript_Egg_Text_0:
-# 95 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 96 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "An old pokemon egg is stored in this\n"
 	.string "glass container. Who knows what\l"
 	.string "pokemon it would contain?$"
 
 LaboratoryHall_Trigger_Fiona_Text_0:
-# 107 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 108 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "Oh {PLAYER}, you came!$"
 
 LaboratoryHall_Trigger_Fiona_Text_1:
-# 114 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
+# 115 "data/maps/MODHeadquarters_LaboratoryHall/scripts.pory"
 	.string "I just got my pokemon! They did suprise\n"
 	.string "me however with another...\p"
 	.string "I shouldn't spoil the surprise for you.\n"

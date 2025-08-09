@@ -105,3 +105,4 @@ gText_Kector_AreYouReady::
 	.string "true adventure soon enough.\p"
 	.string "May your fire burn bright!\p"
 	.string "$"
+	

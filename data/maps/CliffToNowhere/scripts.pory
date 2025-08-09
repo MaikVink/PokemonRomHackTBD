@@ -60,7 +60,7 @@ script CliffToNowhere_EscapeSequence{
     I would love to stick around and talk some more with you, but I've places to be.\p
     ...\p
     What do you mean you're not going to let me go?\p
-    sigh... I'm not really prepared for a fight like this, but I've gotten too far to let someone stop me now!\l
+    Sigh... I'm not really prepared for a fight like this, but I've gotten too far to let someone stop me now!\l
     Bring it on Hotshot!"))
     setvar(VAR_STORY_PROGRESSION, 14)
     special(HealPlayerParty)
@@ -143,11 +143,12 @@ script CliffToNowhere_Event_DemoEnding
     This is the ending of the demo, the rest of the game will be worked on in the next couple of years. \p
     feel free to share feedback about the demo and what things you would like to see improved in the full version. \l
     Feel also free to share any spelling mistakes made in the demo, there are probably a lot. \p
-    Found any exploits or mistakes? any glitches or bugs? any things that didn't work quite as well? \l
+    Found any exploits or mistakes? any glitches or bugs? Anything that didn't work quite as well? \l
     All feedback is welcome! \p
     You're free to explore the MOD headquarters for as long as you like, but the official demo ends here. \p
     Also a warning, I cannot guarantee that any progress you made in this demo will be kept in the full release. \p
-    With that being said: thank you for playing this demo!"))
+    With that being said:\p 
+    Thank you for playing this demo!"))
     releaseall
 }
 

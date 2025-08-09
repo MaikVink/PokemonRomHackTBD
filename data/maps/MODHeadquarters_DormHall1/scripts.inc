@@ -25,11 +25,11 @@ Dormhall1_OnTransition::
 	goto_if_eq Dormhall1_OnTransition_2
 Dormhall1_OnTransition_1:
 # 35 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	goto_if_set FLAG_TOURNAMENT_LOST, Dormhall1_OnTransition_5
+	goto_if_set FLAG_TOURNAMENT_LOST, Dormhall1_OnTransition_6
 Dormhall1_OnTransition_4:
 # 41 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	compare VAR_STORY_PROGRESSION, 14
-	goto_if_eq Dormhall1_OnTransition_7
+	goto_if_eq Dormhall1_OnTransition_9
 	return
 
 Dormhall1_OnTransition_2:
@@ -66,7 +66,13 @@ Dormhall1_OnTransition_5:
 	clearflag FLAG_HIDE_LEADER
 	goto Dormhall1_OnTransition_4
 
-Dormhall1_OnTransition_7:
+Dormhall1_OnTransition_6:
+# 35 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+	compare VAR_STORY_PROGRESSION, 10
+	goto_if_lt Dormhall1_OnTransition_5
+	goto Dormhall1_OnTransition_4
+
+Dormhall1_OnTransition_9:
 # 43 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	setflag FLAG_HIDE_DENEITH
 # 44 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -148,9 +154,9 @@ DormHall1_LostTournament::
 # 101 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	closemessage
 # 102 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	applymovement 2, Dormhall1_Movement_Move_To_PlayerLost
-# 103 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	applymovement 4, Dormhall1_Movemement_DelayedLookDown
+# 103 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
+	applymovement 2, Dormhall1_Movement_Move_To_PlayerLost
 # 104 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	waitmovement 0
 # 105 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -766,8 +772,8 @@ DormHall1_LostTournament_Text_0:
 	.string "room since the tournament is over!\p"
 	.string "Oh in case you don't know already, I've\n"
 	.string "won that tournament!\p"
-	.string "They give me this interesting price...\l"
-	.string "If you have time I would like to show\l"
+	.string "They give me this interesting price...\p"
+	.string "If you have time I would like to show\n"
 	.string "you...$"
 
 DormHall1_LostTournament_Text_1:
@@ -847,8 +853,8 @@ DormHall1_EventScript_LadyInitiative_Text_0:
 DormHall1_EventScript_LadyInitiative_Text_1:
 # 170 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	.string "I never had a pokemon before and now I\n"
-	.string "have to fight in a tournament. I wonder\l"
-	.string "how it will go...$"
+	.string "have to fight in a tournament!\p"
+	.string "I wonder how it will go...$"
 
 DormHall1_EventScript_LadyInitiative_Text_2:
 # 172 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -858,8 +864,8 @@ DormHall1_EventScript_LadyInitiative_Text_2:
 
 DormHall1_EventScript_LadyInitiative_Text_3:
 # 174 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
-	.string "I saw your fight! Fiona is really a\n"
-	.string "powerfull Pokemon Trainer\p"
+	.string "I saw your fight. Fiona is really a\n"
+	.string "powerfull Pokemon Trainer!\p"
 	.string "She has a good chance at winning this\n"
 	.string "whole Tournament!$"
 
@@ -900,7 +906,7 @@ DormHall1_EventScript_ManInitiative_Text_2:
 # 205 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	.string "I'm sorry. I guess I was just a bit too\n"
 	.string "much focussed on impressing Surge and\l"
-	.string "possibly the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}$"
+	.string "possibly the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}.$"
 
 DormHall1_EventScript_ManInitiative_Text_3:
 # 207 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
@@ -983,7 +989,7 @@ Dormhall1_EventScript_NinjaInitiative_Text_0:
 Dormhall1_EventScript_NinjaInitiative_Text_1:
 # 273 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	.string "I have to improve my ninja skills if I\n"
-	.string "want to impress the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}$"
+	.string "want to impress the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}.$"
 
 Dormhall1_EventScript_NinjaInitiative_Text_2:
 # 275 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
