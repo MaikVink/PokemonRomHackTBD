@@ -1252,7 +1252,7 @@ MoveMasters_ObjectScript_NameRater_Text_0:
 	.string "That being said, it is not easy to make\n"
 	.string "your pokemon understand he has to\l"
 	.string "listen to a new name, so I do require\l"
-	.string "some compensation for my services\l"
+	.string "some compensation for my services.\l"
 	.string "How does 100 sound?$"
 
 MoveMasters_ObjectScript_NameRater_Text_1:

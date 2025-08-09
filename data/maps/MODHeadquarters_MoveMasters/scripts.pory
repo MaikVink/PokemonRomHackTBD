@@ -27,7 +27,7 @@ script MoveMasters_ObjectScript_NameRater
         I'm the Name Rater.\p
         Well, technically I'm the pokemon renamers, but people are more familiar with the name Name Rater.\l
         If you ever want your pokemon to be called a different name, you can come to me!\p
-        That being said, it is not easy to make your pokemon understand he has to listen to a new name, so I do require some compensation for my services\l
+        That being said, it is not easy to make your pokemon understand he has to listen to a new name, so I do require some compensation for my services.\l
         How does 100 sound?"))
     }
     showmoneybox(0,0)

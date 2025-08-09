@@ -345,7 +345,7 @@ CliffToNowhere_EscapeSequence_Text_5:
 	.string "...\p"
 	.string "What do you mean you're not going to\n"
 	.string "let me go?\p"
-	.string "sigh... I'm not really prepared for a\n"
+	.string "Sigh... I'm not really prepared for a\n"
 	.string "fight like this, but I've gotten too far\l"
 	.string "to let someone stop me now!\l"
 	.string "Bring it on Hotshot!$"

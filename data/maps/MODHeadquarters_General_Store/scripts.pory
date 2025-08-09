@@ -25,7 +25,7 @@ script GeneratlStore_ObjectScript_MartEmployer
         msgbox(format("Welcome to my humble shop!\p
         Pokeballs, potions, held items, repels and more!\p
         If your looking for anything come check with me, because I will most likely have it somewhere around!\p
-        That being said... The leader does restrict me to sell... 'good' items to low level Initiatives.\p
+        That being said... {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} does restrict me to sell... 'good' items to low level Initiatives.\p
         The higher your rank will become, the more items I'm allowed to sell you, so please do consider to come back from time to time!\p
         With that being said..."))
     }

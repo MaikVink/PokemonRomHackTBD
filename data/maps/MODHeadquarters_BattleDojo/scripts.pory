@@ -113,7 +113,10 @@ script BattleDojo_Event_Surge{
             }
             else
             {
-                msgbox(format("{COLOR GREEN}???{COLOR DARK_GRAY}: Welcome Rekruut! This is the Battle Dojo, a safe place to perform pokemon battles!\p{COLOR GREEN}Surge{COLOR DARK_GRAY}: My name is Surge and I'm the person that will judge your performance in this Tournament. \pPokemon are dangerous to handle, so this Tournament would allow a safe space to see how well you can handle taking on this dangerous living weapon.\p Don't worry, if you would lose control over your pokemon, I'm more than capable to subdue the situation."))
+                msgbox(format("{COLOR GREEN}???{COLOR DARK_GRAY}: Welcome Rekruut! This is the Battle Dojo, a safe place to perform pokemon battles!\p
+                {COLOR GREEN}Surge{COLOR DARK_GRAY}: My name is Surge and I'm the person that will judge your performance in this Tournament. \p
+                Pokemon are dangerous to handle, so this Tournament would allow a safe space to see how well you can handle taking on this dangerous living weapon.\p 
+                Don't worry, if you would lose control over your pokemon, I'm more than capable to subdue the situation."))
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Are you ready to do you first ever pokemon battle?"), MSGBOX_YESNO)
             }
             if(var(VAR_RESULT))
@@ -138,19 +141,25 @@ script BattleDojo_Event_Surge{
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_WalkRightBackwards)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards)
                 waitmovement(0)
-                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Wow, that totally did not go as I expected.\p But fair is fair, you were clearly the stronger trainer.\p Good luck in the rest of the tournament! I'll go think what I can do to become a better trainer!"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Wow, that totally did not go as I expected.\p 
+                But fair is fair, you were clearly the stronger trainer.\p 
+                Good luck in the rest of the tournament! I'll go think what I can do to become a better trainer!"))
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_OpponentLeave)
                 waitmovement(0)
                 hideobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge)
                 waitmovement(0)
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceLeft)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Well fought {PLAYER}, I can see you can get far in this tournament.\p In my eyes you have already proven yourself to be capable of handling these dangerous pokemon.\p Still, I ask you to continue in this tournament. I would like to see how far you can get.\p Who knows? Maybe you can win this whole tournament! I know {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} will have prepared something special if you would become our champion today!\p You can go rest now, tomorrow your next battle will be ready!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Well fought {PLAYER}, I can see you can get far in this tournament.\p 
+                In my eyes you have already proven yourself to be capable of handling these dangerous pokemon.\p 
+                Still, I ask you to continue in this tournament. I would like to see how far you can get.\p 
+                {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} will have prepared something special if you win!\p 
+                You can go rest now, tomorrow your next battle will be ready!"))
             }
             else
             {
                 setflag(FLAG_REUSABLE_SKIP_FLAG)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: that's fine, come talk to me when you're ready"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: that's fine, come talk to me when you're ready!"))
             }
         case 7:
             if(flag(FLAG_BATTLE_WON))
@@ -165,11 +174,15 @@ script BattleDojo_Event_Surge{
             }
             else
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: One battle down, three to go.\p Every Initiative has a different pokemon so it's impossible for anyone to know how these battles will go. \pStill, are you ready for your next battle?"), MSGBOX_YESNO)
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: One battle down, three to go.\p 
+                Every Initiative has a different pokemon so it's impossible for anyone to know how these battles will go. \p
+                Still, are you ready for your next battle?"), MSGBOX_YESNO)
             }
             if(var(VAR_RESULT))
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Fantastic! go stand where you stood yesterday and I'll call your next opponent forward"))
+                setflag(FLAG_TOURNAMENT_LOST)
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Fantastic!\p
+                Go stand where you stood yesterday and I'll call your next opponent forward."))
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceDown)
                 call(BattleDojo_PLayerMoveToBattleSpot)
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: HERALD, YOU MAY ENTER!"))
@@ -188,24 +201,26 @@ script BattleDojo_Event_Surge{
                 applymovement(HIKER_LOCALID, BattleDojo_Movement_WalkRightBackwards)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards)
                 waitmovement(0)
-                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Guess my ego got a bit too my head after my first win.\p Thank you for keeping me humble {PLAYER}.\l Good luck in the rest of the tournament, I'll be rooting for you!"))
+                msgbox(format("{COLOR BLUE}Herald{COLOR DARK_GRAY}: Guess my ego went to my head a bit after my first win.\p Thank you for keeping me humble, {PLAYER}!\l Good luck in the rest of the tournament, I'll be rooting for you!"))
                 applymovement(HIKER_LOCALID, BattleDojo_Movement_OpponentLeave)
                 waitmovement(0)
                 hideobjectat(HIKER_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge)
                 waitmovement(0)
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceLeft)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: And that makes two: you have already made it to the semi-finals.\l Congrats {PLAYER}!\p That does not mean the battles will become easier from here, tomorrow is another opponent and another battle.\p Go rest so you're ready for the battle that comes next!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: And that makes two: you have already made it to the semi-finals.\l Congrats {PLAYER}!\p 
+                That does not mean the battles will become easier from here on out, tomorrow is another opponent and another battle.\p
+                Go rest so you're ready for the battle that comes next!"))
             }
             else
             {
                 setflag(FLAG_REUSABLE_SKIP_FLAG)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: No shame in being overprepared.\n come talk to me when you're ready"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: No shame in being overprepared.\n Come talk to me when you're ready!"))
             }
         case 8:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job on making it to the finals {PLAYER}!\l now go rest and be preparred for the thoughest battle tomorrow!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job on making it to the finals {PLAYER}!\l Now go rest and be preparred for the thoughest battle tomorrow!"))
                 releaseall
                 end
             }
@@ -215,10 +230,11 @@ script BattleDojo_Event_Surge{
             }
             else
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, You're halfway, keep it up!\p Do expect these battle to become harder through the tournament though. I would hate to see you lose because you were holding back! \p Are you ready for your next battle?"), MSGBOX_YESNO)
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Now, you're halfway.\n Keep it up!\p Do expect these battle to become harder through the tournament though. I would hate to see you lose because you were holding back! \p Are you ready for your next battle?"), MSGBOX_YESNO)
             }
             if(var(VAR_RESULT))
             {
+                setflag(FLAG_TOURNAMENT_LOST)
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Understood! You know what to do."))
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceDown)
                 call(BattleDojo_PLayerMoveToBattleSpot)
@@ -250,12 +266,12 @@ script BattleDojo_Event_Surge{
             else
             {
                 setflag(FLAG_REUSABLE_SKIP_FLAG)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: No shame in being overprepared.\n come talk to me when you're ready"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: No shame in being overprepared.\n Come talk to me when you're ready!"))
             }
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job Champion!\n Go rest for now, I'll talk with {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} tomorrow about your reward!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Good job Champion!\n Go rest for now, I'll talk with {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} about your reward!"))
                 releaseall
                 end
             }
@@ -265,10 +281,11 @@ script BattleDojo_Event_Surge{
             }
             else
             {
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: The Finals...\p The best and second best are also the best and second best pokemon trainers, who would have expected?\p Today we're going to see, who really, is the most skilled trainer out of the two of you.\p Are you ready for the final battle of the Tournament?"), MSGBOX_YESNO)
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: The finals...\p The best and second best are also the best and second best pokemon trainers, who would have expected?\p Today we're going to see, who really, is the most skilled trainer out of the two of you.\p Are you ready for the final battle of the Tournament?"), MSGBOX_YESNO)
             }
             if(var(VAR_RESULT))
             {
+                setflag(FLAG_TOURNAMENT_LOST)
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Excellent!\n So please {PLAYER}, for the last time this tournament..."))
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceDown)
                 call(BattleDojo_PLayerMoveToBattleSpot)
@@ -276,9 +293,7 @@ script BattleDojo_Event_Surge{
                 showobjectat(FIONA_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(FIONA_LOCALID, BattleDojo_Movement_OpponentWalksToSpot)
                 waitmovement(0)
-                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: So, you have kept your promise and also made it to the finals? \p Good!\p Let's show everyone here, what a real pokemon battle means!\l I'm not gonna hold back and I hope you'll do the same to me!"))
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: INITIATIVES! You two have already proved from your first battle you're responsible, capable trainers able to take care of these dangerous pokemon!\l Todays battle is not to prove yourself worthy of owning pokemon, todays battle is about proving yourself worthy of {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} respect!\l Win this battle and get properly rewarded. If both fighters are ready, than you can start!"))
-                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: Let's do this {PLAYER}!"))
+                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: So, you have kept your promise and also made it to the finals? \p Good!\p Let's show everyone here, what a real pokemon battle means!"))
                 applymovement(FIONA_LOCALID, BattleDojo_Movement_WalkLeft)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight)
                 waitmovement(0)
@@ -289,19 +304,25 @@ script BattleDojo_Event_Surge{
                 applymovement(FIONA_LOCALID, BattleDojo_Movement_WalkRightBackwards)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards)
                 waitmovement(0)
-                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: I...\p I'm speechless!\p It seems you're even more skilled than I thought!\p Don't celebrate too hard though {PLAYER}, I'm your rival after all!\l I'll train and become stronger, and I'll battle you again and next time I'll come out victorious!\p Mark my words!"))
+                msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: I...\p 
+                I'm speechless!\p 
+                It seems you're even more skilled than I thought!\p 
+                Don't celebrate too hard though {PLAYER}. I'm your rival after all!\l I'll train and become stronger, and next time I'll come out victorious!\p 
+                Mark my words!"))
                 applymovement(FIONA_LOCALID, BattleDojo_Movement_OpponentLeave)
                 waitmovement(0)
                 hideobjectat(FIONA_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_movement_PlayerWalkBackSurge)
                 waitmovement(0)
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceLeft)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Congratulations {PLAYER}, I knew you would come out victorious!\p You know {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was also watching this battle and is very impressed, he says he has big plans preparred for you!\p I'll go talk with {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} to see about your reward.\l Go rest and relax from this fight, tomorrow you'll get your reward and than you'll be able to go explore the world with your new pokemon!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Congratulations {PLAYER}, I knew you would come out victorious!\p 
+                You know...\n {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was also watching this battle and is very impressed. He has big plans preparred for you!\p 
+                I'll go talk with {COLOR LIGHT_GRAY}Him{COLOR DARK_GRAY} to see about your reward.\l Go rest and relax from this fight, tomorrow you'll get your reward and than you'll be able to go explore the world with your new pokemon!"))
             }
             else
             {
                 setflag(FLAG_REUSABLE_SKIP_FLAG)
-                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Don't keep everyone waiting for too long, we all want to see how this next battle is gonna go!"))
+                msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: Don't keep everyone waiting for too long!\l We all want to see how this next battle is gonna go!"))
             }
         default:
             if(flag(FLAG_UNLOCK_BATTLEDOJO))
@@ -501,12 +522,12 @@ script BattleDojo_BattleDojoBattles{
                 {
                     trainerbattle_no_intro(TRAINER_FIONA_B0, Fiona_LostNormal)
                 }
-            case 6:
-                trainerbattle_no_intro(TRAINER_TRISTAN_B0, Tristan_Lost)
             case 4:
                 trainerbattle_no_intro(TRAINER_VICTOR_B0, Victor_Lost)
             case 5:
                 trainerbattle_no_intro(TRAINER_VERA_B0, Vera_Lost)
+            case 6:
+                trainerbattle_no_intro(TRAINER_TRISTAN_B0, Tristan_Lost)
         }
         applymovement(VAR_TEMP_1, BattleDojo_Movement_WalkRightBackwards)
         applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkLeftBackwards)
@@ -528,12 +549,12 @@ script BattleDojo_BattleDojoBattles{
                 {
                     msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: It seems like I still not strong enough. But mark my words, I won't make it as easy for you the next time!"))
                 }
-            case 6:
-                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I got lots of things to think about after this battle, I better go and start doing that.\l Thanks for the battle {PLAYER}!"))
             case 4:
                 msgbox(format("{COLOR BLUE}Victor{COLOR DARK_GRAY}: I need some more training to be able to use my knowledge in battle...\l Thanks for the battle {PLAYER}!"))
             case 5:
                 msgbox(format("{COLOR BLUE}Vera{COLOR DARK_GRAY}: You have quite the interesting set of pokemon on your team, I'll love to battle your more often!\l Thanks for the battle {PLAYER}!"))
+            case 6:
+                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: No matter how often we fight, you always amaze me.\l Thanks for the battle {PLAYER}!"))
         }
         applymovement(VAR_TEMP_1, BattleDojo_Movement_OpponentLeave)
         waitmovement(0)
