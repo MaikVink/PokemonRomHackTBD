@@ -12664,32 +12664,32 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_Lantern, 
     },
 
-    [ITEM_ROCK_SMASHER] =
+    [ITEM_DRILL] =
     {
-        .name = _("Rock Smasher"),
+        .name = _("Drill"),
         .price = 10000,
         .description = COMPOUND_STRING(
             "An small tool\n"
             "that is able to\n"
-            "smash small rocks."
+            "drill small rocks."
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_RockSmasher, 
+        .fieldUseFunc = ItemUseOutOfBattle_Drill, 
     },
 
-    [ITEM_BOLDER_PUSHER] =
+    [ITEM_MECHANICAL_ARM] =
     {
-        .name = _("Bolder Pusher"),
+        .name = _("Mech. Arm"),
         .price = 10000,
         .description = COMPOUND_STRING(
-            "A small tool\n"
+            "An arm attachment\n"
             "that is able to\n"
             "push large bolders"
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_BolderPusher, 
+        .fieldUseFunc = ItemUseOutOfBattle_MechanicalArm, 
     },
 
     [ITEM_SURFBOARD] =
@@ -12734,18 +12734,18 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_DivingEquipment, 
     },
 
-    [ITEM_REVERSE_WATERFALL] =
+    [ITEM_AQUA_JETPACK] =
     {
-        .name = _("Waterfall Kit"),
+        .name = _("Aqua Jetpack"),
         .price = 10000,
         .description = COMPOUND_STRING(
-            "A small device\n"
-            "that allows you to\n"
-            "climb waterfalls."
+            "A jetpack using\n"
+            "water to climb\n"
+            "waterfalls."
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_ReverseWaterfall, 
+        .fieldUseFunc = ItemUseOutOfBattle_AquaJetpack, 
     },
 
     [ITEM_CAMPING_EQUIPMENT] =

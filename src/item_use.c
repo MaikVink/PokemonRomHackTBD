@@ -69,12 +69,12 @@ static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static void ItemUseOnFieldCB_Axe(u8);
 static void ItemUseOnFieldCB_Lantern(u8);
-static void ItemUseOnFieldCB_RockSmasher(u8);
-static void ItemUseOnFieldCB_BolderPusher(u8);
+static void ItemUseOnFieldCB_Drill(u8);
+static void ItemUseOnFieldCB_MechanicalArm(u8);
 static void ItemUseOnFieldCB_SurfBoard(u8);
 static void ItemUseOnFieldCB_BirdFlute(u8);
 static void ItemUseOnFieldCB_DivingEquipment(u8);
-static void ItemUseOnFieldCB_ReverseWaterfall(u8);
+static void ItemUseOnFieldCB_AquaJetpack(u8);
 static bool8 TryToWaterSudowoodo(void);
 static void BootUpSoundTMHM(u8);
 static void Task_ShowTMHMContainedMessage(u8);
@@ -1506,22 +1506,22 @@ void ItemUseOnFieldCB_Lantern(u8 taskId)
     DestroyTask(taskId);
 }
 
-void ItemUseOutOfBattle_RockSmasher(u8 taskId)
+void ItemUseOutOfBattle_Drill(u8 taskId)
 {
     if(!gTasks[taskId].tUsingRegisteredKeyItem)
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_RockSmasher;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Drill;
         gFieldCallback = FieldCB_UseItemOnField;
         gBagMenu->newScreenCallback = CB2_ReturnToField;
         Task_FadeAndCloseBagMenu(taskId);
     }
     else{
-        sItemUseOnFieldCB = ItemUseOnFieldCB_RockSmasher;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Drill;
         SetUpItemUseOnFieldCallback(taskId); 
     }
 }
 
-void ItemUseOnFieldCB_RockSmasher(u8 taskId)
+void ItemUseOnFieldCB_Drill(u8 taskId)
 {
     LockPlayerFieldControls();
     if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
@@ -1538,22 +1538,22 @@ void ItemUseOnFieldCB_RockSmasher(u8 taskId)
     DestroyTask(taskId);
 }
 
-void ItemUseOutOfBattle_BolderPusher(u8 taskId)
+void ItemUseOutOfBattle_MechanicalArm(u8 taskId)
 {
     if(!gTasks[taskId].tUsingRegisteredKeyItem)
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_BolderPusher;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_MechanicalArm;
         gFieldCallback = FieldCB_UseItemOnField;
         gBagMenu->newScreenCallback = CB2_ReturnToField;
         Task_FadeAndCloseBagMenu(taskId);
     }
     else{
-        sItemUseOnFieldCB = ItemUseOnFieldCB_BolderPusher;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_MechanicalArm;
         SetUpItemUseOnFieldCallback(taskId); 
     }
 }
 
-void ItemUseOnFieldCB_BolderPusher(u8 taskId)
+void ItemUseOnFieldCB_MechanicalArm(u8 taskId)
 {
     LockPlayerFieldControls();
     if(CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER) == TRUE)
@@ -1664,22 +1664,22 @@ void ItemUseOnFieldCB_DivingEquipment(u8 taskId)
     UnlockPlayerFieldControls();
 }
 
-void ItemUseOutOfBattle_ReverseWaterfall(u8 taskId)
+void ItemUseOutOfBattle_AquaJetpack(u8 taskId)
 {
     if(!gTasks[taskId].tUsingRegisteredKeyItem)
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_ReverseWaterfall;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_AquaJetpack;
         gFieldCallback = FieldCB_UseItemOnField;
         gBagMenu->newScreenCallback = CB2_ReturnToField;
         Task_FadeAndCloseBagMenu(taskId);
     }
     else{
-        sItemUseOnFieldCB = ItemUseOnFieldCB_ReverseWaterfall;
+        sItemUseOnFieldCB = ItemUseOnFieldCB_AquaJetpack;
         SetUpItemUseOnFieldCallback(taskId); 
     }
 }
 
-void ItemUseOnFieldCB_ReverseWaterfall(u8 taskId)
+void ItemUseOnFieldCB_AquaJetpack(u8 taskId)
 {
     LockPlayerFieldControls();
     if(IsPlayerSurfingNorth() == TRUE)
