@@ -70,8 +70,8 @@ script Hall1_EventScript_GuardRight{
         case 3:
         case 4:
         case 5:
-        msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today."))
         case 6:
+        msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today."))
         case 7:
         case 8:
         msgbox(format("Today is a special day huh?\n Don't worry initiative!\l We will make sure nothing goes wrong today.\p
@@ -85,7 +85,7 @@ script Hall1_EventScript_GuardRight{
             }
             else
             {
-                msgbox(format("Today is an extra special day isn't?\n Good luck today!\p And of course don't worry.\l We will make sure nothing goes wrong today."))      
+                msgbox(format("Today is an extra special day isn't?\n Good luck today!\p And of course don't worry.\n We will make sure nothing goes wrong today."))      
             }
         default:
             msgbox(format("Don't forget to make every day your special day!"))
@@ -116,7 +116,7 @@ script Hall1_EventScript_Wanderer{
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("I guess that people were correct, you're very strong! Even though Fiona wooped my ass, I would love to fight you as well some day!"))
+                msgbox(format("I guess that people were correct! You're very strong! Even though Fiona wooped my ass, I would love to fight you as well some day!"))
             }
             else
             {
@@ -164,7 +164,7 @@ script Hall1_EventScript_Beauty{
             }
             else
             {
-                msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Frankly, I think neither of you two deserve to be in the finals. I'm clearly the best trainer. But there is little I can do to chance the system now."))      
+                msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Frankly, I think neither of you two deserve to be in the finals. I'm clearly the best trainer. But there is little I can do to change the system now."))      
             }
         default:
             msgbox(format("{COLOR BLUE}Bella{COLOR DARK_GRAY}: Be careful not to fall off your high horse dear. It's only a matter of time before somewhere far more handsome and skillful will take your place."))

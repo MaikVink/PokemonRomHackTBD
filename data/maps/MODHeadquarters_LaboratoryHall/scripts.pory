@@ -48,7 +48,7 @@ script LaboratoryHall_EventScript_Woman{
             }
             else
             {
-                msgbox(format("My idea was approved by Surge and {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}! Good luck with the finals by the way! Afterwards I'm going to ask the champion for a battle. I want to see what the skill level is at the top!"))      
+                msgbox(format("My idea was approved by Surge and {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!\l Good luck with the finals by the way!\l Afterwards I'm going to ask the champion for a battle. I want to see what the skill level is at the top!"))      
             }
         default:
             msgbox(format("{COLOR BLUE}Maria{COLOR DARK_GRAY}: The battle arena is a good place to train your pokemons and to rematch other Initiatives if you want to see how far they have come.\p The lab on the other hand is a good place if you need something more specific."))
@@ -71,7 +71,8 @@ script LaboratoryHall_EventScript_GuardOpen{
         case 6:
         case 7:
         case 8:
-            msgbox(format("This area leads to the battle Dojo, hear you'll be performing the Tournament.\p Once you're ready you can enter."))
+        case 9:
+            msgbox(format("This area leads to the battle Dojo, here the Tournament will be held.\p Once you're ready you can enter."))
         default:
             msgbox(format("This area lead to the battle Dojo.\p If you want to fight one of your colleagues, this is the place to do it!"))
     }

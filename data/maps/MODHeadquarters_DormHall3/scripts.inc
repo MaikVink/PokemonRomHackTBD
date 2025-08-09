@@ -283,7 +283,7 @@ DormHallBottemLeft_EventScript_Hiker_Text_6:
 DormHallBottemLeft_EventScript_Hiker_Text_7:
 # 49 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: I knew you could do it! Only the\n"
-	.string "best could defeat me HAHAHAHA.\l"
+	.string "best could defeat me! HAHAHAHA.\l"
 	.string "HAHAHA\l"
 	.string "HA\l"
 	.string "ha\l"
@@ -305,7 +305,7 @@ DormHallBottemLeft_EventScript_Hiker_Text_9:
 # 65 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
 	.string "{COLOR BLUE}Herald{COLOR DARK_GRAY}: Well I like sleeping in the wild,\n"
 	.string "nothing beats a comfortable bed with a\l"
-	.string "strong room above your head.$"
+	.string "strong roof above your head.$"
 
 DormHallBottemLeft_EventScript_Woman_Text_0:
 # 80 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
@@ -350,21 +350,22 @@ DormHallBottemLeft_EventScript_Woman_Text_4:
 DormHallBottemLeft_EventScript_Woman_Text_5:
 # 99 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
 	.string "I know I have no right to ask this of\n"
-	.string "you {PLAYER}, but if you wouldn't mind\l"
+	.string "you {PLAYER}, but if you wouldn't\l"
+	.string "mind...\l"
 	.string "Could you please win this next battle?\l"
 	.string "I heard you're gonna fight Bella and I\l"
 	.string "just hate looking at her smug face...$"
 
 DormHallBottemLeft_EventScript_Woman_Text_6:
 # 105 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
-	.string "Well done {PLAYER}! or should I say\n"
+	.string "Well done {PLAYER}! Or should I say\n"
 	.string "Champion now?$"
 
 DormHallBottemLeft_EventScript_Woman_Text_7:
 # 109 "data/maps/MODHeadquarters_DormHall3/scripts.pory"
 	.string "The finals are today, aren't they? Good\n"
-	.string "luck {PLAYER}, may the best rookie\l"
-	.string "win!$"
+	.string "luck {PLAYER}!\l"
+	.string "May the best rookie win!$"
 
 DormHallBottemLeft_EventScript_Woman_Text_8:
 # 112 "data/maps/MODHeadquarters_DormHall3/scripts.pory"

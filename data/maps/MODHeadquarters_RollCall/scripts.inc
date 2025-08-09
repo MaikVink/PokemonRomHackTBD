@@ -748,7 +748,7 @@ RollCall_EventScript_FatGuy_Text_0:
 
 RollCall_EventScript_FatGuy_Text_1:
 # 33 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	.string "I cannot believe, the rumors are true!\n"
+	.string "I cannot believe the rumors are true!\n"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was here and he talked to us\l"
 	.string "directly!\l"
 	.string "I have never been more excited in my\l"
@@ -784,7 +784,7 @@ RollCall_EventScript_FatGuy_Text_6:
 # 56 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you see the look on that\n"
 	.string "Bella's face? It was like your win\l"
-	.string "insulted her entire existance\l"
+	.string "insulted her entire existance!\l"
 	.string "HAHAHAHA!$"
 
 RollCall_EventScript_FatGuy_Text_7:
@@ -797,8 +797,9 @@ RollCall_EventScript_FatGuy_Text_8:
 # 65 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: YOU ACTUALLY DID IT! I'm so\n"
 	.string "honoured to be your first loss, my dear\l"
-	.string "Champion. I wonder what the reward was\l"
-	.string "that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised...$"
+	.string "Champion.\l"
+	.string "I wonder what the reward was that {COLOR LIGHT_GRAY}The\l"
+	.string "Leader{COLOR DARK_GRAY} promised...$"
 
 RollCall_EventScript_FatGuy_Text_9:
 # 69 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -820,14 +821,13 @@ RollCall_EventScript_LadyLeft_Text_0:
 
 RollCall_EventScript_LadyLeft_Text_1:
 # 89 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	.string "Do you know who that was? it was the\n"
+	.string "Do you know who that was? It was the\n"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!$"
 
 RollCall_EventScript_LadyLeft_Text_2:
 # 91 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	.string "Eevee is more powerful than I thought!\n"
-	.string "I do assume you didn't take it easy on\l"
-	.string "me?$"
+	.string "You didn't take it easy on me, right?$"
 
 RollCall_EventScript_LadyLeft_Text_3:
 # 93 "data/maps/MODHeadquarters_RollCall/scripts.pory"
@@ -988,7 +988,7 @@ RollCall_MeetTheLeader_Text_7:
 
 RollCall_MeetTheLeader_Text_8:
 # 226 "data/maps/MODHeadquarters_RollCall/scripts.pory"
-	.string "Over the next 3 days, starting\n"
+	.string "Over the next 4 days, starting\n"
 	.string "tomorrow, a tournament will be held.\p"
 	.string "It will be a one on one battles with your\n"
 	.string "given starter pokemon. The winner\l"

@@ -30,7 +30,7 @@ script RollCall_EventScript_FatGuy{
             msgbox(format("We were told to go to this room after we got our pokemon.\p
                 I wonder if this means we will get to meet {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}..."))
         case 5:
-            msgbox(format("I cannot believe, the rumors are true! {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was here and he talked to us directly!\l I have never been more excited in my life!"))
+            msgbox(format("I cannot believe the rumors are true! {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} was here and he talked to us directly!\l I have never been more excited in my life!"))
         case 6:
             if(flag(FLAG_BATTLE_WON))
             {
@@ -53,7 +53,7 @@ script RollCall_EventScript_FatGuy{
         case 8:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you see the look on that Bella's face? It was like your win insulted her entire existance HAHAHAHA!"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: Did you see the look on that Bella's face? It was like your win insulted her entire existance! HAHAHAHA!"))
             }
             else
             {
@@ -62,7 +62,7 @@ script RollCall_EventScript_FatGuy{
         case 9:
             if(flag(FLAG_BATTLE_WON))
             {
-                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: YOU ACTUALLY DID IT! I'm so honoured to be your first loss, my dear Champion. I wonder what the reward was that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised..."))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: YOU ACTUALLY DID IT! I'm so honoured to be your first loss, my dear Champion.\l I wonder what the reward was that {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} promised..."))
             }
             else
             {
@@ -86,9 +86,9 @@ script RollCall_EventScript_LadyLeft{
         case 4:
             msgbox(format("I was so suprised I got an Eevee! What pokemon did you get from your test?"))
         case 5:
-            msgbox(format("Do you know who that was? it was the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!"))
+            msgbox(format("Do you know who that was? It was the {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!"))
         case 6:
-            msgbox(format("Eevee is more powerful than I thought! I do assume you didn't take it easy on me?"))
+            msgbox(format("Eevee is more powerful than I thought! You didn't take it easy on me, right?"))
         case 7:
             msgbox(format("Ugh, I hate that I lost to her. I don't mind that she is better, but does she really need to gloat so much about it?"))
         case 8:
@@ -223,7 +223,7 @@ script RollCall_MeetTheLeader{
     Having a pokemon might make you feel superior over the general public. But remember: 
     For how useful pokemon can be in our daily life, they are also extremly dangerous.\p
     Each of you have proven yourself responsable and strong enough to take care of these pokemon, but now you have to show that you didn't just luck out."))
-    msgbox(format("Over the next 3 days, starting tomorrow, a tournament will be held.\p 
+    msgbox(format("Over the next 4 days, starting tomorrow, a tournament will be held.\p 
     It will be a one on one battles with your given starter pokemon. The winner continues to next round, the loser has to think about why they lost. \p
     The Tournament winner will, of course, be rightfully rewarded."))
     msgbox(format("Don't worry about losing, this tournament is more about your performance than your result."))

@@ -44,7 +44,7 @@ script EvoMAsters_ObjectScript_Masseuse{
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_FREE_MASSAGE))
     {
         setflag(FLAG_FREE_MASSAGE)
-        msgbox(format("Oh? Is that an Eevee I see in your party?\p alright, for this once I allow you to use my services for free if you want."))
+        msgbox(format("Oh? Is that an Eevee I see in your party?\p Alright, for this once I allow you to use my services for free if you want."))
         call(EvoMasters_CheckFreeMassageEevee)
     }
     showmoneybox(0, 0)
@@ -317,7 +317,7 @@ script EvoMasters_ObjectScript_EvoChecker{
     faceplayer
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
-        msgbox(format("Hi, I'm the Strategic Sister!\p I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me\p Even if you think you know how they evolve, you might be surprised to learn that some will have different or multiple ways to evolve! \p Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
+        msgbox(format("Hi, I'm the Strategic Sister!\p I know of every pokemon what requirements they need to evolve, so if you're ever unsure how you can evolve a certain pokemon, please come to me!\p Even if you think you know how they evolve, you might be surprised to learn that some will have different or multiple ways to evolve! \p Don't worry about pay, I don't require anything for my services. You can always come to me to check on what you need to do to evolve your pokemon."))
     }
     msgbox(format("Do you want to know how you need to evolve one of your pokemon?"), MSGBOX_YESNO)
     if(var(VAR_RESULT))
