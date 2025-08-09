@@ -28,7 +28,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GetChallengeStatus::
 
 VerdanturfTown_BattleTentLobby_EventScript_QuitWithoutSaving::
 	lockall
-	msgbox BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge, MSGBOX_DEFAULT
 	closemessage
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
@@ -53,7 +52,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GivePrize::
 	switch VAR_RESULT
 	case FALSE, VerdanturfTown_BattleTentLobby_EventScript_NoRoomForPrize
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	message BattleFrontier_BattleDomeLobby_Text_ReceivedPrize  @ Odd that it used Dome's copy instead of Palace's
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
@@ -64,7 +62,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GivePrize::
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_NoRoomForPrize::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
@@ -93,8 +90,6 @@ VerdanturfTown_BattleTentLobby_EventScript_LostChallenge::
 
 VerdanturfTown_BattleTentLobby_EventScript_ResumeChallenge::
 	lockall
-	msgbox BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting, MSGBOX_DEFAULT
-	message BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge
 	waitmessage
 	verdanturftent_save CHALLENGE_STATUS_SAVING
 	playse SE_SAVE
@@ -131,7 +126,6 @@ VerdanturfTown_BattleTentLobby_EventScript_TryEnterChallenge::
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
-	special ChoosePartyForBattleFrontier
 	waitstate
 	goto_if_eq VAR_RESULT, 0, VerdanturfTown_BattleTentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox VerdanturfTown_BattleTentLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
@@ -277,7 +271,6 @@ VerdanturfTown_BattleTentLobby_EventScript_RulesBoard::
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading
 	waitmessage
 	setvar VAR_0x8004, SCROLL_MULTI_BATTLE_TENT_RULES
 	special ShowScrollableMultichoice
@@ -299,27 +292,22 @@ VerdanturfTown_BattleTentLobby_EventScript_RulesLevel::
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_RulesBasics::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesBasics, MSGBOX_DEFAULT
 	goto VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_RulesNature::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesNature, MSGBOX_DEFAULT
 	goto VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_RulesMoves::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesMoves, MSGBOX_DEFAULT
 	goto VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_RulesUnderpowered::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesUnderpowered, MSGBOX_DEFAULT
 	goto VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_RulesWhenInDanger::
-	msgbox BattleFrontier_BattlePalaceLobby_Text_ExplainRulesWhenInDanger, MSGBOX_DEFAULT
 	goto VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 

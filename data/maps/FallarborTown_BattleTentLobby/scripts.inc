@@ -130,7 +130,6 @@ FallarborTown_BattleTentLobby_EventScript_TryEnterChallenge::
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
-	special ChoosePartyForBattleFrontier
 	waitstate
 	goto_if_eq VAR_RESULT, 0, FallarborTown_BattleTentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox FallarborTown_BattleTentLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
@@ -255,12 +254,10 @@ FallarborTown_BattleTentLobby_EventScript_ScottAlreadySpokenTo::
 
 FallarborTown_BattleTentLobby_EventScript_RulesBoard::
 	lockall
-	msgbox BattleFrontier_BattleArenaLobby_Text_RulesAreListed, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattleArenaLobby_Text_ReadWhichHeading
 	waitmessage
 	multichoice 17, 0, MULTI_FALLARBOR_TENT_RULES, FALSE
 	switch VAR_RESULT
@@ -279,22 +276,18 @@ FallarborTown_BattleTentLobby_EventScript_RulesLevel::
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesBattle::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesMind::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainMindRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesSkill::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesBody::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 

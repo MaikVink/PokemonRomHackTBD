@@ -51,7 +51,6 @@ SlateportCity_BattleTentLobby_EventScript_GivePrize::
 	switch VAR_RESULT
 	case FALSE, SlateportCity_BattleTentLobby_EventScript_NoRoomForPrize
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	message BattleFrontier_BattleTowerLobby_Text_ReceivedPrize  @ Odd that it uses Tower's instead of Factory's or its own
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
@@ -227,12 +226,10 @@ SlateportCity_BattleTentLobby_EventScript_Woman::
 
 SlateportCity_BattleTentLobby_EventScript_RulesBoard::
 	lockall
-	msgbox BattleFrontier_BattleFactoryLobby_Text_RulesAreListed, MSGBOX_DEFAULT
 	goto SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading
 	waitmessage
 	multichoice 17, 0, MULTI_SLATEPORT_TENT_RULES, FALSE
 	switch VAR_RESULT

@@ -201,110 +201,110 @@ CliffToNowhere_Event_DemoEnding::
 	faceplayer
 # 142 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Event_DemoEnding_Text_0
-# 151 "data/maps/CliffToNowhere/scripts.pory"
+# 152 "data/maps/CliffToNowhere/scripts.pory"
 	releaseall
 	return
 
 
-# 158 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_RunDown:
 # 159 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
+CliffToNowhere_RunDown:
 # 160 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 161 "data/maps/CliffToNowhere/scripts.pory"
 	face_up
 	step_end
 
-# 163 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_BreakDoor:
 # 164 "data/maps/CliffToNowhere/scripts.pory"
-	walk_in_place_fast_up
+CliffToNowhere_BreakDoor:
 # 165 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 166 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 167 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_up
+	walk_in_place_fast_up
 # 168 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+	walk_fast_up
 # 169 "data/maps/CliffToNowhere/scripts.pory"
-	jump_down
+	lock_facing_direction
 # 170 "data/maps/CliffToNowhere/scripts.pory"
+	jump_down
+# 171 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 173 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_PushedBack:
 # 174 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+CliffToNowhere_PushedBack:
 # 175 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 176 "data/maps/CliffToNowhere/scripts.pory"
-	unlock_facing_direction
-# 177 "data/maps/CliffToNowhere/scripts.pory"
-	face_right
-# 178 "data/maps/CliffToNowhere/scripts.pory"
 	lock_facing_direction
-# 179 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_left
-# 180 "data/maps/CliffToNowhere/scripts.pory"
+# 176 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 177 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
+# 178 "data/maps/CliffToNowhere/scripts.pory"
+	face_right
+# 179 "data/maps/CliffToNowhere/scripts.pory"
+	lock_facing_direction
+# 180 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_left
 # 181 "data/maps/CliffToNowhere/scripts.pory"
+	unlock_facing_direction
+# 182 "data/maps/CliffToNowhere/scripts.pory"
 	face_down
 	step_end
 
-# 184 "data/maps/CliffToNowhere/scripts.pory"
+# 185 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Jumpoff:
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
+# 186 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 # 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 187 "data/maps/CliffToNowhere/scripts.pory"
 	jump_2_down
 	step_end
 
-# 189 "data/maps/CliffToNowhere/scripts.pory"
+# 190 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Pursue:
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 193 "data/maps/CliffToNowhere/scripts.pory"
+# 194 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToPlayer:
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
+# 195 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 # 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 196 "data/maps/CliffToNowhere/scripts.pory"
 	face_left
 	step_end
 
-# 198 "data/maps/CliffToNowhere/scripts.pory"
+# 199 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToEntrance:
-# 199 "data/maps/CliffToNowhere/scripts.pory"
+# 200 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
-# 199 "data/maps/CliffToNowhere/scripts.pory"
+# 200 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 	step_end
 
@@ -315,8 +315,8 @@ CliffToNowhere_EscapeSequence_Text_0:
 CliffToNowhere_EscapeSequence_Text_1:
 # 49 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR LIGHT_RED}???{COLOR DARK_GRAY}: What are you doing?\n"
-	.string "Open this door right now!\l"
-	.string "We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!$"
+	.string " Open this door right now!\l"
+	.string " We can't let {COLOR RED}her{COLOR DARK_GRAY} escape!$"
 
 CliffToNowhere_EscapeSequence_Text_2:
 # 52 "data/maps/CliffToNowhere/scripts.pory"
@@ -336,35 +336,35 @@ CliffToNowhere_EscapeSequence_Text_5:
 # 57 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: Damn, seems like I didn't manage to\n"
 	.string "outsmart all {COLOR LIGHT_GRAY}his{COLOR DARK_GRAY} henchman.\p"
-	.string "Wait... I know you!\n"
-	.string "You're that Special Initiative that was\l"
+	.string " Wait... I know you!\n"
+	.string " You're that Special Initiative that was\l"
 	.string "talking to {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}!\p"
-	.string "I would love to stick around and talk\n"
+	.string " I would love to stick around and talk\n"
 	.string "some more with you, but I've places to\l"
 	.string "be.\p"
-	.string "...\p"
-	.string "What do you mean you're not going to\n"
+	.string " ...\p"
+	.string " What do you mean you're not going to\n"
 	.string "let me go?\p"
-	.string "Sigh... I'm not really prepared for a\n"
+	.string " Sigh... I'm not really prepared for a\n"
 	.string "fight like this, but I've gotten too far\l"
 	.string "to let someone stop me now!\l"
-	.string "Bring it on Hotshot!$"
+	.string " Bring it on Hotshot!$"
 
 CliffToNowhere_EscapeSequence_Text_6:
 # 69 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR RED}Deneith{COLOR DARK_GRAY}: And I would have gotten away\n"
 	.string "with it if it wasn't for you...\p"
-	.string "No matter, hear take your stupid usb\n"
+	.string " No matter, hear take your stupid usb\n"
 	.string "back, we don't need it anyways.\l"
-	.string "I was just a distraction so that\l"
+	.string " I was just a distraction so that\l"
 	.string "nobody would notice Zero hacking their\l"
 	.string "PCs and get all the data we needed.\p"
-	.string "Still, I would recommend you watch what\n"
+	.string " Still, I would recommend you watch what\n"
 	.string "is on that stick.\l"
-	.string "It'll contain some secrets of team MOD\l"
+	.string " It'll contain some secrets of team MOD\l"
 	.string "they will never disclose to you\l"
 	.string "personally.\p"
-	.string "Until our next encounter Hotshot!$"
+	.string " Until our next encounter Hotshot!$"
 
 CliffToNowhere_EscapeSequence_Text_7:
 # 95 "data/maps/CliffToNowhere/scripts.pory"
@@ -376,33 +376,33 @@ CliffToNowhere_EscapeSequence_Text_8:
 	.string "{PLAYER}. You managed to distract her\l"
 	.string "almost long enough for us to catch her\l"
 	.string "before she escaped.\p"
-	.string "I know you tried your best, but sadly\n"
+	.string " I know you tried your best, but sadly\n"
 	.string "these team A.S. members don't care for\l"
 	.string "the result in a pokemon battle.\p"
-	.string "This is important though, did you by\n"
+	.string " This is important though, did you by\n"
 	.string "any chance manage to snatch something\l"
 	.string "of her or did she drop something by\l"
 	.string "accident?\l"
-	.string "I mean anything, did you manage to get\l"
+	.string " I mean anything, did you manage to get\l"
 	.string "anything at all from her?$"
 
 CliffToNowhere_EscapeSequence_Text_9:
 # 106 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: Great job apprenhending this\n"
 	.string "{PLAYER}!\l"
-	.string "This usb contains some...\l"
-	.string "'sensative' data we would prefer to not\l"
+	.string " This usb contains some...\l"
+	.string " 'sensative' data we would prefer to not\l"
 	.string "fall in the enemies hands.\p"
-	.string "We will take it over from here\n"
+	.string " We will take it over from here\n"
 	.string "{PLAYER}.\p"
-	.string "Please take this, as thanks for your\n"
+	.string " Please take this, as thanks for your\n"
 	.string "hard work and loyalty.$"
 
 CliffToNowhere_EscapeSequence_Text_10:
 # 116 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: DAMMIT!\p"
-	.string "...\p"
-	.string "You don't need to worry too much about\n"
+	.string " ...\p"
+	.string " You don't need to worry too much about\n"
 	.string "it {PLAYER}, let me take care of it\l"
 	.string "from here, you go on your quest now, we\l"
 	.string "will probably speak each other another\l"
@@ -412,40 +412,40 @@ CliffToNowhere_EscapeSequence_Text_11:
 # 120 "data/maps/CliffToNowhere/scripts.pory"
 	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: One more thing though, be\n"
 	.string "carefull around these A.S. Members\p"
-	.string "Though you'll certainly be handsomely\n"
+	.string " Though you'll certainly be handsomely\n"
 	.string "rewarded if you can bring any of them\l"
 	.string "in, it has a 99.72% change of ending in\l"
 	.string "your death.\p"
-	.string "So please be very carefull around them,\l"
-	.string "it would be shame to lose such a great\l"
+	.string " So please be very carefull around them,\l"
+	.string " it would be shame to lose such a great\l"
 	.string "asset.$"
 
 CliffToNowhere_Event_DemoEnding_Text_0:
 # 142 "data/maps/CliffToNowhere/scripts.pory"
 	.string "Congratulations!\p"
-	.string "This is the ending of the demo, the\n"
+	.string " This is the ending of the demo, the\n"
 	.string "rest of the game will be worked on in\l"
 	.string "the next couple of years.\p"
-	.string "feel free to share feedback about the\n"
+	.string " feel free to share feedback about the\n"
 	.string "demo and what things you would like to\l"
 	.string "see improved in the full version.\l"
-	.string "Feel also free to share any spelling\l"
+	.string " Feel also free to share any spelling\l"
 	.string "mistakes made in the demo, there are\l"
 	.string "probably a lot.\p"
-	.string "Found any exploits or mistakes? any\n"
-	.string "glitches or bugs? any things that\l"
-	.string "didn't work quite as well?\l"
-	.string "All feedback is welcome!\p"
-	.string "You're free to explore the MOD\n"
+	.string " Found any exploits or mistakes? any\n"
+	.string "glitches or bugs? Anything that didn't\l"
+	.string "work quite as well?\l"
+	.string " All feedback is welcome!\p"
+	.string " You're free to explore the MOD\n"
 	.string "headquarters for as long as you like,\l"
 	.string "but the official demo ends here.\p"
-	.string "Also a warning, I cannot guarantee\n"
+	.string " Also a warning, I cannot guarantee\n"
 	.string "that any progress you made in this demo\l"
 	.string "will be kept in the full release.\p"
-	.string "With that being said: thank you for\n"
-	.string "playing this demo!$"
+	.string " With that being said:\p"
+	.string " Thank you for playing this demo!$"
 
 CliffToNowhere_DeneithLost::
-# 154 "data/maps/CliffToNowhere/scripts.pory"
+# 155 "data/maps/CliffToNowhere/scripts.pory"
 	.string "Damn, I guess I should have been beter\n"
 	.string "prepared for this$"

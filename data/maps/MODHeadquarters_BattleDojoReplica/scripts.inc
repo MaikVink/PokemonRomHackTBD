@@ -895,8 +895,8 @@ BattleDojoReplica_BattleDojoReplicaBattles_Text_4:
 BattleDojoReplica_BattleDojoReplicaBattles_Text_5:
 # 226 "data/maps/MODHeadquarters_BattleDojoReplica/scripts.pory"
 	.string "{COLOR BLUE}Maria{COLOR DARK_GRAY}: Glad you have found the training\n"
-	.string "field\p"
-	.string "Now let's see if the experience I\n"
+	.string "field.\p"
+	.string "Now let's see if the experience is\n"
 	.string "anything as I imagined!$"
 
 BattleDojoReplica_BattleDojoReplicaBattles_Text_6:

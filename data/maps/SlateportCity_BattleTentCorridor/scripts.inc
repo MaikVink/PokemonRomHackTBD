@@ -33,12 +33,10 @@ SlateportCity_BattleTentCorridor_EventScript_EnterCorridor::
 	goto_if_eq VAR_0x8006, 2, SlateportCity_BattleTentCorridor_EventScript_ResumeChallenge
 	slateporttent_generaterentalmons
 	slateporttent_generateopponentmons
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_HoldMonsChooseFromSelection, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	slateporttent_rentmons
 	waitstate
 SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_RightThisWay, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ATTENDANT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -56,7 +54,6 @@ SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
 SlateportCity_BattleTentCorridor_EventScript_ReturnToRoomFromBattle::
 	factory_setopponentmons
 	factory_resethelditems
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_LetUsRestoreMons, MSGBOX_DEFAULT
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
@@ -71,14 +68,12 @@ SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent::
 	case 2, SlateportCity_BattleTentCorridor_EventScript_AskRetireChallenge
 
 SlateportCity_BattleTentCorridor_EventScript_AskPauseChallenge::
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_SaveAndQuitGame, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent
 	case YES, SlateportCity_BattleTentCorridor_EventScript_PauseChallenge
 	case MULTI_B_PRESSED, SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent
 
 SlateportCity_BattleTentCorridor_EventScript_AskRetireChallenge::
-	message BattleFrontier_BattleFactoryPreBattleRoom_Text_RetireFromChallenge
 	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
@@ -88,7 +83,6 @@ SlateportCity_BattleTentCorridor_EventScript_AskRetireChallenge::
 
 SlateportCity_BattleTentCorridor_EventScript_AskSwapMon::
 	slateporttent_generateopponentmons
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_LikeToSwapMon, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom
 	case YES, SlateportCity_BattleTentCorridor_EventScript_SwapMons
@@ -99,21 +93,17 @@ SlateportCity_BattleTentCorridor_EventScript_SwapMons::
 	slateporttent_swapmons
 	waitstate
 	goto_if_eq VAR_RESULT, 1, SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom
-	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_YourSwapIsComplete, MSGBOX_DEFAULT
 	goto SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom
 
 SlateportCity_BattleTentCorridor_EventScript_ReadyFor2ndOpponent::
-	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor2ndOpponent
 	waitmessage
 	return
 
 SlateportCity_BattleTentCorridor_EventScript_ReadyFor3rdOpponent::
-	message BattleFrontier_BattleFactoryPreBattleRoom_Text_ReadyFor3rdOpponent
 	waitmessage
 	return
 
 SlateportCity_BattleTentCorridor_EventScript_PauseChallenge::
-	message BattleFrontier_BattleFactoryPreBattleRoom_Text_SavingDataPleaseWait
 	waitmessage
 	slateporttent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
