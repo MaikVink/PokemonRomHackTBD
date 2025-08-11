@@ -900,11 +900,11 @@ BattleDojo_BattleDojoBattles_1:
 # 516 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 0, BattleDojo_BattleDojoBattles_15
 # 525 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 6, BattleDojo_BattleDojoBattles_16
+	case 4, BattleDojo_BattleDojoBattles_16
 # 527 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 4, BattleDojo_BattleDojoBattles_17
+	case 5, BattleDojo_BattleDojoBattles_17
 # 529 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 5, BattleDojo_BattleDojoBattles_18
+	case 6, BattleDojo_BattleDojoBattles_18
 BattleDojo_BattleDojoBattles_10:
 # 532 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_WalkRightBackwards
@@ -923,11 +923,11 @@ BattleDojo_BattleDojoBattles_10:
 # 543 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	case 0, BattleDojo_BattleDojoBattles_27
 # 552 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 6, BattleDojo_BattleDojoBattles_28
+	case 4, BattleDojo_BattleDojoBattles_28
 # 554 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 4, BattleDojo_BattleDojoBattles_29
+	case 5, BattleDojo_BattleDojoBattles_29
 # 556 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	case 5, BattleDojo_BattleDojoBattles_30
+	case 6, BattleDojo_BattleDojoBattles_30
 BattleDojo_BattleDojoBattles_22:
 # 559 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
 	applymovement VAR_TEMP_1, BattleDojo_Movement_OpponentLeave
@@ -1008,17 +1008,17 @@ BattleDojo_BattleDojoBattles_15:
 
 BattleDojo_BattleDojoBattles_16:
 # 526 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	trainerbattle_no_intro TRAINER_TRISTAN_B0, Tristan_Lost
+	trainerbattle_no_intro TRAINER_VICTOR_B0, Victor_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_17:
 # 528 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	trainerbattle_no_intro TRAINER_VICTOR_B0, Victor_Lost
+	trainerbattle_no_intro TRAINER_VERA_B0, Vera_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_18:
 # 530 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	trainerbattle_no_intro TRAINER_VERA_B0, Vera_Lost
+	trainerbattle_no_intro TRAINER_TRISTAN_B0, Tristan_Lost
 	goto BattleDojo_BattleDojoBattles_10
 
 BattleDojo_BattleDojoBattles_19:
@@ -1601,13 +1601,13 @@ BattleDojo_BattleDojoBattles_Text_5:
 
 BattleDojo_BattleDojoBattles_Text_6:
 # 499 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Show me what makes you so\n"
-	.string "special!$"
+	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Time to test out my new\n"
+	.string "strategy!$"
 
 BattleDojo_BattleDojoBattles_Text_7:
 # 501 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: Time to test out my new\n"
-	.string "strategy!$"
+	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: Show me what makes you so\n"
+	.string "special!$"
 
 BattleDojo_BattleDojoBattles_Text_8:
 # 503 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
@@ -1648,22 +1648,21 @@ BattleDojo_BattleDojoBattles_Text_13:
 
 BattleDojo_BattleDojoBattles_Text_14:
 # 553 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I got lots of things to think\n"
-	.string "about after this battle, I better go\l"
-	.string "and start doing that.\l"
+	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: No matter how often we fight,\n"
+	.string "you always amaze me.\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_15:
 # 555 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: I need some more training to be\n"
-	.string "able to use my knowledge in battle...\l"
+	.string "{COLOR BLUE}Vera{COLOR DARK_GRAY}: You have quite the interesting\n"
+	.string "set of pokemon on your team, I'll love\l"
+	.string "to battle your more often!\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_16:
 # 557 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Vera{COLOR DARK_GRAY}: You have quite the interesting\n"
-	.string "set of pokemon on your team, I'll love\l"
-	.string "to battle your more often!\l"
+	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I need some more training to\n"
+	.string "be able to use my knowledge in battle...\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_17:
@@ -1712,12 +1711,12 @@ Bella_Lost::
 
 Tristan_Lost::
 # 677 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "I understand now!$"
+	.string "I still need some more field experience\n"
+	.string "it seems.$"
 
 Victor_Lost::
 # 681 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "I still need some more field experience\n"
-	.string "it seems.$"
+	.string "I understand now!$"
 
 Vera_Lost::
 # 685 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"

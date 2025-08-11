@@ -47,511 +47,513 @@ EntranceHall_FirstEntrace::
 # 27 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	setflag FLAG_HIDE_LEADER
 # 28 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
+	setflag FLAG_FIRST_RIVAL_MEETING
 # 29 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight
 # 30 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 31 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	goto_if_set FLAG_TOURNAMENT_LOST, EntranceHall_FirstEntrace_2
-# 40 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_1
 # 41 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox EntranceHall_FirstEntrace_Text_1
 # 42 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	playfanfare MUS_OBTAIN_ITEM
 # 43 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+# 44 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	compare VAR_RESULT, SPECIES_EEVEE
 	goto_if_eq EntranceHall_FirstEntrace_6
-# 49 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 50 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	givemon SPECIES_EEVEE, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1
 EntranceHall_FirstEntrace_5:
-# 51 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_2
 # 52 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitfanfare
+	msgbox EntranceHall_FirstEntrace_Text_2
 # 53 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_3, MSGBOX_YESNO
+	waitfanfare
 # 54 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_3, MSGBOX_YESNO
+# 55 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne EntranceHall_FirstEntrace_10
 EntranceHall_FirstEntrace_9:
-# 59 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 60 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_FirstEntrace_Text_4
 EntranceHall_FirstEntrace_1:
-# 61 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_5
 # 62 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookLeft
+	msgbox EntranceHall_FirstEntrace_Text_5
 # 63 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_MoveDownFromLeader
-# 64 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 65 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_WalkRightNormal1
-# 66 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal1
-# 67 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_6
-# 70 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 71 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 72 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 73 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 74 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_7
-# 79 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_WalkRightNormal2
-# 80 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
-# 81 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_8
-# 85 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 86 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 87 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 88 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 89 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_9
-# 92 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_WalkRightCutOff
-# 93 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightCutOff
-# 94 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_10
-# 97 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 98 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 1, EntranceHall_Movement_DeneithBumpLeader
-# 99 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 100 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_11
-# 106 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement 3, CommonMovement_LookLeft
-# 107 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookLeft
-# 108 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 1, EntranceHall_Movement_DeneithWalkAway
-# 109 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 64 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_MoveDownFromLeader
+# 65 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	waitmovement 0
-# 110 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	removeobject 1, MAP_MODHEADQUARTERS_ENTRANCE_HALL
-# 111 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_12
-# 112 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 66 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_WalkRightNormal1
+# 67 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal1
+# 68 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_6
+# 71 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 72 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement 3, CommonMovement_LookDown
-# 113 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 73 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 114 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_13
-# 116 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 74 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 75 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_7
+# 80 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_WalkRightNormal2
+# 81 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
+# 82 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_8
+# 86 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 87 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 88 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 89 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 90 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_9
+# 93 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement 3, EntranceHall_Movement_WalkRightCutOff
-# 117 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 94 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightCutOff
-# 118 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_14
-# 122 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 95 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_10
+# 98 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	waitmovement 0
-# 123 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 124 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 125 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 99 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 1, EntranceHall_Movement_DeneithBumpLeader
+# 100 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	waitmovement 0
-# 126 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_15
-# 129 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_WalkRightNormal2
-# 130 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
-# 131 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_16
-# 134 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 135 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 136 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 137 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 138 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_17
-# 141 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_18
-# 145 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_WalkRightNormal2
-# 146 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
-# 147 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_19
-# 150 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 151 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 152 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
-# 153 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 154 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_20
-# 156 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_21
-# 158 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_22
-# 164 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookUp
-# 165 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 166 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_23
-# 172 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, CommonMovement_LookDown
-# 173 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
-# 174 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_FirstEntrace_Text_24
-# 177 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 101 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_11
+# 107 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookLeft
+# 108 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookLeft
-# 178 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 3, EntranceHall_Movement_LeaderWalkAway
-# 179 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 109 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 1, EntranceHall_Movement_DeneithWalkAway
+# 110 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	waitmovement 0
+# 111 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	removeobject 1, MAP_MODHEADQUARTERS_ENTRANCE_HALL
+# 112 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_12
+# 113 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 114 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 115 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_13
+# 117 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_WalkRightCutOff
+# 118 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightCutOff
+# 119 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_14
+# 123 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 124 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 125 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 126 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 127 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_15
+# 130 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_WalkRightNormal2
+# 131 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
+# 132 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_16
+# 135 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 136 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 137 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 138 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 139 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_17
+# 142 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_18
+# 146 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_WalkRightNormal2
+# 147 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2
+# 148 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_19
+# 151 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 152 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 153 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 154 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 155 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_20
+# 157 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_21
+# 159 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_22
+# 165 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookUp
+# 166 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 167 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_23
+# 173 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, CommonMovement_LookDown
+# 174 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 175 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_FirstEntrace_Text_24
+# 178 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookLeft
+# 179 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement 3, EntranceHall_Movement_LeaderWalkAway
 # 180 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	removeobject 3, MAP_MODHEADQUARTERS_ENTRANCE_HALL
+	waitmovement 0
 # 181 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 11
+	removeobject 3, MAP_MODHEADQUARTERS_ENTRANCE_HALL
 # 182 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 11
+# 183 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	releaseall
 	return
 
 EntranceHall_FirstEntrace_2:
-# 32 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 33 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_FirstEntrace_Text_0
 	goto EntranceHall_FirstEntrace_1
 
 EntranceHall_FirstEntrace_6:
-# 45 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 46 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	givemon SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1
 	goto EntranceHall_FirstEntrace_5
 
 EntranceHall_FirstEntrace_10:
-# 56 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	call Common_EventScript_GetGiftMonPartySlot
 # 57 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	call Common_EventScript_GetGiftMonPartySlot
+# 58 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	goto EntranceHall_FirstEntrace_9
 
 
 EntranceHall_CheckDoor::
-# 186 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lockall
 # 187 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	lockall
+# 188 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_CheckDoor_Text_0
-# 189 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	setvar VAR_MOD_SHOPS_STATE, 2000
 # 190 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 12
+	setvar VAR_MOD_SHOPS_STATE, 2000
 # 191 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	setvar VAR_STORY_PROGRESSION, 12
+# 192 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	releaseall
 	return
 
 
 EntranceHall_Trigger_Deneith::
-# 195 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lockall
 # 196 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	faceplayer
+	lockall
 # 197 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	faceplayer
+# 198 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_Trigger_Deneith_Text_0
-# 200 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement 2, CommonMovement_LookUp
 # 201 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	waitmovement 0
+	applymovement 2, CommonMovement_LookUp
 # 202 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	waitmovement 0
+# 203 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	releaseall
 	return
 
 
 EntranceHall_Trigger_NotYet::
-# 206 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock
 # 207 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
+	lock
 # 208 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_Trigger_NotYet_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_WalkUp1
 # 209 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_Trigger_NotYet_Text_0
+# 210 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	release
 	return
 
 
 EntranceHall_Trigger_Release::
-# 213 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lockall
 # 214 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	setvar VAR_STORY_PROGRESSION, 13
+	lockall
 # 215 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_Trigger_Release_Text_0
+	setvar VAR_STORY_PROGRESSION, 13
 # 216 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_Notice
+	msgbox EntranceHall_Trigger_Release_Text_0
 # 217 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_Notice
+# 218 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_Trigger_Release_Text_1
-# 227 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
 # 228 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp
+# 229 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_Trigger_Release_Text_2
-# 230 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 231 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	releaseall
 	return
 
 
 EntranceHall_Sign_MoveMasters::
-# 234 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock
 # 235 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_Sign_MoveMasters_Text_0
+	lock
 # 236 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_Sign_MoveMasters_Text_0
+# 237 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	release
 	return
 
 
 EntranceHall_Sign_GeneralStore::
-# 240 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock
 # 241 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_Sign_GeneralStore_Text_0
+	lock
 # 242 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_Sign_GeneralStore_Text_0
+# 243 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	release
 	return
 
 
 EntranceHall_Sign_EvolutionMaster::
-# 246 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock
 # 247 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox EntranceHall_Sign_EvolutionMaster_Text_0
+	lock
 # 248 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox EntranceHall_Sign_EvolutionMaster_Text_0
+# 249 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	release
 	return
 
 
 Entrancehall_Sign_SpecialShop::
-# 252 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock
 # 253 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox Entrancehall_Sign_SpecialShop_Text_0
+	lock
 # 254 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox Entrancehall_Sign_SpecialShop_Text_0
+# 255 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	release
 	return
 
 
 Entrancehall_Sign_Office::
-# 258 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lockall
 # 259 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	lockall
+# 260 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	switch VAR_MOD_SHOPS_STATE
-# 261 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 11, Entrancehall_Sign_Office_3
 # 262 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 101, Entrancehall_Sign_Office_3
+	case 11, Entrancehall_Sign_Office_3
 # 263 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 1001, Entrancehall_Sign_Office_3
+	case 101, Entrancehall_Sign_Office_3
 # 264 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 110, Entrancehall_Sign_Office_3
+	case 1001, Entrancehall_Sign_Office_3
 # 265 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 1010, Entrancehall_Sign_Office_3
+	case 110, Entrancehall_Sign_Office_3
 # 266 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 1100, Entrancehall_Sign_Office_3
+	case 1010, Entrancehall_Sign_Office_3
 # 267 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 111, Entrancehall_Sign_Office_3
+	case 1100, Entrancehall_Sign_Office_3
 # 268 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 1011, Entrancehall_Sign_Office_3
+	case 111, Entrancehall_Sign_Office_3
 # 269 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	case 1101, Entrancehall_Sign_Office_3
+	case 1011, Entrancehall_Sign_Office_3
 # 270 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	case 1101, Entrancehall_Sign_Office_3
+# 271 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	case 1110, Entrancehall_Sign_Office_3
-# 280 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 281 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	case 2000, Entrancehall_Sign_Office_4
-# 291 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 292 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox Entrancehall_Sign_Office_Text_6
 Entrancehall_Sign_Office_1:
-# 293 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 294 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	releaseall
 	return
 
 Entrancehall_Sign_Office_3:
-# 271 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox Entrancehall_Sign_Office_Text_0, MSGBOX_YESNO
 # 272 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox Entrancehall_Sign_Office_Text_0, MSGBOX_YESNO
+# 273 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Entrancehall_Sign_Office_6
-# 278 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 279 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox Entrancehall_Sign_Office_Text_2
 	goto Entrancehall_Sign_Office_1
 
 Entrancehall_Sign_Office_4:
-# 281 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	msgbox Entrancehall_Sign_Office_Text_3, MSGBOX_YESNO
 # 282 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	msgbox Entrancehall_Sign_Office_Text_3, MSGBOX_YESNO
+# 283 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Entrancehall_Sign_Office_9
-# 288 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 289 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox Entrancehall_Sign_Office_Text_5
 	goto Entrancehall_Sign_Office_1
 
 Entrancehall_Sign_Office_6:
-# 274 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 275 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox Entrancehall_Sign_Office_Text_1
 	goto Entrancehall_Sign_Office_1
 
 Entrancehall_Sign_Office_9:
-# 284 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 285 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox Entrancehall_Sign_Office_Text_4
 	goto Entrancehall_Sign_Office_1
 
 
-# 296 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-EntranceHall_Movement_MoveDownFromLeader:
 # 297 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_down
+EntranceHall_Movement_MoveDownFromLeader:
 # 298 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_down
+# 299 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_right
 	step_end
 
-# 301 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_WalkRightNormal1:
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 302 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 303 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
 	step_end
 
-# 305 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_WalkRightNormal2:
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 306 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 307 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
 	step_end
 
-# 309 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 310 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_WalkRightCutOff:
-# 310 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 311 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 310 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 311 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 310 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 311 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
-# 310 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 311 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_slow_right
 	step_end
 
-# 313 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_DeneithBumpLeader:
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 314 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
 # 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	lock_facing_direction
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 315 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
 # 316 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	jump_right
+	lock_facing_direction
 # 317 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	jump_right
+# 318 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 320 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 321 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_DeneithWalkAway:
-# 321 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_down
-# 321 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 322 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_down
 # 322 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	walk_fast_left
-# 322 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_down
+# 323 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
 # 323 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+	walk_fast_left
+# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_up
-# 323 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_up
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
-# 324 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 325 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_fast_left
 	step_end
 
-# 327 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 EntranceHall_Movement_LeaderWalkAway:
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
-# 328 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 329 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	walk_left
 	step_end
 
 EntranceHall_FirstEntrace_Text_0:
-# 32 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 33 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: You might wonder why I\n"
 	.string "brought you here instead of Fiona,\l"
 	.string "right?\p"
@@ -566,20 +568,20 @@ EntranceHall_FirstEntrace_Text_0:
 	.string "I mean our new plan.$"
 
 EntranceHall_FirstEntrace_Text_1:
-# 40 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 41 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: First things first, your\n"
 	.string "just reward:$"
 
 EntranceHall_FirstEntrace_Text_2:
-# 51 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 52 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon$"
 
 EntranceHall_FirstEntrace_Text_3:
-# 53 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 54 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Do you want to give the pokemon a name?$"
 
 EntranceHall_FirstEntrace_Text_4:
-# 59 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 60 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: {COLOR LIGHT_GREEN}Prof. Kector{COLOR DARK_GRAY} told me about\n"
 	.string "you, you know.\p"
 	.string "He told me I should expect great thing\n"
@@ -592,13 +594,13 @@ EntranceHall_FirstEntrace_Text_4:
 	.string "have to proof yourself to me.$"
 
 EntranceHall_FirstEntrace_Text_5:
-# 61 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 62 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Please walk with me, than I'll give you a\n"
 	.string "proper tour while I'll explain what I'm\l"
 	.string "talking about.$"
 
 EntranceHall_FirstEntrace_Text_6:
-# 67 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 68 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Intelligence, Strenght,\n"
 	.string "Compassion.\p"
 	.string "These are incredible skills to have but\n"
@@ -607,7 +609,7 @@ EntranceHall_FirstEntrace_Text_6:
 	.string "Loyalty.$"
 
 EntranceHall_FirstEntrace_Text_7:
-# 74 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 75 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Up here we have the Move\n"
 	.string "Masters.\p"
 	.string "If you ever want your pokemon to learn\n"
@@ -623,7 +625,7 @@ EntranceHall_FirstEntrace_Text_7:
 	.string "them.$"
 
 EntranceHall_FirstEntrace_Text_8:
-# 81 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 82 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Anyways, as I was saying:\n"
 	.string "Loyalty is the core aspect we are\l"
 	.string "looking for in our new recruits.\p"
@@ -636,7 +638,7 @@ EntranceHall_FirstEntrace_Text_8:
 	.string "place.$"
 
 EntranceHall_FirstEntrace_Text_9:
-# 89 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 90 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: This place is team MOD\n"
 	.string "general store.\p"
 	.string "Pokéballs, repels, potions and anything\n"
@@ -646,7 +648,7 @@ EntranceHall_FirstEntrace_Text_9:
 	.string "matter what kind of items you can buy.$"
 
 EntranceHall_FirstEntrace_Text_10:
-# 94 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 95 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: You see, right now you're a\n"
 	.string "level 1 Initiative\l"
 	.string "Just like all you colleagues that also\l"
@@ -654,7 +656,7 @@ EntranceHall_FirstEntrace_Text_10:
 	.string "By showing your skill and loy-$"
 
 EntranceHall_FirstEntrace_Text_11:
-# 100 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 101 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: OOF!\p"
 	.string "I'm sorry sir-\p"
 	.string "O... O my god!\p"
@@ -665,12 +667,12 @@ EntranceHall_FirstEntrace_Text_11:
 	.string "will never happen again!$"
 
 EntranceHall_FirstEntrace_Text_12:
-# 111 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 112 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: hm... that might be\n"
 	.string "problematic...$"
 
 EntranceHall_FirstEntrace_Text_13:
-# 114 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 115 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: What? O nothing you need\n"
 	.string "to worry about.\p"
 	.string "Let's just quickly finish our business\n"
@@ -679,7 +681,7 @@ EntranceHall_FirstEntrace_Text_13:
 	.string "usually. Anyways, where were we?$"
 
 EntranceHall_FirstEntrace_Text_14:
-# 118 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 119 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Ah yes, your rank!\p"
 	.string "You can increase your rank if you show\n"
 	.string "your skill and loyalty to us.\l"
@@ -692,7 +694,7 @@ EntranceHall_FirstEntrace_Text_14:
 	.string "Rookie.$"
 
 EntranceHall_FirstEntrace_Text_15:
-# 126 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 127 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Here we have the Evolution\n"
 	.string "Masters.\p"
 	.string "As you probably know, Most pokemon can\n"
@@ -703,7 +705,7 @@ EntranceHall_FirstEntrace_Text_15:
 	.string "place to go!$"
 
 EntranceHall_FirstEntrace_Text_16:
-# 131 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 132 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Let's talk some more about\n"
 	.string "your rank.\p"
 	.string "You probably wonder what you need to\n"
@@ -712,7 +714,7 @@ EntranceHall_FirstEntrace_Text_16:
 	.string "Go explore {COLOR BLUE}Ludumundi{COLOR DARK_GRAY} with your pokemon.$"
 
 EntranceHall_FirstEntrace_Text_17:
-# 138 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 139 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Lastly, we have the special\n"
 	.string "shop.\p"
 	.string "As you might know, long ago we would use\n"
@@ -729,7 +731,7 @@ EntranceHall_FirstEntrace_Text_17:
 	.string "additional tools.$"
 
 EntranceHall_FirstEntrace_Text_18:
-# 141 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 142 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "This is the shop for those tools. They\n"
 	.string "might be a bit expensive and you might\l"
 	.string "not need all of them in your travels,\l"
@@ -743,7 +745,7 @@ EntranceHall_FirstEntrace_Text_18:
 	.string "So, if you don't mind.$"
 
 EntranceHall_FirstEntrace_Text_19:
-# 147 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 148 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Many MOD members wander\n"
 	.string "around {COLOR BLUE}Ludumundi{COLOR DARK_GRAY}, but to give you some\l"
 	.string "guidance in your quest to become a\l"
@@ -757,7 +759,7 @@ EntranceHall_FirstEntrace_Text_19:
 	.string "How you get that last rank, is up to you.$"
 
 EntranceHall_FirstEntrace_Text_20:
-# 154 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 155 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Also, this challenge is\n"
 	.string "given to all Initiatives in your group.\p"
 	.string "Everyone has an equal chance of\n"
@@ -766,7 +768,7 @@ EntranceHall_FirstEntrace_Text_20:
 	.string "you do.$"
 
 EntranceHall_FirstEntrace_Text_21:
-# 156 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 157 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Just because I don't trust everyone,\n"
 	.string "does not mean I don't give everyone a\l"
 	.string "fair chance to win my trust.\p"
@@ -775,7 +777,7 @@ EntranceHall_FirstEntrace_Text_21:
 	.string "the reason I brought you here.$"
 
 EntranceHall_FirstEntrace_Text_22:
-# 158 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 159 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Team A.S..\p"
 	.string "You might have heard that name before\n"
 	.string "somewhere around here.\p"
@@ -792,7 +794,7 @@ EntranceHall_FirstEntrace_Text_22:
 	.string "Team A.S. really is about...$"
 
 EntranceHall_FirstEntrace_Text_23:
-# 166 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 167 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Let me just-\p"
 	.string "...\p"
 	.string "wait, where did i put it?\p"
@@ -801,7 +803,7 @@ EntranceHall_FirstEntrace_Text_23:
 	.string "that little -$"
 
 EntranceHall_FirstEntrace_Text_24:
-# 174 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 175 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: ...\p"
 	.string "I'm sorry {PLAYER}, I seem to have\n"
 	.string "misplaced the keycard to my office. I\l"
@@ -813,13 +815,13 @@ EntranceHall_FirstEntrace_Text_24:
 	.string "conversation.$"
 
 EntranceHall_CheckDoor_Text_0:
-# 187 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 188 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Enough time should have passed.\p"
 	.string "you should check if {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} is in his\n"
 	.string "office already.$"
 
 EntranceHall_Trigger_Deneith_Text_0:
-# 197 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 198 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR RED}???{COLOR DARK_GRAY}: Oh hé Rookie!\p"
 	.string "Don't mind me, I just found this keycard\n"
 	.string "and thought it was better if I brought\l"
@@ -828,16 +830,16 @@ EntranceHall_Trigger_Deneith_Text_0:
 	.string "Don't worry, I'll handle it from here!$"
 
 EntranceHall_Trigger_NotYet_Text_0:
-# 208 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 209 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "You don't have any reason yet to go\n"
 	.string "this way.$"
 
 EntranceHall_Trigger_Release_Text_0:
-# 215 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 216 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "RING! RING!$"
 
 EntranceHall_Trigger_Release_Text_1:
-# 217 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 218 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "It seems like your phone is ringing.\p"
 	.string "You decide to pick it up.\p"
 	.string "???: Hello? Hello hello?\p"
@@ -859,33 +861,33 @@ EntranceHall_Trigger_Release_Text_1:
 	.string "CLICK!$"
 
 EntranceHall_Trigger_Release_Text_2:
-# 228 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 229 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "...\p"
 	.string "Was that just your imagination, or did\n"
 	.string "you just hear some movement behind\l"
 	.string "that door?$"
 
 EntranceHall_Sign_MoveMasters_Text_0:
-# 235 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 236 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Move Masters.\p"
 	.string "Wether you're trying to learn or forget,\n"
 	.string "Move Masters have your back!$"
 
 EntranceHall_Sign_GeneralStore_Text_0:
-# 241 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 242 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "MOD general Store.\p"
 	.string "For all your daily needs at a cheap\n"
 	.string "price!$"
 
 EntranceHall_Sign_EvolutionMaster_Text_0:
-# 247 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 248 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Evolution masters.\p"
 	.string "We can help you bring pokemon back to\n"
 	.string "their best strongest form. Together, we\l"
 	.string "can make Pokemon great again!$"
 
 Entrancehall_Sign_SpecialShop_Text_0:
-# 253 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 254 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Nationals Useful Tools.\p"
 	.string "If you want to have that little extra\n"
 	.string "on your journey.\l"
@@ -893,7 +895,7 @@ Entrancehall_Sign_SpecialShop_Text_0:
 	.string "back!$"
 
 Entrancehall_Sign_Office_Text_0:
-# 271 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 272 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "The door is locked and the reflective\n"
 	.string "glass makes it impossible to see inside.\l"
 	.string "Though you do seem to hear someone\l"
@@ -901,36 +903,36 @@ Entrancehall_Sign_Office_Text_0:
 	.string "Knock on the door?$"
 
 Entrancehall_Sign_Office_Text_1:
-# 274 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 275 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "You knock on the door, but whoever is\n"
 	.string "inside seems to not stop with whatever\l"
 	.string "they are doing.$"
 
 Entrancehall_Sign_Office_Text_2:
-# 278 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 279 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Better to not interrupt whatever they\n"
 	.string "are doing.$"
 
 Entrancehall_Sign_Office_Text_3:
-# 281 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 282 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "The door is locked and the reflective\n"
 	.string "glass makes it impossible to see inside.\l"
 	.string "Do you want to put your ear to the\l"
 	.string "door?$"
 
 Entrancehall_Sign_Office_Text_4:
-# 284 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 285 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "You think you can hear some breathing,\n"
 	.string "though you cannot make out if it comes\l"
 	.string "from inside or if you just hear your own\l"
 	.string "shallow breaths.$"
 
 Entrancehall_Sign_Office_Text_5:
-# 288 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 289 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "Why would you do that?$"
 
 Entrancehall_Sign_Office_Text_6:
-# 291 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
+# 292 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "It's you!\p"
 	.string "....\p"
 	.string "You can only see yourself in the\n"

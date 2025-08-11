@@ -12751,7 +12751,7 @@ const struct Item gItemsInfo[] =
     [ITEM_CAMPING_EQUIPMENT] =
     {
         .name = _("Camping Kit"),
-        .price = 5000,
+        .price = 0,
         .description = COMPOUND_STRING(
             "Some equipment which\n"
             "you can use to sleep\n"
