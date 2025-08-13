@@ -188,11 +188,6 @@ script MoveMasters_LearnEggMove
             msgbox(format("I'm sorry dear, but I can't teach a pokemon their egg moves until they are hatched\p
             Please come again if you have a pokemon you would like to learn their egg moves"))
         }
-        elif(var(VAR_0x8005) == 0)
-        {
-            msgbox(format("I'm terribly sorry dear, but it seems this pokemon does not learn any egg moves.\p
-            Please come again if you have a pokemon you would like to learn their egg moves"))
-        }
         else
         {
             msgbox(format("What move would you like them to learn?"))

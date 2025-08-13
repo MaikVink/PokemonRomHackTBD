@@ -16,65 +16,80 @@ script PlayerRoom_SignScript_Computer{
         msgbox(format("Do you want to put in the usbstick?"), MSGBOX_YESNO)
         if(var(VAR_RESULT))
         {
-            msgbox(format("You put int the usb stick \p
-            ...\p   
-            The USB contains a folder filled with different kind of files containing some logs and data for a project called... \l
-            'G.S.P.' \p
-            Sadly, a lot of the files are redacted, making it difficult to understand everything in the files, including what G.S.P. stands for.\p
-            There are still some logs you can read through, would you like to look at them?"), MSGBOX_YESNO)
-            
+            if(!flag(FLAG_FIRST_REVIEW_USB))
+            {
+                msgbox(format("You put int the usb stick \p
+                ...\p   
+                The USB contains a folder filled with different kind of files containing some logs and data for a project called... \l
+                'G.S.P.' \p
+                Sadly, a lot of the files are redacted, making it difficult to understand everything in the files, including what G.S.P. stands for.\p
+                There are still some logs you can read through."))
+            }
+            setvar(VAR_TEMP_A, 1)
+            while(var(VAR_TEMP_A) == 1)
+            {
+                message(format("Which file would you like to read?"))
+                waitmessage
+                multichoice(25, 5, MULTI_USB, 0)
+                closemessage
+                switch(var(VAR_RESULT))
+                {
+                    case 0:
+                        msgbox(format("You put int the usb stick \p
+                        ...\p   
+                        The USB contains a folder filled with different kind of files containing some logs and data for a project called... \l
+                        'G.S.P.' \p
+                        Sadly, a lot of the files are redacted, making it difficult to understand everything in the files, including what G.S.P. stands for.\p
+                        There are still some logs you can read through."))
+                    case 1:
+                         msgbox(format("'Entry Log 1358\p
+                            G- S- Program finally got the green light. It took us over 20 years to perfect the formula, but this time the subject should not be able to -.\p
+                            We will start with human testing soon. Actually we already have the perfect canditate for it: \l
+                            -. \l
+                            Who beter than the - of -. It would also be a perfect test to see that - won't happen again.\p
+                            - G.'"))
+                    case 2:
+                         msgbox(format("'Entry Log 1462\p
+                            Experiment 224 on subject -, from now on referred to as Test Subject or TS, was a success.\l
+                            They don't even seem to notice anything themselves, nor do any of the other members.\l 
+                            This is even better result that we could have hoped for, it almost like -.\p
+                            We will continue with performing stress tests on TS to see if the effects of G.S.P. will stay strong.\l
+                            The last thing we want is another Rocket Incident, aspecially now - has taken control of the region.\l
+                            Best case scenario, TS will become a great asset. Worst case scenario we will have to dispose of them...\p
+                            - G.'"))
+                    case 3:
+                        if(flag(FLAG_TOURNAMENT_LOST))
+                        {
+                            msgbox(format("'Entry Log 1467\p
+                            Final stress test complete. Though a full test could sadly not be performed, the result was far from disappointing.\l
+                            TS proves to be clearly the best subject to have chosen for G.S.P.. - also gave TS special attention today, though I warned him not to do that.\l
+                            He seemed to not care for my warnings though...\p
+                            {COLOR LIGHT_GRAY}He{COLOR DARK_GRAY} agreed with letting TS free... of course, while we keeping an eye out.\l
+                            This will be the final test we will perform, if this returns a success we will use G.S.P worldwide... on subjects that are deemed necessary of course.\l
+                            In the meantime, I will continue with making daily logs to see the progress of TS.\p
+                            - G.'"))
+                        }
+                        else
+                        {
+                            msgbox(format("'Entry Log 1467\p
+                            Final stress test complete. I can say I'm happily surprised by it. TS performed better than I could have hoped for.\l
+                            There was a moment I feared -, but that ended up not happening. This proves that our progress in the G- S- Program will soon be ready to release worldwide.
+                            {COLOR LIGHT_GRAY}He{COLOR DARK_GRAY} agreed with letting TS free... of course, while we keeping an eye out.\l
+                            This will be the final test we will perform, but I'm already sure this will return a success. Soon, we will be able to run G.S.P. on all subjects...\l
+                            that are deemed necessary of course.\l
+                            In the meantime, I will continue with making daily logs to see the progress of TS.\p
+                            - G.'"))
+                        }
+                    default:
+                        setvar(VAR_TEMP_A, 0)
+                        msgbox("You've seen enough for now.") 
+                }
+            }
         }
-        if(var(VAR_RESULT))
+        else
         {
-            msgbox(format("'Entry Log 1358\p
-            G- S- Program finally got the green light. It took us over 20 years to perfect the formula, but this time the subject should not be able to -.\p
-            We will start with human testing soon. Actually we already have the perfect canditate for it: \l
-            -. \l
-            Who beter than the - of -. It would also be a perfect test to see that - won't happen again.\p
-            - G.' \p
-            Would you like to continue reading?"), MSGBOX_YESNO)
-            if(var(VAR_RESULT))
-            {
-                msgbox(format("'Entry Log 1462\p
-                Experiment 224 on subject -, from now on referred to as Test Subject or TS, was a success.\l
-                They don't even seem to notice anything themselves, nor do any of the other members.\l 
-                This is even better result that we could have hoped for, it almost like -.\p
-                We will continue with performing stress tests on TS to see if the effects of G.S.P. will stay strong.\l
-                The last thing we want is another Rocket Incident, aspecially now - has taken control of the region.\l
-                Best case scenario, TS will become a great asset. Worst case scenario we will have to dispose of them...\p
-                - G.' \p
-                Would you like to continue reading?"), MSGBOX_YESNO)
-            }
-            if(var(VAR_RESULT))
-            {
-                if(flag(FLAG_TOURNAMENT_LOST))
-                {
-                    msgbox(format("'Entry Log 1467\p
-                    Final stress test complete. Though a full test could sadly not be performed, the result was far from disappointing.\l
-                    TS proves to be clearly the best subject to have chosen for G.S.P.. - also gave TS special attention today, though I warned him not to do that.\l
-                    He seemed to not care for my warnings though...\p
-                    {COLOR LIGHT_GRAY}He{COLOR DARK_GRAY} agreed with letting TS free... of course, while we keeping an eye out.\l
-                    This will be the final test we will perform, if this returns a success we will use G.S.P worldwide... on subjects that are deemed necessary of course.\l
-                    In the meantime, I will continue with making daily logs to see the progress of TS.\p
-                    - G.'"))
-                }
-                else
-                {
-                    msgbox(format("'Entry Log 1467\p
-                    Final stress test complete. I can say I'm happily surprised by it. TS performed better than I could have hoped for.\l
-                    There was a moment I feared -, but that ended up not happening. This proves that our progress in the G- S- Program will soon be ready to release worldwide.
-                    {COLOR LIGHT_GRAY}He{COLOR DARK_GRAY} agreed with letting TS free... of course, while we keeping an eye out.\l
-                    This will be the final test we will perform, but I'm already sure this will return a success. Soon, we will be able to run G.S.P. on all subjects...\l
-                    that are deemed necessary of course.\l
-                    In the meantime, I will continue with making daily logs to see the progress of TS.\p
-                    - G.'"))
-                }
-                msgbox(format("That were all logs that you were able to read."))
-                releaseall
-                end
-            }
+            msgbox(format("Maybe another time."))
         }
-        msgbox(format("Maybe another time"))
     }
     else
     {

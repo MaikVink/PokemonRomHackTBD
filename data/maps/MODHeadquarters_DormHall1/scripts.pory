@@ -375,7 +375,7 @@ movement Dormhall1_Movement_Move_To_PlayerLost{
 }
 
 movement Dormhall1_Movemement_DelayedLookDown{
-    delay_8 * 6
+    delay_8 * 4
     face_down
 }
 

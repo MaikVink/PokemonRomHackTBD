@@ -64,7 +64,7 @@
 #define FLAG_UNUSED8    0x33 // Unused Flag
 #define FLAG_USB_STICK    0x34 // Unused Flag
 #define FLAG_HIDE_AIRANEA    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
+#define FLAG_FIRST_REVIEW_USB    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
