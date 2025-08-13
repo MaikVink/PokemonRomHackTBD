@@ -66,7 +66,7 @@ FionasRoom_SignScript_Book_9:
 	compare VAR_STORY_PROGRESSION, 10
 	goto_if_lt FionasRoom_SignScript_Book_12
 # 46 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	multichoice 25, 5, MULTI_DIARY_2, 0
+	multichoice 25, 2, MULTI_DIARY_2, 0
 FionasRoom_SignScript_Book_11:
 # 48 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	closemessage
@@ -81,14 +81,14 @@ FionasRoom_SignScript_Book_11:
 # 77 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	case 3, FionasRoom_SignScript_Book_19
 # 104 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_A, 0
 # 105 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Book_Text_8
 	goto FionasRoom_SignScript_Book_8
 
 FionasRoom_SignScript_Book_12:
 # 42 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	multichoice 25, 5, MULTI_DIARY_1, 0
+	multichoice 25, 2, MULTI_DIARY_1, 0
 	goto FionasRoom_SignScript_Book_11
 
 FionasRoom_SignScript_Book_16:

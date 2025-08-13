@@ -201,110 +201,110 @@ CliffToNowhere_Event_DemoEnding::
 	faceplayer
 # 142 "data/maps/CliffToNowhere/scripts.pory"
 	msgbox CliffToNowhere_Event_DemoEnding_Text_0
-# 151 "data/maps/CliffToNowhere/scripts.pory"
+# 152 "data/maps/CliffToNowhere/scripts.pory"
 	releaseall
 	return
 
 
-# 158 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_RunDown:
 # 159 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
+CliffToNowhere_RunDown:
 # 160 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 161 "data/maps/CliffToNowhere/scripts.pory"
 	face_up
 	step_end
 
-# 163 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_BreakDoor:
 # 164 "data/maps/CliffToNowhere/scripts.pory"
-	walk_in_place_fast_up
+CliffToNowhere_BreakDoor:
 # 165 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 166 "data/maps/CliffToNowhere/scripts.pory"
 	walk_in_place_fast_up
 # 167 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_up
+	walk_in_place_fast_up
 # 168 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+	walk_fast_up
 # 169 "data/maps/CliffToNowhere/scripts.pory"
-	jump_down
+	lock_facing_direction
 # 170 "data/maps/CliffToNowhere/scripts.pory"
+	jump_down
+# 171 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 173 "data/maps/CliffToNowhere/scripts.pory"
-CliffToNowhere_PushedBack:
 # 174 "data/maps/CliffToNowhere/scripts.pory"
-	lock_facing_direction
+CliffToNowhere_PushedBack:
 # 175 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 176 "data/maps/CliffToNowhere/scripts.pory"
-	unlock_facing_direction
-# 177 "data/maps/CliffToNowhere/scripts.pory"
-	face_right
-# 178 "data/maps/CliffToNowhere/scripts.pory"
 	lock_facing_direction
-# 179 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_left
-# 180 "data/maps/CliffToNowhere/scripts.pory"
+# 176 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 177 "data/maps/CliffToNowhere/scripts.pory"
 	unlock_facing_direction
+# 178 "data/maps/CliffToNowhere/scripts.pory"
+	face_right
+# 179 "data/maps/CliffToNowhere/scripts.pory"
+	lock_facing_direction
+# 180 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_left
 # 181 "data/maps/CliffToNowhere/scripts.pory"
+	unlock_facing_direction
+# 182 "data/maps/CliffToNowhere/scripts.pory"
 	face_down
 	step_end
 
-# 184 "data/maps/CliffToNowhere/scripts.pory"
+# 185 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Jumpoff:
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
-	walk_fast_down
-# 185 "data/maps/CliffToNowhere/scripts.pory"
+# 186 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 # 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 186 "data/maps/CliffToNowhere/scripts.pory"
+	walk_fast_down
+# 187 "data/maps/CliffToNowhere/scripts.pory"
 	jump_2_down
 	step_end
 
-# 189 "data/maps/CliffToNowhere/scripts.pory"
+# 190 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_Pursue:
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
-# 190 "data/maps/CliffToNowhere/scripts.pory"
+# 191 "data/maps/CliffToNowhere/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 193 "data/maps/CliffToNowhere/scripts.pory"
+# 194 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToPlayer:
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
-	walk_up
-# 194 "data/maps/CliffToNowhere/scripts.pory"
+# 195 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 # 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 195 "data/maps/CliffToNowhere/scripts.pory"
+	walk_up
+# 196 "data/maps/CliffToNowhere/scripts.pory"
 	face_left
 	step_end
 
-# 198 "data/maps/CliffToNowhere/scripts.pory"
+# 199 "data/maps/CliffToNowhere/scripts.pory"
 CliffToNowhere_BackToEntrance:
-# 199 "data/maps/CliffToNowhere/scripts.pory"
+# 200 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
-# 199 "data/maps/CliffToNowhere/scripts.pory"
+# 200 "data/maps/CliffToNowhere/scripts.pory"
 	walk_up
 	step_end
 
@@ -368,7 +368,8 @@ CliffToNowhere_EscapeSequence_Text_6:
 
 CliffToNowhere_EscapeSequence_Text_7:
 # 95 "data/maps/CliffToNowhere/scripts.pory"
-	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them.$"
+	.string "{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT!\n"
+	.string "Just lost them.$"
 
 CliffToNowhere_EscapeSequence_Text_8:
 # 100 "data/maps/CliffToNowhere/scripts.pory"
@@ -416,7 +417,7 @@ CliffToNowhere_EscapeSequence_Text_11:
 	.string "rewarded if you can bring any of them\l"
 	.string "in, it has a 99.72% change of ending in\l"
 	.string "your death.\p"
-	.string "So please be very carefull around them,\l"
+	.string "So please be very carefull around them,\n"
 	.string "it would be shame to lose such a great\l"
 	.string "asset.$"
 
@@ -433,8 +434,8 @@ CliffToNowhere_Event_DemoEnding_Text_0:
 	.string "mistakes made in the demo, there are\l"
 	.string "probably a lot.\p"
 	.string "Found any exploits or mistakes? any\n"
-	.string "glitches or bugs? any things that\l"
-	.string "didn't work quite as well?\l"
+	.string "glitches or bugs? Anything that didn't\l"
+	.string "work quite as well?\l"
 	.string "All feedback is welcome!\p"
 	.string "You're free to explore the MOD\n"
 	.string "headquarters for as long as you like,\l"
@@ -442,10 +443,10 @@ CliffToNowhere_Event_DemoEnding_Text_0:
 	.string "Also a warning, I cannot guarantee\n"
 	.string "that any progress you made in this demo\l"
 	.string "will be kept in the full release.\p"
-	.string "With that being said: thank you for\n"
-	.string "playing this demo!$"
+	.string "With that being said:\p"
+	.string "Thank you for playing this demo!$"
 
 CliffToNowhere_DeneithLost::
-# 154 "data/maps/CliffToNowhere/scripts.pory"
+# 155 "data/maps/CliffToNowhere/scripts.pory"
 	.string "Damn, I guess I should have been beter\n"
 	.string "prepared for this$"

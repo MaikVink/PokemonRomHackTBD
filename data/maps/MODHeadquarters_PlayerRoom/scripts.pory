@@ -24,13 +24,14 @@ script PlayerRoom_SignScript_Computer{
                 'G.S.P.' \p
                 Sadly, a lot of the files are redacted, making it difficult to understand everything in the files, including what G.S.P. stands for.\p
                 There are still some logs you can read through."))
+                setflag(FLAG_FIRST_REVIEW_USB)
             }
             setvar(VAR_TEMP_A, 1)
             while(var(VAR_TEMP_A) == 1)
             {
                 message(format("Which file would you like to read?"))
                 waitmessage
-                multichoice(25, 5, MULTI_USB, 0)
+                multichoice(25, 2, MULTI_USB, 0)
                 closemessage
                 switch(var(VAR_RESULT))
                 {

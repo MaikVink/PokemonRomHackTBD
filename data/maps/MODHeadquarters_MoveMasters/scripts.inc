@@ -1322,7 +1322,7 @@ MoveMasters_ObjectScript_MoveDeleter_Text_1:
 # 111 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Does one of your pokemon need to\n"
 	.string "forget something?\l"
-	.string "Doing so will cost you 100$"
+	.string "Doing so will cost you 100.$"
 
 MoveMasters_ObjectScript_MoveDeleter_Text_2:
 # 122 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
@@ -1381,7 +1381,7 @@ MoveMasters_LearnEggMove_Text_1:
 # 179 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Changed your mind?\n"
 	.string "Speak to me again if you want to learn\l"
-	.string "an egg move$"
+	.string "an egg move.$"
 
 MoveMasters_LearnEggMove_Text_2:
 # 188 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
@@ -1389,7 +1389,7 @@ MoveMasters_LearnEggMove_Text_2:
 	.string "pokemon their egg moves until they are\l"
 	.string "hatched\p"
 	.string "Please come again if you have a pokemon\n"
-	.string "you would like to learn their egg moves$"
+	.string "you would like to learn their egg moves.$"
 
 MoveMasters_LearnEggMove_Text_3:
 # 193 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"

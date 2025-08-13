@@ -186,6 +186,8 @@ enum {
     WIN_MSG = PARTY_SIZE,
 };
 
+static u8 sLastChosenMonId = 0;
+
 struct PartyMenuBoxInfoRects
 {
     void (*blitFunc)(u8, u8, u8, u8, u8, bool8);
@@ -1541,7 +1543,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             {
                 PlaySE(SE_FAILURE);
                 PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
-                DisplayPartyMenuMessage(gText_NotEevee, FALSE);
+                DisplayPartyMenuMessage(gText_NotEevee, TRUE);
                 gTasks[taskId].func = Task_PartyMenuWaitForMessage;
             }
             else
@@ -1887,6 +1889,7 @@ void Task_PartyMenuWaitForMessage(u8 taskId)
     {
         if (JOY_NEW(A_BUTTON | B_BUTTON))
         {
+            DisplayPartyMenuMessage(gText_ExpandedPlaceholder_Empty, FALSE);
             PlaySE(SE_SELECT);
             PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
             ClearWindowTilemap(sPartyMenuInternal->windowId[1]);
@@ -7855,14 +7858,24 @@ static void Task_ChooseMonForFriendShip(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        CleanupOverworldWindowsAndTilemaps();
-        if(gFieldEffectArguments[1] == 523)
+        if(gFieldEffectArguments[1] < PARTY_SIZE)
         {
-            InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_EEVEE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+            MaximizeFriendShip(&gPlayerParty[sLastChosenMonId]);
+            CleanupOverworldWindowsAndTilemaps();
+            gFieldCallback2 = CB2_FadeFromPartyMenu;
+            SetMainCallback2(CB2_ReturnToField);
         }
         else
         {
-            InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+            CleanupOverworldWindowsAndTilemaps();
+            if(gFieldEffectArguments[1] == 523)
+            {
+                InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_EEVEE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+            }
+            else
+            {
+                InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ChooseMonForFriendShip);
+            }
         }
         DestroyTask(taskId);
     }
@@ -7874,6 +7887,21 @@ static void CB2_ChooseMonForFriendShip(void)
     if(gSpecialVar_0x8004 >= PARTY_SIZE)
     {
         gSpecialVar_0x8004 = PARTY_NOTHING_CHOSEN;
+    }
+    else if(gFieldEffectArguments[1] == 523)
+    {
+        u16 species = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES);
+
+        //special case for Riolu
+        if (species == SPECIES_RIOLU)
+        {
+            gSpecialVar_0x8005 = 447;
+            sLastChosenMonId = GetCursorSelectionMonId();
+        }
+        else if (species == SPECIES_EEVEE)
+        {
+            MaximizeFriendShip(&gPlayerParty[gSpecialVar_0x8004]);
+        }
     }
     else
     {

@@ -39,11 +39,11 @@ script FionasRoom_SignScript_Book{
             {
                 if(var(VAR_STORY_PROGRESSION) < 10)
                 {
-                    multichoice(25, 5, MULTI_DIARY_1, 0)
+                    multichoice(25, 2, MULTI_DIARY_1, 0)
                 }
                 else
                 {
-                    multichoice(25, 5, MULTI_DIARY_2, 0)
+                    multichoice(25, 2, MULTI_DIARY_2, 0)
                 }
                 closemessage
                 switch(var(VAR_RESULT))
@@ -101,7 +101,7 @@ script FionasRoom_SignScript_Book{
                             message(format("Which diary entry would you like to read?"))
                         }
                     default:
-                        setvar(VAR_TEMP_1, 0)
+                        setvar(VAR_TEMP_A, 0)
                         msgbox(format("Enough snooping around for now."))
                 }
             } 
