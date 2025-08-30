@@ -1487,9 +1487,9 @@ Laboratory_Movement_MoveToProfessor:
 
 Laboratory_WarpInto_FirstPokemon_Text_0:
 # 12 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	.string "{COLOR LIGHT_GREEN}???{COLOR DARK_GRAY}: ah {PLAYER}, I have been\n"
+	.string "{COLOR LIGHT_GREEN}???{COLOR DARK_GRAY}: Ah {PLAYER}, I have been\n"
 	.string "expecting you!\p"
-	.string "please, step forward.$"
+	.string "Please, step forward.$"
 
 Laboratory_WarpInto_FirstPokemon_Text_1:
 # 17 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
@@ -1602,7 +1602,7 @@ Laboratory_Test_Text_11:
 Laboratory_Test_Text_12:
 # 230 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
 	.string "Q8: You encounter a human ghost in an\n"
-	.string "abandonde place. Do you:\p"
+	.string "abandoned place. Do you:\p"
 	.string "A) Try to kill it.\p"
 	.string "B) Attempt to let the ghost past to a\n"
 	.string "peacefull afterlife.\p"
@@ -1633,7 +1633,7 @@ Laboratory_Test_Text_16:
 	.string "colleagues wants to betray team MOD, do\l"
 	.string "you:\p"
 	.string "A) Confront him.\p"
-	.string "B) Tell the autoriets about the issue.\p"
+	.string "B) Tell the authorities about the issue.\p"
 	.string "C) Try to get him red-handed.$"
 
 Laboratory_Test_Text_17:
@@ -1660,7 +1660,7 @@ Laboratory_Test_Text_20:
 
 Laboratory_Test_Text_21:
 # 365 "data/maps/MODHeadquarters_Laboratory/scripts.pory"
-	.string "alright, out of my calculations, this\n"
+	.string "Alright, out of my calculations, this\n"
 	.string "pokemon would be the best fit for you$"
 
 Laboratory_Test_Text_22:

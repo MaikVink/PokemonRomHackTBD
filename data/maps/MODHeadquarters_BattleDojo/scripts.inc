@@ -1284,8 +1284,8 @@ BattleDojo_Event_Surge_Text_4:
 
 BattleDojo_Event_Surge_Text_5:
 # 132 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle,\n"
-	.string "let's go easy on this one, OK?$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle.\n"
+	.string "Let's go easy on this one, OK?$"
 
 BattleDojo_Event_Surge_Text_6:
 # 144 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"

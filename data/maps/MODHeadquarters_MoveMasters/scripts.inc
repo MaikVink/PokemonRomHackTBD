@@ -1342,7 +1342,7 @@ MoveMasters_ObjectScript_EggTutor_Text_0:
 # 140 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Oh hello dear, can I help you with\n"
 	.string "anything?\p"
-	.string "What services do I over? Oh nothing\n"
+	.string "What services do I offer? Oh nothing\n"
 	.string "special.\p"
 	.string "I can help your pokemon remember their\n"
 	.string "Egg moves if you're interested.\p"

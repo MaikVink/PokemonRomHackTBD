@@ -32,7 +32,7 @@ script GeneratlStore_ObjectScript_MartEmployer
     if(!flag(FLAG_GIFT_GENERALSTORE))
     {
         msgbox(format("Let me give you some things on the house this once, to get you started on your journey.\p
-        I would say don't waste it, but if you do you're more quickly to come back to me so...\l
+        I would say don't waste it, but if you do you're more likely to come back to me so...\l
         do waste it I guess?"))
         giveitem(ITEM_POKE_BALL, 15)
         giveitem(ITEM_POTION, 5)

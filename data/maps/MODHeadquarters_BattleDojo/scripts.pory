@@ -129,7 +129,7 @@ script BattleDojo_Event_Surge{
                 showobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_OpponentWalksToSpot)
                 waitmovement(0)
-                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle, let's go easy on this one, OK?"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle. Let's go easy on this one, OK?"))
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_WalkLeft)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight)
                 waitmovement(0)
@@ -209,7 +209,7 @@ script BattleDojo_Event_Surge{
                 waitmovement(0)
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceLeft)
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: And that makes two: you have already made it to the semi-finals.\l Congrats {PLAYER}!\p 
-                That does not mean the battles will become easier from here on out, tomorrow is another opponent and another battle.\p
+                That does not mean the battles will become easier from here on out. Tomorrow is another opponent and another battle.\p
                 Go rest so you're ready for the battle that comes next!"))
             }
             else

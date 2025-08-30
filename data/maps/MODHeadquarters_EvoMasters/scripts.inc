@@ -6498,8 +6498,8 @@ EvoMasters_ObjectScript_MartEmployer_Text_1:
 	.string "Oh? Is that an Eevee I see in your\n"
 	.string "party? Because it is your first time\l"
 	.string "visiting us, please allow me to give you\l"
-	.string "some stuff. For this once, it will be on\l"
-	.string "the house!$"
+	.string "some stuff. Don't worry, it's on the\l"
+	.string "house!$"
 
 EvoMasters_ObjectScript_MartEmployer_Text_2:
 # 378 "data/maps/MODHeadquarters_EvoMasters/scripts.pory"

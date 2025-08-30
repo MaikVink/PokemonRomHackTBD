@@ -4024,7 +4024,7 @@ GeneratlStore_ObjectScript_MartEmployer_Text_1:
 	.string "house this once, to get you started on\l"
 	.string "your journey.\p"
 	.string "I would say don't waste it, but if you do\n"
-	.string "you're more quickly to come back to me\l"
+	.string "you're more likely to come back to me\l"
 	.string "so...\l"
 	.string "do waste it I guess?$"
 

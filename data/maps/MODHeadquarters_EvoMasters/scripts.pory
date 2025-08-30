@@ -367,7 +367,7 @@ script EvoMasters_ObjectScript_MartEmployer{
     }
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
     {
-        msgbox(format("Oh? Is that an Eevee I see in your party? Because it is your first time visiting us, please allow me to give you some stuff. For this once, it will be on the house!"))
+        msgbox(format("Oh? Is that an Eevee I see in your party? Because it is your first time visiting us, please allow me to give you some stuff. Don't worry, it's on the house!"))
         giveitem(ITEM_WATER_STONE)
         giveitem(ITEM_FIRE_STONE)
         giveitem(ITEM_THUNDER_STONE)

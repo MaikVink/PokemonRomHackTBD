@@ -796,7 +796,7 @@ DormHall1_LostTournament_Text_4:
 DormHall1_WonTournament_Text_0:
 # 117 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a\n"
-	.string "moment$"
+	.string "moment!$"
 
 Dormhall1_Frame_DeneithDefeat_Text_0:
 # 136 "data/maps/MODHeadquarters_DormHall1/scripts.pory"

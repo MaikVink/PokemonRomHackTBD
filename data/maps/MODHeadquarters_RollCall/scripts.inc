@@ -959,7 +959,7 @@ RollCall_MeetTheLeader_Text_6:
 # 217 "data/maps/MODHeadquarters_RollCall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Thank you Airanea.\p"
 	.string "LISTEN UP ROOKIES!\p"
-	.string "usually I don't waste my time talking to\n"
+	.string "Usually I don't waste my time talking to\n"
 	.string "you newbloods until you have proven\l"
 	.string "yourself.\p"
 	.string "You're lucky I had today other business\n"

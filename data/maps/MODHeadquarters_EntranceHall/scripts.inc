@@ -574,7 +574,7 @@ EntranceHall_FirstEntrace_Text_1:
 
 EntranceHall_FirstEntrace_Text_2:
 # 52 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon$"
+	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon.$"
 
 EntranceHall_FirstEntrace_Text_3:
 # 54 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
@@ -697,7 +697,7 @@ EntranceHall_FirstEntrace_Text_15:
 # 127 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	.string "{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Here we have the Evolution\n"
 	.string "Masters.\p"
-	.string "As you probably know, Most pokemon can\n"
+	.string "As you probably know, most pokemon can\n"
 	.string "evolve and become stronger.\p"
 	.string "If you need something specific to\n"
 	.string "evolve a pokemon or you want to know\l"

@@ -138,7 +138,7 @@ script MoveMasters_ObjectScript_EggTutor{
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
         msgbox(format("Oh hello dear, can I help you with anything?\p
-        What services do I over? Oh nothing special.\p
+        What services do I offer? Oh nothing special.\p
         I can help your pokemon remember their Egg moves if you're interested.\p
         It is quite difficult to do this, so I would need some compensation for my services... \p
         Does a 1000 sound agreeable with you?"))
