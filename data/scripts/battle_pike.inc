@@ -18,28 +18,18 @@ BattleFrontier_BattlePikeRoom_OnTransition:
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetDoubleBattleObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 2, 5
-	setobjectxyperm LOCALID_OBJ_1, 6, 5
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetTwoObjectRoomPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 4
-	setobjectxyperm LOCALID_OBJ_1, 3, 4
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetOneObjectRoomPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 4
-	setobjectxyperm LOCALID_OBJ_1, 0, 0
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetNPCRoomObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 5, 5
-	setobjectxyperm LOCALID_OBJ_1, 0, 0
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetBrainRoomObjPos::
-	setobjectxyperm LOCALID_OBJ_0, 4, 3
-	setobjectxyperm LOCALID_OBJ_1, 4, 4
 	end
 
 BattleFrontier_BattlePikeRoom_OnWarp:
@@ -47,16 +37,6 @@ BattleFrontier_BattlePikeRoom_OnWarp:
 	.2byte 0
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_InitRoomObjects::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LINK_RECEPTIONIST
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LINK_RECEPTIONIST
-	pike_getroomtype
-	goto_if_eq VAR_RESULT, PIKE_ROOM_STATUS, BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
-	goto_if_eq VAR_RESULT, PIKE_ROOM_HARD_BATTLE, BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
-	goto_if_eq VAR_RESULT, PIKE_ROOM_DOUBLE_BATTLE, BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
-	goto_if_eq VAR_RESULT, PIKE_ROOM_BRAIN, BattleFrontier_BattlePikeRoomNormal_EventScript_InitBrainRoomObjects
-	hideobjectat LOCALID_OBJ_1, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL
-	setvar VAR_TEMP_4, 1
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom::
@@ -67,7 +47,6 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom::
 BattleFrontier_BattlePikeRoomNormal_EventScript_InitBrainRoomObjects::
 	setvar VAR_TEMP_4, 1
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	hideobjectat LOCALID_OBJ_0, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL  @ Pike Queen hidden initially
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_LeftRoomWarp::
@@ -109,17 +88,11 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp::
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
-	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL, 4, 7
-	waitstate
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpWildMonRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
-	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS, 4, 19
-	waitstate
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_SetEnteredRoom::
@@ -131,8 +104,6 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
-	closemessage
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SetEnteredRoom::
@@ -144,8 +115,6 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
-	closemessage
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_Exit::
@@ -175,15 +144,11 @@ BattleFrontier_BattlePikeRoom_EventScript_EnableHealing::
 BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
-	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_FINAL, 2, 7
 	return
 
 BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
-	call BattleFrontier_BattlePike_EventScript_CloseCurtain
-	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM, 6, 10
 	return
 
 BattleFrontier_BattlePikeRoomWildMons_EventScript_Exit::
@@ -212,13 +177,10 @@ BattleFrontier_BattlePikeRoomWildMons_EventScript_NoTurningBack::
 	setvar VAR_TEMP_3, 0
 	setvar VAR_TEMP_2, 0
 	lockall
-	msgbox BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
-	closemessage
 	end
 
 BattleFrontier_BattlePike_EventScript_Retire::
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS CHALLENGE_STATUS_LOST
-	warp MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY, 5, 6
 	waitstate
 	end
 
