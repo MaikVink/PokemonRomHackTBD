@@ -50,7 +50,6 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_NextOpponentEnter::
 	battletent_getopponentintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
-	call BattleFrontier_BattlePalaceBattleRoom_EventScript_DoPalaceBattle
 	switch VAR_RESULT
 	case 1, VerdanturfTown_BattleTentBattleRoom_EventScript_DefeatedOpponent
 VerdanturfTown_BattleTentBattleRoom_EventScript_WarpToLobbyLost::
@@ -71,7 +70,6 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_DefeatedOpponent::
 	applymovement LOCALID_ATTENDANT, Common_Movement_WalkInPlaceFasterDown
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	msgbox BattleFrontier_BattlePalaceBattleRoom_Text_LetMeRestoreYourMons, MSGBOX_DEFAULT
 	special LoadPlayerParty
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
@@ -90,15 +88,12 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge::
 	case 2, VerdanturfTown_BattleTentBattleRoom_EventScript_AskRetireChallenge
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_AskPauseChallenge::
-	msgbox BattleFrontier_BattlePalaceBattleRoom_Text_SaveAndQuitGame, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
 	case YES, VerdanturfTown_BattleTentBattleRoom_EventScript_PauseChallenge
 	case MULTI_B_PRESSED, VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_AskRetireChallenge::
-	message BattleFrontier_BattlePalaceBattleRoom_Text_WishToQuitChallenge
-	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
 	case 1, VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
@@ -119,8 +114,6 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon::
 	waitstate
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_PauseChallenge::
-	message BattleFrontier_BattlePalaceBattleRoom_Text_SavingData
-	waitmessage
 	verdanturftent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse
@@ -141,13 +134,9 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_SetUpObjects::
 	end
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
-	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor2ndOpponent
-	waitmessage
 	return
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
-	message BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor3rdOpponent
-	waitmessage
 	return
 
 VerdanturfTown_BattleTentBattleRoom_Movement_SetInvisible:

@@ -255,13 +255,10 @@ FallarborTown_BattleTentLobby_EventScript_ScottAlreadySpokenTo::
 
 FallarborTown_BattleTentLobby_EventScript_RulesBoard::
 	lockall
-	msgbox BattleFrontier_BattleArenaLobby_Text_RulesAreListed, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattleArenaLobby_Text_ReadWhichHeading
-	waitmessage
 	multichoice 17, 0, MULTI_FALLARBOR_TENT_RULES, FALSE
 	switch VAR_RESULT
 	case 0, FallarborTown_BattleTentLobby_EventScript_RulesLevel
@@ -279,22 +276,18 @@ FallarborTown_BattleTentLobby_EventScript_RulesLevel::
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesBattle::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesMind::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainMindRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesSkill::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 FallarborTown_BattleTentLobby_EventScript_RulesBody::
-	msgbox BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules, MSGBOX_DEFAULT
 	goto FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 

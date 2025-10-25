@@ -52,11 +52,9 @@ FallarborTown_BattleTentBattleRoom_EventScript_NextOpponentEnter::
 	playse SE_M_BELLY_DRUM
 	waitse
 	waitmovement 0
-	msgbox BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin, MSGBOX_DEFAULT
 	battletent_getopponentintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
-	call BattleFrontier_BattleArenaBattleRoom_EventScript_DoArenaBattle
 	switch VAR_RESULT
 	case 1, FallarborTown_BattleTentBattleRoom_EventScript_DefeatedOpponent
 	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
@@ -64,7 +62,6 @@ FallarborTown_BattleTentBattleRoom_EventScript_NextOpponentEnter::
 	waitse
 	waitmovement 0
 	fallarbortent_getopponentname
-	msgbox BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent, MSGBOX_DEFAULT
 FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyLost::
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
 	special LoadPlayerParty
@@ -76,7 +73,6 @@ FallarborTown_BattleTentBattleRoom_EventScript_DefeatedOpponent::
 	playse SE_BANG
 	waitse
 	waitmovement 0
-	msgbox BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer, MSGBOX_DEFAULT
 	closemessage
 FallarborTown_BattleTentBattleRoom_EventScript_IncrementBattleNum::
 	frontier_get FRONTIER_DATA_BATTLE_NUM
@@ -91,7 +87,6 @@ FallarborTown_BattleTentBattleRoom_EventScript_IncrementBattleNum::
 	waitmovement 0
 	applymovement LOCALID_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
-	msgbox BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored, MSGBOX_DEFAULT
 	special LoadPlayerParty
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
@@ -109,14 +104,12 @@ FallarborTown_BattleTentBattleRoom_EventScript_AskContinueChallenge::
 	case 2, FallarborTown_BattleTentBattleRoom_EventScript_AskRetireChallenge
 
 FallarborTown_BattleTentBattleRoom_EventScript_AskPauseChallenge::
-	msgbox BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, FallarborTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
 	case YES, FallarborTown_BattleTentBattleRoom_EventScript_PauseChallenge
 	case MULTI_B_PRESSED, FallarborTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
 
 FallarborTown_BattleTentBattleRoom_EventScript_AskRetireChallenge::
-	message BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge
 	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
@@ -148,18 +141,12 @@ FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon::
 @ See above
 
 FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
-	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent
-	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
-	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent
-	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_PauseChallenge::
-	message BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait
-	waitmessage
 	fallarbortent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse
