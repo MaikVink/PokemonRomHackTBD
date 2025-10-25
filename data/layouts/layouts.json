@@ -2632,16 +2632,6 @@
       "blockdata_filepath": "data/layouts/Route130/map.bin"
     },
     {
-      "id": "LAYOUT_BATTLE_FRONTIER_OUTSIDE_WEST",
-      "name": "BattleFrontier_OutsideWest_Layout",
-      "width": 56,
-      "height": 72,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleFrontierOutsideWest",
-      "border_filepath": "data/layouts/BattleFrontier_OutsideWest/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_OutsideWest/map.bin"
-    },
-    {
       "id": "LAYOUT_BATTLE_ELEVATOR",
       "name": "BattleElevator_Layout",
       "width": 5,
@@ -3342,16 +3332,6 @@
       "blockdata_filepath": "data/layouts/MagmaHideout_4F/map.bin"
     },
     {
-      "id": "LAYOUT_BATTLE_FRONTIER_OUTSIDE_EAST",
-      "name": "BattleFrontier_OutsideEast_Layout",
-      "width": 72,
-      "height": 72,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
-      "border_filepath": "data/layouts/BattleFrontier_OutsideEast/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_OutsideEast/map.bin"
-    },
-    {
       "id": "LAYOUT_SOOTOPOLIS_CITY_LEGENDS_BATTLE",
       "name": "SootopolisCity_LegendsBattle_Layout",
       "width": 60,
@@ -3510,36 +3490,6 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/SafariZone_Southeast/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_Southeast/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_FRONTIER_RANKING_HALL",
-      "name": "BattleFrontier_RankingHall_Layout",
-      "width": 53,
-      "height": 15,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontierRankingHall",
-      "border_filepath": "data/layouts/BattleFrontier_RankingHall/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_RankingHall/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER",
-      "name": "BattleFrontier_ExchangeServiceCorner_Layout",
-      "width": 15,
-      "height": 11,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_FRONTIER_RECEPTION_GATE",
-      "name": "BattleFrontier_ReceptionGate_Layout",
-      "width": 9,
-      "height": 14,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/BattleFrontier_ReceptionGate/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_ReceptionGate/map.bin"
     },
     {
       "id": "LAYOUT_ARTISAN_CAVE_B1F",
@@ -3830,16 +3780,6 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/NavelRock_Fork/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_Fork/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_FRONTIER_SCOTTS_HOUSE",
-      "name": "BattleFrontier_ScottsHouse_Layout",
-      "width": 6,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/BattleFrontier_ScottsHouse/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_ScottsHouse/map.bin"
     },
     {
       "id": "LAYOUT_METEOR_FALLS_STEVENS_CAVE",

@@ -1611,38 +1611,21 @@ static void InitFrontierMapSprites(void)
     {
         s8 mapNum = gSaveBlock1Ptr->location.mapNum;
 
-        if (mapNum == MAP_NUM(BATTLE_FRONTIER_OUTSIDE_WEST)
-            || (mapNum == MAP_NUM(BATTLE_FRONTIER_OUTSIDE_EAST) && (x = 55)))
+        id = MapNumToFrontierFacilityId(mapNum);
+        if (id != 0)
         {
-            x += gSaveBlock1Ptr->pos.x;
-            y = gSaveBlock1Ptr->pos.y;
-
-            x /= 8;
-            y /= 8;
-
-            id = 0;
+            x = sMapLandmarks[id - 1].x;
+            y = sMapLandmarks[id - 1].y;
         }
         else
         {
-            id = MapNumToFrontierFacilityId(mapNum);
-            if (id != 0)
-            {
-                x = sMapLandmarks[id - 1].x;
-                y = sMapLandmarks[id - 1].y;
-            }
-            else
-            {
-                // Handle Artisan Cave.
-                if (gSaveBlock1Ptr->escapeWarp.mapNum == MAP_NUM(BATTLE_FRONTIER_OUTSIDE_EAST))
-                    x = gSaveBlock1Ptr->escapeWarp.x + 55;
-                else
-                    x = gSaveBlock1Ptr->escapeWarp.x;
+            // Handle Artisan Cave.
+            x = gSaveBlock1Ptr->escapeWarp.x;
 
-                y = gSaveBlock1Ptr->escapeWarp.y;
+            y = gSaveBlock1Ptr->escapeWarp.y;
 
-                x /= 8;
-                y /= 8;
-            }
+            x /= 8;
+            y /= 8;
         }
 
         LoadCompressedSpriteSheet(sHeadsSpriteSheet);
