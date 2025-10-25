@@ -360,11 +360,6 @@ CableClub_EventScript_EnterColosseum::
 	closedoor 9, 1
 	waitdooranim
 	release
-	goto_if_eq VAR_0x8004, USING_MULTI_BATTLE, CableClub_EventScript_WarpTo4PColosseum
-	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8
-	special DoCableClubWarp
-	waitstate
 	end
 
 @ Unused
@@ -374,10 +369,6 @@ CableClub_EventScript_PlayerApproachLinkRoomRight::
 	return
 
 CableClub_EventScript_WarpTo4PColosseum::
-	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_4P, 5, 8
-	special DoCableClubWarp
-	waitstate
 	end
 
 CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers::

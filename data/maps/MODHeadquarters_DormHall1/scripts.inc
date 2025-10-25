@@ -826,7 +826,7 @@ Dormhall1_Frame_DeneithDefeat_Text_1:
 # 144 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
 	.string "If you're wandering you haven't been\n"
 	.string "out for long, so don't worry. I was just\l"
-	.string "standing guard on orders of {COLOR LIGHT_GRAY}the Leader{COLOR DARK_GRAY}.\l"
+	.string "standing guard on orders of {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}.\l"
 	.string "Now you're back up again, I'll be going. I\l"
 	.string "have other important stuff to take\l"
 	.string "care off.\p"
@@ -841,9 +841,9 @@ Dormhall1_Frame_DeneithDefeat_Text_1:
 	.string "If you would manage to bring in a Team\n"
 	.string "A.S. member you would be rewardly\l"
 	.string "greatly, but I would advice against it,\l"
-	.string "because it might caused you your life.\l"
+	.string "because it might cost you your life.\l"
 	.string "It would be a shame to lose such a\l"
-	.string "valuable member like you are.$"
+	.string "valuable asset like you.$"
 
 DormHall1_EventScript_LadyInitiative_Text_0:
 # 168 "data/maps/MODHeadquarters_DormHall1/scripts.pory"
