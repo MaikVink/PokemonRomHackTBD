@@ -1671,7 +1671,7 @@ static void Task_StartActivity(u8 taskId)
         HealPlayerParty();
         SavePlayerParty();
         LoadPlayerBag();
-        WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_2P), MAP_NUM(BATTLE_COLOSSEUM_2P), 6, 8, USING_SINGLE_BATTLE);
+        //WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_2P), MAP_NUM(BATTLE_COLOSSEUM_2P), 6, 8, USING_SINGLE_BATTLE);
         SetMainCallback2(CB2_TransitionToCableClub);
         break;
     case ACTIVITY_BATTLE_DOUBLE:
@@ -1680,7 +1680,7 @@ static void Task_StartActivity(u8 taskId)
         SavePlayerParty();
         LoadPlayerBag();
         CreateTrainerCardInBuffer(gBlockSendBuffer, TRUE);
-        WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_2P), MAP_NUM(BATTLE_COLOSSEUM_2P), 6, 8, USING_DOUBLE_BATTLE);
+        //WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_2P), MAP_NUM(BATTLE_COLOSSEUM_2P), 6, 8, USING_DOUBLE_BATTLE);
         SetMainCallback2(CB2_TransitionToCableClub);
         break;
     case ACTIVITY_BATTLE_MULTI:
@@ -1689,7 +1689,7 @@ static void Task_StartActivity(u8 taskId)
         SavePlayerParty();
         LoadPlayerBag();
         CreateTrainerCardInBuffer(gBlockSendBuffer, TRUE);
-        WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_4P), MAP_NUM(BATTLE_COLOSSEUM_4P), 5, 8, USING_MULTI_BATTLE);
+        //WarpForCableClubActivity(MAP_GROUP(BATTLE_COLOSSEUM_4P), MAP_NUM(BATTLE_COLOSSEUM_4P), 5, 8, USING_MULTI_BATTLE);
         SetMainCallback2(CB2_TransitionToCableClub);
         break;
     case ACTIVITY_TRADE:

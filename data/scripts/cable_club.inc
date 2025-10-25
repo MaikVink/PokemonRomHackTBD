@@ -337,34 +337,6 @@ CableClub_EventScript_TryEnterColosseum::
 	end
 
 CableClub_EventScript_EnterColosseum::
-	special HealPlayerParty
-	special SavePlayerParty
-	special LoadPlayerBag
-	copyvar VAR_CABLE_CLUB_STATE, VAR_0x8004
-	messageautoscroll CableClub_Text_PleaseEnter
-	waitmessage
-	call CableClub_EventScript_OpenDirectCornerBarrier
-	special DrawWholeMapView
-	playse SE_CLICK
-	delay 60
-	applymovement VAR_LAST_TALKED, Movement_AttendantFaceLeft
-	waitmovement 0
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerApproachLinkRoomLeft
-	waitmovement 0
-	opendoor 9, 1
-	waitdooranim
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerEnterLinkRoom
-	waitmovement 0
-	hideobjectat OBJ_EVENT_ID_PLAYER, 0
-	closedoor 9, 1
-	waitdooranim
-	release
-	goto_if_eq VAR_0x8004, USING_MULTI_BATTLE, CableClub_EventScript_WarpTo4PColosseum
-	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8
-	special DoCableClubWarp
-	waitstate
 	end
 
 @ Unused
@@ -374,10 +346,6 @@ CableClub_EventScript_PlayerApproachLinkRoomRight::
 	return
 
 CableClub_EventScript_WarpTo4PColosseum::
-	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_4P, 5, 8
-	special DoCableClubWarp
-	waitstate
 	end
 
 CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers::

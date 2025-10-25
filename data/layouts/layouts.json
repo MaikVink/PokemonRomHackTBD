@@ -1982,16 +1982,6 @@
       "blockdata_filepath": "data/layouts/SecretBase_BrownCave1/map.bin"
     },
     {
-      "id": "LAYOUT_SECRET_BASE_BLUE_CAVE1",
-      "name": "SecretBase_BlueCave1_Layout",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_SecretBase",
-      "secondary_tileset": "gTileset_SecretBaseBlueCave",
-      "border_filepath": "data/layouts/SecretBase_BlueCave1/border.bin",
-      "blockdata_filepath": "data/layouts/SecretBase_BlueCave1/map.bin"
-    },
-    {
       "id": "LAYOUT_SECRET_BASE_YELLOW_CAVE1",
       "name": "SecretBase_YellowCave1_Layout",
       "width": 11,
@@ -2040,16 +2030,6 @@
       "secondary_tileset": "gTileset_SecretBaseBrownCave",
       "border_filepath": "data/layouts/SecretBase_BrownCave2/border.bin",
       "blockdata_filepath": "data/layouts/SecretBase_BrownCave2/map.bin"
-    },
-    {
-      "id": "LAYOUT_SECRET_BASE_BLUE_CAVE2",
-      "name": "SecretBase_BlueCave2_Layout",
-      "width": 15,
-      "height": 7,
-      "primary_tileset": "gTileset_SecretBase",
-      "secondary_tileset": "gTileset_SecretBaseBlueCave",
-      "border_filepath": "data/layouts/SecretBase_BlueCave2/border.bin",
-      "blockdata_filepath": "data/layouts/SecretBase_BlueCave2/map.bin"
     },
     {
       "id": "LAYOUT_SECRET_BASE_YELLOW_CAVE2",
@@ -2102,16 +2082,6 @@
       "blockdata_filepath": "data/layouts/SecretBase_BrownCave3/map.bin"
     },
     {
-      "id": "LAYOUT_SECRET_BASE_BLUE_CAVE3",
-      "name": "SecretBase_BlueCave3_Layout",
-      "width": 10,
-      "height": 17,
-      "primary_tileset": "gTileset_SecretBase",
-      "secondary_tileset": "gTileset_SecretBaseBlueCave",
-      "border_filepath": "data/layouts/SecretBase_BlueCave3/border.bin",
-      "blockdata_filepath": "data/layouts/SecretBase_BlueCave3/map.bin"
-    },
-    {
       "id": "LAYOUT_SECRET_BASE_YELLOW_CAVE3",
       "name": "SecretBase_YellowCave3_Layout",
       "width": 12,
@@ -2162,16 +2132,6 @@
       "blockdata_filepath": "data/layouts/SecretBase_BrownCave4/map.bin"
     },
     {
-      "id": "LAYOUT_SECRET_BASE_BLUE_CAVE4",
-      "name": "SecretBase_BlueCave4_Layout",
-      "width": 9,
-      "height": 17,
-      "primary_tileset": "gTileset_SecretBase",
-      "secondary_tileset": "gTileset_SecretBaseBlueCave",
-      "border_filepath": "data/layouts/SecretBase_BlueCave4/border.bin",
-      "blockdata_filepath": "data/layouts/SecretBase_BlueCave4/map.bin"
-    },
-    {
       "id": "LAYOUT_SECRET_BASE_YELLOW_CAVE4",
       "name": "SecretBase_YellowCave4_Layout",
       "width": 13,
@@ -2202,16 +2162,6 @@
       "blockdata_filepath": "data/layouts/SecretBase_Shrub4/map.bin"
     },
     {
-      "id": "LAYOUT_BATTLE_COLOSSEUM_2P",
-      "name": "BattleColosseum_2P_Layout",
-      "width": 14,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_CableClub",
-      "border_filepath": "data/layouts/BattleColosseum_2P/border.bin",
-      "blockdata_filepath": "data/layouts/BattleColosseum_2P/map.bin"
-    },
-    {
       "id": "LAYOUT_TRADE_CENTER",
       "name": "TradeCenter_Layout",
       "width": 12,
@@ -2230,16 +2180,6 @@
       "secondary_tileset": "gTileset_CableClub",
       "border_filepath": "data/layouts/RecordCorner/border.bin",
       "blockdata_filepath": "data/layouts/RecordCorner/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_COLOSSEUM_4P",
-      "name": "BattleColosseum_4P_Layout",
-      "width": 14,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_CableClub",
-      "border_filepath": "data/layouts/BattleColosseum_4P/border.bin",
-      "blockdata_filepath": "data/layouts/BattleColosseum_4P/map.bin"
     },
     {
       "id": "LAYOUT_CONTEST_HALL",
@@ -3390,46 +3330,6 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/MirageTower_3F/border.bin",
       "blockdata_filepath": "data/layouts/MirageTower_3F/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_TENT_LOBBY",
-      "name": "BattleTentLobby_Layout",
-      "width": 13,
-      "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleTent",
-      "border_filepath": "data/layouts/BattleTentLobby/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTentLobby/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_TENT_CORRIDOR",
-      "name": "BattleTentCorridor_Layout",
-      "width": 5,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleTent",
-      "border_filepath": "data/layouts/BattleTentCorridor/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTentCorridor/map.bin"
-    },
-    {
-      "id": "LAYOUT_BATTLE_TENT_BATTLE_ROOM",
-      "name": "BattleTentBattleRoom_Layout",
-      "width": 10,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleTent",
-      "border_filepath": "data/layouts/BattleTentBattleRoom/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTentBattleRoom/map.bin"
-    },
-    {
-      "id": "LAYOUT_VERDANTURF_TOWN_BATTLE_TENT_BATTLE_ROOM",
-      "name": "VerdanturfTown_BattleTentBattleRoom_Layout",
-      "width": 13,
-      "height": 9,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleTent",
-      "border_filepath": "data/layouts/VerdanturfTown_BattleTentBattleRoom/border.bin",
-      "blockdata_filepath": "data/layouts/VerdanturfTown_BattleTentBattleRoom/map.bin"
     },
     {
       "id": "LAYOUT_MIRAGE_TOWER_4F",
