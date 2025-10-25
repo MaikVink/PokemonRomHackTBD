@@ -20,6 +20,10 @@ script Entrancehall_OnTransition
     {
         setflag(FLAG_HIDE_DENEITH)
     }
+    if(var(VAR_MOD_SHOPS_STATE) > 2000 && var(VAR_STORY_PROGRESSION) < 13)
+    {
+        setvar(VAR_MOD_SHOPS_STATE, 1111)
+    }
 }
 
 script EntranceHall_FirstEntrace{
