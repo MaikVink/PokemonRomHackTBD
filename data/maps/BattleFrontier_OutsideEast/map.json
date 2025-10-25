@@ -360,13 +360,6 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 65,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_BATTLE_FRONTIER_LOUNGE3",
-      "dest_warp_id": "0"
-    }
   ],
   "coord_events": [
 
