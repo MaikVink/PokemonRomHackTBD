@@ -227,13 +227,9 @@ SlateportCity_BattleTentLobby_EventScript_Woman::
 
 SlateportCity_BattleTentLobby_EventScript_RulesBoard::
 	lockall
-	msgbox BattleFrontier_BattleFactoryLobby_Text_RulesAreListed, MSGBOX_DEFAULT
-	goto SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard::
-	message BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading
-	waitmessage
 	multichoice 17, 0, MULTI_SLATEPORT_TENT_RULES, FALSE
 	switch VAR_RESULT
 	case 0, SlateportCity_BattleTentLobby_EventScript_RulesBasics
