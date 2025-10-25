@@ -2072,9 +2072,6 @@ void UpdateFrontierManiac(u16 daysSince)
 
 void ShowFrontierManiacMessage(void)
 {
-    static const u8 *const sFrontierManiacMessages[] =
-    {
-    };
 
     static const u8 sFrontierManiacStreakThresholds[][FRONTIER_MANIAC_MESSAGE_COUNT - 1] =
     {
@@ -2153,8 +2150,6 @@ void ShowFrontierManiacMessage(void)
     }
 
     for (i = 0; i < FRONTIER_MANIAC_MESSAGE_COUNT - 1 && sFrontierManiacStreakThresholds[facility][i] < winStreak; i++);
-
-    //ShowFieldMessage(sFrontierManiacMessages[facility][i]);
 }
 
 // gSpecialVar_0x8005 and 0x8006 here are used by MoveElevator
@@ -2732,16 +2727,12 @@ void SetBattleTowerLinkPlayerGfx(void)
 
 void ShowNatureGirlMessage(void)
 {
-    static const u8 *const sNatureGirlMessages[0] = {
-    };
-
     u8 nature;
 
     if (gSpecialVar_0x8004 >= PARTY_SIZE)
         gSpecialVar_0x8004 = 0;
 
     nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
-    //ShowFieldMessage(sNatureGirlMessages[nature]);
 }
 
 void UpdateFrontierGambler(u16 daysSince)
@@ -2753,22 +2744,12 @@ void UpdateFrontierGambler(u16 daysSince)
 
 void ShowFrontierGamblerLookingMessage(void)
 {
-    static const u8 *const sFrontierGamblerLookingMessages[] =
-    {
-    };
-
     u16 challenge = VarGet(VAR_FRONTIER_GAMBLER_CHALLENGE);
-    //ShowFieldMessage(sFrontierGamblerLookingMessages[challenge]);
     VarSet(VAR_FRONTIER_GAMBLER_SET_CHALLENGE, challenge);
 }
 
 void ShowFrontierGamblerGoMessage(void)
 {
-    static const u8 *const sFrontierGamblerGoMessages[] =
-    {
-    };
-
-    //ShowFieldMessage(sFrontierGamblerGoMessages[VarGet(VAR_FRONTIER_GAMBLER_SET_CHALLENGE)]);
 }
 
 void FrontierGamblerSetWonOrLost(bool8 won)
