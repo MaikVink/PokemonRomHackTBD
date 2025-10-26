@@ -1,4 +1,4 @@
-const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
+const void *const gItemIconTable[ITEMS_COUNT + 1][2] =
 {
     [ITEM_NONE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Poké Balls
