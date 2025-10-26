@@ -101,7 +101,7 @@ script EvoMasters_CheckDeclineMassage{
 script EvoMasters_GiveMassage
 {
     msgbox(format("Which Pokemon would you like me to give a massage?"))
-    setfieldeffectargument(1, 0)
+    setfieldeffectargument(1, 10)
     special(ChooseMonForFriendShip)
     waitstate
     showmoneybox(0, 0)
@@ -123,13 +123,31 @@ script EvoMasters_GiveMassage
 
 script EvoMasters_GiveMassageEevee
 {
-    msgbox(format("Please present me your Eevee"))
+    msgbox(format("Please present me your Eevee."))
     setfieldeffectargument(1, 523)
     special(ChooseMonForFriendShip)
     waitstate
     if(var(VAR_0x8004) == 0xFF)
     {
         call(EvoMasters_CheckDeclineMassage)
+    }
+    elif(var(VAR_0x8005) == 447)
+    {
+        msgbox(format("Oh, I see you also have a Riolu!\p 
+        Would you like to use your free massage for him instead?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT))
+        {
+            setfieldeffectargument(1, VAR_0x8004)
+            special(ChooseMonForFriendShip) //does not actually let the player choose, instead just uses riolu id
+            waitstate
+            msgbox(format("My work is done, they should now consider you a close friend.\p
+            This was a one time offer though, so I do expect some payment in return next time!\p
+            Hope to see you again!"))
+        }
+        else
+        {
+            call(EvoMasters_GiveMassageEevee)
+        }
     }
     else
     {
@@ -349,7 +367,7 @@ script EvoMasters_ObjectScript_MartEmployer{
     }
     if(!flag(FLAG_TOURNAMENT_LOST) && !flag(FLAG_GIFT_EVOMASTERS))
     {
-        msgbox(format("Oh? Is that an Eevee I see in your party? Because it is your first time visiting us, please allow me to give you some stuff. For this once, it will be on the house!"))
+        msgbox(format("Oh? Is that an Eevee I see in your party? Because it is your first time visiting us, please allow me to give you some stuff. Don't worry, it's on the house!"))
         giveitem(ITEM_WATER_STONE)
         giveitem(ITEM_FIRE_STONE)
         giveitem(ITEM_THUNDER_STONE)

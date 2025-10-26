@@ -109,7 +109,7 @@ script MoveMasters_ObjectScript_MoveDeleter
     }
     showmoneybox(0, 0)
     msgbox(format("Does one of your pokemon need to forget something?\l
-    Doing so will cost you 100"), MSGBOX_YESNO)
+    Doing so will cost you 100."), MSGBOX_YESNO)
     if(var(VAR_RESULT))
     {
         checkmoney(100)
@@ -138,7 +138,7 @@ script MoveMasters_ObjectScript_EggTutor{
     if(var(VAR_MOD_SHOPS_STATE) < 2000)
     {
         msgbox(format("Oh hello dear, can I help you with anything?\p
-        What services do I over? Oh nothing special.\p
+        What services do I offer? Oh nothing special.\p
         I can help your pokemon remember their Egg moves if you're interested.\p
         It is quite difficult to do this, so I would need some compensation for my services... \p
         Does a 1000 sound agreeable with you?"))
@@ -177,7 +177,7 @@ script MoveMasters_LearnEggMove
     if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN)
     {
         msgbox(format("Changed your mind? \n 
-        Speak to me again if you want to learn an egg move"))
+        Speak to me again if you want to learn an egg move."))
         return
     }
     else
@@ -186,12 +186,7 @@ script MoveMasters_LearnEggMove
         if(var(VAR_RESULT))
         {
             msgbox(format("I'm sorry dear, but I can't teach a pokemon their egg moves until they are hatched\p
-            Please come again if you have a pokemon you would like to learn their egg moves"))
-        }
-        elif(var(VAR_0x8005) == 0)
-        {
-            msgbox(format("I'm terribly sorry dear, but it seems this pokemon does not learn any egg moves.\p
-            Please come again if you have a pokemon you would like to learn their egg moves"))
+            Please come again if you have a pokemon you would like to learn their egg moves."))
         }
         else
         {

@@ -30,183 +30,235 @@ FionasRoom_SignScript_Book::
 # 23 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Book_Text_0, MSGBOX_YESNO
 # 24 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Book_2
-# 32 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne FionasRoom_SignScript_Book_3
-# 69 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_8
+	goto_if_ne FionasRoom_SignScript_Book_2
+# 112 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_9
 FionasRoom_SignScript_Book_1:
-# 71 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 114 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	releaseall
 	return
 
 FionasRoom_SignScript_Book_2:
 # 26 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Book_5
+# 36 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	setvar VAR_TEMP_A, 1
+# 37 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+FionasRoom_SignScript_Book_8:
+# 38 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	compare VAR_TEMP_A, 1
+	goto_if_eq FionasRoom_SignScript_Book_9
+	goto FionasRoom_SignScript_Book_1
+
+FionasRoom_SignScript_Book_5:
+# 28 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	applymovement 1, CommonMovement_FacePlayer
-# 27 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 29 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Book_Text_1
-# 30 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 32 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	applymovement 1, CommonMovement_FaceOriginalDirection
 	goto FionasRoom_SignScript_Book_1
 
-FionasRoom_SignScript_Book_3:
-# 34 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_2
-# 41 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_3, MSGBOX_YESNO
-# 42 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne FionasRoom_SignScript_Book_8
-FionasRoom_SignScript_Book_7:
-# 65 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_7
-	goto FionasRoom_SignScript_Book_1
-
-FionasRoom_SignScript_Book_8:
-# 44 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_4
+FionasRoom_SignScript_Book_9:
+# 40 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	compare VAR_STORY_PROGRESSION, 10
+	goto_if_lt FionasRoom_SignScript_Book_12
+# 46 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	multichoice 25, 2, MULTI_DIARY_2, 0
+FionasRoom_SignScript_Book_11:
+# 48 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	closemessage
+# 49 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	switch VAR_RESULT
 # 51 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_3, MSGBOX_YESNO
-# 52 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne FionasRoom_SignScript_Book_10
-	goto FionasRoom_SignScript_Book_7
-
-FionasRoom_SignScript_Book_10:
-# 54 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_5
+	case 0, FionasRoom_SignScript_Book_16
 # 60 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	msgbox FionasRoom_SignScript_Book_Text_6
+	case 1, FionasRoom_SignScript_Book_17
+# 69 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	case 2, FionasRoom_SignScript_Book_18
+# 77 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	case 3, FionasRoom_SignScript_Book_19
+# 104 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	setvar VAR_TEMP_A, 0
+# 105 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_8
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_12:
+# 42 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	multichoice 25, 2, MULTI_DIARY_1, 0
+	goto FionasRoom_SignScript_Book_11
+
+FionasRoom_SignScript_Book_16:
+# 52 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_3
+# 59 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_17:
 # 61 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	releaseall
-	end
+	msgbox FionasRoom_SignScript_Book_Text_4
+# 68 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_18:
+# 70 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_5
+# 76 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_19:
+# 78 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	compare VAR_STORY_PROGRESSION, 10
+	goto_if_lt FionasRoom_SignScript_Book_21
+# 82 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	goto_if_set FLAG_TOURNAMENT_LOST, FionasRoom_SignScript_Book_22
+# 94 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_7
+# 101 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_21:
+	goto FionasRoom_SignScript_Book_8
+
+FionasRoom_SignScript_Book_22:
+# 84 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	msgbox FionasRoom_SignScript_Book_Text_6
+# 90 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	message FionasRoom_SignScript_Book_Text_2
+	goto FionasRoom_SignScript_Book_8
 
 
 FionasRoom_EventScript_Fiona::
-# 75 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 118 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	lockall
-# 76 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 119 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	faceplayer
-# 77 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 120 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	switch VAR_STORY_PROGRESSION
-# 79 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	case 6, FionasRoom_EventScript_Fiona_3
-# 81 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 124 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	case 7, FionasRoom_EventScript_Fiona_4
-# 83 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 126 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	case 8, FionasRoom_EventScript_Fiona_5
-# 85 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	case 9, FionasRoom_EventScript_Fiona_6
-# 97 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 140 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_5
 FionasRoom_EventScript_Fiona_1:
-# 102 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 145 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	applymovement 1, CommonMovement_FaceOriginalDirection
-# 103 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 146 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	releaseall
 	return
 
 FionasRoom_EventScript_Fiona_3:
-# 80 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 123 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_0
 	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_4:
-# 82 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 125 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_1
 	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_5:
-# 84 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 127 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_2
 	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_6:
-# 86 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 129 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	goto_if_set FLAG_BATTLE_WON, FionasRoom_EventScript_Fiona_8
-# 93 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 136 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_4
 	goto FionasRoom_EventScript_Fiona_1
 
 FionasRoom_EventScript_Fiona_8:
-# 88 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 131 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_EventScript_Fiona_Text_3
 	goto FionasRoom_EventScript_Fiona_1
 
 
 FionasRoom_SignScript_Computer::
-# 107 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 150 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	lockall
-# 108 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 151 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Computer_Text_0
-# 109 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 152 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Computer_2
 FionasRoom_SignScript_Computer_1:
-# 117 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 160 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	releaseall
 	return
 
 FionasRoom_SignScript_Computer_2:
-# 111 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 154 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	applymovement 1, CommonMovement_NoticeUp
-# 112 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 155 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Computer_Text_1
-# 115 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 158 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	applymovement 1, CommonMovement_FaceOriginalDirection
 	goto FionasRoom_SignScript_Computer_1
 
 
 FionasRoom_SignScript_Bed::
-# 121 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 164 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	lockall
-# 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 165 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_0, MSGBOX_YESNO
-# 124 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 167 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne FionasRoom_SignScript_Bed_2
-# 147 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 190 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_3
 FionasRoom_SignScript_Bed_1:
-# 149 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 192 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	releaseall
 	return
 
 FionasRoom_SignScript_Bed_2:
-# 126 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 169 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	compare VAR_STORY_PROGRESSION, 5
 	goto_if_lt FionasRoom_SignScript_Bed_5
-# 130 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 173 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Bed_6
-# 137 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 180 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	setrespawn HEAL_LOCATION_FIONASROOM
-# 138 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 181 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	fadescreen 1
-# 139 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 182 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	special HealPlayerParty
-# 140 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 183 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	playfanfare MUS_HEAL
-# 141 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 184 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	waitfanfare
-# 142 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 185 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	fadescreen 0
 	goto FionasRoom_SignScript_Bed_1
 
 FionasRoom_SignScript_Bed_5:
-# 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 171 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_1
 	goto FionasRoom_SignScript_Bed_1
 
 FionasRoom_SignScript_Bed_6:
-# 132 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 175 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Bed_Text_2
 	goto FionasRoom_SignScript_Bed_1
 
 
 FionasRoom_SignScript_Table::
-# 153 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 196 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	msgbox FionasRoom_SignScript_Table_Text_0
-# 154 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 197 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	releaseall
 	return
 
@@ -234,7 +286,7 @@ FionasRoom_SignScript_Book_Text_0:
 	.string "Do you want to read it?$"
 
 FionasRoom_SignScript_Book_Text_1:
-# 27 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 29 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p"
 	.string "I hope you understand {PLAYER}, but\n"
 	.string "this stuff is a little bit personal...\p"
@@ -242,8 +294,13 @@ FionasRoom_SignScript_Book_Text_1:
 	.string "read it.$"
 
 FionasRoom_SignScript_Book_Text_2:
-# 34 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "'Dear Dairy,\n"
+# 37 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "Which diary entry would you like to\n"
+	.string "read?$"
+
+FionasRoom_SignScript_Book_Text_3:
+# 52 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "'Dear Diary,\n"
 	.string "today is the day!\l"
 	.string "The day I'm finally going to do\l"
 	.string "something usefull with my life!\l"
@@ -257,13 +314,9 @@ FionasRoom_SignScript_Book_Text_2:
 	.string "did this and why it was neseccary.\l"
 	.string "Please Brother, forgive me.'$"
 
-FionasRoom_SignScript_Book_Text_3:
-# 41 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "Do you want to continue reading?$"
-
 FionasRoom_SignScript_Book_Text_4:
-# 44 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "'Dear Dairy,\n"
+# 61 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "'Dear Diary,\n"
 	.string "I'm so annoyed right now!\l"
 	.string "I have been studying really hard and\l"
 	.string "pushing myself to the limit and still I\l"
@@ -279,8 +332,8 @@ FionasRoom_SignScript_Book_Text_4:
 	.string "ever be in need...'$"
 
 FionasRoom_SignScript_Book_Text_5:
-# 54 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "'Dear Dairy,\n"
+# 70 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "'Dear Diary,\n"
 	.string "It's finally time, I have made it through\l"
 	.string "the pre-selection and I'm now\l"
 	.string "applicable for getting my first\l"
@@ -298,38 +351,61 @@ FionasRoom_SignScript_Book_Text_5:
 	.string "to do it.'$"
 
 FionasRoom_SignScript_Book_Text_6:
-# 60 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "That was everything that has been\n"
-	.string "written down$"
+# 84 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "'Dear Diary,\n"
+	.string "I cannot believe it!\l"
+	.string "I won the Tournament! I was sure\l"
+	.string "{PLAYER} would also beat me with this,\l"
+	.string "but no, it was me who won!\l"
+	.string "Even {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} came to me personally\l"
+	.string "and gave me an Shiny Eevee!\l"
+	.string "Maybe... Maybe I can still do this...\l"
+	.string "Maybe I can still be the sister that\l"
+	.string "protects you Brother...$"
 
 FionasRoom_SignScript_Book_Text_7:
-# 65 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	.string "That is enough for now.$"
+# 94 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "'Dear Diary,\n"
+	.string "The outcome I feared has happened.\l"
+	.string "{PLAYER} won the tournament.\p"
+	.string "It's not like I don't think they deserve\n"
+	.string "it, I just don't know if I can trust\l"
+	.string "them.\l"
+	.string "I would like them to be my friend, but if\l"
+	.string "they become a problem than I fear I\l"
+	.string "won't be strong enough to stop them.\l"
+	.string "Which means I won't be strong enough to\l"
+	.string "protect you... Brother.\p"
+	.string "I failed you... I'm sorry.$"
 
 FionasRoom_SignScript_Book_Text_8:
-# 69 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 105 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+	.string "Enough snooping around for now.$"
+
+FionasRoom_SignScript_Book_Text_9:
+# 112 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Better not go through people's stuff\n"
 	.string "without first asking permission.$"
 
 FionasRoom_EventScript_Fiona_Text_0:
-# 80 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 123 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé {PLAYER}, ready for your\n"
 	.string "first day of the tournament?$"
 
 FionasRoom_EventScript_Fiona_Text_1:
-# 82 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 125 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hope the tournament is going\n"
 	.string "great for you! So far, I'm keeping up my\l"
 	.string "end of our agreement.$"
 
 FionasRoom_EventScript_Fiona_Text_2:
-# 84 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 127 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: I made it to the finals\n"
 	.string "{PLAYER}! Don't dissapoint me and\l"
 	.string "make sure we meet each other there!$"
 
 FionasRoom_EventScript_Fiona_Text_3:
-# 88 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 131 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Hé Champion, don't think I'm just\n"
 	.string "going to sulk around.\p"
 	.string "I'm going to train harder than ever\n"
@@ -337,7 +413,7 @@ FionasRoom_EventScript_Fiona_Text_3:
 	.string "defeat me that easily!$"
 
 FionasRoom_EventScript_Fiona_Text_4:
-# 93 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 136 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Today is the day {PLAYER}.\n"
 	.string "Today we're going to do that pokemon\l"
 	.string "battle we promised each other. Once\l"
@@ -345,7 +421,7 @@ FionasRoom_EventScript_Fiona_Text_4:
 	.string "I'll be ready!$"
 
 FionasRoom_EventScript_Fiona_Text_5:
-# 97 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 140 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: Oh, hé {PLAYER}! Welcome to my\n"
 	.string "room!\l"
 	.string "Feel free to look around the place!\p"
@@ -357,7 +433,7 @@ FionasRoom_EventScript_Fiona_Text_5:
 	.string "is entirely up to you!$"
 
 FionasRoom_SignScript_Computer_Text_0:
-# 108 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 151 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "It's Fiona's computer. You can see a\n"
 	.string "background of a cute cat hanging on a\l"
 	.string "tree with the text: 'Hang in there!'.\p"
@@ -366,7 +442,7 @@ FionasRoom_SignScript_Computer_Text_0:
 	.string "password.$"
 
 FionasRoom_SignScript_Computer_Text_1:
-# 112 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 155 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: What are you trying to do?\p"
 	.string "Anyways, don't think that I'm just going\n"
 	.string "to tell you my password and good luck\l"
@@ -375,16 +451,16 @@ FionasRoom_SignScript_Computer_Text_1:
 	.string "my affairs, if you know what I mean.$"
 
 FionasRoom_SignScript_Bed_Text_0:
-# 122 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 165 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "It's Fiona's bed!\p"
 	.string "Do you want to sleep in it?$"
 
 FionasRoom_SignScript_Bed_Text_1:
-# 128 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 171 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Now is not the time to go to bed...$"
 
 FionasRoom_SignScript_Bed_Text_2:
-# 132 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 175 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "{COLOR RED}Fiona{COLOR DARK_GRAY}: uhm... please don't take this the\n"
 	.string "wrong way, but I just see you as a\l"
 	.string "friend {PLAYER}.\p"
@@ -393,11 +469,11 @@ FionasRoom_SignScript_Bed_Text_2:
 	.string "bed with you...$"
 
 FionasRoom_SignScript_Bed_Text_3:
-# 147 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 190 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Why would you want to sleep in Fiona's\n"
 	.string "bed?$"
 
 FionasRoom_SignScript_Table_Text_0:
-# 153 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
+# 196 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	.string "Why does Fiona also have an unique\n"
 	.string "table and carpet?$"

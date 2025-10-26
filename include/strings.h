@@ -3108,4 +3108,17 @@ extern const u8 gText_Sunny[];
 //EvoMasters
 extern const u8 gText_NotEevee[];
 
+//USB
+extern const u8 gText_GeneralInfo[];
+extern const u8 gText_EntryLog1358[];
+extern const u8 gText_EntryLog1462[];
+extern const u8 gText_EntryLog1467[];
+
+//Diary
+extern const u8 gText_Entry1[];
+extern const u8 gText_Entry2[];
+extern const u8 gText_Entry3[];
+extern const u8 gText_Entry4[];
+extern const u8 gText_Locked[];
+
 #endif // GUARD_STRINGS_H

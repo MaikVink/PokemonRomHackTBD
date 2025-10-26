@@ -51,7 +51,6 @@ SlateportCity_BattleTentLobby_EventScript_GivePrize::
 	switch VAR_RESULT
 	case FALSE, SlateportCity_BattleTentLobby_EventScript_NoRoomForPrize
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	goto SlateportCity_BattleTentLobby_EventScript_EndGivePrize
@@ -226,11 +225,9 @@ SlateportCity_BattleTentLobby_EventScript_Woman::
 
 SlateportCity_BattleTentLobby_EventScript_RulesBoard::
 	lockall
-	goto SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard
 	end
 
 SlateportCity_BattleTentLobby_EventScript_ReadRulesBoard::
-	waitmessage
 	multichoice 17, 0, MULTI_SLATEPORT_TENT_RULES, FALSE
 	switch VAR_RESULT
 	case 0, SlateportCity_BattleTentLobby_EventScript_RulesBasics

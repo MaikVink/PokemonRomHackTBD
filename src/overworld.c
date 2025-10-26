@@ -864,9 +864,7 @@ static void LoadMapFromWarp(bool32 a1)
     LoadCurrentMapData();
     if (!(sObjectEventLoadFlag & SKIP_OBJECT_EVENT_LOAD))
     {
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-            LoadBattlePyramidObjectEventTemplates();
-        else if (InTrainerHill())
+        if (InTrainerHill())
             LoadTrainerHillObjectEventTemplates();
         else
             LoadObjEventTemplatesFromHeader();
@@ -898,9 +896,7 @@ if (I_VS_SEEKER_CHARGING != 0)
     RunOnTransitionMapScript();
     UpdateLocationHistoryForRoamer();
     RoamerMoveToOtherLocationSet();
-    if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-        InitBattlePyramidMap(FALSE);
-    else if (InTrainerHill())
+    if (InTrainerHill())
         InitTrainerHillMap();
     else
         InitMap();
@@ -1753,9 +1749,7 @@ void CB2_ContinueSavedGame(void)
     LoadSaveblockMapHeader();
     ClearDiveAndHoleWarps();
     trainerHillMapId = GetCurrentTrainerHillMapId();
-    if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-        LoadBattlePyramidFloorObjectEventScripts();
-    else if (trainerHillMapId != 0 && trainerHillMapId != TRAINER_HILL_ENTRANCE)
+    if (trainerHillMapId != 0 && trainerHillMapId != TRAINER_HILL_ENTRANCE)
         LoadTrainerHillFloorObjectEventScripts();
     else
         LoadSaveblockObjEventScripts();
@@ -1763,9 +1757,7 @@ void CB2_ContinueSavedGame(void)
     UnfreezeObjectEvents();
     DoTimeBasedEvents();
     UpdateMiscOverworldStates();
-    if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-        InitBattlePyramidMap(TRUE);
-    else if (trainerHillMapId != 0)
+    if (trainerHillMapId != 0)
         InitTrainerHillMap();
     else
         InitMapFromSavedGame();

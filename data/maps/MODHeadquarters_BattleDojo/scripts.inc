@@ -1284,8 +1284,8 @@ BattleDojo_Event_Surge_Text_4:
 
 BattleDojo_Event_Surge_Text_5:
 # 132 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle,\n"
-	.string "let's go easy on this one, OK?$"
+	.string "{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle.\n"
+	.string "Let's go easy on this one, OK?$"
 
 BattleDojo_Event_Surge_Text_6:
 # 144 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
@@ -1369,8 +1369,8 @@ BattleDojo_Event_Surge_Text_16:
 	.string "already made it to the semi-finals.\l"
 	.string "Congrats {PLAYER}!\p"
 	.string "That does not mean the battles will\n"
-	.string "become easier from here on out,\l"
-	.string "tomorrow is another opponent and\l"
+	.string "become easier from here on out.\l"
+	.string "Tomorrow is another opponent and\l"
 	.string "another battle.\p"
 	.string "Go rest so you're ready for the battle\n"
 	.string "that comes next!$"
@@ -1601,13 +1601,13 @@ BattleDojo_BattleDojoBattles_Text_5:
 
 BattleDojo_BattleDojoBattles_Text_6:
 # 499 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Show me what makes you so\n"
-	.string "special!$"
+	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Time to test out my new\n"
+	.string "strategy!$"
 
 BattleDojo_BattleDojoBattles_Text_7:
 # 501 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: Time to test out my new\n"
-	.string "strategy!$"
+	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: Show me what makes you so\n"
+	.string "special!$"
 
 BattleDojo_BattleDojoBattles_Text_8:
 # 503 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
@@ -1648,8 +1648,8 @@ BattleDojo_BattleDojoBattles_Text_13:
 
 BattleDojo_BattleDojoBattles_Text_14:
 # 553 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: I need some more training to be\n"
-	.string "able to use my knowledge in battle...\l"
+	.string "{COLOR BLUE}Victor{COLOR DARK_GRAY}: No matter how often we fight,\n"
+	.string "you always amaze me.\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_15:
@@ -1661,8 +1661,8 @@ BattleDojo_BattleDojoBattles_Text_15:
 
 BattleDojo_BattleDojoBattles_Text_16:
 # 557 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: No matter how often we fight,\n"
-	.string "you always amaze me.\l"
+	.string "{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I need some more training to\n"
+	.string "be able to use my knowledge in battle...\l"
 	.string "Thanks for the battle {PLAYER}!$"
 
 BattleDojo_BattleDojoBattles_Text_17:
@@ -1711,12 +1711,12 @@ Bella_Lost::
 
 Tristan_Lost::
 # 677 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "I understand now!$"
+	.string "I still need some more field experience\n"
+	.string "it seems.$"
 
 Victor_Lost::
 # 681 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"
-	.string "I still need some more field experience\n"
-	.string "it seems.$"
+	.string "I understand now!$"
 
 Vera_Lost::
 # 685 "data/maps/MODHeadquarters_BattleDojo/scripts.pory"

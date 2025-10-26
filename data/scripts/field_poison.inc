@@ -27,13 +27,4 @@ EventScript_FrontierFieldWhiteOut::
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
-	pike_inchallenge
-	pyramid_inchallenge
-	trainerhill_inchallenge
-	goto_if_eq VAR_RESULT, TRUE, TrainerHill_1F_EventScript_Lost
-	special Script_FadeOutMapMusic
-	waitstate
-	fadescreen FADE_TO_BLACK
-	special SetCB2WhiteOut
-	waitstate
 	end

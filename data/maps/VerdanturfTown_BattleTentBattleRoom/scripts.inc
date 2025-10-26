@@ -94,7 +94,6 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_AskPauseChallenge::
 	case MULTI_B_PRESSED, VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_AskRetireChallenge::
-	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
 	case 1, VerdanturfTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
@@ -115,7 +114,6 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon::
 	waitstate
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_PauseChallenge::
-	waitmessage
 	verdanturftent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse
@@ -136,11 +134,9 @@ VerdanturfTown_BattleTentBattleRoom_EventScript_SetUpObjects::
 	end
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
-	waitmessage
 	return
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
-	waitmessage
 	return
 
 VerdanturfTown_BattleTentBattleRoom_Movement_SetInvisible:

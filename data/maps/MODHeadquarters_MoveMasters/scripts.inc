@@ -247,30 +247,27 @@ MoveMasters_LearnEggMove::
 # 186 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne MoveMasters_LearnEggMove_4
-# 191 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	compare VAR_0x8005, 0
-	goto_if_eq MoveMasters_LearnEggMove_5
-# 198 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	msgbox MoveMasters_LearnEggMove_Text_4
-# 199 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 193 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	msgbox MoveMasters_LearnEggMove_Text_3
+# 194 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	special TeachMoveEggMove
-# 200 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 195 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	waitstate
-# 201 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 196 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_0x8004, 0
-	goto_if_eq MoveMasters_LearnEggMove_9
-# 208 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	goto_if_eq MoveMasters_LearnEggMove_7
+# 203 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	showmoneybox 0, 0
+# 204 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	msgbox MoveMasters_LearnEggMove_Text_5
+# 206 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	playse SE_SHOP
+# 207 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	removemoney 1000
+# 208 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	updatemoneybox
 # 209 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_LearnEggMove_Text_6
-# 211 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	playse SE_SHOP
-# 212 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	removemoney 1000
-# 213 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	updatemoneybox
-# 214 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	msgbox MoveMasters_LearnEggMove_Text_7
 	return
 
 MoveMasters_LearnEggMove_1:
@@ -283,959 +280,954 @@ MoveMasters_LearnEggMove_4:
 	msgbox MoveMasters_LearnEggMove_Text_2
 	return
 
-MoveMasters_LearnEggMove_5:
-# 193 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	msgbox MoveMasters_LearnEggMove_Text_3
-	return
-
-MoveMasters_LearnEggMove_9:
-# 203 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	msgbox MoveMasters_LearnEggMove_Text_5
-# 204 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+MoveMasters_LearnEggMove_7:
+# 198 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	msgbox MoveMasters_LearnEggMove_Text_4
+# 199 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	call MoveMasters_LearnEggMove
 	return
 
 
 MoveMasters_ObjectScript_MoveTutor::
-# 221 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 216 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	lockall
-# 222 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 217 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	faceplayer
-# 223 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 218 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_MOD_SHOPS_STATE, 2000
 	goto_if_lt MoveMasters_ObjectScript_MoveTutor_2
 MoveMasters_ObjectScript_MoveTutor_1:
-# 234 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 229 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	showmoneybox 0, 0
-# 235 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 230 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MoveTutor_Text_1, MSGBOX_YESNO
-# 237 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 232 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne MoveMasters_ObjectScript_MoveTutor_5
-# 252 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 247 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MoveTutor_Text_3
 MoveMasters_ObjectScript_MoveTutor_4:
-# 254 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 249 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	hidemoneybox
-# 255 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 250 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	releaseall
 	return
 
 MoveMasters_ObjectScript_MoveTutor_2:
-# 225 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 220 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MoveTutor_Text_0
 	goto MoveMasters_ObjectScript_MoveTutor_1
 
 MoveMasters_ObjectScript_MoveTutor_5:
-# 239 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 234 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	checkmoney 1000
-# 240 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 235 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne MoveMasters_ObjectScript_MoveTutor_8
-# 246 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 241 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MoveTutor_Text_2
 	goto MoveMasters_ObjectScript_MoveTutor_4
 
 MoveMasters_ObjectScript_MoveTutor_8:
-# 242 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 237 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	call MoveTutor_DecideMove
 	goto MoveMasters_ObjectScript_MoveTutor_4
 
 
 MoveTutor_DecideMove::
-# 260 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 255 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	message MoveTutor_DecideMove_Text_0
-# 261 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 256 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	hidemoneybox
-# 262 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 257 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	multichoicegrid 10, 0, MULTI_MOVE_TUTOR, 2, 0
-# 263 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 258 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	closemessage
-# 264 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 259 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	switch VAR_RESULT
-# 266 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 261 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 0, MoveTutor_DecideMove_3
-# 269 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 264 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 1, MoveTutor_DecideMove_4
-# 272 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 267 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 2, MoveTutor_DecideMove_5
-# 275 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 270 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 3, MoveTutor_DecideMove_6
-# 278 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 273 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 4, MoveTutor_DecideMove_7
-# 281 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 276 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 5, MoveTutor_DecideMove_8
-# 284 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 279 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 6, MoveTutor_DecideMove_9
-# 287 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 282 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 7, MoveTutor_DecideMove_10
-# 291 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 286 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveTutor_DecideMove_Text_1
-# 293 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 288 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	releaseall
 	end
 
 MoveTutor_DecideMove_1:
-# 297 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 292 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveTutor_DecideMove_Text_2
-# 298 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 293 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-# 299 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 294 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq MoveTutor_DecideMove_12
-# 307 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 302 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	showmoneybox 0, 0
-# 308 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 303 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveTutor_DecideMove_Text_4
-# 310 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 305 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	playse SE_SHOP
-# 311 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 306 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	removemoney 1000
-# 312 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 307 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	updatemoneybox
-# 313 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 308 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveTutor_DecideMove_Text_5
 	return
 
 MoveTutor_DecideMove_3:
-# 267 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 262 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_FRENZY_PLANT
-# 268 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 263 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_FRENZY_PLANT
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_4:
-# 270 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 265 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_BLAST_BURN
-# 271 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 266 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_BLAST_BURN
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_5:
-# 273 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 268 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_HYDRO_CANNON
-# 274 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 269 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_HYDRO_CANNON
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_6:
-# 276 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 271 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_VOLT_TACKLE
-# 277 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 272 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_VOLT_TACKLE
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_7:
-# 279 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 274 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_DRACO_METEOR
-# 280 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 275 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_DRACO_METEOR
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_8:
-# 282 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 277 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_DRAGON_ASCENT
-# 283 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 278 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_DRAGON_ASCENT
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_9:
-# 285 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 280 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_RELIC_SONG
-# 286 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 281 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_RELIC_SONG
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_10:
-# 288 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 283 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	buffermovename STR_VAR_1, MOVE_SECRET_SWORD
-# 289 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 284 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	setvar VAR_0x8005, MOVE_SECRET_SWORD
 	goto MoveTutor_DecideMove_1
 
 MoveTutor_DecideMove_12:
-# 301 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 296 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveTutor_DecideMove_Text_3
-# 303 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 298 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	call MoveTutor_DecideMove
 	return
 
 
 MoveMasters_ObjectScript_MartEmployer::
-# 320 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 315 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	lockall
-# 321 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 316 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	faceplayer
-# 322 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 317 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	compare VAR_MOD_SHOPS_STATE, 2000
 	goto_if_lt MoveMasters_ObjectScript_MartEmployer_2
 MoveMasters_ObjectScript_MartEmployer_1:
-# 329 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 324 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MartEmployer_Text_1
-# 330 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 325 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	switch VAR_BADGE_AMOUNT
-# 332 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 327 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 0, MoveMasters_ObjectScript_MartEmployer_6
-# 334 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 329 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 1, MoveMasters_ObjectScript_MartEmployer_7
-# 336 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 331 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 2, MoveMasters_ObjectScript_MartEmployer_8
-# 338 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 333 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 3, MoveMasters_ObjectScript_MartEmployer_9
-# 340 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 335 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 4, MoveMasters_ObjectScript_MartEmployer_10
-# 342 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 337 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 5, MoveMasters_ObjectScript_MartEmployer_11
-# 344 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 339 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 6, MoveMasters_ObjectScript_MartEmployer_12
-# 346 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 341 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 7, MoveMasters_ObjectScript_MartEmployer_13
-# 348 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 343 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	case 8, MoveMasters_ObjectScript_MartEmployer_14
-# 351 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 346 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MartEmployer_Text_2
 MoveMasters_ObjectScript_MartEmployer_4:
-# 353 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 348 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MartEmployer_Text_3
-# 354 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 349 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	releaseall
 	return
 
 MoveMasters_ObjectScript_MartEmployer_2:
-# 324 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 319 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	msgbox MoveMasters_ObjectScript_MartEmployer_Text_0
 	goto MoveMasters_ObjectScript_MartEmployer_1
 
 MoveMasters_ObjectScript_MartEmployer_6:
-# 333 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 328 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMNoBadges
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_7:
-# 335 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 330 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMOne
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_8:
-# 337 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 332 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMTwo
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_9:
-# 339 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 334 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMThree
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_10:
-# 341 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 336 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMFour
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_11:
-# 343 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 338 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMFive
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_12:
-# 345 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 340 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMSix
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_13:
-# 347 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 342 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMSeven
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_14:
-# 349 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 344 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	pokemart ModHeadquarters_TMEight
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 
 	.align 2
-# 357 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 352 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMNoBadges:
+# 353 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 354 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
+# 355 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM10
+# 356 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM12
+# 357 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM20
 # 358 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM32
 # 359 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM41
 # 360 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM44
 # 361 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM49
 # 362 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM51
 # 363 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
-# 364 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
-# 365 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 366 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 367 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 368 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 371 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMOne:
+# 367 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 368 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
+# 369 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM07
+# 370 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM10
+# 371 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM11
 # 372 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM12
 # 373 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM16
 # 374 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM18
 # 375 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM20
 # 376 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM27
 # 377 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM32
 # 378 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM33
 # 379 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM37
 # 380 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM41
 # 381 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM44
 # 382 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM45
 # 383 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM46
 # 384 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM48
 # 385 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM49
 # 386 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM51
 # 387 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
-# 388 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 389 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 390 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 391 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 392 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 395 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMTwo:
+# 391 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM01
+# 392 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 393 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
+# 394 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM07
+# 395 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM09
 # 396 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM01
+	.2byte ITEM_TM10
 # 397 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM11
 # 398 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM12
 # 399 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM16
 # 400 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM09
+	.2byte ITEM_TM17
 # 401 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM18
 # 402 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM20
 # 403 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM21
 # 404 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM27
 # 405 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM17
+	.2byte ITEM_TM28
 # 406 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM32
 # 407 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM33
 # 408 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM21
+	.2byte ITEM_TM34
 # 409 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM37
 # 410 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM28
+	.2byte ITEM_TM39
 # 411 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM41
 # 412 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM44
 # 413 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM34
+	.2byte ITEM_TM45
 # 414 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM46
 # 415 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM47
 # 416 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM48
 # 417 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM49
 # 418 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM51
 # 419 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 420 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM47
-# 421 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 422 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 423 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 424 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 427 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMThree:
+# 423 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM01
+# 424 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM03
+# 425 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM04
+# 426 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 427 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
 # 428 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM01
+	.2byte ITEM_TM07
 # 429 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM03
+	.2byte ITEM_TM08
 # 430 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM04
+	.2byte ITEM_TM09
 # 431 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM10
 # 432 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM11
 # 433 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM12
 # 434 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM08
+	.2byte ITEM_TM16
 # 435 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM09
+	.2byte ITEM_TM17
 # 436 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM18
 # 437 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM20
 # 438 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM21
 # 439 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM27
 # 440 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM17
+	.2byte ITEM_TM28
 # 441 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM32
 # 442 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM33
 # 443 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM21
+	.2byte ITEM_TM34
 # 444 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM37
 # 445 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM28
+	.2byte ITEM_TM39
 # 446 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM40
 # 447 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM41
 # 448 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM34
+	.2byte ITEM_TM42
 # 449 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM43
 # 450 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM44
 # 451 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM40
+	.2byte ITEM_TM45
 # 452 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM46
 # 453 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM42
+	.2byte ITEM_TM47
 # 454 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM43
+	.2byte ITEM_TM48
 # 455 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM49
 # 456 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM51
 # 457 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 458 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM47
-# 459 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 460 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 461 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 462 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 465 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMFour:
+# 461 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM01
+# 462 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM03
+# 463 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM04
+# 464 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 465 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
 # 466 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM01
+	.2byte ITEM_TM07
 # 467 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM03
+	.2byte ITEM_TM08
 # 468 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM04
+	.2byte ITEM_TM09
 # 469 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM10
 # 470 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM11
 # 471 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM12
 # 472 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM08
+	.2byte ITEM_TM16
 # 473 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM09
+	.2byte ITEM_TM17
 # 474 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM18
 # 475 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM20
 # 476 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM21
 # 477 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM27
 # 478 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM17
+	.2byte ITEM_TM28
 # 479 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM32
 # 480 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM33
 # 481 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM21
+	.2byte ITEM_TM34
 # 482 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM37
 # 483 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM28
+	.2byte ITEM_TM39
 # 484 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM40
 # 485 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM41
 # 486 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM34
+	.2byte ITEM_TM42
 # 487 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM43
 # 488 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM44
 # 489 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM40
+	.2byte ITEM_TM45
 # 490 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM46
 # 491 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM42
+	.2byte ITEM_TM47
 # 492 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM43
+	.2byte ITEM_TM48
 # 493 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM49
 # 494 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM51
 # 495 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 496 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM47
-# 497 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 498 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 499 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 500 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 503 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMFive:
+# 499 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM01
+# 500 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM03
+# 501 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM04
+# 502 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
+# 503 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM06
 # 504 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM01
+	.2byte ITEM_TM07
 # 505 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM03
+	.2byte ITEM_TM08
 # 506 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM04
+	.2byte ITEM_TM09
 # 507 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM10
 # 508 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM11
 # 509 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM12
 # 510 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM08
+	.2byte ITEM_TM13
 # 511 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM09
+	.2byte ITEM_TM16
 # 512 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM17
 # 513 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM18
 # 514 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM20
 # 515 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM13
+	.2byte ITEM_TM21
 # 516 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM23
 # 517 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM17
+	.2byte ITEM_TM24
 # 518 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM27
 # 519 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM28
 # 520 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM21
+	.2byte ITEM_TM31
 # 521 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM23
+	.2byte ITEM_TM32
 # 522 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM24
+	.2byte ITEM_TM33
 # 523 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM34
 # 524 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM28
+	.2byte ITEM_TM35
 # 525 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM31
+	.2byte ITEM_TM36
 # 526 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM37
 # 527 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM39
 # 528 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM34
+	.2byte ITEM_TM40
 # 529 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM35
+	.2byte ITEM_TM41
 # 530 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM36
+	.2byte ITEM_TM42
 # 531 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM43
 # 532 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM44
 # 533 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM40
+	.2byte ITEM_TM45
 # 534 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM46
 # 535 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM42
+	.2byte ITEM_TM47
 # 536 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM43
+	.2byte ITEM_TM48
 # 537 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM49
 # 538 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM51
 # 539 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 540 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM47
-# 541 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 542 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 543 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 544 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 547 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMSix:
+# 543 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM01
+# 544 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM02
+# 545 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM03
+# 546 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM04
+# 547 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+	.2byte ITEM_TM05
 # 548 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM01
+	.2byte ITEM_TM06
 # 549 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM02
+	.2byte ITEM_TM07
 # 550 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM03
+	.2byte ITEM_TM08
 # 551 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM04
+	.2byte ITEM_TM09
 # 552 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM05
+	.2byte ITEM_TM10
 # 553 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM06
+	.2byte ITEM_TM11
 # 554 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM07
+	.2byte ITEM_TM12
 # 555 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM08
+	.2byte ITEM_TM13
 # 556 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM09
+	.2byte ITEM_TM16
 # 557 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM10
+	.2byte ITEM_TM17
 # 558 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM11
+	.2byte ITEM_TM18
 # 559 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM12
+	.2byte ITEM_TM19
 # 560 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM13
+	.2byte ITEM_TM20
 # 561 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM16
+	.2byte ITEM_TM21
 # 562 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM17
+	.2byte ITEM_TM23
 # 563 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM18
+	.2byte ITEM_TM24
 # 564 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM19
+	.2byte ITEM_TM26
 # 565 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM20
+	.2byte ITEM_TM27
 # 566 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM21
+	.2byte ITEM_TM28
 # 567 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM23
+	.2byte ITEM_TM29
 # 568 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM24
+	.2byte ITEM_TM30
 # 569 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM26
+	.2byte ITEM_TM31
 # 570 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM27
+	.2byte ITEM_TM32
 # 571 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM28
+	.2byte ITEM_TM33
 # 572 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM29
+	.2byte ITEM_TM34
 # 573 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM30
+	.2byte ITEM_TM35
 # 574 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM31
+	.2byte ITEM_TM36
 # 575 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM32
+	.2byte ITEM_TM37
 # 576 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM33
+	.2byte ITEM_TM39
 # 577 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM34
+	.2byte ITEM_TM40
 # 578 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM35
+	.2byte ITEM_TM41
 # 579 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM36
+	.2byte ITEM_TM42
 # 580 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM37
+	.2byte ITEM_TM43
 # 581 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM44
 # 582 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM40
+	.2byte ITEM_TM45
 # 583 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM41
+	.2byte ITEM_TM46
 # 584 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM42
+	.2byte ITEM_TM47
 # 585 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM43
+	.2byte ITEM_TM48
 # 586 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM44
+	.2byte ITEM_TM49
 # 587 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM51
 # 588 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM46
-# 589 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM47
-# 590 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM48
+	.2byte ITEM_TM52
+	.2byte ITEM_NONE
+
+	.align 2
 # 591 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM49
-# 592 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM51
-# 593 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.2byte ITEM_TM52
-	.2byte ITEM_NONE
-
-	.align 2
-# 596 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMSeven:
-# 597 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 592 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM01
-# 598 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 593 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM02
-# 599 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 594 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM03
-# 600 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 595 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM04
-# 601 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 596 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM05
-# 602 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 597 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM06
-# 603 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 598 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM07
-# 604 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 599 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM08
-# 605 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 600 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM09
-# 606 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 601 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM10
-# 607 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 602 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM11
-# 608 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 603 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM12
-# 609 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 604 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM13
-# 610 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 605 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM14
-# 611 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 606 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM16
-# 612 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 607 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM17
-# 613 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 608 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM18
-# 614 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 609 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM19
-# 615 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 610 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM20
-# 616 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 611 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM21
-# 617 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 612 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM22
-# 618 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 613 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM23
-# 619 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 614 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM24
-# 620 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 615 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM25
-# 621 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 616 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM26
-# 622 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 617 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM27
-# 623 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 618 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM28
-# 624 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 619 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM29
-# 625 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 620 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM30
-# 626 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 621 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM31
-# 627 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 622 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM32
-# 628 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 623 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM33
-# 629 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 624 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM34
-# 630 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 625 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM35
-# 631 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 626 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM36
-# 632 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 627 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM37
-# 633 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 628 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM38
-# 634 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 629 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM39
-# 635 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 630 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM40
-# 636 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 631 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM41
-# 637 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 632 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM42
-# 638 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 633 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM43
-# 639 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 634 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM44
-# 640 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 635 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM45
-# 641 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 636 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM46
-# 642 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 637 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM47
-# 643 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 638 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM48
-# 644 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 639 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM49
-# 645 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 640 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM50
-# 646 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 641 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM51
-# 647 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 642 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM52
 	.2byte ITEM_NONE
 
 	.align 2
-# 650 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 645 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 ModHeadquarters_TMEight:
-# 651 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 646 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM01
-# 652 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 647 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM02
-# 653 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 648 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM03
-# 654 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 649 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM04
-# 655 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 650 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM05
-# 656 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 651 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM06
-# 657 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 652 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM07
-# 658 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 653 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM08
-# 659 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 654 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM09
-# 660 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 655 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM10
-# 661 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 656 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM11
-# 662 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 657 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM12
-# 663 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 658 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM13
-# 664 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 659 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM14
-# 665 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 660 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM15
-# 666 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 661 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM16
-# 667 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 662 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM17
-# 668 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 663 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM18
-# 669 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 664 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM19
-# 670 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 665 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM20
-# 671 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 666 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM21
-# 672 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 667 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM22
-# 673 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 668 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM23
-# 674 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 669 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM24
-# 675 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 670 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM25
-# 676 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 671 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM26
-# 677 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 672 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM27
-# 678 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 673 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM28
-# 679 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 674 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM29
-# 680 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 675 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM30
-# 681 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 676 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM31
-# 682 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 677 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM32
-# 683 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 678 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM33
-# 684 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 679 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM34
-# 685 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 680 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM35
-# 686 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 681 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM36
-# 687 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 682 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM37
-# 688 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 683 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM38
-# 689 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 684 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM39
-# 690 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 685 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM40
-# 691 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 686 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM41
-# 692 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 687 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM42
-# 693 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 688 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM43
-# 694 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 689 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM44
-# 695 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 690 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM45
-# 696 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 691 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM46
-# 697 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 692 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM47
-# 698 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 693 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM48
-# 699 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 694 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM49
-# 700 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 695 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM50
-# 701 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 696 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM51
-# 702 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 697 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.2byte ITEM_TM52
 	.2byte ITEM_NONE
 
@@ -1330,7 +1322,7 @@ MoveMasters_ObjectScript_MoveDeleter_Text_1:
 # 111 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Does one of your pokemon need to\n"
 	.string "forget something?\l"
-	.string "Doing so will cost you 100$"
+	.string "Doing so will cost you 100.$"
 
 MoveMasters_ObjectScript_MoveDeleter_Text_2:
 # 122 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
@@ -1350,7 +1342,7 @@ MoveMasters_ObjectScript_EggTutor_Text_0:
 # 140 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Oh hello dear, can I help you with\n"
 	.string "anything?\p"
-	.string "What services do I over? Oh nothing\n"
+	.string "What services do I offer? Oh nothing\n"
 	.string "special.\p"
 	.string "I can help your pokemon remember their\n"
 	.string "Egg moves if you're interested.\p"
@@ -1389,7 +1381,7 @@ MoveMasters_LearnEggMove_Text_1:
 # 179 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Changed your mind?\n"
 	.string "Speak to me again if you want to learn\l"
-	.string "an egg move$"
+	.string "an egg move.$"
 
 MoveMasters_LearnEggMove_Text_2:
 # 188 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
@@ -1397,38 +1389,30 @@ MoveMasters_LearnEggMove_Text_2:
 	.string "pokemon their egg moves until they are\l"
 	.string "hatched\p"
 	.string "Please come again if you have a pokemon\n"
-	.string "you would like to learn their egg moves$"
+	.string "you would like to learn their egg moves.$"
 
 MoveMasters_LearnEggMove_Text_3:
 # 193 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.string "I'm terribly sorry dear, but it seems\n"
-	.string "this pokemon does not learn any egg\l"
-	.string "moves.\p"
-	.string "Please come again if you have a pokemon\n"
-	.string "you would like to learn their egg moves$"
+	.string "What move would you like them to learn?$"
 
 MoveMasters_LearnEggMove_Text_4:
 # 198 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	.string "What move would you like them to learn?$"
-
-MoveMasters_LearnEggMove_Text_5:
-# 203 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Changed your mind? Or is there another\n"
 	.string "pokemon you would like me to teach\l"
 	.string "their egg moves?$"
 
-MoveMasters_LearnEggMove_Text_6:
-# 209 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+MoveMasters_LearnEggMove_Text_5:
+# 204 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Thank you for using my services dear. I\n"
 	.string "hope you don't mind my payment...\l"
 	.string "I need to feed my children somehow...$"
 
-MoveMasters_LearnEggMove_Text_7:
-# 214 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+MoveMasters_LearnEggMove_Text_6:
+# 209 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Please, come back again.$"
 
 MoveMasters_ObjectScript_MoveTutor_Text_0:
-# 225 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 220 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "...\p"
 	.string "...\p"
 	.string "hmm?\p"
@@ -1445,57 +1429,57 @@ MoveMasters_ObjectScript_MoveTutor_Text_0:
 	.string "for me.$"
 
 MoveMasters_ObjectScript_MoveTutor_Text_1:
-# 235 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 230 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "So, have a pokemon worthy for my\n"
 	.string "services?\l"
 	.string "a 1000 to learn such a move seems only\l"
 	.string "fair to me.$"
 
 MoveMasters_ObjectScript_MoveTutor_Text_2:
-# 246 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 241 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "...\p"
 	.string "Don't think you can get a discount from\n"
 	.string "me.$"
 
 MoveMasters_ObjectScript_MoveTutor_Text_3:
-# 252 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 247 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "I thought so. Do come back when you\n"
 	.string "have a pokemon worthy of my time.$"
 
 MoveTutor_DecideMove_Text_0:
-# 260 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 255 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "What move would you like me to learn\n"
 	.string "your pokemon?$"
 
 MoveTutor_DecideMove_Text_1:
-# 291 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 286 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Just what I though...\p"
 	.string "Come back when you have a pokemon\n"
 	.string "worthy of my abilities!$"
 
 MoveTutor_DecideMove_Text_2:
-# 297 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 292 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Which pokemon would you like me to learn\n"
 	.string "{STR_VAR_1} to?$"
 
 MoveTutor_DecideMove_Text_3:
-# 301 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 296 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Changed your mind?\n"
 	.string "Or would you maybe try another move?$"
 
 MoveTutor_DecideMove_Text_4:
-# 308 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 303 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Done! Your pokemon now knows\n"
 	.string "{STR_VAR_1}!\p"
 	.string "Now if you don't mind paying me for my\n"
 	.string "work...$"
 
 MoveTutor_DecideMove_Text_5:
-# 313 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 308 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Come again if you need me!$"
 
 MoveMasters_ObjectScript_MartEmployer_Text_0:
-# 324 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 319 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Hello, I'm the TM seller.\p"
 	.string "I have all the different TMs you could\n"
 	.string "possibly want your pokemon to learn.\p"
@@ -1506,15 +1490,15 @@ MoveMasters_ObjectScript_MartEmployer_Text_0:
 	.string "to time to see if my shop has improved.$"
 
 MoveMasters_ObjectScript_MartEmployer_Text_1:
-# 329 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 324 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Would you like to buy any TMs I have on\n"
 	.string "offer?$"
 
 MoveMasters_ObjectScript_MartEmployer_Text_2:
-# 351 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 346 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Oh, it seems like something went wrong,\n"
 	.string "please come again later!$"
 
 MoveMasters_ObjectScript_MartEmployer_Text_3:
-# 353 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
+# 348 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
 	.string "Have a nice day!$"

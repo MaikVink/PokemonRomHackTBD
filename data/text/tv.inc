@@ -108,6 +108,64 @@ gTVBravoTrainerText07::
 gTVBravoTrainerText08::
 	.string "Introducing the TRAINER's {STR_VAR_1}!$"
 
+BattleFrontier_BattleTowerLobby_Text_InterviewRequest::
+	.string "Hello! You're the TRAINER who just had\n"
+	.string "a battle, right?\p"
+	.string "I'm gathering interviews with TRAINERS\n"
+	.string "all over the place.\p"
+	.string "May I get a few words from you about\n"
+	.string "your impressions on battling?$"
+
+BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut::
+	.string "You will? Really?\n"
+	.string "Thank you!\l"
+	.string "Then, uh…\p"
+	.string "How did things turn out in\n"
+	.string "the BATTLE TOWER today?\p"
+	.string "Were you satisfied with the battle?\n"
+	.string "Or are you unhappy?$"
+
+BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou::
+	.string "Oh…\n"
+	.string "Sorry we disturbed you.\p"
+	.string "Please give us an interview the next\n"
+	.string "time you visit the BATTLE TOWER.$"
+
+BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle::
+	.string "Well, of course!\p"
+	.string "That unmistakable look of satisfaction\n"
+	.string "on your face…\p"
+	.string "It's obvious that you've had a great\n"
+	.string "battle.$"
+
+BattleFrontier_BattleTowerLobby_Text_DifficultToMakeBattleTurnOutAsPlanned::
+	.string "Oh, I see…\p"
+	.string "Well, it certainly is difficult to make a\n"
+	.string "battle turn out exactly as planned.$"
+
+BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle::
+	.string "Oh, oh, may I ask one more question?\p"
+	.string "If you were to describe your\n"
+	.string "impressions about this battle with\l"
+	.string "one saying, what would it be?$"
+
+BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine::
+	.string "Oh, that is stunningly cool!\p"
+	.string "That's a great line!\n"
+	.string "I hope you'll do great next time, too.\p"
+	.string "I hope to see you again!$"
+
+BattleFrontier_BattleTowerLobby_Text_SilentType::
+	.string "Oh, I see…\p"
+	.string "Still, being the silent type is also\n"
+	.string "cool, isn't it?\p"
+	.string "I hope you'll give me the opportunity\n"
+	.string "to share your thoughts again!$"
+
+BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle::
+	.string "I'll be looking forward to your\n"
+	.string "next battle!$"
+
 BravoTrainerBattleTower_Text_Intro::
 	.string "Yeah!\n"
 	.string "It's BRAVO TRAINER time!\p"
@@ -1820,6 +1878,131 @@ TVSpotTheCuties_Text_Outro::
 	.string "They go so wonderfully together!\p"
 	.string "Before I swoon,\n"
 	.string "I bid you all farewell!$"
+
+gTVPokemonNewsBattleFrontierText00::
+	.string "Greetings!\n"
+	.string "It's time for POKéMON NEWS.\p"
+	.string "We've got some uplifting news from\n"
+	.string "the BATTLE FRONTIER.$"
+
+gTVPokemonNewsBattleFrontierText01::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE TOWER's SINGLE BATTLE\l"
+	.string "ROOM challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText02::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE TOWER's DOUBLE BATTLE\l"
+	.string "ROOM challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText03::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE TOWER's MULTI BATTLE\l"
+	.string "ROOM challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText04::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE TOWER's LINK MULTI BATTLE\l"
+	.string "ROOM challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText05::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-championship-streak record\l"
+	.string "competing in the BATTLE DOME's\l"
+	.string "SINGLE BATTLE Tournaments.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText06::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-championship-streak record\l"
+	.string "competing in the BATTLE DOME's\l"
+	.string "DOUBLE BATTLE Tournaments.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText07::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE FACTORY's Battle\l"
+	.string "Swap Single challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText08::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE FACTORY's Battle\l"
+	.string "Swap Double challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText09::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "record of clearing {STR_VAR_2} rooms\l"
+	.string "while on the BATTLE PIKE's Battle\l"
+	.string "Choice challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText10::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while\l"
+	.string "competing in the BATTLE ARENA's\l"
+	.string "Set KO Tournaments.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText11::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE PALACE's SINGLE BATTLE\l"
+	.string "HALL challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText12::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "{STR_VAR_2}-win-streak record while on\l"
+	.string "the BATTLE PALACE's DOUBLE BATTLE\l"
+	.string "HALL challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText13::
+	.string "The TRAINER {STR_VAR_1} set a new\n"
+	.string "record of clearing {STR_VAR_2} floors\l"
+	.string "while on the BATTLE PYRAMID's\l"
+	.string "Battle Quest challenge.\p"
+	.string "Here's to {STR_VAR_1}!$"
+
+gTVPokemonNewsBattleFrontierText14::
+	.string "And to the three POKéMON, {STR_VAR_1},\n"
+	.string "{STR_VAR_2}, and {STR_VAR_3}!\p"
+	.string "Congratulations for your\n"
+	.string "record-breaking performance!$"
+
+gTVPokemonNewsBattleFrontierText15::
+	.string "And to the two POKéMON, {STR_VAR_1}\n"
+	.string "and {STR_VAR_2}!\p"
+	.string "Congratulations for your\n"
+	.string "record-breaking performance!$"
+
+gTVPokemonNewsBattleFrontierText16::
+	.string "And to the four POKéMON: {STR_VAR_1}!\p"
+	.string "{STR_VAR_2}!\p"
+	.string "{STR_VAR_3}!$"
+
+gTVPokemonNewsBattleFrontierText17::
+	.string "And {STR_VAR_1}!\p"
+	.string "Congratulations for your\n"
+	.string "record-breaking performance!$"
+
+gTVPokemonNewsBattleFrontierText18::
+	.string "Let's hope for more record-setting\n"
+	.string "feats from {STR_VAR_1} and the loyal\l"
+	.string "POKéMON!\p"
+	.string "That's the news on POKéMON NEWS!$"
 
 gTVWhatsNo1InHoennTodayText00::
 	.string "WHAT'S NO. 1 IN HOENN TODAY?\n"

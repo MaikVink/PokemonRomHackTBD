@@ -141,15 +141,12 @@ FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon::
 @ See above
 
 FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor2ndOpponent::
-	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_ReadyFor3rdOpponent::
-	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_PauseChallenge::
-	waitmessage
 	fallarbortent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse

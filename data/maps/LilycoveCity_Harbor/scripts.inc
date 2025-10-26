@@ -46,6 +46,7 @@ LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect::
 	special GetLilycoveSSTidalSelection
 	switch VAR_RESULT
 	case 0, LilycoveCity_Harbor_EventScript_GoToSlateport
+	case 1, LilycoveCity_Harbor_EventScript_GoToBattleFrontier
 	case 2, LilycoveCity_Harbor_EventScript_GoToSouthernIsland
 	case 3, LilycoveCity_Harbor_EventScript_GoToNavelRock
 	case 4, LilycoveCity_Harbor_EventScript_GoToBirthIsland
@@ -89,6 +90,13 @@ LilycoveCity_Harbor_EventScript_GoToSlateport::
 	call LilycoveCity_Harbor_EventScript_BoardFerry
 	warp MAP_SS_TIDAL_CORRIDOR, 1, 10
 	waitstate
+	release
+	end
+
+LilycoveCity_Harbor_EventScript_GoToBattleFrontier::
+	msgbox LilycoveCity_Harbor_Text_BattleFrontierItIs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind
+	call LilycoveCity_Harbor_EventScript_BoardFerry
 	release
 	end
 
@@ -362,6 +370,14 @@ LilycoveCity_Harbor_EventScript_GoToSlateportUnused::
 	release
 	end
 
+@ Unused
+LilycoveCity_Harbor_EventScript_GoToBattleFrontierUnused::
+	msgbox LilycoveCity_Harbor_Text_BattleFrontierItIs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind
+	call LilycoveCity_Harbor_EventScript_BoardFerry
+	release
+	end
+
 LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind::
 	message LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo
 	waitmessage
@@ -547,6 +563,9 @@ LilycoveCity_Harbor_Text_SailAnotherTime:
 
 LilycoveCity_Harbor_Text_SlateportItIs:
 	.string "SLATEPORT CITY it is, then!$"
+
+LilycoveCity_Harbor_Text_BattleFrontierItIs:
+	.string "BATTLE FRONTIER it is, then!$"
 
 LilycoveCity_Harbor_Text_PleaseBoard:
 	.string "Please board the ferry and wait for\n"

@@ -28,7 +28,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GetChallengeStatus::
 
 VerdanturfTown_BattleTentLobby_EventScript_QuitWithoutSaving::
 	lockall
-	closemessage
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	frontier_set FRONTIER_DATA_LVL_MODE, FRONTIER_LVL_50
@@ -52,7 +51,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GivePrize::
 	switch VAR_RESULT
 	case FALSE, VerdanturfTown_BattleTentLobby_EventScript_NoRoomForPrize
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox VerdanturfTown_BattleTentLobby_Text_ReturnFortified, MSGBOX_DEFAULT
@@ -62,8 +60,6 @@ VerdanturfTown_BattleTentLobby_EventScript_GivePrize::
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_NoRoomForPrize::
-	waitmessage
-	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	releaseall
 	end
@@ -90,7 +86,6 @@ VerdanturfTown_BattleTentLobby_EventScript_LostChallenge::
 
 VerdanturfTown_BattleTentLobby_EventScript_ResumeChallenge::
 	lockall
-	waitmessage
 	verdanturftent_save CHALLENGE_STATUS_SAVING
 	playse SE_SAVE
 	waitse
@@ -126,6 +121,7 @@ VerdanturfTown_BattleTentLobby_EventScript_TryEnterChallenge::
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
+	special ChoosePartyForBattleFrontier
 	waitstate
 	goto_if_eq VAR_RESULT, 0, VerdanturfTown_BattleTentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox VerdanturfTown_BattleTentLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
@@ -271,7 +267,6 @@ VerdanturfTown_BattleTentLobby_EventScript_RulesBoard::
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard::
-	waitmessage
 	setvar VAR_0x8004, SCROLL_MULTI_BATTLE_TENT_RULES
 	special ShowScrollableMultichoice
 	waitstate

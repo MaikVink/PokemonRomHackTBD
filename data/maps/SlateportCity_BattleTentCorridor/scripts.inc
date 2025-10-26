@@ -37,7 +37,6 @@ SlateportCity_BattleTentCorridor_EventScript_EnterCorridor::
 	slateporttent_rentmons
 	waitstate
 SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
-	closemessage
 	applymovement LOCALID_ATTENDANT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	opendoor 2, 1
@@ -74,7 +73,6 @@ SlateportCity_BattleTentCorridor_EventScript_AskPauseChallenge::
 	case MULTI_B_PRESSED, SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent
 
 SlateportCity_BattleTentCorridor_EventScript_AskRetireChallenge::
-	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
 	case 1, SlateportCity_BattleTentCorridor_EventScript_AskReadyForOpponent
@@ -96,15 +94,12 @@ SlateportCity_BattleTentCorridor_EventScript_SwapMons::
 	goto SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom
 
 SlateportCity_BattleTentCorridor_EventScript_ReadyFor2ndOpponent::
-	waitmessage
 	return
 
 SlateportCity_BattleTentCorridor_EventScript_ReadyFor3rdOpponent::
-	waitmessage
 	return
 
 SlateportCity_BattleTentCorridor_EventScript_PauseChallenge::
-	waitmessage
 	slateporttent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse

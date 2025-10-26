@@ -21,48 +21,91 @@ script FionasRoom_SignScript_Drawer{
 script FionasRoom_SignScript_Book{
     lockall
     msgbox(format("It seems like Fiona left her diary open on the table.\l Do you want to read it?"), MSGBOX_YESNO)
-    if(!flag(FLAG_FIONA_ROOM))
+    if(var(VAR_RESULT))
     {
-        applymovement(FIONA_LOCAL_ID, CommonMovement_FacePlayer)
-        msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p 
-        I hope you understand {PLAYER}, but this stuff is a little bit personal...\p
-        So I would appreciate it if you didn't read it."))
-        applymovement(FIONA_LOCAL_ID, CommonMovement_FaceOriginalDirection)
-    }
-    elif(var(VAR_RESULT))
-    {
-        msgbox(format("'Dear Dairy,\n 
-        today is the day!\l 
-        The day I'm finally going to do something usefull with my life!\l 
-        My mom and brother were not happy with my choice, but I could not just sit around and do nothing anymore!\l
-        My mom seems to eventually understood it, but I fear my brother still hates me for the choice I made.\p
-        I just hope I can show him one day why I did this and why it was neseccary.\l
-        Please Brother, forgive me.'"))
-        msgbox(format("Do you want to continue reading?"), MSGBOX_YESNO)
-        if(var(VAR_RESULT))
+        if(!flag(FLAG_FIONA_ROOM))
         {
-            msgbox(format("'Dear Dairy,\n
-            I'm so annoyed right now!\l
-            I have been studying really hard and pushing myself to the limit and still I only scored second highest of my class. \p
-            I don't know how they do it, that {PLAYER}. They just seems to be a natural at this!\p
-            I want to hate them, but I just can't help but respect their skill.\l
-            Maybe I should just try to befriend them instead?\l 
-            Maybe they could help me out if I would ever be in need...'"))
-            msgbox(format("Do you want to continue reading?"), MSGBOX_YESNO)
-            if(var(VAR_RESULT))
-            {
-                msgbox(format("'Dear Dairy,\n
-                It's finally time, I have made it through the pre-selection and I'm now applicable for getting my first pokemon.\p
-                I never have had a pokemon before, I wonder which one I will get and how they will be?\p
-                I just hope everything I'm doing is gonna be worth it...\p
-                Brother, if you would ever read this, know that I have done this in your best interest.\l
-                Please forgive our mom for letting me do this and please forgive me for wanting to do it.'"))
-                msgbox(format("That was everything that has been written down"))
-                releaseall
-                end
-            }
+            applymovement(FIONA_LOCAL_ID, CommonMovement_FacePlayer)
+            msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}:Uhm...\p 
+            I hope you understand {PLAYER}, but this stuff is a little bit personal...\p
+            So I would appreciate it if you didn't read it."))
+            applymovement(FIONA_LOCAL_ID, CommonMovement_FaceOriginalDirection)
         }
-        msgbox(format("That is enough for now."))
+        else
+        {
+            setvar(VAR_TEMP_A, 1)
+            message(format("Which diary entry would you like to read?"))
+            while(var(VAR_TEMP_A) == 1)
+            {
+                if(var(VAR_STORY_PROGRESSION) < 10)
+                {
+                    multichoice(25, 2, MULTI_DIARY_1, 0)
+                }
+                else
+                {
+                    multichoice(25, 2, MULTI_DIARY_2, 0)
+                }
+                closemessage
+                switch(var(VAR_RESULT))
+                {
+                    case 0:
+                        msgbox(format("'Dear Diary,\n 
+                        today is the day!\l 
+                        The day I'm finally going to do something usefull with my life!\l 
+                        My mom and brother were not happy with my choice, but I could not just sit around and do nothing anymore!\l
+                        My mom seems to eventually understood it, but I fear my brother still hates me for the choice I made.\p
+                        I just hope I can show him one day why I did this and why it was neseccary.\l
+                        Please Brother, forgive me.'"))
+                        message(format("Which diary entry would you like to read?"))
+                    case 1:
+                        msgbox(format("'Dear Diary,\n
+                        I'm so annoyed right now!\l
+                        I have been studying really hard and pushing myself to the limit and still I only scored second highest of my class. \p
+                        I don't know how they do it, that {PLAYER}. They just seems to be a natural at this!\p
+                        I want to hate them, but I just can't help but respect their skill.\l
+                        Maybe I should just try to befriend them instead?\l 
+                        Maybe they could help me out if I would ever be in need...'"))
+                        message(format("Which diary entry would you like to read?"))
+                    case 2:
+                        msgbox(format("'Dear Diary,\n
+                        It's finally time, I have made it through the pre-selection and I'm now applicable for getting my first pokemon.\p
+                        I never have had a pokemon before, I wonder which one I will get and how they will be?\p
+                        I just hope everything I'm doing is gonna be worth it...\p
+                        Brother, if you would ever read this, know that I have done this in your best interest.\l
+                        Please forgive our mom for letting me do this and please forgive me for wanting to do it.'"))
+                        message(format("Which diary entry would you like to read?"))
+                    case 3:
+                        if(var(VAR_STORY_PROGRESSION) < 10)
+                        {
+                            //do nothing
+                        }
+                        elif(flag(FLAG_TOURNAMENT_LOST))
+                        {
+                            msgbox(format("'Dear Diary,\n
+                            I cannot believe it!\l
+                            I won the Tournament! I was sure {PLAYER} would also beat me with this, but no, it was me who won!\l
+                            Even {COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} came to me personally and gave me an Shiny Eevee!\l
+                            Maybe... Maybe I can still do this...\l
+                            Maybe I can still be the sister that protects you Brother..."))
+                            message(format("Which diary entry would you like to read?"))
+                        }
+                        else
+                        {
+                            msgbox(format("'Dear Diary,\n
+                            The outcome I feared has happened.\l 
+                            {PLAYER} won the tournament.\p
+                            It's not like I don't think they deserve it, I just don't know if I can trust them.\l
+                            I would like them to be my friend, but if they become a problem than I fear I won't be strong enough to stop them.\l
+                            Which means I won't be strong enough to protect you... Brother.\p
+                            I failed you... I'm sorry."))
+                            message(format("Which diary entry would you like to read?"))
+                        }
+                    default:
+                        setvar(VAR_TEMP_A, 0)
+                        msgbox(format("Enough snooping around for now."))
+                }
+            } 
+        }
     }
     else
     {

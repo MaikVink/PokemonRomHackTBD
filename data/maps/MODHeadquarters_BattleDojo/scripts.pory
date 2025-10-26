@@ -129,7 +129,7 @@ script BattleDojo_Event_Surge{
                 showobjectat(FATMAN_LOCALID, MAP_MODHEADQUARTERS_BATTLE_DOJO)
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_OpponentWalksToSpot)
                 waitmovement(0)
-                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle, let's go easy on this one, OK?"))
+                msgbox(format("{COLOR BLUE}Fabian{COLOR DARK_GRAY}: This is our first ever battle. Let's go easy on this one, OK?"))
                 applymovement(FATMAN_LOCALID, BattleDojo_Movement_WalkLeft)
                 applymovement(OBJ_EVENT_ID_PLAYER, BattleDojo_Movement_WalkRight)
                 waitmovement(0)
@@ -209,7 +209,7 @@ script BattleDojo_Event_Surge{
                 waitmovement(0)
                 applymovement(SURGE_LOCALID, BattleDojo_Movement_FaceLeft)
                 msgbox(format("{COLOR GREEN}Surge{COLOR DARK_GRAY}: And that makes two: you have already made it to the semi-finals.\l Congrats {PLAYER}!\p 
-                That does not mean the battles will become easier from here on out, tomorrow is another opponent and another battle.\p
+                That does not mean the battles will become easier from here on out. Tomorrow is another opponent and another battle.\p
                 Go rest so you're ready for the battle that comes next!"))
             }
             else
@@ -496,9 +496,9 @@ script BattleDojo_BattleDojoBattles{
                     msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: This time, I'm coming to win!"))
                 }
             case 6:
-                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Show me what makes you so special!"))
+                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: Time to test out my new strategy!"))
             case 4:
-                msgbox(format("{COLOR BLUE}Victor{COLOR DARK_GRAY}: Time to test out my new strategy!"))
+                msgbox(format("{COLOR BLUE}Victor{COLOR DARK_GRAY}: Show me what makes you so special!"))
             case 5:
                 msgbox(format("{COLOR BLUE}Vera{COLOR DARK_GRAY}: Let's see what you have learned in your journey {PLAYER}!"))
         }
@@ -550,11 +550,11 @@ script BattleDojo_BattleDojoBattles{
                     msgbox(format("{COLOR RED}Fiona{COLOR DARK_GRAY}: It seems like I still not strong enough. But mark my words, I won't make it as easy for you the next time!"))
                 }
             case 4:
-                msgbox(format("{COLOR BLUE}Victor{COLOR DARK_GRAY}: I need some more training to be able to use my knowledge in battle...\l Thanks for the battle {PLAYER}!"))
+                msgbox(format("{COLOR BLUE}Victor{COLOR DARK_GRAY}: No matter how often we fight, you always amaze me.\l Thanks for the battle {PLAYER}!"))
             case 5:
                 msgbox(format("{COLOR BLUE}Vera{COLOR DARK_GRAY}: You have quite the interesting set of pokemon on your team, I'll love to battle your more often!\l Thanks for the battle {PLAYER}!"))
             case 6:
-                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: No matter how often we fight, you always amaze me.\l Thanks for the battle {PLAYER}!"))
+                msgbox(format("{COLOR BLUE}Tristan{COLOR DARK_GRAY}: I need some more training to be able to use my knowledge in battle...\l Thanks for the battle {PLAYER}!"))
         }
         applymovement(VAR_TEMP_1, BattleDojo_Movement_OpponentLeave)
         waitmovement(0)
@@ -675,11 +675,11 @@ text Bella_Lost{
 }
 
 text Tristan_Lost{
-    format("I understand now!")
+    format("I still need some more field experience it seems.")
 }
 
 text Victor_Lost{
-    format("I still need some more field experience it seems.")
+    format("I understand now!")
 }
 
 text Vera_Lost{

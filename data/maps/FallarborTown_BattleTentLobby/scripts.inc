@@ -130,6 +130,7 @@ FallarborTown_BattleTentLobby_EventScript_TryEnterChallenge::
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
+	special ChoosePartyForBattleFrontier
 	waitstate
 	goto_if_eq VAR_RESULT, 0, FallarborTown_BattleTentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox FallarborTown_BattleTentLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
@@ -258,7 +259,6 @@ FallarborTown_BattleTentLobby_EventScript_RulesBoard::
 	end
 
 FallarborTown_BattleTentLobby_EventScript_ReadRulesBoard::
-	waitmessage
 	multichoice 17, 0, MULTI_FALLARBOR_TENT_RULES, FALSE
 	switch VAR_RESULT
 	case 0, FallarborTown_BattleTentLobby_EventScript_RulesLevel

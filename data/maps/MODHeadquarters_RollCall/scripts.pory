@@ -216,7 +216,7 @@ script RollCall_MeetTheLeader{
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Thank you Airanea.\p
     LISTEN UP ROOKIES!\p 
-    usually I don't waste my time talking to you newbloods until you have proven yourself.\p
+    Usually I don't waste my time talking to you newbloods until you have proven yourself.\p
     You're lucky I had today other business here that I wanted to make today an exception and see what younglins were brought in here with the promise of power."))
     msgbox(format("Each of you will have received a pokemon, tailored specifically to your abilities. I trust in G-,\l
     I mean Professors Kectors capabilities that he has judged you properly.\p

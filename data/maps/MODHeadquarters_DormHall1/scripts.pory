@@ -114,7 +114,7 @@ script DormHall1_LostTournament{
 }
 
 script DormHall1_WonTournament{
-    msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a moment"))
+    msgbox(format("{COLOR LIGHT_GRAY}???{COLOR DARK_GRAY}: {PLAYER}, stay there for a moment!"))
     applymovement(NINJABOY_LOCALID, CommonMovement_NoticeLeft)
     applymovement(GUY_LOCALID, CommonMovement_NoticeLeft)
     applymovement(LADY_LOCALID, CommonMovement_Notice)
@@ -375,7 +375,7 @@ movement Dormhall1_Movement_Move_To_PlayerLost{
 }
 
 movement Dormhall1_Movemement_DelayedLookDown{
-    delay_8 * 6
+    delay_8 * 4
     face_down
 }
 

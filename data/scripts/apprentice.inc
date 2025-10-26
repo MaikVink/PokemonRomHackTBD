@@ -1,5 +1,13 @@
 .set LOCALID_APPRENTICE, 6
 
+BattleFrontier_BattleTowerLobby_EventScript_Apprentice::
+	lock
+	faceplayer
+	apprentice_gavelvlmode
+	goto_if_eq VAR_RESULT, FALSE, Apprentice_EventScript_FirstMeeting
+	apprentice_shouldcheckgone
+	goto_if_eq VAR_0x8004, FALSE, Apprentice_EventScript_AskQuestion  @ VAR_0x8004 always TRUE here
+	goto_if_set FLAG_DAILY_APPRENTICE_LEAVES, Apprentice_EventScript_Gone
 Apprentice_EventScript_AskQuestion:
 	apprentice_getquestion
 	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WHICH_MON, Apprentice_EventScript_UseWhichMon

@@ -20,6 +20,10 @@ script Entrancehall_OnTransition
     {
         setflag(FLAG_HIDE_DENEITH)
     }
+    if(var(VAR_MOD_SHOPS_STATE) > 2000 && var(VAR_STORY_PROGRESSION) < 13)
+    {
+        setvar(VAR_MOD_SHOPS_STATE, 1111)
+    }
 }
 
 script EntranceHall_FirstEntrace{
@@ -49,7 +53,7 @@ script EntranceHall_FirstEntrace{
         {
             givemon(SPECIES_EEVEE, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1)
         }
-        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon"))
+        msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon."))
         waitfanfare
         msgbox(format("Do you want to give the pokemon a name?"), MSGBOX_YESNO)
         if(var(VAR_RESULT))
@@ -125,7 +129,7 @@ script EntranceHall_FirstEntrace{
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookUp)
     waitmovement(0)
     msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY}: Here we have the Evolution Masters.\p 
-    As you probably know, Most pokemon can evolve and become stronger.\p 
+    As you probably know, most pokemon can evolve and become stronger.\p 
     If you need something specific to evolve a pokemon or you want to know how to evolve a pokemon, this is the place to go!"))
     applymovement(LEADER_LOCALID, EntranceHall_Movement_WalkRightNormal2)
     applymovement(OBJ_EVENT_ID_PLAYER, EntranceHall_Movement_WalkRightNormal2)

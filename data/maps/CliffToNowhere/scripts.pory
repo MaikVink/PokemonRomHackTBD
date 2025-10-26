@@ -92,7 +92,7 @@ script CliffToNowhere_EscapeSequence{
     waitmovement(0)
     closedoor(16, 15)
     waitdooranim
-    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT! just lost them."))
+    msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: SHIT!\n Just lost them."))
     applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToPlayer)
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, CommonMovement_LookRight)
@@ -119,7 +119,7 @@ script CliffToNowhere_EscapeSequence{
     }
     msgbox(format("{COLOR LIGHT_RED}Airanea{COLOR DARK_GRAY}: One more thing though, be carefull around these A.S. Members \p
     Though you'll certainly be handsomely rewarded if you can bring any of them in, it has a 99.72% change of ending in your death. \p
-    So please be very carefull around them, \l
+    So please be very carefull around them, \n
     it would be shame to lose such a great asset."), MSGBOX_DEFAULT)
     closemessage
     applymovement(AIRANEA_LOCALID, CliffToNowhere_BackToEntrance)
