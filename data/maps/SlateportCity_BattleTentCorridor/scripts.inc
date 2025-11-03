@@ -35,7 +35,7 @@ SlateportCity_BattleTentCorridor_EventScript_EnterCorridor::
 	slateporttent_rentmons
 	waitstate
 SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
-	applymovement LOCALID_ATTENDANT, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	opendoor 2, 1
 	waitdooranim

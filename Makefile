@@ -33,7 +33,7 @@ ifeq (debug,$(MAKECMDGOALS))
 endif
 
 # Default make rule
-all: rom
+all: rom postbuild
 
 # Toolchain selection
 TOOLCHAIN := $(DEVKITARM)
@@ -62,30 +62,15 @@ endif
 
 CPP := $(PREFIX)cpp
 
-#ROM_NAME := pokeemerald_agbcc.gba
-#ELF_NAME := $(ROM_NAME:.gba=.elf)
-#MAP_NAME := $(ROM_NAME:.gba=.map)
-#OBJ_DIR_NAME := build/emerald
+ROM_NAME := $(FILE_NAME).gba
+OBJ_DIR_NAME := $(BUILD_DIR)/modern
+OBJ_DIR_NAME_TEST := $(BUILD_DIR)/modern-test
+OBJ_DIR_NAME_DEBUG := $(BUILD_DIR)/modern-debug
 
-MODERN_ROM_NAME := PokemonMOD.gba
-MODERN_ELF_NAME := $(MODERN_ROM_NAME:.gba=.elf)
-MODERN_MAP_NAME := $(MODERN_ROM_NAME:.gba=.map)
-MODERN_OBJ_DIR_NAME := build/modern
-
-SHELL := bash -o pipefail
-
-ELF = $(ROM:.gba=.elf)
-MAP = $(ROM:.gba=.map)
-SYM = $(ROM:.gba=.sym)
-
-TEST_OBJ_DIR_NAME_MODERN := build/modern-test
-TEST_OBJ_DIR_NAME_AGBCC := build/test
-
-ifeq ($(MODERN),0)
-TEST_OBJ_DIR_NAME := $(TEST_OBJ_DIR_NAME_AGBCC)
+ELF_NAME := $(ROM_NAME:.gba=.elf)
+MAP_NAME := $(ROM_NAME:.gba=.map)
 TESTELF = $(ROM_NAME:.gba=-test.elf)
 HEADLESSELF = $(ROM_NAME:.gba=-test-headless.elf)
-endif
 
 # Pick our active variables
 ROM := $(ROM_NAME)
@@ -217,27 +202,6 @@ $(C_BUILDDIR)/wild_encounter.o: c_dep += $(DATA_SRC_SUBDIR)/wild_encounters.h
 
 PERL := perl
 SHA1 := $(shell { command -v sha1sum || command -v shasum; } 2>/dev/null) -c
-GFX := tools/gbagfx/gbagfx$(EXE)
-AIF := tools/aif2pcm/aif2pcm$(EXE)
-MID := tools/mid2agb/mid2agb$(EXE)
-SCANINC := tools/scaninc/scaninc$(EXE)
-PREPROC := tools/preproc/preproc$(EXE)
-RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
-FIX := tools/gbafix/gbafix$(EXE)
-MAPJSON := tools/mapjson/mapjson$(EXE)
-JSONPROC := tools/jsonproc/jsonproc$(EXE)
-SCRIPT := tools/poryscript/poryscript$(EXE)
-PATCHELF := tools/patchelf/patchelf$(EXE)
-ROMTEST ?= $(shell { command -v mgba-rom-test || command -v tools/mgba/mgba-rom-test$(EXE); } 2>/dev/null)
-ROMTESTHYDRA := tools/mgba-rom-test-hydra/mgba-rom-test-hydra$(EXE)
-
-PERL := perl
-
-# Inclusive list. If you don't want a tool to be built, don't add it here.
-TOOLDIRS := tools/aif2pcm tools/bin2c tools/gbafix tools/gbagfx tools/jsonproc tools/mapjson tools/mid2agb tools/preproc tools/ramscrgen tools/rsfont tools/scaninc
-CHECKTOOLDIRS = tools/patchelf tools/mgba-rom-test-hydra
-TOOLBASE = $(TOOLDIRS:tools/%=%)
-TOOLS = $(foreach tool,$(TOOLBASE),tools/$(tool)/$(tool)$(EXE))
 
 MAKEFLAGS += --no-print-directory
 
@@ -350,25 +314,6 @@ check: $(TESTELF)
 	$(ROMTESTHYDRA) $(ROMTEST) $(OBJCOPY) $(HEADLESSELF)
 
 # Other rules
-AUTO_GEN_TARGETS :=
-
-all: history rom postbuild
-
-history:
-	@bash ./check_history.sh
-
-tools: $(TOOLDIRS)
-
-check-tools: $(CHECKTOOLDIRS)
-
-syms: $(SYM)
-
-$(TOOLDIRS):
-	@$(MAKE) -C $@
-
-$(CHECKTOOLDIRS):
-	@$(MAKE) -C $@
-
 rom: $(ROM)
 ifeq ($(COMPARE),1)
 	@$(SHA1) rom.sha1
@@ -386,9 +331,6 @@ clean-assets:
 	find sound -iname '*.bin' -exec rm {} +
 	find . \( -iname '*.1bpp' -o -iname '*.4bpp' -o -iname '*.8bpp' -o -iname '*.gbapal' -o -iname '*.lz' -o -iname '*.smol' -o -iname '*.fastSmol' -o -iname '*.smolTM' -o -iname '*.rl' -o -iname '*.latfont' -o -iname '*.hwjpnfont' -o -iname '*.fwjpnfont' \) -exec rm {} +
 	find $(DATA_ASM_SUBDIR)/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
-	rm -f $(AUTO_GEN_TARGETS)
-	@$(MAKE) clean -C libagbsyscall
-	rm -f $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
 
 tidy: tidymodern tidycheck tidydebug
 
@@ -421,7 +363,6 @@ generated: $(AUTO_GEN_TARGETS)
 %.png: ;
 %.pal: ;
 %.aif: ;
-%.pory: ;
 
 %.1bpp:     %.png  ; $(GFX) $< $@
 %.4bpp:     %.png  ; $(GFX) $< $@
@@ -540,7 +481,7 @@ $(DATA_SRC_SUBDIR)/pokemon/teachable_learnsets.h: $(TEACHABLE_DEPS)
 	python3 $(LEARNSET_HELPERS_DIR)/make_teachables.py $<
 
 # Linker script
-#LD_SCRIPT := ld_script_modern.ld
+LD_SCRIPT := ld_script_modern.ld
 
 # Final rules
 
@@ -548,6 +489,21 @@ libagbsyscall:
 	@$(MAKE) -C libagbsyscall TOOLCHAIN=$(TOOLCHAIN) MODERN=1
 
 # Enable LTO LDFLAGS if set
+ifneq ($(LTO),0)
+LDFLAGS := -march=armv4t -mabi=apcs-gnu -mcpu=arm7tdmi -Xlinker -Map=../../$(MAP) -Xlinker --print-memory-usage -Xassembler -meabi=5 -Xassembler -march=armv4t -Xassembler -mcpu=arm7tdmi -Xlinker --gc-sections
+LDFLAGS += -Xlinker -flto=auto
+$(ELF): $(LD_SCRIPT) $(OBJS) libagbsyscall
+	@echo "cd $(OBJ_DIR) && $(ARMCC) $(LDFLAGS) -T ../../$< -o ../../$@ <objs> <libs>"
+	+@cd $(OBJ_DIR) && $(ARMCC) $(LDFLAGS) -T ../../$< -o ../../$@ $(OBJS_REL) $(LIB)
+	$(FIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
+else
+# Output .map file, memory usage readout and gc sections to clean-up unused data
+LDFLAGS = -Map ../../$(MAP) --print-memory-usage --gc-sections
+$(ELF): $(LD_SCRIPT) $(OBJS) libagbsyscall
+	@cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$<  -o ../../$@ $(OBJS_REL) $(LIB) | cat
+	@echo "cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$< -o ../../$@ <objs> <libs> | cat"
+	$(FIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
+endif
 
 # Builds the rom from the elf file
 $(ROM): $(ELF)

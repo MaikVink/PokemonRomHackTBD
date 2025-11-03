@@ -383,7 +383,6 @@ const u32 gObjectEventPic_RayquazaCutscene[] = INCBIN_U32("graphics/object_event
 
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/lugia.gbapal");
-const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokemon/ho_oh.4bpp");
 
 const u32 gObjectEventPic_Deneith[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/deneith.4bpp");
 const u32 gObjectEventPic_Fiona[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/fiona.4bpp");

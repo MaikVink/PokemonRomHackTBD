@@ -84,7 +84,7 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_TRACKS_SLITHER]        = &gFieldEffectObjectTemplate_SlitherTracks,
     [FLDEFFOBJ_TRACKS_SPOT]           = &gFieldEffectObjectTemplate_SpotTracks,
     [FLDEFFOBJ_TRACKS_BUG]            = &gFieldEffectObjectTemplate_BugTracks,
-    [FLDEFFOBJ_CAVE_DUST]             = &gFieldEffectObjectTemplate_CaveDust,
+    [FLDEFFOBJ_CAVE_DUST]             = &gFieldEffectObjectTemplate_UnusedSand,//&gFieldEffectObjectTemplate_CaveDust,
     [FLDEFFOBJ_ROCK_CLIMB_BLOB]       = &gFieldEffectObjectTemplate_RockClimbBlob,
     [FLDEFFOBJ_ROCK_CLIMB_DUST]       = &gFieldEffectObjectTemplate_RockClimbDust,
 };

@@ -381,7 +381,6 @@ gFieldEffectScript_TracksSlither::
 	field_eff_end
 
 gFieldEffectScript_CaveDust::
-	field_eff_loadfadedpal_callnative gSpritePalette_CaveDust FldEff_CaveDust
 	field_eff_end
 
 gFieldEffectScript_Defog::
