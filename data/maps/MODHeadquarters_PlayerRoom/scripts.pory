@@ -125,7 +125,7 @@ script PlayerRoom_SignScript_Bed{
             Do you want to sleep and rest up for today?"), MSGBOX_YESNO)
             if(var(VAR_RESULT))
             {
-                setrespawn(HEAL_LOCATION_PLAYERROOM)
+                setrespawn(LOCATION_MOD_HEADQUARTERS_PLAYERROOM)
                 fadescreen(1)
                 special(HealPlayerParty)
                 playfanfare(MUS_HEAL)

@@ -231,7 +231,7 @@ FionasRoom_SignScript_Bed_2:
 # 173 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	goto_if_unset FLAG_FIONA_ROOM, FionasRoom_SignScript_Bed_6
 # 180 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
-	setrespawn HEAL_LOCATION_FIONASROOM
+	setrespawn HEAL_LOCATION_MOD_HEADQUARTERS_FIONAROOM
 # 181 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"
 	fadescreen 1
 # 182 "data/maps/MODHeadquarters_FionasRoom/scripts.pory"

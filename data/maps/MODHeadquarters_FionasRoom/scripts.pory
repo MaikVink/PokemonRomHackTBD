@@ -177,7 +177,7 @@ script FionasRoom_SignScript_Bed{
         }
         else
         {
-            setrespawn(HEAL_LOCATION_FIONASROOM)
+            setrespawn(HEAL_LOCATION_MOD_HEADQUARTERS_FIONAROOM)
             fadescreen(1)
             special(HealPlayerParty)
             playfanfare(MUS_HEAL)
