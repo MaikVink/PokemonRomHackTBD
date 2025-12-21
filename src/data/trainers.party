@@ -82,334 +82,333 @@ Music: Male
 Double Battle: No
 
 === TRAINER_FABIAN_1 ===
-Name: SAWYER
-Class: Hiker
+Name: Fabian
+Class: Initiative
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+
+Munch (SPECIES_MUNCHLAX) (M) 
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Defense Curl
+
+=== TRAINER_HERALD_1 ===
+Name: Herald
+Class: Initiative
 Pic: Hiker
 Gender: Male
-Music: Hiker
+Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move
 
-Geodude
-Level: 21
+Spike (SPECIES_GEODUDE_ALOLA) (M)
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BELLA_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_HERALD_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_FIONA_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_FIONA_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_FABIAN_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_HERALD_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BELLA_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VICTOR_B0 ===
-Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
+Name: Bella
+Class: Initiative
+Pic: Beauty
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Skitty
-Level: 26
+Saria (SPECIES_PETILIL) (F)
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Growth
+- Helping Hand
+- Stun Spore
+
+=== TRAINER_FIONA_1 ===
+Name: Fiona
+Class: Rival
+Pic: Fiona
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cynthia (SPECIES_GIBLE) (F)
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_ROUGH_SKIN
+- Tackle
+- Sand Attack
+- Swords Dance
+
+=== TRAINER_FIONA_B0 ===
+Name: Fiona
+Class: Rival
+Pic: Fiona
+Gender: Female
+Music: Intense
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cynthia (SPECIES_GIBLE) (F)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_ROUGH_SKIN
+
+=== TRAINER_FABIAN_B0 ===
+Name: Fabian
+Class: Initiative
+Pic: Sailor
+Gender: Male
+Music: Male
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Munch (SPECIES_MUNCHLAX) (M) @ Sitrus Berry
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Poochyena
-Level: 26
+=== TRAINER_HERALD_B0 ===
+Name: Herald
+Class: Initiative
+Pic: Hiker
+Gender: Male
+Music: Male
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Spike (SPECIES_GEODUDE_ALOLA) (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zigzagoon
-Level: 26
+=== TRAINER_BELLA_B0 ===
+Name: Bella
+Class: Initiative
+Pic: Beauty
+Gender: Female
+Music: Female
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Saria (SPECIES_PETILIL) (F) @ Miracle Seed
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lotad
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+=== TRAINER_VICTOR_B0 ===
+Name: Victor
+Class: Initiative
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Seedot
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Taillow
-Level: 26
+The Mountain (SPECIES_LARVITAR)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VERA_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Vera
+Class: Initiative
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Poochyena
-Level: 9
+Zorro (SPECIES_ZORUA_HISUI) (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRISTAN_B0 ===
-Name: MARCEL
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Tristan
+Class: Initiative
+Pic: Guitarist
 Gender: Male
-Music: Cool
+Music: Male
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Manectric
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Shiftry
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Rock Eater (SPECIES_ARON)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_ROCK_HEAD
 
 === TRAINER_NIKO_B0 ===
-Name: ALBERTO
-Class: Bird Keeper
-Pic: Bird Keeper
+Name: Niko
+Class: Initiative
+Pic: Ninja Boy
 Gender: Male
-Music: Cool
+Music: Male
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Pelipper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Xatu
-Level: 30
+Ninja (SPECIES_FROAKIE)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HERA_B0 ===
-Name: ED
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
+Name: Hera
+Class: Initiative
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zangoose
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Seviper
-Level: 30
+Bolt (SPECIES_ROTOM)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RAOUL_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
+Name: Raoul
+Class: Initiative
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Carvanha
-Level: 36
+Speedy (SPECIES_TREECKO)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PAULA_B0 ===
-Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Swimmer
+Name: Paula
+Class: Initiative
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Gyarados
-Level: 34
+Nurse (SPECIES_AUDINO) (F)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARIA_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Maria
+Class: Initiative
+Pic: Lady
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Poochyena
-Level: 11
+Eva (SPECIES_KANGASKHAN)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PHOENIX_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: Phoenix
+Class: Initiative
+Pic: Psychic M
 Gender: Male
-Music: Aqua
+Music: Male
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zubat
-Level: 27
+Einstein (SPECIES_ABRA) (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Teleport
+- Hidden Power
 
 === TRAINER_ROSANNE_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Rosanne
+Class: Initiative
+Pic: Leaf
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 27
+Eve (SPECIES_EEVEE) (F)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TESSA_B0 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Tessa
+Class: Initiative
+Pic: Lass
+Gender: Female
+Music: Female
+Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Poochyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zubat
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 26
+Champion (SPECIES_CHARMANDER) (F)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_FIONA_B0_SHINY ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Fiona
+Class: Rival
+Pic: Fiona
+Gender: Female
+Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Carvanha
-Level: 15
+Cynthia (SPECIES_GIBLE) (F)
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_ROUGH_SKIN
+
+Serena (SPECIES_EEVEE) (F)
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_ADAPTABILITY
+Shiny: Yes
 
 === TRAINER_DENEITH_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Name: Deneith
+Class: As Member
+Pic: Deneith
+Gender: Female
+Music: Intense
+Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zubat
-Level: 14
+Shield (SPECIES_SHIELDON)
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Protect
+- Tackle
+- Metal Sound
 
-Carvanha
-Level: 14
+Armour (SPECIES_CHARCADET)
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: ABILITY_FLAME_BODY
+
+Sword (SPECIES_HONEDGE)
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Autotomize
+- Shadow Sneak
+- Fury Cutter
+- Slash
+
+
+
+
 
 === TRAINER_GRUNT_SPACE_CENTER_1 ===
 Name: GRUNT
