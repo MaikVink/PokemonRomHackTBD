@@ -47,11 +47,11 @@ script EntranceHall_FirstEntrace{
         specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
         if(var(VAR_RESULT) == SPECIES_EEVEE)
         {
-            givemon(SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1)
+            givemon(SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 0)
         }
         else
         {
-            givemon(SPECIES_EEVEE, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1)
+            givemon(SPECIES_EEVEE, 5, , 4, , 1, , , , , , , , , , , , , , , , , , 0)
         }
         msgbox(format("{COLOR LIGHT_GRAY}The Leader{COLOR DARK_GRAY} gave you a pokemon."))
         waitfanfare

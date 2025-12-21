@@ -160,7 +160,7 @@ PlayerRoom_SignScript_Bed_5:
 
 PlayerRoom_SignScript_Bed_8:
 # 128 "data/maps/MODHeadquarters_PlayerRoom/scripts.pory"
-	setrespawn HEAL_LOCATION_PLAYERROOM
+	setrespawn HEAL_LOCATION_MOD_HEADQUARTERS_PLAYERROOM
 # 129 "data/maps/MODHeadquarters_PlayerRoom/scripts.pory"
 	fadescreen 1
 # 130 "data/maps/MODHeadquarters_PlayerRoom/scripts.pory"

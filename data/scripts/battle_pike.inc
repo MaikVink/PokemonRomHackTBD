@@ -1,4 +1,3 @@
-@ Note: LOCALIDs shared with BattleFrontier_BattlePikeRoomNormal
 BattleFrontier_BattlePikeRoom_MapScripts:
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_BattlePikeRoom_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattlePikeRoom_OnWarp
@@ -41,7 +40,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_InitRoomObjects::
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom::
 	setvar VAR_TEMP_4, 1
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_InitBrainRoomObjects::
@@ -65,6 +64,7 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_RightRoomWarp::
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp::
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	pike_get PIKE_DATA_WIN_STREAK
 	addvar VAR_RESULT, 1
 	pike_set PIKE_DATA_WIN_STREAK, VAR_RESULT
@@ -86,12 +86,12 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp::
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom::
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpWildMonRoom::
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
 	end
 
@@ -142,12 +142,12 @@ BattleFrontier_BattlePikeRoom_EventScript_EnableHealing::
 	return
 
 BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom::
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
 	return
 
 BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom::
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoom_Movement_HidePlayer
 	waitmovement 0
 	return
 

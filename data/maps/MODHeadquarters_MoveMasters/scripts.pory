@@ -221,7 +221,7 @@ script MoveMasters_ObjectScript_MoveTutor{
         ...\p
         hmm?\p
         O? you're talking to me?\p
-        Oh my mistake, I expect you're not quite ready for what I have to ffer.\l
+        Oh my mistake, I expect you're not quite ready for what I have to offer.\l
         I'm the Master Tutor. I can teach some of your pokemon their strongest move.\l
         Frenzy Plant, Hydro Cannon, Blast Burn, Dragon Ascent, and many others I can offer you.
         It took me years to master these moves so I'll require some compensation. About a 1000 would work for me."))

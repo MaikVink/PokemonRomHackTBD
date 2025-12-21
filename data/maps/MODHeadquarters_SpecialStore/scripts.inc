@@ -475,11 +475,10 @@ SpecialStore_ObjectScript_MartEmployer_Text_9:
 
 SpecialStore_ObjectScript_MartEmployer_Text_10:
 # 118 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	.string "Oh, I see you bought the Reverse\n"
-	.string "Waterfall!\l"
-	.string "A small, but fantastic gadget that will\l"
-	.string "allow you to travel up a waterfall\l"
-	.string "without any trouble!\l"
+	.string "Oh, I see you bought the Aqua Jetpack!\l"
+	.string "A great piece of equipment that will\l"
+	.string "allow you to travel up a waterfall with\l"
+	.string "little trouble!\l"
 	.string "Here, allow me to give you a gift as well\l"
 	.string "with it:$"
 

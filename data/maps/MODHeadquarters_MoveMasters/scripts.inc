@@ -1418,7 +1418,7 @@ MoveMasters_ObjectScript_MoveTutor_Text_0:
 	.string "hmm?\p"
 	.string "O? you're talking to me?\p"
 	.string "Oh my mistake, I expect you're not quite\n"
-	.string "ready for what I have to ffer.\l"
+	.string "ready for what I have to offer.\l"
 	.string "I'm the Master Tutor. I can teach some\l"
 	.string "of your pokemon their strongest move.\l"
 	.string "Frenzy Plant, Hydro Cannon, Blast Burn,\l"

@@ -115,8 +115,8 @@ script SpecialStore_ObjectScript_MartEmployer{
     checkitem(ITEM_AQUA_JETPACK, 1)
     if(var(VAR_RESULT) && !flag(FLAG_BADGE08_GET))
     {
-        msgbox(format("Oh, I see you bought the Reverse Waterfall! \l
-        A small, but fantastic gadget that will allow you to travel up a waterfall without any trouble! \l
+        msgbox(format("Oh, I see you bought the Aqua Jetpack! \l
+        A great piece of equipment that will allow you to travel up a waterfall with little trouble! \l
         Here, allow me to give you a gift as well with it:"))
         giveitem(ITEM_HM07)
         msgbox(format("I the older days we used to need pokemon with HMs to travel around and clear stuff up. \l
