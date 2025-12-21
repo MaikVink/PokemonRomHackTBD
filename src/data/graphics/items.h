@@ -2102,29 +2102,29 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon
 
 //new Items
 
-const u32 gItemIcon_Axe[] = INCBIN_U32("graphics/items/icons/axe.4bpp.lz");
-const u32 gItemIconPalette_Axe[] = INCBIN_U32("graphics/items/icon_palettes/axe.gbapal.lz");
+const u32 gItemIcon_Axe[] = INCBIN_U32("graphics/items/icons/axe.4bpp.smol");
+const u16 gItemIconPalette_Axe[] = INCBIN_U16("graphics/items/icon_palettes/axe.gbapal");
 
-const u32 gItemIcon_Lantern[] = INCBIN_U32("graphics/items/icons/lantern.4bpp.lz");
-const u32 gItemIconPalette_Lantern[] = INCBIN_U32("graphics/items/icon_palettes/lantern.gbapal.lz");
+const u32 gItemIcon_Lantern[] = INCBIN_U32("graphics/items/icons/lantern.4bpp.smol");
+const u16 gItemIconPalette_Lantern[] = INCBIN_U16("graphics/items/icon_palettes/lantern.gbapal");
 
-const u32 gItemIcon_Drill[] = INCBIN_U32("graphics/items/icons/drill.4bpp.lz");
-const u32 gItemIconPalette_Drill[] = INCBIN_U32("graphics/items/icon_palettes/drill.gbapal.lz");
+const u32 gItemIcon_Drill[] = INCBIN_U32("graphics/items/icons/drill.4bpp.smol");
+const u16 gItemIconPalette_Drill[] = INCBIN_U16("graphics/items/icon_palettes/drill.gbapal");
 
-const u32 gItemIcon_MechanicalArm[] = INCBIN_U32("graphics/items/icons/mechanical_arm.4bpp.lz");
-const u32 gItemIconPalette_MechanicalArm[] = INCBIN_U32("graphics/items/icon_palettes/mechanical_arm.gbapal.lz");
+const u32 gItemIcon_MechanicalArm[] = INCBIN_U32("graphics/items/icons/mechanical_arm.4bpp.smol");
+const u16 gItemIconPalette_MechanicalArm[] = INCBIN_U16("graphics/items/icon_palettes/mechanical_arm.gbapal");
 
-const u32 gItemIcon_Surfboard[] = INCBIN_U32("graphics/items/icons/surfboard.4bpp.lz");
-const u32 gItemIconPalette_Surfboard[] = INCBIN_U32("graphics/items/icon_palettes/surfboard.gbapal.lz");
+const u32 gItemIcon_Surfboard[] = INCBIN_U32("graphics/items/icons/surfboard.4bpp.smol");
+const u16 gItemIconPalette_Surfboard[] = INCBIN_U16("graphics/items/icon_palettes/surfboard.gbapal");
 
-const u32 gItemIcon_BirdFlute[] = INCBIN_U32("graphics/items/icons/bird_flute.4bpp.lz");
-const u32 gItemIconPalette_BirdFlute[] = INCBIN_U32("graphics/items/icon_palettes/bird_flute.gbapal.lz");
+const u32 gItemIcon_BirdFlute[] = INCBIN_U32("graphics/items/icons/bird_flute.4bpp.smol");
+const u16 gItemIconPalette_BirdFlute[] = INCBIN_U16("graphics/items/icon_palettes/bird_flute.gbapal");
 
-const u32 gItemIcon_DivingEquipment[] = INCBIN_U32("graphics/items/icons/diving_equipment.4bpp.lz");
-const u32 gItemIconPalette_DivingEquipment[] = INCBIN_U32("graphics/items/icon_palettes/diving_equipment.gbapal.lz");
+const u32 gItemIcon_DivingEquipment[] = INCBIN_U32("graphics/items/icons/diving_equipment.4bpp.smol");
+const u16 gItemIconPalette_DivingEquipment[] = INCBIN_U16("graphics/items/icon_palettes/diving_equipment.gbapal");
 
-const u32 gItemIcon_AquaJetpack[] = INCBIN_U32("graphics/items/icons/aqua_jetpack.4bpp.lz");
-const u32 gItemIconPalette_AquaJetpack[] = INCBIN_U32("graphics/items/icon_palettes/aqua_jetpack.gbapal.lz");
+const u32 gItemIcon_AquaJetpack[] = INCBIN_U32("graphics/items/icons/aqua_jetpack.4bpp.smol");
+const u16 gItemIconPalette_AquaJetpack[] = INCBIN_U16("graphics/items/icon_palettes/aqua_jetpack.gbapal");
 
-const u32 gItemIcon_CampingEquipment[] = INCBIN_U32("graphics/items/icons/camping_equipment.4bpp.lz");
-const u32 gItemIconPalette_CampingEquipment[] = INCBIN_U32("graphics/items/icon_palettes/camping_equipment.gbapal.lz");
+const u32 gItemIcon_CampingEquipment[] = INCBIN_U32("graphics/items/icons/camping_equipment.4bpp.smol");
+const u16 gItemIconPalette_CampingEquipment[] = INCBIN_U16("graphics/items/icon_palettes/camping_equipment.gbapal");

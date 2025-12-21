@@ -1745,23 +1745,23 @@ extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 
 //new items
 extern const u32 gItemIcon_Axe[];
-extern const u32 gItemIconPalette_Axe[];
+extern const u16 gItemIconPalette_Axe[];
 extern const u32 gItemIcon_Lantern[];
-extern const u32 gItemIconPalette_Lantern[];
+extern const u16 gItemIconPalette_Lantern[];
 extern const u32 gItemIcon_Drill[];
-extern const u32 gItemIconPalette_Drill[];
+extern const u16 gItemIconPalette_Drill[];
 extern const u32 gItemIcon_MechanicalArm[];
-extern const u32 gItemIconPalette_MechanicalArm[];
+extern const u16 gItemIconPalette_MechanicalArm[];
 extern const u32 gItemIcon_Surfboard[];
-extern const u32 gItemIconPalette_Surfboard[];
+extern const u16 gItemIconPalette_Surfboard[];
 extern const u32 gItemIcon_BirdFlute[];
-extern const u32 gItemIconPalette_BirdFlute[];
+extern const u16 gItemIconPalette_BirdFlute[];
 extern const u32 gItemIcon_DivingEquipment[];
-extern const u32 gItemIconPalette_DivingEquipment[];
+extern const u16 gItemIconPalette_DivingEquipment[];
 extern const u32 gItemIcon_AquaJetpack[];
-extern const u32 gItemIconPalette_AquaJetpack[];
+extern const u16 gItemIconPalette_AquaJetpack[];
 extern const u32 gItemIcon_CampingEquipment[];
-extern const u32 gItemIconPalette_CampingEquipment[];
+extern const u16 gItemIconPalette_CampingEquipment[];
 
 //menu graphics
 extern const u16 gMenuInfoElements1_Pal[16];

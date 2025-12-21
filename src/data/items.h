@@ -14602,7 +14602,7 @@ const struct Item gItemsInfo[] =
     [ITEM_AXE] =
     {
         .name = ITEM_NAME("Axe"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "An sturdy axe\n"
             "Perfect to chop\n"
@@ -14610,13 +14610,15 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_Axe, 
+        .fieldUseFunc = ItemUseOutOfBattle_Axe,
+        .iconPic = gItemIcon_Axe,
+        .iconPalette = gItemIconPalette_Axe, 
     },
 
     [ITEM_LANTERN] =
     {
         .name = ITEM_NAME("Lantern"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "A small latern\n"
             "that can light up\n"
@@ -14625,12 +14627,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_Lantern, 
+        .iconPic = gItemIcon_Lantern,
+        .iconPalette = gItemIconPalette_Lantern,
     },
 
     [ITEM_DRILL] =
     {
         .name = ITEM_NAME("Drill"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "An small tool\n"
             "that is able to\n"
@@ -14639,12 +14643,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_Drill, 
+        .iconPic = gItemIcon_Drill,
+        .iconPalette = gItemIconPalette_Drill,
     },
 
     [ITEM_MECHANICAL_ARM] =
     {
         .name = ITEM_NAME("Mech. Arm"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "An arm attachment\n"
             "that is able to\n"
@@ -14653,12 +14659,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_MechanicalArm, 
+        .iconPic = gItemIcon_MechanicalArm,
+        .iconPalette = gItemIconPalette_MechanicalArm,
     },
 
     [ITEM_SURFBOARD] =
     {
         .name = ITEM_NAME("Surfboard"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "A small board\n"
             "to travel over\n"
@@ -14667,12 +14675,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_SurfBoard, 
+        .iconPic = gItemIcon_Surfboard,
+        .iconPalette = gItemIconPalette_Surfboard,
     },
 
     [ITEM_BIRD_FLUTE] =
     {
         .name = ITEM_NAME("Bird Flute"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "A flute to call\n"
             "friendly birds to\n"
@@ -14681,12 +14691,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_BirdFlute, 
+        .iconPic = gItemIcon_BirdFlute,
+        .iconPalette = gItemIconPalette_BirdFlute,
     },
 
     [ITEM_DIVING_EQUIPMENT] =
     {
         .name = ITEM_NAME("Diving Equipm"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "A small set of\n"
             "equipment to dive\n"
@@ -14695,12 +14707,14 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_DivingEquipment, 
+        .iconPic = gItemIcon_DivingEquipment,
+        .iconPalette = gItemIconPalette_DivingEquipment,
     },
 
     [ITEM_AQUA_JETPACK] =
     {
         .name = ITEM_NAME("Aqua Jetpack"),
-        .price = 10000,
+        .price = 10,
         .description = COMPOUND_STRING(
             "A jetpack using\n"
             "water to climb\n"
@@ -14708,7 +14722,9 @@ const struct Item gItemsInfo[] =
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
-        .fieldUseFunc = ItemUseOutOfBattle_AquaJetpack, 
+        .fieldUseFunc = ItemUseOutOfBattle_AquaJetpack,
+        .iconPic = gItemIcon_AquaJetpack,
+        .iconPalette = gItemIconPalette_AquaJetpack, 
     },
 
     [ITEM_CAMPING_EQUIPMENT] =
@@ -14723,8 +14739,8 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD, 
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse, 
-        .iconPic = gItemIcon_PokeshiDoll,
-        .iconPalette = gItemIconPalette_PokeshiDoll,
+        .iconPic = gItemIcon_CampingEquipment,
+        .iconPalette = gItemIconPalette_CampingEquipment,
     },
 };
 

@@ -1603,33 +1603,22 @@ static u8 ModifyBreedingScoreForOvalCharm(u8 score)
 
 u8 GetMoveEggMoves(struct Pokemon *mon, u16 *eggset)
 {
-    u16 eggMoveIdx = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    const u16 *eggMoves = gSpeciesInfo[species].eggMoveLearnset;
     u8 numMoves = 0;
-    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
     u16 i;
 
+    if (eggMoves == NULL)
+        return 0;
+
     for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
-    {
-        eggset[i] = 0;
-    }
+        eggset[i] = MOVE_NONE;
 
-    /*for (i = 0; i < ARRAY_COUNT(gEggMoves) - 1; i++)
+    for (i = 0; eggMoves[i] != MOVE_UNAVAILABLE && i < EGG_MOVES_ARRAY_COUNT; i++)
     {
-        if (gEggMoves[i] == species + EGG_MOVES_SPECIES_OFFSET)
-        {
-            eggMoveIdx = i + 1;
-            break;
-        }
-    }*/
-
-    /*for (i = 0; i < EGG_MOVES_ARRAY_COUNT; i++)
-    {
-        if (gEggMoves[eggMoveIdx + i] > EGG_MOVES_SPECIES_OFFSET)
-            break;
-
-        eggset[i] = gEggMoves[eggMoveIdx + i];
+        eggset[i] = eggMoves[i];
         numMoves++;
-    }*/
+    }
 
     return numMoves;
 }

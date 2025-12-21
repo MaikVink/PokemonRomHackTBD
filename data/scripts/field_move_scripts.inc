@@ -332,11 +332,11 @@ Text_CantWaterfall:
 
 Text_WantToWaterfall:
 	.string "It's a large waterfall.\n"
-	.string "Would you like to use Reverse\l"
-	.string "Waterfall?$"
+	.string "Would you like to use Aqua\l"
+	.string "Jetpack?$"
 
 Text_MonUsedWaterfall:
-	.string "{PLAYER} used Reverse Waterfall.$"
+	.string "{PLAYER} used Aqua Jetpack.$"
 
 EventScript_UseDive::
 	lockall

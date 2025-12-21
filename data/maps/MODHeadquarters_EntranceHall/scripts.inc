@@ -79,7 +79,7 @@ EntranceHall_FirstEntrace::
 	compare VAR_RESULT, SPECIES_EEVEE
 	goto_if_eq EntranceHall_FirstEntrace_6
 # 54 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	givemon SPECIES_EEVEE, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1
+	givemon SPECIES_EEVEE, 5, , 4, , 1, , , , , , , , , , , , , , , , , , 0
 EntranceHall_FirstEntrace_5:
 # 56 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
 	msgbox EntranceHall_FirstEntrace_Text_2
@@ -253,7 +253,7 @@ EntranceHall_FirstEntrace_2:
 
 EntranceHall_FirstEntrace_6:
 # 50 "data/maps/MODHeadquarters_EntranceHall/scripts.pory"
-	givemon SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 1
+	givemon SPECIES_RIOLU, 5, , 4, , 2, , , , , , , , , , , , , , , , , , 0
 	goto EntranceHall_FirstEntrace_5
 
 EntranceHall_FirstEntrace_10:

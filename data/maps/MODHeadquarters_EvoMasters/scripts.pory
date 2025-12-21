@@ -31,6 +31,7 @@ script EvoMasters_ExitSimulation{
     setflag(FLAG_HIDE_REPLICA_SIMULATION_SISTER)
     clearflag(FLAG_SIMULATION_ENTERED)
     setvar(VAR_SIMULATION_STATUS, 0)
+    special(RtcSetTimeToDay)
     releaseall
 }
 
