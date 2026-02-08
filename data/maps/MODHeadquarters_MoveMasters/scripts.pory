@@ -325,7 +325,7 @@ script MoveMasters_ObjectScript_MartEmployer
     switch(var(VAR_BADGE_AMOUNT))
     {
         case 0:
-            pokemart(ModHeadquarters_TMNoBadges)
+            pokemart(ModHeadquarters_TMEight)
         case 1:
             pokemart(ModHeadquarters_TMOne)
         case 2:
