@@ -3,7 +3,7 @@ mapscripts MODHeadquarters_SpecialStore_MapScripts {
 }
 
 script SpecialStore_OnTransition{
-    if(var(VAR_MOD_SHOPS_STATE < 1000))
+    if(var(VAR_MOD_SHOPS_STATE) < 1000)
     {
         addvar(VAR_MOD_SHOPS_STATE, 1000)
     }
