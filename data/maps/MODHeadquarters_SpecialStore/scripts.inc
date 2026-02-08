@@ -6,8 +6,8 @@ MODHeadquarters_SpecialStore_MapScripts::
 
 SpecialStore_OnTransition::
 # 6 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
-	compare VAR_MOD_SHOPS_STATE < 1000, 0
-	goto_if_ne SpecialStore_OnTransition_2
+	compare VAR_MOD_SHOPS_STATE, 1000
+	goto_if_lt SpecialStore_OnTransition_2
 SpecialStore_OnTransition_1:
 # 10 "data/maps/MODHeadquarters_SpecialStore/scripts.pory"
 	compare VAR_MOD_SHOPS_STATE, 0

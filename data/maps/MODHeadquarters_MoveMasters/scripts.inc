@@ -500,7 +500,7 @@ MoveMasters_ObjectScript_MartEmployer_2:
 
 MoveMasters_ObjectScript_MartEmployer_6:
 # 328 "data/maps/MODHeadquarters_MoveMasters/scripts.pory"
-	pokemart ModHeadquarters_TMNoBadges
+	pokemart ModHeadquarters_TMEight
 	goto MoveMasters_ObjectScript_MartEmployer_4
 
 MoveMasters_ObjectScript_MartEmployer_7:
